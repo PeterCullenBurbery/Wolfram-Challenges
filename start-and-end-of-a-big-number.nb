@@ -1,0 +1,47 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      1093,         39]
+NotebookOptionsPosition[       734,         25]
+NotebookOutlinePosition[      1142,         41]
+CellTagsIndexPosition[      1099,         38]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["Start and End of a Big Number", "Title",
+ CellChangeTimes->{{3.893246625560777*^9, 
+  3.893246631921263*^9}},ExpressionUUID->"33831bf4-6704-412c-802f-\
+1e0b3dff5c98"]
+},
+WindowSize->{569.25, 609.75},
+WindowMargins->{{Automatic, 102}, {33.75, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"7cc386fe-c5ef-4e87-986b-1996b7461104"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 172, 3, 160, "Title",ExpressionUUID->"33831bf4-6704-412c-802f-1e0b3dff5c98"]
+}
+]
+*)
+
