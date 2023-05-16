@@ -1,0 +1,83 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2237,         75]
+NotebookOptionsPosition[      1724,         57]
+NotebookOutlinePosition[      2133,         73]
+CellTagsIndexPosition[      2090,         70]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[ButtonBox["Goldbach Partitions",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://challenges.wolframcloud.com/challenge/find-goldbach-\
+partitions"], None},
+ ButtonNote->
+  "https://challenges.wolframcloud.com/challenge/find-goldbach-partitions"]], \
+"Title",
+ CellChangeTimes->{{3.8932470523684*^9, 
+  3.8932470594556723`*^9}},ExpressionUUID->"b29518a6-71cf-4808-b0b9-\
+93c6a055cf75"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"GoldbachPartitions", "[", 
+    RowBox[{"n_Integer", "?", "EvenQ"}], "]"}], "/;", 
+   RowBox[{"n", ">", "2"}]}], ":=", 
+  RowBox[{"Sort", "/@", 
+   RowBox[{"IntegerPartitions", "[", 
+    RowBox[{"n", ",", "2", ",", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"Prime", "[", "m", "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"m", ",", 
+         RowBox[{"PrimePi", "[", "n", "]"}]}], "}"}]}], "]"}]}], 
+    "]"}]}]}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.8932470741290555`*^9, 3.8932470741300554`*^9}, {
+  3.893247201609577*^9, 3.893247202609043*^9}},
+ CellLabel->
+  "In[151]:=",ExpressionUUID->"7f26153a-80f3-43b5-b970-314d29c756c4"]
+}, Open  ]]
+},
+WindowSize->{569.25, 609.75},
+WindowMargins->{{Automatic, 83.25}, {10.5, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"b292a492-1c8e-451f-8319-b28ef55b4feb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 406, 10, 98, "Title",ExpressionUUID->"b29518a6-71cf-4808-b0b9-93c6a055cf75"],
+Cell[989, 34, 719, 20, 113, "Input",ExpressionUUID->"7f26153a-80f3-43b5-b970-314d29c756c4",
+ InitializationCell->True]
+}, Open  ]]
+}
+]
+*)
+
