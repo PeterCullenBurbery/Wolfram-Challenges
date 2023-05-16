@@ -1,0 +1,108 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3356,        100]
+NotebookOptionsPosition[      2574,         79]
+NotebookOutlinePosition[      2977,         95]
+CellTagsIndexPosition[      2934,         92]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[ButtonBox["Antipode above or below Sea Level",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://challenges.wolframcloud.com/challenge/antipode-above-or-below-\
+sea-level"], None},
+ ButtonNote->
+  "https://challenges.wolframcloud.com/challenge/antipode-above-or-below-sea-\
+level"]], "Title",
+ CellChangeTimes->{{3.8932518285245056`*^9, 
+  3.8932518359677935`*^9}},ExpressionUUID->"05ccfe2d-ec01-480a-806c-\
+eecc07d15a3b"],
+
+Cell["\<\
+I saw how someone else solved this challenge so this isn\[CloseCurlyQuote]t \
+my idea.\
+\>", "Text",
+ CellChangeTimes->{{3.8932518508318434`*^9, 
+  3.893251864064356*^9}},ExpressionUUID->"2acbd71c-2331-43ab-8a44-\
+82f60f698675"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"AntipodeAboveSeaLevelQ", "[", "loc_", "]"}], ":=", 
+  RowBox[{
+   RowBox[{"GeoElevationData", "@", 
+    RowBox[{"GeoAntipode", "@", "loc"}]}], ">", 
+   RowBox[{"0", " ", 
+    RowBox[{"Quantity", "@", "\"\<m\>\""}]}]}]}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.8932518459901233`*^9, 3.8932518459911227`*^9}},
+ CellLabel->"In[93]:=",ExpressionUUID->"8b4a5eb2-6817-430a-8e98-d2e6c2e48d85"],
+
+Cell[TextData[ButtonBox["Solution statistics",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://www.wolframcloud.com/obj/e21c188b-b657-4169-8dc5-\
+1f68a7fddb02"], None},
+ ButtonNote->
+  "https://www.wolframcloud.com/obj/e21c188b-b657-4169-8dc5-1f68a7fddb02"]], \
+"Text",
+ CellChangeTimes->{{3.8932518737290554`*^9, 
+  3.8932518784805603`*^9}},ExpressionUUID->"8dbd312e-e5be-4754-923a-\
+421507c7bbc8"],
+
+Cell[TextData[ButtonBox["Challenge cloud notebook",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://www.wolframcloud.com/obj/burbery1/Published/\
+AntipodeAboveOrBelowSeaLevel.nb"], None},
+ ButtonNote->
+  "https://www.wolframcloud.com/obj/burbery1/Published/\
+AntipodeAboveOrBelowSeaLevel.nb"]], "Text",
+ CellChangeTimes->{{3.8932518877451997`*^9, 
+  3.893251902776933*^9}},ExpressionUUID->"9f91a751-6797-46d2-a30d-\
+8d4ffc155c22"]
+}, Open  ]]
+},
+WindowSize->{718.5, 735.},
+WindowMargins->{{Automatic, -5.25}, {Automatic, 0}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"6c82568c-6d69-45bf-84ab-88000472c67d"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 442, 10, 98, "Title",ExpressionUUID->"05ccfe2d-ec01-480a-806c-eecc07d15a3b"],
+Cell[1025, 34, 238, 6, 35, "Text",ExpressionUUID->"2acbd71c-2331-43ab-8a44-82f60f698675"],
+Cell[1266, 42, 441, 10, 44, "Input",ExpressionUUID->"8b4a5eb2-6817-430a-8e98-d2e6c2e48d85",
+ InitializationCell->True],
+Cell[1710, 54, 407, 10, 35, "Text",ExpressionUUID->"8dbd312e-e5be-4754-923a-421507c7bbc8"],
+Cell[2120, 66, 438, 10, 35, "Text",ExpressionUUID->"9f91a751-6797-46d2-a30d-8d4ffc155c22"]
+}, Open  ]]
+}
+]
+*)
+

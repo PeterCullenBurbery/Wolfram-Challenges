@@ -1,0 +1,143 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4845,        135]
+NotebookOptionsPosition[      3727,        109]
+NotebookOutlinePosition[      4137,        125]
+CellTagsIndexPosition[      4094,        122]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[ButtonBox["Antipodal City",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://Antipodal City"], None},
+ ButtonNote->"https://Antipodal City"]], "Title",
+ CellChangeTimes->{{3.8932513787148037`*^9, 
+  3.8932513900944433`*^9}},ExpressionUUID->"c9eda07b-466e-4f8f-a10c-\
+d21455296629"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"AntipodalCity", "[", "loc_", "]"}], ":=", 
+  RowBox[{
+   RowBox[{"GeoNearest", "[", 
+    RowBox[{"\"\<City\>\"", ",", 
+     RowBox[{"GeoAntipode", "@", "loc"}]}], "]"}], "[", 
+   RowBox[{"[", "1", "]"}], "]"}]}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.893251478805167*^9, 3.893251478805167*^9}},
+ CellLabel->"In[88]:=",ExpressionUUID->"1dc59538-1035-44fc-bca5-75a8cf906882"],
+
+Cell["First also works:", "Text",
+ CellChangeTimes->{{3.893251596357751*^9, 
+  3.8932515985340433`*^9}},ExpressionUUID->"f552887b-e27f-493f-bfaa-\
+d873ae6035b0"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"AntipodalCity", "[", "loc_", "]"}], ":=", 
+  RowBox[{"First", "[", 
+   RowBox[{"GeoNearest", "[", 
+    RowBox[{"\"\<City\>\"", ",", 
+     RowBox[{"GeoAntipode", "@", "loc"}]}], "]"}], "]"}]}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.893251478805167*^9, 3.8932515143916883`*^9}},
+ CellLabel->"In[89]:=",ExpressionUUID->"c24c94e9-9287-4efc-b334-b9c67ae60883"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"AntipodalCity", "[", "l_", "]"}], ":=", 
+  RowBox[{"First", "[", 
+   RowBox[{"GeoNearest", "[", 
+    RowBox[{"\"\<City\>\"", ",", 
+     RowBox[{"GeoAntipode", "@", "l"}]}], "]"}], "]"}]}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.893251478805167*^9, 3.8932515143916883`*^9}, {
+  3.893251600628281*^9, 3.8932516053858604`*^9}, {3.8932517238787575`*^9, 
+  3.893251729491164*^9}, {3.893251770118562*^9, 3.893251773454918*^9}},
+ CellLabel->"In[91]:=",ExpressionUUID->"13b8e159-9e12-4bb8-b6c1-7659ea05f610"],
+
+Cell[TextData[ButtonBox["Solution statistics",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://www.wolframcloud.com/obj/9013b7f8-d856-497e-925f-\
+879b7a86ce79"], None},
+ ButtonNote->
+  "https://www.wolframcloud.com/obj/9013b7f8-d856-497e-925f-879b7a86ce79"]], \
+"Text",
+ CellChangeTimes->{{3.893251565665172*^9, 
+  3.893251571066001*^9}},ExpressionUUID->"9a423768-2ac7-4899-96d3-\
+a4c63b0e33f4"],
+
+Cell[TextData[ButtonBox["Cloud notebook with solution",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://www.wolframcloud.com/obj/burbery1/Published/AntipodalCity.nb"]\
+, None},
+ ButtonNote->
+  "https://www.wolframcloud.com/obj/burbery1/Published/AntipodalCity.nb"]], \
+"Text",
+ CellChangeTimes->{{3.8932515804579487`*^9, 
+  3.8932515866404095`*^9}},ExpressionUUID->"f2e2defd-c151-40d3-945e-\
+f11f4cebb92b"],
+
+Cell[TextData[ButtonBox["Solution with first and l instead of loc statistics",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://www.wolframcloud.com/obj/b4e329c2-646a-4647-b26a-\
+09a57f69116b"], None},
+ ButtonNote->
+  "https://www.wolframcloud.com/obj/b4e329c2-646a-4647-b26a-09a57f69116b"]], \
+"Text",
+ CellChangeTimes->{{3.893251677256386*^9, 
+  3.893251697481144*^9}},ExpressionUUID->"1d56c589-531a-473f-acb6-\
+48300a2aaeff"]
+}, Open  ]]
+},
+WindowSize->{569.25, 609.75},
+WindowMargins->{{Automatic, 35.25}, {27.75, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"f4222f85-e6d9-42cf-a5a9-83a7fffd12a6"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 302, 7, 98, "Title",ExpressionUUID->"c9eda07b-466e-4f8f-a10c-d21455296629"],
+Cell[885, 31, 429, 10, 44, "Input",ExpressionUUID->"1dc59538-1035-44fc-bca5-75a8cf906882",
+ InitializationCell->True],
+Cell[1317, 43, 161, 3, 35, "Text",ExpressionUUID->"f552887b-e27f-493f-bfaa-d873ae6035b0"],
+Cell[1481, 48, 411, 9, 64, "Input",ExpressionUUID->"c24c94e9-9287-4efc-b334-b9c67ae60883",
+ InitializationCell->True],
+Cell[1895, 59, 555, 11, 44, "Input",ExpressionUUID->"13b8e159-9e12-4bb8-b6c1-7659ea05f610",
+ InitializationCell->True],
+Cell[2453, 72, 403, 10, 35, "Text",ExpressionUUID->"9a423768-2ac7-4899-96d3-a4c63b0e33f4"],
+Cell[2859, 84, 414, 10, 35, "Text",ExpressionUUID->"f2e2defd-c151-40d3-945e-f11f4cebb92b"],
+Cell[3276, 96, 435, 10, 35, "Text",ExpressionUUID->"1d56c589-531a-473f-acb6-48300a2aaeff"]
+}, Open  ]]
+}
+]
+*)
+

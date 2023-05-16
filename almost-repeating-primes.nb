@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      2152,         71]
-NotebookOptionsPosition[      1666,         54]
-NotebookOutlinePosition[      2076,         70]
-CellTagsIndexPosition[      2033,         67]
+NotebookDataLength[      3215,         99]
+NotebookOptionsPosition[      2518,         79]
+NotebookOutlinePosition[      2928,         95]
+CellTagsIndexPosition[      2885,         92]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -48,8 +48,33 @@ Cell[BoxData[
         RowBox[{"{", "e", "}"}]}], "]"}], "]"}], ",", 
      RowBox[{"{", 
       RowBox[{"i", ",", "30"}], "}"}]}], "]"}]}]}]], "Input",
+ InitializationCell->True,
  CellChangeTimes->{{3.8932499763829927`*^9, 3.8932499763829927`*^9}},
- CellLabel->"In[43]:=",ExpressionUUID->"c8cf8ea1-4c15-4586-840e-f82047918628"]
+ CellLabel->"In[43]:=",ExpressionUUID->"c8cf8ea1-4c15-4586-840e-f82047918628"],
+
+Cell[TextData[ButtonBox["Cloud notebook",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://www.wolframcloud.com/obj/burbery1/Published/\
+AlmostRepeatingPrimes.nb"], None},
+ ButtonNote->
+  "https://www.wolframcloud.com/obj/burbery1/Published/AlmostRepeatingPrimes.\
+nb"]], "Text",
+ CellChangeTimes->{{3.8932504595852876`*^9, 
+  3.8932504652036953`*^9}},ExpressionUUID->"e29193cb-9b3b-41e7-b2ca-\
+0ef933a682ec"],
+
+Cell[TextData[ButtonBox["Solution statistics",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://www.wolframcloud.com/obj/ca8ad0dd-f966-4a5f-914e-\
+b3b37ed746b1"], None},
+ ButtonNote->
+  "https://www.wolframcloud.com/obj/ca8ad0dd-f966-4a5f-914e-b3b37ed746b1"]], \
+"Text",
+ CellChangeTimes->{{3.893250505443664*^9, 
+  3.893250511044757*^9}},ExpressionUUID->"f713640c-cd48-47a0-b961-\
+acd6dad95951"]
 }, Open  ]]
 },
 WindowSize->{569.25, 609.75},
@@ -71,7 +96,10 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 412, 10, 98, "Title",ExpressionUUID->"aae7e158-c91e-4936-941c-5ea3ddd41a37"],
-Cell[995, 34, 655, 17, 67, "Input",ExpressionUUID->"c8cf8ea1-4c15-4586-840e-f82047918628"]
+Cell[995, 34, 682, 18, 83, "Input",ExpressionUUID->"c8cf8ea1-4c15-4586-840e-f82047918628",
+ InitializationCell->True],
+Cell[1680, 54, 416, 10, 35, "Text",ExpressionUUID->"e29193cb-9b3b-41e7-b2ca-0ef933a682ec"],
+Cell[2099, 66, 403, 10, 35, "Text",ExpressionUUID->"f713640c-cd48-47a0-b961-acd6dad95951"]
 }, Open  ]]
 }
 ]
