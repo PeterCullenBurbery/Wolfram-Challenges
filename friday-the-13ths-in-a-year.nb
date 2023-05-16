@@ -1,0 +1,94 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2682,         86]
+NotebookOptionsPosition[      2076,         67]
+NotebookOutlinePosition[      2486,         83]
+CellTagsIndexPosition[      2443,         80]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[ButtonBox["Friday the 13ths in a Year",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://challenges.wolframcloud.com/challenge/friday-the-13ths-in-a-\
+year"], None},
+ ButtonNote->
+  "https://challenges.wolframcloud.com/challenge/friday-the-13ths-in-a-year"]]\
+, "Title",
+ CellChangeTimes->{{3.8932452407176456`*^9, 
+  3.8932452528352447`*^9}},ExpressionUUID->"cda05a19-142d-4756-a792-\
+4f3e26993a4e"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"FridayThe13ths", "[", "year_Integer", "]"}], ":=", 
+  RowBox[{"Length", "[", 
+   RowBox[{
+    RowBox[{"Select", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"DayName", "[", "#", "]"}], "==", "Friday"}], "&"}], "]"}], 
+    "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"DateList", "[", 
+       RowBox[{"{", 
+        RowBox[{"year", ",", "#", ",", "13"}], "}"}], "]"}], "&"}], "/@", 
+     RowBox[{"Range", "[", "12", "]"}]}], "]"}], "]"}]}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.893244831495245*^9, 3.893244831495245*^9}},
+ CellLabel->"In[70]:=",ExpressionUUID->"d65e33ca-a85b-4593-9351-f1647e7fc67e"],
+
+Cell[TextData[ButtonBox["Solution",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://www.wolframcloud.com/obj/ef6ad38a-09df-4d89-a5fb-\
+16ab35647950"], None},
+ ButtonNote->
+  "https://www.wolframcloud.com/obj/ef6ad38a-09df-4d89-a5fb-16ab35647950"]], \
+"Text",
+ CellChangeTimes->{{3.89324527049979*^9, 
+  3.893245275078782*^9}},ExpressionUUID->"8ca6048c-bd43-454f-aca0-\
+2a2b868b0a62"]
+}, Open  ]]
+},
+WindowSize->{569.25, 609.75},
+WindowMargins->{{Automatic, 134.25}, {22.5, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"141b8c53-6085-40ec-be00-094fb8f6d83d"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 421, 10, 98, "Title",ExpressionUUID->"cda05a19-142d-4756-a792-4f3e26993a4e"],
+Cell[1004, 34, 662, 18, 83, "Input",ExpressionUUID->"d65e33ca-a85b-4593-9351-f1647e7fc67e",
+ InitializationCell->True],
+Cell[1669, 54, 391, 10, 35, "Text",ExpressionUUID->"8ca6048c-bd43-454f-aca0-2a2b868b0a62"]
+}, Open  ]]
+}
+]
+*)
+
