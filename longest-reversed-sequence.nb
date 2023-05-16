@@ -1,0 +1,80 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2188,         72]
+NotebookOptionsPosition[      1666,         54]
+NotebookOutlinePosition[      2083,         70]
+CellTagsIndexPosition[      2040,         67]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[ButtonBox["Longest Reversed Sequence",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://challenges.wolframcloud.com/challenge/longest-reversed-\
+sequence"], None},
+ ButtonNote->
+  "https://challenges.wolframcloud.com/challenge/longest-reversed-sequence"]],\
+ "Title",
+ CellChangeTimes->{{3.893257340264659*^9, 
+  3.893257346959719*^9}},ExpressionUUID->"00d468c3-f314-416b-98a8-\
+9bbd3d85bf9f"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"LongestReversedSubsequence", "[", 
+   RowBox[{"list", ":", 
+    RowBox[{"{", "__Integer", "}"}]}], "]"}], ":=", 
+  RowBox[{"Length", "[", 
+   RowBox[{"First", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"LongestCommonSequence", "[", 
+       RowBox[{"#", ",", "list"}], "]"}], "&"}], "/@", 
+     RowBox[{"Reverse", "[", 
+      RowBox[{"Reverse", "/@", 
+       RowBox[{"Subsequences", "[", "list", "]"}]}], "]"}]}], "]"}], 
+   "]"}]}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.893257333149979*^9, 3.893257333150977*^9}},
+ CellLabel->"In[26]:=",ExpressionUUID->"36e3d1f5-7115-4fcc-bbb0-2958aa0794cc"]
+}, Open  ]]
+},
+WindowSize->{312, 495},
+WindowMargins->{{Automatic, 104.40000000000009`}, {Automatic, 0}},
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"9ee7cdac-6388-4472-9925-ac9930832761"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 414, 10, 222, "Title",ExpressionUUID->"00d468c3-f314-416b-98a8-9bbd3d85bf9f"],
+Cell[997, 34, 653, 17, 235, "Input",ExpressionUUID->"36e3d1f5-7115-4fcc-bbb0-2958aa0794cc",
+ InitializationCell->True]
+}, Open  ]]
+}
+]
+*)
+
