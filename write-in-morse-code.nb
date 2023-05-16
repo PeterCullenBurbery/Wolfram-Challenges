@@ -1,0 +1,251 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      9987,        243]
+NotebookOptionsPosition[      7843,        196]
+NotebookOutlinePosition[      8249,        212]
+CellTagsIndexPosition[      8206,        209]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[ButtonBox["Write in Morse Code",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://challenges.wolframcloud.com/challenge/write-in-morse-code"], 
+   None},
+ ButtonNote->
+  "https://challenges.wolframcloud.com/challenge/write-in-morse-code"]], \
+"Title",
+ CellChangeTimes->{{3.893240896118381*^9, 
+  3.8932409043848906`*^9}},ExpressionUUID->"81f85e84-ce6a-494d-9bf3-\
+84a6c8a91f7c"],
+
+Cell[TextData[ButtonBox["My notebook",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://www.wolframcloud.com/obj/burbery1/Published/WriteInMorseCode(\
+1).nb"], None},
+ ButtonNote->
+  "https://www.wolframcloud.com/obj/burbery1/Published/WriteInMorseCode(1).\
+nb"]], "Text",
+ CellChangeTimes->{{3.893240947752686*^9, 
+  3.8932409517887335`*^9}},ExpressionUUID->"4fe45bd7-d042-4524-8a4c-\
+3e89d036cdd4"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ToMorseCode", "[", "text_String", "]"}], ":=", 
+  RowBox[{"StringRiffle", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"StringRiffle", "[", 
+       RowBox[{
+        RowBox[{"StringReplace", "[", 
+         RowBox[{
+          RowBox[{"Characters", "[", "#", "]"}], ",", 
+          RowBox[{"Thread", "[", 
+           RowBox[{
+            RowBox[{"Alphabet", "[", "]"}], "->", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<.-\>\"", ",", "\"\<-...\>\"", ",", "\"\<-.-.\>\"", ",", 
+              "\"\<-..\>\"", ",", "\"\<.\>\"", ",", "\"\<..-.\>\"", ",", 
+              "\"\<--.\>\"", ",", "\"\<....\>\"", ",", "\"\<..\>\"", ",", 
+              "\"\<.---\>\"", ",", "\"\<-.-\>\"", ",", "\"\<.-..\>\"", ",", 
+              "\"\<--\>\"", ",", "\"\<-.\>\"", ",", "\"\<---\>\"", ",", 
+              "\"\<.--.\>\"", ",", "\"\<--.-\>\"", ",", "\"\<.-.\>\"", ",", 
+              "\"\<...\>\"", ",", "\"\<-\>\"", ",", "\"\<..-\>\"", ",", 
+              "\"\<...-\>\"", ",", "\"\<.--\>\"", ",", "\"\<-..-\>\"", ",", 
+              "\"\<-.--\>\"", ",", "\"\<--..\>\""}], "}"}]}], "]"}]}], "]"}], 
+        ",", "\"\< \>\""}], "]"}], "&"}], "/@", 
+     RowBox[{"TextWords", "[", 
+      RowBox[{"ToLowerCase", "@", "text"}], "]"}]}], ",", "\"\</\>\""}], 
+   "]"}]}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.893240915626193*^9, 3.893240916778833*^9}},
+ CellLabel->"In[56]:=",ExpressionUUID->"0814c17d-15e5-4b93-9a80-dce9cc138a13"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ToMorseCode", "[", "\"\<This is not a pipe\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.8932409574396086`*^9, 3.8932409574396086`*^9}},
+ CellLabel->"In[57]:=",ExpressionUUID->"f32109f1-c6dc-4d2e-90ad-4fcd0085cabd"],
+
+Cell[BoxData["\<\"- .... .. .../.. .../-. --- -/.-/.--. .. .--. .\"\>"], \
+"Output",
+ CellChangeTimes->{3.893240959396157*^9},
+ CellLabel->"Out[57]=",ExpressionUUID->"9b67b22c-c848-4566-bbc5-6c40d4a6f2c7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ToMorseCode", "[", "\"\<Wolfram Challenges\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.893240962479002*^9, 3.8932409624800014`*^9}},
+ CellLabel->"In[58]:=",ExpressionUUID->"2e53c9e6-708b-49d1-be75-dc6ffec1d2ee"],
+
+Cell[BoxData["\<\".-- --- .-.. ..-. .-. .- --/-.-. .... .- .-.. .-.. . -. --. \
+. ...\"\>"], "Output",
+ CellChangeTimes->{3.8932409635277896`*^9},
+ CellLabel->"Out[58]=",ExpressionUUID->"f7642fff-132f-4bea-b9f1-d972f69d2e22"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ToMorseCode", "[", "\"\<use spaces\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.8932409695573845`*^9, 3.893240969558385*^9}},
+ CellLabel->"In[59]:=",ExpressionUUID->"776dd354-1ce6-4534-b62c-b84bb6413ea4"],
+
+Cell[BoxData["\<\"..- ... ./... .--. .- -.-. . ...\"\>"], "Output",
+ CellChangeTimes->{3.893240970476612*^9},
+ CellLabel->"Out[59]=",ExpressionUUID->"37988f0d-2e24-45f9-bb0d-3685877a3645"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"StringPosition", "[", 
+   RowBox[{"%", ",", "\"\< \>\""}], "]"}], "[", 
+  RowBox[{"[", 
+   RowBox[{"All", ",", "1"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.893240981822377*^9, 3.8932409818233533`*^9}},
+ CellLabel->"In[60]:=",ExpressionUUID->"ea0a998d-f0d4-4c81-9747-c4550f0a0504"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "4", ",", "8", ",", "14", ",", "19", ",", "22", ",", "27", ",", "29"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.8932409827286243`*^9},
+ CellLabel->"Out[60]=",ExpressionUUID->"3d1fb6f3-c1d2-4681-b261-486be9c186b3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ToMorseCode", "[", "\"\<SAME\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.8932410058687186`*^9, 3.893241008122588*^9}},
+ CellLabel->"In[61]:=",ExpressionUUID->"b50c2cae-d5d9-40f4-a91b-2595df5b0da9"],
+
+Cell[BoxData["\<\"... .- -- .\"\>"], "Output",
+ CellChangeTimes->{3.8932410083105946`*^9},
+ CellLabel->"Out[61]=",ExpressionUUID->"f2387f5d-2764-4aa7-801a-dcd1ade38aab"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ToMorseCode", "[", "\"\<same\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.893241009238237*^9, 3.893241012993543*^9}},
+ CellLabel->"In[62]:=",ExpressionUUID->"1af0ac2b-9324-49bd-8449-414d5ddc47b2"],
+
+Cell[BoxData["\<\"... .- -- .\"\>"], "Output",
+ CellChangeTimes->{3.893241013338321*^9},
+ CellLabel->"Out[62]=",ExpressionUUID->"2d328f15-20b0-4a72-95f5-acf75ead4648"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ToMorseCode", "[", 
+  "\"\<When in the Course of human events, it becomes necessary  for one \
+people to dissolve the political bands which have connected  them with \
+another, and to assume, among the Powers of the earth, the  separate and \
+equal station to which the Laws of Nature and of  Nature's God entitle them, \
+a decent respect to the opinions of  mankind requires that they should \
+declare the causes which impel them  to the separation.\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.8932410278935385`*^9, 3.893241027894532*^9}},
+ CellLabel->"In[63]:=",ExpressionUUID->"fa626162-e5d3-4a8d-80e2-50a2cea18d46"],
+
+Cell[BoxData["\<\".-- .... . -./.. -./- .... ./-.-. --- ..- .-. ... ./--- \
+..-./.... ..- -- .- -./. ...- . -. - .../.. -/-... . -.-. --- -- . .../-. . \
+-.-. . ... ... .- .-. -.--/..-. --- .-./--- -. ./.--. . --- .--. .-.. ./- \
+---/-.. .. ... ... --- .-.. ...- ./- .... ./.--. --- .-.. .. - .. -.-. .- \
+.-../-... .- -. -.. .../.-- .... .. -.-. ..../.... .- ...- ./-.-. --- -. -. . \
+-.-. - . -../- .... . --/.-- .. - ..../.- -. --- - .... . .-./.- -. -../- \
+---/.- ... ... ..- -- ./.- -- --- -. --./- .... ./.--. --- .-- . .-. .../--- \
+..-./- .... ./. .- .-. - ..../- .... ./... . .--. .- .-. .- - ./.- -. -../. \
+--.- ..- .- .-../... - .- - .. --- -./- ---/.-- .... .. -.-. ..../- .... \
+./.-.. .- .-- .../--- ..-./-. .- - ..- .-. ./.- -. -../--- ..-./-. .- - ..- \
+.-. . ' .../--. --- -../. -. - .. - .-.. ./- .... . --/.-/-.. . -.-. . -. \
+-/.-. . ... .--. . -.-. -/- ---/- .... ./--- .--. .. -. .. --- -. .../--- \
+..-./-- .- -. -.- .. -. -../.-. . --.- ..- .. .-. . .../- .... .- -/- .... . \
+-.--/... .... --- ..- .-.. -../-.. . -.-. .-.. .- .-. ./- .... ./-.-. .- ..- \
+... . .../.-- .... .. -.-. ..../.. -- .--. . .-../- .... . --/- ---/- .... \
+./... . .--. .- .-. .- - .. --- -.\"\>"], "Output",
+ CellChangeTimes->{3.8932410290790367`*^9},
+ CellLabel->"Out[63]=",ExpressionUUID->"f908b4b0-3ab5-4297-81fd-be6512870837"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{569.25, 609.75},
+WindowMargins->{{Automatic, 60}, {0.75, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"1e7cab39-7ad4-479a-b399-c3179bcaa99b"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 400, 10, 98, "Title",ExpressionUUID->"81f85e84-ce6a-494d-9bf3-84a6c8a91f7c"],
+Cell[983, 34, 407, 10, 35, "Text",ExpressionUUID->"4fe45bd7-d042-4524-8a4c-3e89d036cdd4"],
+Cell[1393, 46, 1499, 32, 197, "Input",ExpressionUUID->"0814c17d-15e5-4b93-9a80-dce9cc138a13",
+ InitializationCell->True],
+Cell[CellGroupData[{
+Cell[2917, 82, 238, 3, 28, "Input",ExpressionUUID->"f32109f1-c6dc-4d2e-90ad-4fcd0085cabd"],
+Cell[3158, 87, 205, 3, 32, "Output",ExpressionUUID->"9b67b22c-c848-4566-bbc5-6c40d4a6f2c7"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3400, 95, 236, 3, 28, "Input",ExpressionUUID->"2e53c9e6-708b-49d1-be75-dc6ffec1d2ee"],
+Cell[3639, 100, 225, 3, 52, "Output",ExpressionUUID->"f7642fff-132f-4bea-b9f1-d972f69d2e22"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3901, 108, 228, 3, 28, "Input",ExpressionUUID->"776dd354-1ce6-4534-b62c-b84bb6413ea4"],
+Cell[4132, 113, 188, 2, 32, "Output",ExpressionUUID->"37988f0d-2e24-45f9-bb0d-3685877a3645"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4357, 120, 323, 7, 28, "Input",ExpressionUUID->"ea0a998d-f0d4-4c81-9747-c4550f0a0504"],
+Cell[4683, 129, 257, 6, 32, "Output",ExpressionUUID->"3d1fb6f3-c1d2-4681-b261-486be9c186b3"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4977, 140, 222, 3, 28, "Input",ExpressionUUID->"b50c2cae-d5d9-40f4-a91b-2595df5b0da9"],
+Cell[5202, 145, 169, 2, 32, "Output",ExpressionUUID->"f2387f5d-2764-4aa7-801a-dcd1ade38aab"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5408, 152, 220, 3, 28, "Input",ExpressionUUID->"1af0ac2b-9324-49bd-8449-414d5ddc47b2"],
+Cell[5631, 157, 167, 2, 32, "Output",ExpressionUUID->"2d328f15-20b0-4a72-95f5-acf75ead4648"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5835, 164, 644, 9, 200, "Input",ExpressionUUID->"fa626162-e5d3-4a8d-80e2-50a2cea18d46"],
+Cell[6482, 175, 1333, 17, 432, "Output",ExpressionUUID->"f908b4b0-3ab5-4297-81fd-be6512870837"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
