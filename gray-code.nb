@@ -1,0 +1,102 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3042,         94]
+NotebookOptionsPosition[      2376,         75]
+NotebookOutlinePosition[      2783,         91]
+CellTagsIndexPosition[      2740,         88]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[ButtonBox["Gray Code",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://challenges.wolframcloud.com/challenge/gray-code"], None},
+ ButtonNote->
+  "https://challenges.wolframcloud.com/challenge/gray-code"]], "Title",
+ CellChangeTimes->{{3.893250048766225*^9, 
+  3.893250067130124*^9}},ExpressionUUID->"e9a64c19-d073-4f8a-97cf-\
+b3fb7fd3feff"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"GrayCode", "[", 
+   RowBox[{"n_Integer", "?", "NonNegative"}], "]"}], ":=", 
+  RowBox[{"StringJoin", "[", 
+   RowBox[{"ToString", "/@", 
+    RowBox[{"IntegerDigits", "[", 
+     RowBox[{
+      RowBox[{"BitXor", "[", 
+       RowBox[{"n", ",", 
+        RowBox[{"BitShiftRight", "[", 
+         RowBox[{"n", ",", "1"}], "]"}]}], "]"}], ",", "2"}], "]"}]}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.8932499223010693`*^9, 3.8932499223020377`*^9}},
+ CellLabel->"In[42]:=",ExpressionUUID->"34acd943-0e8b-4429-ad96-4a329b2055d6"],
+
+Cell[TextData[ButtonBox["Solution",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://www.wolframcloud.com/obj/500f81ba-b1f0-4d47-a304-\
+aa03ed8183bd"], None},
+ ButtonNote->
+  "https://www.wolframcloud.com/obj/500f81ba-b1f0-4d47-a304-aa03ed8183bd"]], \
+"Text",
+ CellChangeTimes->{{3.893250009805606*^9, 
+  3.8932500129507766`*^9}},ExpressionUUID->"a1ab68af-285b-41d3-80c2-\
+8baa94455f66"],
+
+Cell[TextData[{
+ "The code is based on the ",
+ ButtonBox["ResourceFunction GrayCode",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+GrayCode"], None},
+  ButtonNote->
+   "https://resources.wolframcloud.com/FunctionRepository/resources/GrayCode"]
+}], "Text",
+ CellChangeTimes->{{3.8932500171105633`*^9, 
+  3.8932500427841687`*^9}},ExpressionUUID->"3a410a9e-e0d4-4408-941c-\
+45f1f253fbb7"]
+}, Open  ]]
+},
+WindowSize->{569.25, 610.5},
+WindowMargins->{{Automatic, 114}, {44.25, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"80944d0d-ec7e-4c60-acca-3cc103f4549c"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 362, 8, 98, "Title",ExpressionUUID->"e9a64c19-d073-4f8a-97cf-b3fb7fd3feff"],
+Cell[945, 32, 558, 14, 67, "Input",ExpressionUUID->"34acd943-0e8b-4429-ad96-4a329b2055d6"],
+Cell[1506, 48, 394, 10, 35, "Text",ExpressionUUID->"a1ab68af-285b-41d3-80c2-8baa94455f66"],
+Cell[1903, 60, 457, 12, 35, "Text",ExpressionUUID->"3a410a9e-e0d4-4408-941c-45f1f253fbb7"]
+}, Open  ]]
+}
+]
+*)
+

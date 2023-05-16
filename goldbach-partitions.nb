@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      2237,         75]
-NotebookOptionsPosition[      1724,         57]
-NotebookOutlinePosition[      2133,         73]
-CellTagsIndexPosition[      2090,         70]
+NotebookDataLength[      2725,         88]
+NotebookOptionsPosition[      2121,         69]
+NotebookOutlinePosition[      2530,         85]
+CellTagsIndexPosition[      2487,         82]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -52,7 +52,19 @@ Cell[BoxData[
  CellChangeTimes->{{3.8932470741290555`*^9, 3.8932470741300554`*^9}, {
   3.893247201609577*^9, 3.893247202609043*^9}},
  CellLabel->
-  "In[151]:=",ExpressionUUID->"7f26153a-80f3-43b5-b970-314d29c756c4"]
+  "In[151]:=",ExpressionUUID->"7f26153a-80f3-43b5-b970-314d29c756c4"],
+
+Cell[TextData[ButtonBox["Solution",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://www.wolframcloud.com/obj/2fc703dd-355c-4b10-8f83-\
+401c1e72b6e9"], None},
+ ButtonNote->
+  "https://www.wolframcloud.com/obj/2fc703dd-355c-4b10-8f83-401c1e72b6e9"]], \
+"Text",
+ CellChangeTimes->{{3.893247301960628*^9, 
+  3.8932473122280474`*^9}},ExpressionUUID->"8870f450-0137-45be-9f89-\
+84c0373b2be8"]
 }, Open  ]]
 },
 WindowSize->{569.25, 609.75},
@@ -74,8 +86,9 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 406, 10, 98, "Title",ExpressionUUID->"b29518a6-71cf-4808-b0b9-93c6a055cf75"],
-Cell[989, 34, 719, 20, 113, "Input",ExpressionUUID->"7f26153a-80f3-43b5-b970-314d29c756c4",
- InitializationCell->True]
+Cell[989, 34, 719, 20, 83, "Input",ExpressionUUID->"7f26153a-80f3-43b5-b970-314d29c756c4",
+ InitializationCell->True],
+Cell[1711, 56, 394, 10, 35, "Text",ExpressionUUID->"8870f450-0137-45be-9f89-84c0373b2be8"]
 }, Open  ]]
 }
 ]
