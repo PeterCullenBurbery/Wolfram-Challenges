@@ -1,0 +1,216 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8205,        208]
+NotebookOptionsPosition[      6530,        170]
+NotebookOutlinePosition[      6940,        186]
+CellTagsIndexPosition[      6897,        183]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[ButtonBox["Fizz Buzz",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://challenges.wolframcloud.com/challenge/fizz-buzz"], None},
+ ButtonNote->
+  "https://challenges.wolframcloud.com/challenge/fizz-buzz"]], "Title",
+ CellChangeTimes->{{3.893240461258255*^9, 
+  3.8932404728688607`*^9}},ExpressionUUID->"68a92588-d9c1-4de0-a6a1-\
+9847b6e3b3ed"],
+
+Cell[TextData[ButtonBox["My notebook",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://www.wolframcloud.com/obj/burbery1/Published/FizzBuzz.nb"], 
+   None},
+ ButtonNote->
+  "https://www.wolframcloud.com/obj/burbery1/Published/FizzBuzz.nb"]], "Text",
+ CellChangeTimes->{{3.8932404972811394`*^9, 
+  3.893240501510769*^9}},ExpressionUUID->"3a953b40-75e9-4d35-a281-\
+07c7ac87edc8"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"FizzBuzz", "[", "n_Integer", "]"}], "/;", 
+   RowBox[{"n", ">", "0"}]}], ":=", 
+  RowBox[{
+   RowBox[{"Range", "@", "n"}], "/.", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"p_", "/;", 
+       RowBox[{"15", "\[Divides]", "p"}]}], "->", "\"\<fizzbuzz\>\""}], ",", 
+     RowBox[{
+      RowBox[{"p_", "/;", 
+       RowBox[{"3", "\[Divides]", "p"}]}], "->", "\"\<fizz\>\""}], ",", 
+     RowBox[{
+      RowBox[{"p_", "/;", 
+       RowBox[{"5", "\[Divides]", "p"}]}], "->", "\"\<buzz\>\""}]}], 
+    "}"}]}]}]], "Input",
+ CellChangeTimes->{{3.8932405075191355`*^9, 3.893240507520144*^9}},
+ CellLabel->"In[31]:=",ExpressionUUID->"93ac0c7e-8390-43f7-b2b8-f7e3651edab6"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FizzBuzz", "[", "20", "]"}]], "Input",
+ CellChangeTimes->{{3.8932405127960515`*^9, 3.8932405152658353`*^9}},
+ CellLabel->"In[32]:=",ExpressionUUID->"afe9b016-7e2a-4bae-a92b-ed2ea8859a5d"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "1", ",", "2", ",", "\<\"fizz\"\>", ",", "4", ",", "\<\"buzz\"\>", 
+   ",", "\<\"fizz\"\>", ",", "7", ",", "8", ",", "\<\"fizz\"\>", 
+   ",", "\<\"buzz\"\>", ",", "11", ",", "\<\"fizz\"\>", ",", "13", ",", "14", 
+   ",", "\<\"fizzbuzz\"\>", ",", "16", ",", "17", ",", "\<\"fizz\"\>", ",", 
+   "19", ",", "\<\"buzz\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{3.8932405155978675`*^9},
+ CellLabel->"Out[32]=",ExpressionUUID->"97964286-ae95-4943-b173-1216908b837d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"FizzBuzz", "[", "10", "]"}], "//", "InputForm"}]], "Input",
+ CellChangeTimes->{{3.8932405170697145`*^9, 3.8932405246256657`*^9}},
+ CellLabel->"In[33]:=",ExpressionUUID->"11d25c58-3c96-4772-842a-ad56f2965f3a"],
+
+Cell["{1, 2, \"fizz\", 4, \"buzz\", \"fizz\", 7, 8, \"fizz\", \"buzz\"}", \
+"Output",
+ CellChangeTimes->{3.8932405249499035`*^9},
+ CellLabel->
+  "Out[33]//InputForm=",ExpressionUUID->"ee1d3831-1382-490b-9068-\
+1f13fd5222d9"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Head", "/@", "%"}]], "Input",
+ CellChangeTimes->{{3.8932405254771743`*^9, 3.8932405271456337`*^9}},
+ CellLabel->"In[34]:=",ExpressionUUID->"cf88d170-fd5a-4d0f-8134-9c97c65011a6"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "Integer", ",", "Integer", ",", "String", ",", "Integer", ",", "String", 
+   ",", "String", ",", "Integer", ",", "Integer", ",", "String", ",", 
+   "String"}], "}"}]], "Output",
+ CellChangeTimes->{3.8932405273184433`*^9},
+ CellLabel->"Out[34]=",ExpressionUUID->"1dd5a99a-aeb6-4986-9303-ceb672631c2a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FizzBuzz", "[", "100", "]"}]], "Input",
+ CellChangeTimes->{{3.8932405316966934`*^9, 3.8932405365297365`*^9}},
+ CellLabel->"In[35]:=",ExpressionUUID->"d5e0d3b3-31db-4329-a0ab-fe9f86ea38bd"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "1", ",", "2", ",", "\<\"fizz\"\>", ",", "4", ",", "\<\"buzz\"\>", 
+   ",", "\<\"fizz\"\>", ",", "7", ",", "8", ",", "\<\"fizz\"\>", 
+   ",", "\<\"buzz\"\>", ",", "11", ",", "\<\"fizz\"\>", ",", "13", ",", "14", 
+   ",", "\<\"fizzbuzz\"\>", ",", "16", ",", "17", ",", "\<\"fizz\"\>", ",", 
+   "19", ",", "\<\"buzz\"\>", ",", "\<\"fizz\"\>", ",", "22", ",", "23", 
+   ",", "\<\"fizz\"\>", ",", "\<\"buzz\"\>", ",", "26", ",", "\<\"fizz\"\>", 
+   ",", "28", ",", "29", ",", "\<\"fizzbuzz\"\>", ",", "31", ",", "32", 
+   ",", "\<\"fizz\"\>", ",", "34", ",", "\<\"buzz\"\>", ",", "\<\"fizz\"\>", 
+   ",", "37", ",", "38", ",", "\<\"fizz\"\>", ",", "\<\"buzz\"\>", ",", "41", 
+   ",", "\<\"fizz\"\>", ",", "43", ",", "44", ",", "\<\"fizzbuzz\"\>", ",", 
+   "46", ",", "47", ",", "\<\"fizz\"\>", ",", "49", ",", "\<\"buzz\"\>", 
+   ",", "\<\"fizz\"\>", ",", "52", ",", "53", ",", "\<\"fizz\"\>", 
+   ",", "\<\"buzz\"\>", ",", "56", ",", "\<\"fizz\"\>", ",", "58", ",", "59", 
+   ",", "\<\"fizzbuzz\"\>", ",", "61", ",", "62", ",", "\<\"fizz\"\>", ",", 
+   "64", ",", "\<\"buzz\"\>", ",", "\<\"fizz\"\>", ",", "67", ",", "68", 
+   ",", "\<\"fizz\"\>", ",", "\<\"buzz\"\>", ",", "71", ",", "\<\"fizz\"\>", 
+   ",", "73", ",", "74", ",", "\<\"fizzbuzz\"\>", ",", "76", ",", "77", 
+   ",", "\<\"fizz\"\>", ",", "79", ",", "\<\"buzz\"\>", ",", "\<\"fizz\"\>", 
+   ",", "82", ",", "83", ",", "\<\"fizz\"\>", ",", "\<\"buzz\"\>", ",", "86", 
+   ",", "\<\"fizz\"\>", ",", "88", ",", "89", ",", "\<\"fizzbuzz\"\>", ",", 
+   "91", ",", "92", ",", "\<\"fizz\"\>", ",", "94", ",", "\<\"buzz\"\>", 
+   ",", "\<\"fizz\"\>", ",", "97", ",", "98", ",", "\<\"fizz\"\>", 
+   ",", "\<\"buzz\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{3.893240536845888*^9},
+ CellLabel->"Out[35]=",ExpressionUUID->"efef1ff4-05f3-4091-83ed-5f209ab8f531"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Count", "[", 
+  RowBox[{
+   RowBox[{"FizzBuzz", "[", "1000", "]"}], ",", "\"\<buzz\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.8932405378778553`*^9, 3.8932405511080017`*^9}},
+ CellLabel->"In[37]:=",ExpressionUUID->"f187b2e9-5429-490d-b5be-5a2bcb988e4b"],
+
+Cell[BoxData["134"], "Output",
+ CellChangeTimes->{{3.893240546696117*^9, 3.8932405515192733`*^9}},
+ CellLabel->"Out[37]=",ExpressionUUID->"b40a36d4-730c-4c6a-bb80-811de5d9ff83"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{569.25, 609.75},
+WindowMargins->{{Automatic, 51.75}, {42.75, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"3ced670c-5953-4964-912d-23db3106bbbe"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 364, 8, 98, "Title",ExpressionUUID->"68a92588-d9c1-4de0-a6a1-9847b6e3b3ed"],
+Cell[947, 32, 385, 9, 35, "Text",ExpressionUUID->"3a953b40-75e9-4d35-a281-07c7ac87edc8"],
+Cell[1335, 43, 727, 20, 83, "Input",ExpressionUUID->"93ac0c7e-8390-43f7-b2b8-f7e3651edab6"],
+Cell[CellGroupData[{
+Cell[2087, 67, 211, 3, 28, "Input",ExpressionUUID->"afe9b016-7e2a-4bae-a92b-ed2ea8859a5d"],
+Cell[2301, 72, 504, 9, 52, "Output",ExpressionUUID->"97964286-ae95-4943-b173-1216908b837d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2842, 86, 243, 4, 28, "Input",ExpressionUUID->"11d25c58-3c96-4772-842a-ad56f2965f3a"],
+Cell[3088, 92, 224, 5, 47, "Output",ExpressionUUID->"ee1d3831-1382-490b-9068-1f13fd5222d9"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3349, 102, 202, 3, 28, "Input",ExpressionUUID->"cf88d170-fd5a-4d0f-8134-9c97c65011a6"],
+Cell[3554, 107, 342, 7, 52, "Output",ExpressionUUID->"1dd5a99a-aeb6-4986-9303-ceb672631c2a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3933, 119, 212, 3, 28, "Input",ExpressionUUID->"d5e0d3b3-31db-4329-a0ab-fe9f86ea38bd"],
+Cell[4148, 124, 1854, 27, 185, "Output",ExpressionUUID->"efef1ff4-05f3-4091-83ed-5f209ab8f531"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6039, 156, 283, 6, 28, "Input",ExpressionUUID->"f187b2e9-5429-490d-b5be-5a2bcb988e4b"],
+Cell[6325, 164, 177, 2, 32, "Output",ExpressionUUID->"b40a36d4-730c-4c6a-bb80-811de5d9ff83"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
