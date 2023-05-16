@@ -1,0 +1,102 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2826,         94]
+NotebookOptionsPosition[      2253,         76]
+NotebookOutlinePosition[      2659,         92]
+CellTagsIndexPosition[      2616,         89]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[ButtonBox["Water in a Barrel",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://challenges.wolframcloud.com/challenge/water-in-a-barrel"], 
+   None},
+ ButtonNote->
+  "https://challenges.wolframcloud.com/challenge/water-in-a-barrel"]], "Title",
+ CellChangeTimes->{{3.893246345867261*^9, 
+  3.893246353353002*^9}},ExpressionUUID->"a02be8dc-17cf-436e-b73e-\
+e6b41c08490d"],
+
+Cell[TextData[ButtonBox["Solution",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://www.wolframcloud.com/obj/d73cf808-f14c-4959-b98a-\
+48a253ab7b80"], None},
+ ButtonNote->
+  "https://www.wolframcloud.com/obj/d73cf808-f14c-4959-b98a-48a253ab7b80"]], \
+"Text",
+ CellChangeTimes->{{3.8932464742650094`*^9, 
+  3.8932464776024556`*^9}},ExpressionUUID->"8d35e448-1a40-449a-a32a-\
+ae16ee5e8340"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"WaterInBarrel", "[", 
+    RowBox[{"R_", ",", "L_", ",", "h_"}], "]"}], "/;", 
+   RowBox[{
+    RowBox[{"0", "<=", "h", "<=", 
+     RowBox[{"2", "R"}]}], "&&", 
+    RowBox[{"L", ">=", "0"}]}]}], ":=", 
+  RowBox[{"L", "*", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["R", "2"], 
+      RowBox[{"ArcCos", "[", 
+       RowBox[{"1", "-", 
+        FractionBox["h", "R"]}], "]"}]}], "-", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"R", "-", "h"}], ")"}], 
+      SqrtBox[
+       RowBox[{
+        SuperscriptBox["R", "2"], "-", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"R", "-", "h"}], ")"}], "2"]}]]}]}], ")"}]}]}]], "Input",
+ CellChangeTimes->{{3.893246367280984*^9, 3.893246418737506*^9}},
+ CellLabel->
+  "In[123]:=",ExpressionUUID->"b086513f-8ede-447b-b7f1-a5feab7483a1"]
+}, Open  ]]
+},
+WindowSize->{569.25, 609.75},
+WindowMargins->{{Automatic, 67.5}, {18, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"663ce588-8022-40c8-9bd7-2416ce5e8fc4"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 390, 9, 98, "Title",ExpressionUUID->"a02be8dc-17cf-436e-b73e-e6b41c08490d"],
+Cell[973, 33, 396, 10, 35, "Text",ExpressionUUID->"8d35e448-1a40-449a-a32a-ae16ee5e8340"],
+Cell[1372, 45, 865, 28, 65, "Input",ExpressionUUID->"b086513f-8ede-447b-b7f1-a5feab7483a1"]
+}, Open  ]]
+}
+]
+*)
+
