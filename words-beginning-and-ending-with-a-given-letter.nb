@@ -1,0 +1,169 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5821,        159]
+NotebookOptionsPosition[      4367,        125]
+NotebookOutlinePosition[      4776,        141]
+CellTagsIndexPosition[      4733,        138]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[ButtonBox["Words Beginning and Ending with a Given Letter",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://challenges.wolframcloud.com/challenge/words-beginning-and-\
+ending-with-a-given-letter"], None},
+ ButtonNote->
+  "https://challenges.wolframcloud.com/challenge/words-beginning-and-ending-\
+with-a-given-letter"]], "Title",
+ CellChangeTimes->{{3.8932407582610693`*^9, 
+  3.8932407645652547`*^9}},ExpressionUUID->"03a31886-62a0-468f-8b0c-\
+12b7cfef7fc4"],
+
+Cell[TextData[ButtonBox["My cloud notebook",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://www.wolframcloud.com/obj/burbery1/Published/\
+WordsBeginningAndEndingWithAGivenLetter.nb"], None},
+ ButtonNote->
+  "https://www.wolframcloud.com/obj/burbery1/Published/\
+WordsBeginningAndEndingWithAGivenLetter.nb"]], "Text",
+ CellChangeTimes->{{3.893240824089675*^9, 
+  3.8932408301244555`*^9}},ExpressionUUID->"122e3983-71f4-4bc7-917e-\
+db47dc7760c4"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SameStartEndWords", "[", "char_String", "]"}], ":=", 
+  RowBox[{
+   RowBox[{"Cases", "[", 
+    RowBox[{"p_", "/;", 
+     RowBox[{"StringMatchQ", "[", 
+      RowBox[{"p", ",", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"char", "~~", "___", "~~", "char"}], ")"}], "|", "char"}]}], 
+      "]"}]}], "]"}], "[", 
+   RowBox[{"WordList", "[", "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.8932407851246357`*^9, 3.8932407851246357`*^9}},
+ CellLabel->"In[50]:=",ExpressionUUID->"294c665c-6d4a-46ed-9afe-7982adb23721"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SameStartEndWords", "[", "\"\<b\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.893240788710295*^9, 3.893240788711295*^9}},
+ CellLabel->"In[51]:=",ExpressionUUID->"8643d9c1-1e78-4040-8305-f5fda2ecc7af"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"baobab\"\>", ",", "\<\"barb\"\>", ",", "\<\"bathtub\"\>", 
+   ",", "\<\"benumb\"\>", ",", "\<\"bib\"\>", ",", "\<\"blab\"\>", 
+   ",", "\<\"blob\"\>", ",", "\<\"blurb\"\>", ",", "\<\"bob\"\>", 
+   ",", "\<\"bomb\"\>", ",", "\<\"breadcrumb\"\>", ",", "\<\"brewpub\"\>", 
+   ",", "\<\"bulb\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{3.893240802845194*^9},
+ CellLabel->"Out[51]=",ExpressionUUID->"05b516f9-60ce-48cd-8498-6fc8e8dbecde"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SameStartEndWords", "[", "\"\<y\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.8932407943011856`*^9, 3.8932407943021865`*^9}},
+ CellLabel->"In[52]:=",ExpressionUUID->"4f1e00b0-e7cf-4946-b912-c09a9562ca80"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"yearly\"\>", ",", "\<\"yearningly\"\>", ",", "\<\"yeasty\"\>", 
+   ",", "\<\"yeomanry\"\>", ",", "\<\"yesterday\"\>", 
+   ",", "\<\"youthfully\"\>", ",", "\<\"yucky\"\>", ",", "\<\"yummy\"\>"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.8932408029561944`*^9},
+ CellLabel->"Out[52]=",ExpressionUUID->"950d1faa-35e6-4e8b-b51a-5b50da81ec17"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SameStartEndWords", "[", "\"\<e\>\"", "]"}], "//", 
+  "Length"}]], "Input",
+ CellChangeTimes->{{3.8932407976464386`*^9, 3.8932407976464386`*^9}},
+ CellLabel->"In[53]:=",ExpressionUUID->"daeab067-9e3d-41e8-8777-9f7d66cc53b3"],
+
+Cell[BoxData["339"], "Output",
+ CellChangeTimes->{3.893240803049198*^9},
+ CellLabel->"Out[53]=",ExpressionUUID->"11db9427-9b69-4fa9-89a4-eb4326867df3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SameStartEndWords", "[", "\"\<q\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.893240801197507*^9, 3.8932408011984787`*^9}},
+ CellLabel->"In[54]:=",ExpressionUUID->"8a3b264f-c7d1-4664-8763-8ce3a0f27e85"],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ CellChangeTimes->{3.8932408031401963`*^9},
+ CellLabel->"Out[54]=",ExpressionUUID->"75493ab4-5ace-411b-8cf1-b5aad2fd49c6"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{569.25, 609.75},
+WindowMargins->{{Automatic, 6.75}, {26.25, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"0fa46454-3fe3-4111-ad2c-687e42d6835f"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 481, 10, 160, "Title",ExpressionUUID->"03a31886-62a0-468f-8b0c-12b7cfef7fc4"],
+Cell[1064, 34, 453, 10, 35, "Text",ExpressionUUID->"122e3983-71f4-4bc7-917e-db47dc7760c4"],
+Cell[1520, 46, 558, 14, 68, "Input",ExpressionUUID->"294c665c-6d4a-46ed-9afe-7982adb23721"],
+Cell[CellGroupData[{
+Cell[2103, 64, 223, 3, 28, "Input",ExpressionUUID->"8643d9c1-1e78-4040-8305-f5fda2ecc7af"],
+Cell[2329, 69, 478, 8, 52, "Output",ExpressionUUID->"05b516f9-60ce-48cd-8498-6fc8e8dbecde"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2844, 82, 227, 3, 28, "Input",ExpressionUUID->"4f1e00b0-e7cf-4946-b912-c09a9562ca80"],
+Cell[3074, 87, 382, 7, 52, "Output",ExpressionUUID->"950d1faa-35e6-4e8b-b51a-5b50da81ec17"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3493, 99, 259, 5, 28, "Input",ExpressionUUID->"daeab067-9e3d-41e8-8777-9f7d66cc53b3"],
+Cell[3755, 106, 151, 2, 32, "Output",ExpressionUUID->"11db9427-9b69-4fa9-89a4-eb4326867df3"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3943, 113, 225, 3, 28, "Input",ExpressionUUID->"8a3b264f-c7d1-4664-8763-8ce3a0f27e85"],
+Cell[4171, 118, 168, 3, 32, "Output",ExpressionUUID->"75493ab4-5ace-411b-8cf1-b5aad2fd49c6"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
