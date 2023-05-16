@@ -1,0 +1,970 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     38887,        962]
+NotebookOptionsPosition[     36953,        920]
+NotebookOutlinePosition[     37354,        936]
+CellTagsIndexPosition[     37311,        933]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[ButtonBox["Babbage Squares",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://challenges.wolframcloud.com/challenge/babbage-squares"], None},
+ ButtonNote->
+  "https://challenges.wolframcloud.com/challenge/babbage-squares"]], "Title",
+ CellChangeTimes->{{3.893253325769621*^9, 
+  3.893253337248285*^9}},ExpressionUUID->"21e00a73-18ed-4ee7-8f98-\
+715858488ff6"],
+
+Cell["\<\
+There\[CloseCurlyQuote]s a helpful post on this at \
+https://community.wolfram.com/groups/-/m/t/755144 and a demonstration at \
+https://demonstrations.wolfram.com/WordSquares/.\
+\>", "Text",
+ CellChangeTimes->{{3.8932536760070753`*^9, 
+  3.893253695114208*^9}},ExpressionUUID->"332b887b-3fb8-45eb-8f10-\
+5df0a2b35361"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"wordsquare", "[", "s_String", "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"n", "=", 
+       RowBox[{"StringLength", "[", "s", "]"}]}], ",", 
+      RowBox[{"c", "=", 
+       RowBox[{"{", 
+        RowBox[{"{", 
+         RowBox[{"Characters", "[", "s", "]"}], "}"}], "}"}]}], ",", "w", ",", 
+      RowBox[{"m", "=", "1"}]}], "}"}], ",", 
+    RowBox[{
+     RowBox[{"w", "=", 
+      RowBox[{"Characters", "/@", 
+       RowBox[{"Select", "[", 
+        RowBox[{
+         RowBox[{"WordList", "[", "]"}], ",", 
+         RowBox[{
+          RowBox[{"StringMatchQ", "[", 
+           RowBox[{"#", ",", 
+            RowBox[{"Repeated", "[", 
+             RowBox[{"_", ",", 
+              RowBox[{"{", "n", "}"}]}], "]"}]}], "]"}], "&"}]}], "]"}]}]}], 
+     ";", "\[IndentingNewLine]", 
+     RowBox[{"NestWhile", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"computewords", "[", 
+         RowBox[{"w", ",", "n", ",", 
+          RowBox[{"m", "++"}], ",", "#"}], "]"}], "&"}], ",", "c", ",", 
+       RowBox[{
+        RowBox[{"m", "<", "n"}], "&"}]}], "]"}]}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"computewords", "[", 
+   RowBox[{"w_", ",", "n_Integer", ",", "m_Integer", ",", "c_List"}], "]"}], ":=", 
+  RowBox[{"Flatten", "[", 
+   RowBox[{
+    RowBox[{"DeleteCases", "[", 
+     RowBox[{
+      RowBox[{"Map", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Cases", "[", 
+          RowBox[{"w", ",", 
+           RowBox[{
+            RowBox[{"p", ":", 
+             RowBox[{"Append", "[", 
+              RowBox[{
+               RowBox[{"#", "[", 
+                RowBox[{"[", 
+                 RowBox[{"All", ",", 
+                  RowBox[{"m", "+", "1"}]}], "]"}], "]"}], ",", 
+               RowBox[{"Repeated", "[", 
+                RowBox[{"_", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"n", "-", "m"}], "}"}]}], "]"}]}], "]"}]}], ":>", 
+            RowBox[{"Append", "[", 
+             RowBox[{"#", ",", "p"}], "]"}]}]}], "]"}], "&"}], ",", "c"}], 
+       "]"}], ",", 
+      RowBox[{"{", "}"}]}], "]"}], ",", "1"}], "]"}]}]}], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.8932532402641106`*^9, 3.893253256153204*^9}},
+ CellLabel->
+  "In[132]:=",ExpressionUUID->"0f2379f2-6a7b-4f2a-a20f-f16a693a3f70"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Grid", "/@", 
+  RowBox[{"wordsquare", "[", "\"\<hair\>\"", "]"}]}]], "Input",
+ CellChangeTimes->{{3.8932532728072042`*^9, 3.8932532819351687`*^9}},
+ CellLabel->
+  "In[135]:=",ExpressionUUID->"e22e7354-5e03-4069-b19d-c74deec76494"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"b\"\>", "\<\"b\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"b\"\>", "\<\"i\"\>", "\<\"s\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"s\"\>", "\<\"t\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"c\"\>", "\<\"r\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"r\"\>", "\<\"i\"\>", "\<\"s\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"s\"\>", "\<\"t\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"c\"\>", "\<\"r\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"r\"\>", "\<\"o\"\>", "\<\"n\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"n\"\>", "\<\"d\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"c\"\>", "\<\"r\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"r\"\>", "\<\"o\"\>", "\<\"n\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"n\"\>", "\<\"t\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"i\"\>", "\<\"d\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"d\"\>", "\<\"e\"\>", "\<\"a\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"a\"\>", "\<\"d\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"i\"\>", "\<\"d\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"d\"\>", "\<\"e\"\>", "\<\"a\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"a\"\>", "\<\"l\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"i\"\>", "\<\"d\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"d\"\>", "\<\"e\"\>", "\<\"a\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"a\"\>", "\<\"m\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"i\"\>", "\<\"d\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"d\"\>", "\<\"e\"\>", "\<\"a\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"a\"\>", "\<\"p\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"i\"\>", "\<\"d\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"d\"\>", "\<\"e\"\>", "\<\"a\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"a\"\>", "\<\"r\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"i\"\>", "\<\"d\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"d\"\>", "\<\"e\"\>", "\<\"s\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"s\"\>", "\<\"t\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"i\"\>", "\<\"d\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"d\"\>", "\<\"l\"\>", "\<\"e\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"e\"\>", "\<\"d\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"i\"\>", "\<\"d\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"d\"\>", "\<\"l\"\>", "\<\"e\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"e\"\>", "\<\"f\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"i\"\>", "\<\"d\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"d\"\>", "\<\"l\"\>", "\<\"e\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"e\"\>", "\<\"k\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"i\"\>", "\<\"d\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"d\"\>", "\<\"l\"\>", "\<\"e\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"e\"\>", "\<\"l\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"i\"\>", "\<\"d\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"d\"\>", "\<\"o\"\>", "\<\"l\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"l\"\>", "\<\"y\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"l\"\>", "\<\"o\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"o\"\>", "\<\"t\"\>", "\<\"a\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"a\"\>", "\<\"d\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"l\"\>", "\<\"o\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"o\"\>", "\<\"t\"\>", "\<\"a\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"a\"\>", "\<\"l\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"l\"\>", "\<\"o\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"o\"\>", "\<\"t\"\>", "\<\"a\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"a\"\>", "\<\"m\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"l\"\>", "\<\"o\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"o\"\>", "\<\"t\"\>", "\<\"a\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"a\"\>", "\<\"p\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"l\"\>", "\<\"o\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"o\"\>", "\<\"t\"\>", "\<\"a\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"a\"\>", "\<\"r\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"l\"\>", "\<\"t\"\>", "\<\"o\"\>"},
+      {"\<\"i\"\>", "\<\"t\"\>", "\<\"e\"\>", "\<\"m\"\>"},
+      {"\<\"r\"\>", "\<\"o\"\>", "\<\"m\"\>", "\<\"p\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"m\"\>", "\<\"m\"\>", "\<\"o\"\>"},
+      {"\<\"i\"\>", "\<\"m\"\>", "\<\"a\"\>", "\<\"m\"\>"},
+      {"\<\"r\"\>", "\<\"o\"\>", "\<\"m\"\>", "\<\"p\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"n\"\>", "\<\"t\"\>", "\<\"i\"\>"},
+      {"\<\"i\"\>", "\<\"t\"\>", "\<\"e\"\>", "\<\"m\"\>"},
+      {"\<\"r\"\>", "\<\"i\"\>", "\<\"m\"\>", "\<\"e\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"p\"\>", "\<\"s\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"s\"\>", "\<\"l\"\>", "\<\"e\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"e\"\>", "\<\"d\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"p\"\>", "\<\"s\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"s\"\>", "\<\"l\"\>", "\<\"e\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"e\"\>", "\<\"f\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"p\"\>", "\<\"s\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"s\"\>", "\<\"l\"\>", "\<\"e\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"e\"\>", "\<\"k\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"p\"\>", "\<\"s\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"s\"\>", "\<\"l\"\>", "\<\"e\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"e\"\>", "\<\"l\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"u\"\>", "\<\"r\"\>", "\<\"a\"\>"},
+      {"\<\"i\"\>", "\<\"r\"\>", "\<\"i\"\>", "\<\"s\"\>"},
+      {"\<\"r\"\>", "\<\"a\"\>", "\<\"s\"\>", "\<\"h\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"u\"\>", "\<\"r\"\>", "\<\"a\"\>"},
+      {"\<\"i\"\>", "\<\"r\"\>", "\<\"i\"\>", "\<\"s\"\>"},
+      {"\<\"r\"\>", "\<\"a\"\>", "\<\"s\"\>", "\<\"p\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"u\"\>", "\<\"r\"\>", "\<\"a\"\>"},
+      {"\<\"i\"\>", "\<\"r\"\>", "\<\"o\"\>", "\<\"n\"\>"},
+      {"\<\"r\"\>", "\<\"a\"\>", "\<\"n\"\>", "\<\"d\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"u\"\>", "\<\"r\"\>", "\<\"a\"\>"},
+      {"\<\"i\"\>", "\<\"r\"\>", "\<\"o\"\>", "\<\"n\"\>"},
+      {"\<\"r\"\>", "\<\"a\"\>", "\<\"n\"\>", "\<\"k\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"u\"\>", "\<\"r\"\>", "\<\"a\"\>"},
+      {"\<\"i\"\>", "\<\"r\"\>", "\<\"o\"\>", "\<\"n\"\>"},
+      {"\<\"r\"\>", "\<\"a\"\>", "\<\"n\"\>", "\<\"t\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"u\"\>", "\<\"t\"\>", "\<\"o\"\>"},
+      {"\<\"i\"\>", "\<\"t\"\>", "\<\"e\"\>", "\<\"m\"\>"},
+      {"\<\"r\"\>", "\<\"o\"\>", "\<\"m\"\>", "\<\"p\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"]}], "}"}]], "Output",
+ CellChangeTimes->{{3.8932532757943726`*^9, 3.8932532822088614`*^9}},
+ CellLabel->
+  "Out[135]=",ExpressionUUID->"bc5252d8-d496-4f8e-8d66-7fb48027cc4b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"First", "[", 
+   RowBox[{"Grid", "/@", 
+    RowBox[{"wordsquare", "[", "\"\<hair\>\"", "]"}]}], "]"}], "//", 
+  "InputForm"}]], "Input",
+ CellChangeTimes->{{3.893253292789687*^9, 3.89325329822412*^9}},
+ CellLabel->
+  "In[136]:=",ExpressionUUID->"40b22860-d69e-4568-aaba-5fcec148a378"],
+
+Cell["\<\
+Grid[{{\"h\", \"a\", \"i\", \"r\"}, {\"a\", \"b\", \"b\", \"e\"}, {\"i\", \"b\
+\", \"i\", \"s\"}, 
+  {\"r\", \"e\", \"s\", \"t\"}}]\
+\>", "Output",
+ CellChangeTimes->{3.8932532985938635`*^9},
+ CellLabel->
+  "Out[136]//InputForm=",ExpressionUUID->"ff02be2b-a213-494f-9c13-\
+abc4a4b4baf0"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"BabbageSquares", "[", 
+   RowBox[{"word_String", "/;", 
+    RowBox[{
+     RowBox[{"StringLength", "[", "word", "]"}], "\[Equal]", "4"}]}], "]"}], ":=", 
+  RowBox[{"Grid", "/@", 
+   RowBox[{"wordsquare", "[", "word", "]"}]}]}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.893253309400732*^9, 3.893253318449501*^9}},
+ CellLabel->
+  "In[137]:=",ExpressionUUID->"28446178-4878-4021-9f6d-a16bdf43bc25"],
+
+Cell[TextData[{
+ "For some reason my solution is not accepted. See ",
+ ButtonBox["this link",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://challenges.wolframcloud.com/challenge/balanced-ternary"], 
+    None},
+  ButtonNote->
+   "https://challenges.wolframcloud.com/challenge/balanced-ternary"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.8932534675805044`*^9, 
+  3.8932535055765038`*^9}},ExpressionUUID->"e2fe1a85-a852-4f44-934a-\
+c09f4f9b3898"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"BabbageSquares", "[", "\"\<hair\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.893253511813391*^9, 3.8932535154573503`*^9}},
+ CellLabel->
+  "In[138]:=",ExpressionUUID->"fc787a2e-0b84-4757-a9b4-f5ff5fb16fa7"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"b\"\>", "\<\"b\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"b\"\>", "\<\"i\"\>", "\<\"s\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"s\"\>", "\<\"t\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"c\"\>", "\<\"r\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"r\"\>", "\<\"i\"\>", "\<\"s\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"s\"\>", "\<\"t\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"c\"\>", "\<\"r\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"r\"\>", "\<\"o\"\>", "\<\"n\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"n\"\>", "\<\"d\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"c\"\>", "\<\"r\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"r\"\>", "\<\"o\"\>", "\<\"n\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"n\"\>", "\<\"t\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"i\"\>", "\<\"d\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"d\"\>", "\<\"e\"\>", "\<\"a\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"a\"\>", "\<\"d\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"i\"\>", "\<\"d\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"d\"\>", "\<\"e\"\>", "\<\"a\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"a\"\>", "\<\"l\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"i\"\>", "\<\"d\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"d\"\>", "\<\"e\"\>", "\<\"a\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"a\"\>", "\<\"m\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"i\"\>", "\<\"d\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"d\"\>", "\<\"e\"\>", "\<\"a\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"a\"\>", "\<\"p\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"i\"\>", "\<\"d\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"d\"\>", "\<\"e\"\>", "\<\"a\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"a\"\>", "\<\"r\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"i\"\>", "\<\"d\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"d\"\>", "\<\"e\"\>", "\<\"s\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"s\"\>", "\<\"t\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"i\"\>", "\<\"d\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"d\"\>", "\<\"l\"\>", "\<\"e\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"e\"\>", "\<\"d\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"i\"\>", "\<\"d\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"d\"\>", "\<\"l\"\>", "\<\"e\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"e\"\>", "\<\"f\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"i\"\>", "\<\"d\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"d\"\>", "\<\"l\"\>", "\<\"e\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"e\"\>", "\<\"k\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"i\"\>", "\<\"d\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"d\"\>", "\<\"l\"\>", "\<\"e\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"e\"\>", "\<\"l\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"i\"\>", "\<\"d\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"d\"\>", "\<\"o\"\>", "\<\"l\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"l\"\>", "\<\"y\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"l\"\>", "\<\"o\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"o\"\>", "\<\"t\"\>", "\<\"a\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"a\"\>", "\<\"d\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"l\"\>", "\<\"o\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"o\"\>", "\<\"t\"\>", "\<\"a\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"a\"\>", "\<\"l\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"l\"\>", "\<\"o\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"o\"\>", "\<\"t\"\>", "\<\"a\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"a\"\>", "\<\"m\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"l\"\>", "\<\"o\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"o\"\>", "\<\"t\"\>", "\<\"a\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"a\"\>", "\<\"p\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"l\"\>", "\<\"o\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"o\"\>", "\<\"t\"\>", "\<\"a\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"a\"\>", "\<\"r\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"l\"\>", "\<\"t\"\>", "\<\"o\"\>"},
+      {"\<\"i\"\>", "\<\"t\"\>", "\<\"e\"\>", "\<\"m\"\>"},
+      {"\<\"r\"\>", "\<\"o\"\>", "\<\"m\"\>", "\<\"p\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"m\"\>", "\<\"m\"\>", "\<\"o\"\>"},
+      {"\<\"i\"\>", "\<\"m\"\>", "\<\"a\"\>", "\<\"m\"\>"},
+      {"\<\"r\"\>", "\<\"o\"\>", "\<\"m\"\>", "\<\"p\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"n\"\>", "\<\"t\"\>", "\<\"i\"\>"},
+      {"\<\"i\"\>", "\<\"t\"\>", "\<\"e\"\>", "\<\"m\"\>"},
+      {"\<\"r\"\>", "\<\"i\"\>", "\<\"m\"\>", "\<\"e\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"p\"\>", "\<\"s\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"s\"\>", "\<\"l\"\>", "\<\"e\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"e\"\>", "\<\"d\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"p\"\>", "\<\"s\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"s\"\>", "\<\"l\"\>", "\<\"e\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"e\"\>", "\<\"f\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"p\"\>", "\<\"s\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"s\"\>", "\<\"l\"\>", "\<\"e\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"e\"\>", "\<\"k\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"p\"\>", "\<\"s\"\>", "\<\"e\"\>"},
+      {"\<\"i\"\>", "\<\"s\"\>", "\<\"l\"\>", "\<\"e\"\>"},
+      {"\<\"r\"\>", "\<\"e\"\>", "\<\"e\"\>", "\<\"l\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"u\"\>", "\<\"r\"\>", "\<\"a\"\>"},
+      {"\<\"i\"\>", "\<\"r\"\>", "\<\"i\"\>", "\<\"s\"\>"},
+      {"\<\"r\"\>", "\<\"a\"\>", "\<\"s\"\>", "\<\"h\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"u\"\>", "\<\"r\"\>", "\<\"a\"\>"},
+      {"\<\"i\"\>", "\<\"r\"\>", "\<\"i\"\>", "\<\"s\"\>"},
+      {"\<\"r\"\>", "\<\"a\"\>", "\<\"s\"\>", "\<\"p\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"u\"\>", "\<\"r\"\>", "\<\"a\"\>"},
+      {"\<\"i\"\>", "\<\"r\"\>", "\<\"o\"\>", "\<\"n\"\>"},
+      {"\<\"r\"\>", "\<\"a\"\>", "\<\"n\"\>", "\<\"d\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"u\"\>", "\<\"r\"\>", "\<\"a\"\>"},
+      {"\<\"i\"\>", "\<\"r\"\>", "\<\"o\"\>", "\<\"n\"\>"},
+      {"\<\"r\"\>", "\<\"a\"\>", "\<\"n\"\>", "\<\"k\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"u\"\>", "\<\"r\"\>", "\<\"a\"\>"},
+      {"\<\"i\"\>", "\<\"r\"\>", "\<\"o\"\>", "\<\"n\"\>"},
+      {"\<\"r\"\>", "\<\"a\"\>", "\<\"n\"\>", "\<\"t\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"h\"\>", "\<\"a\"\>", "\<\"i\"\>", "\<\"r\"\>"},
+      {"\<\"a\"\>", "\<\"u\"\>", "\<\"t\"\>", "\<\"o\"\>"},
+      {"\<\"i\"\>", "\<\"t\"\>", "\<\"e\"\>", "\<\"m\"\>"},
+      {"\<\"r\"\>", "\<\"o\"\>", "\<\"m\"\>", "\<\"p\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"]}], "}"}]], "Output",
+ CellChangeTimes->{3.8932535158510466`*^9},
+ CellLabel->
+  "Out[138]=",ExpressionUUID->"5e215ba6-fa16-4273-a96e-027e5699802d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"BabbageSquares", "[", "\"\<zoos\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.893253511813391*^9, 3.893253540953676*^9}},
+ CellLabel->
+  "In[139]:=",ExpressionUUID->"ca9ed013-f7bf-4f7a-ae9a-b36d7a66d1a0"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TagBox[GridBox[{
+      {"\<\"z\"\>", "\<\"o\"\>", "\<\"o\"\>", "\<\"s\"\>"},
+      {"\<\"o\"\>", "\<\"b\"\>", "\<\"o\"\>", "\<\"e\"\>"},
+      {"\<\"o\"\>", "\<\"o\"\>", "\<\"z\"\>", "\<\"e\"\>"},
+      {"\<\"s\"\>", "\<\"e\"\>", "\<\"e\"\>", "\<\"d\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"z\"\>", "\<\"o\"\>", "\<\"o\"\>", "\<\"s\"\>"},
+      {"\<\"o\"\>", "\<\"b\"\>", "\<\"o\"\>", "\<\"e\"\>"},
+      {"\<\"o\"\>", "\<\"o\"\>", "\<\"z\"\>", "\<\"e\"\>"},
+      {"\<\"s\"\>", "\<\"e\"\>", "\<\"e\"\>", "\<\"k\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"z\"\>", "\<\"o\"\>", "\<\"o\"\>", "\<\"s\"\>"},
+      {"\<\"o\"\>", "\<\"b\"\>", "\<\"o\"\>", "\<\"e\"\>"},
+      {"\<\"o\"\>", "\<\"o\"\>", "\<\"z\"\>", "\<\"e\"\>"},
+      {"\<\"s\"\>", "\<\"e\"\>", "\<\"e\"\>", "\<\"m\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"z\"\>", "\<\"o\"\>", "\<\"o\"\>", "\<\"s\"\>"},
+      {"\<\"o\"\>", "\<\"b\"\>", "\<\"o\"\>", "\<\"e\"\>"},
+      {"\<\"o\"\>", "\<\"o\"\>", "\<\"z\"\>", "\<\"e\"\>"},
+      {"\<\"s\"\>", "\<\"e\"\>", "\<\"e\"\>", "\<\"p\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"z\"\>", "\<\"o\"\>", "\<\"o\"\>", "\<\"s\"\>"},
+      {"\<\"o\"\>", "\<\"b\"\>", "\<\"o\"\>", "\<\"e\"\>"},
+      {"\<\"o\"\>", "\<\"o\"\>", "\<\"z\"\>", "\<\"e\"\>"},
+      {"\<\"s\"\>", "\<\"e\"\>", "\<\"e\"\>", "\<\"r\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"z\"\>", "\<\"o\"\>", "\<\"o\"\>", "\<\"s\"\>"},
+      {"\<\"o\"\>", "\<\"g\"\>", "\<\"r\"\>", "\<\"e\"\>"},
+      {"\<\"o\"\>", "\<\"r\"\>", "\<\"a\"\>", "\<\"l\"\>"},
+      {"\<\"s\"\>", "\<\"e\"\>", "\<\"l\"\>", "\<\"f\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"z\"\>", "\<\"o\"\>", "\<\"o\"\>", "\<\"s\"\>"},
+      {"\<\"o\"\>", "\<\"g\"\>", "\<\"r\"\>", "\<\"e\"\>"},
+      {"\<\"o\"\>", "\<\"r\"\>", "\<\"a\"\>", "\<\"l\"\>"},
+      {"\<\"s\"\>", "\<\"e\"\>", "\<\"l\"\>", "\<\"l\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"z\"\>", "\<\"o\"\>", "\<\"o\"\>", "\<\"s\"\>"},
+      {"\<\"o\"\>", "\<\"i\"\>", "\<\"n\"\>", "\<\"k\"\>"},
+      {"\<\"o\"\>", "\<\"n\"\>", "\<\"c\"\>", "\<\"e\"\>"},
+      {"\<\"s\"\>", "\<\"k\"\>", "\<\"e\"\>", "\<\"w\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"z\"\>", "\<\"o\"\>", "\<\"o\"\>", "\<\"s\"\>"},
+      {"\<\"o\"\>", "\<\"k\"\>", "\<\"r\"\>", "\<\"a\"\>"},
+      {"\<\"o\"\>", "\<\"r\"\>", "\<\"a\"\>", "\<\"l\"\>"},
+      {"\<\"s\"\>", "\<\"a\"\>", "\<\"l\"\>", "\<\"e\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"z\"\>", "\<\"o\"\>", "\<\"o\"\>", "\<\"s\"\>"},
+      {"\<\"o\"\>", "\<\"k\"\>", "\<\"r\"\>", "\<\"a\"\>"},
+      {"\<\"o\"\>", "\<\"r\"\>", "\<\"a\"\>", "\<\"l\"\>"},
+      {"\<\"s\"\>", "\<\"a\"\>", "\<\"l\"\>", "\<\"t\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"\<\"z\"\>", "\<\"o\"\>", "\<\"o\"\>", "\<\"s\"\>"},
+      {"\<\"o\"\>", "\<\"v\"\>", "\<\"u\"\>", "\<\"m\"\>"},
+      {"\<\"o\"\>", "\<\"u\"\>", "\<\"z\"\>", "\<\"o\"\>"},
+      {"\<\"s\"\>", "\<\"m\"\>", "\<\"o\"\>", "\<\"g\"\>"}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"]}], "}"}]], "Output",
+ CellChangeTimes->{3.8932535413017554`*^9},
+ CellLabel->
+  "Out[139]=",ExpressionUUID->"e6b1aac6-f1cc-4e65-8a3c-eaf1c556d0af"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"BabbageSquares", "[", "\"\<dogs\>\"", "]"}], "//", 
+  "Length"}]], "Input",
+ CellChangeTimes->{{3.8932535580970716`*^9, 3.8932535580970716`*^9}},
+ CellLabel->
+  "In[140]:=",ExpressionUUID->"d3fef769-ebdf-4bfe-9b58-83acdf94d0fd"],
+
+Cell[BoxData["157"], "Output",
+ CellChangeTimes->{3.89325355900816*^9},
+ CellLabel->
+  "Out[140]=",ExpressionUUID->"b8d83a91-b6b2-438a-93ef-8d4a0c190b6a"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{718.5, 729.75},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"3095e85c-74e6-4e0b-a718-cc4f8914c50f"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 380, 8, 98, "Title",ExpressionUUID->"21e00a73-18ed-4ee7-8f98-715858488ff6"],
+Cell[963, 32, 328, 7, 58, "Text",ExpressionUUID->"332b887b-3fb8-45eb-8f10-5df0a2b35361"],
+Cell[1294, 41, 2351, 67, 197, "Input",ExpressionUUID->"0f2379f2-6a7b-4f2a-a20f-f16a693a3f70",
+ InitializationCell->True],
+Cell[CellGroupData[{
+Cell[3670, 112, 254, 5, 28, "Input",ExpressionUUID->"e22e7354-5e03-4069-b19d-c74deec76494"],
+Cell[3927, 119, 13010, 302, 321, "Output",ExpressionUUID->"bc5252d8-d496-4f8e-8d66-7fb48027cc4b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16974, 426, 319, 8, 28, "Input",ExpressionUUID->"40b22860-d69e-4568-aaba-5fcec148a378"],
+Cell[17296, 436, 297, 8, 64, "Output",ExpressionUUID->"ff02be2b-a213-494f-9c13-abc4a4b4baf0"]
+}, Open  ]],
+Cell[17608, 447, 447, 11, 44, "Input",ExpressionUUID->"28446178-4878-4021-9f6d-a16bdf43bc25",
+ InitializationCell->True],
+Cell[18058, 460, 454, 13, 35, "Text",ExpressionUUID->"e2fe1a85-a852-4f44-934a-c09f4f9b3898"],
+Cell[CellGroupData[{
+Cell[18537, 477, 229, 4, 28, "Input",ExpressionUUID->"fc787a2e-0b84-4757-a9b4-f5ff5fb16fa7"],
+Cell[18769, 483, 12984, 302, 321, "Output",ExpressionUUID->"5e215ba6-fa16-4273-a96e-027e5699802d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31790, 790, 227, 4, 28, "Input",ExpressionUUID->"ca9ed013-f7bf-4f7a-ae9a-b36d7a66d1a0"],
+Cell[32020, 796, 4448, 104, 162, "Output",ExpressionUUID->"e6b1aac6-f1cc-4e65-8a3c-eaf1c556d0af"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[36505, 905, 263, 6, 28, "Input",ExpressionUUID->"d3fef769-ebdf-4bfe-9b58-83acdf94d0fd"],
+Cell[36771, 913, 154, 3, 32, "Output",ExpressionUUID->"b8d83a91-b6b2-438a-93ef-8d4a0c190b6a"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

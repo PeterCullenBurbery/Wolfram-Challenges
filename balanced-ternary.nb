@@ -10,19 +10,26 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      5417,        154]
-NotebookOptionsPosition[      4271,        125]
-NotebookOutlinePosition[      4682,        141]
-CellTagsIndexPosition[      4639,        138]
+NotebookDataLength[      6848,        193]
+NotebookOptionsPosition[      5486,        161]
+NotebookOutlinePosition[      5897,        177]
+CellTagsIndexPosition[      5854,        174]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
-Cell["Balanced Ternary", "Title",
- CellChangeTimes->{{3.893249815670466*^9, 
-  3.8932498180636606`*^9}},ExpressionUUID->"36189d5e-770b-4f72-bd09-\
+Cell[TextData[ButtonBox["Balanced Ternary",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://challenges.wolframcloud.com/challenge/balanced-ternary"], 
+   None},
+ ButtonNote->
+  "https://challenges.wolframcloud.com/challenge/balanced-ternary"]], "Title",
+ CellChangeTimes->{{3.893249815670466*^9, 3.8932498180636606`*^9}, {
+  3.893253418628691*^9, 
+  3.893253418628691*^9}},ExpressionUUID->"36189d5e-770b-4f72-bd09-\
 fa26502bbd9c"],
 
 Cell[BoxData[
@@ -78,6 +85,7 @@ Cell[BoxData[
             RowBox[{
              RowBox[{"-", "1"}], " ", "->", " ", "\n", "T"}]}], "}"}]}], 
          "]"}]}]}], "]"}]}], "]"}], "]"}]}]], "Input",
+ InitializationCell->True,
  CellChangeTimes->{{3.893249696988982*^9, 3.8932497572147017`*^9}},
  CellLabel->"In[38]:=",ExpressionUUID->"b22158f7-f4e8-4215-958c-5e7cfe5fcd71"],
 
@@ -120,7 +128,35 @@ Cell[BoxData[
 Cell[BoxData["\<\"1100T1\"\>"], "Output",
  CellChangeTimes->{3.893249825566255*^9},
  CellLabel->"Out[41]=",ExpressionUUID->"12051ed9-c5e9-4c22-bd0e-6939ea225c59"]
-}, Open  ]]
+}, Open  ]],
+
+Cell[TextData[ButtonBox["My work in a notebook",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://www.wolframcloud.com/obj/burbery1/Published/BalancedTernary.\
+nb"], None},
+ ButtonNote->
+  "https://www.wolframcloud.com/obj/burbery1/Published/BalancedTernary.nb"]], \
+"Text",
+ CellChangeTimes->{{3.893253608303028*^9, 
+  3.8932536143186936`*^9}},ExpressionUUID->"ddb00ad2-dfc7-4f25-9841-\
+70582e9645d1"],
+
+Cell[TextData[{
+ "The ",
+ ButtonBox["ResourceFunction BalancedTernary",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+BalancedTernary/"], None},
+  ButtonNote->
+   "https://resources.wolframcloud.com/FunctionRepository/resources/\
+BalancedTernary/"],
+ " was how I solved the challenge."
+}], "Text",
+ CellChangeTimes->{{3.893253632032956*^9, 
+  3.8932536592386165`*^9}},ExpressionUUID->"34aac2cf-0f57-4073-981e-\
+a5cd4bfab830"]
 }, Open  ]]
 },
 WindowSize->{569.25, 609.75},
@@ -141,20 +177,23 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 161, 3, 98, "Title",ExpressionUUID->"36189d5e-770b-4f72-bd09-fa26502bbd9c"],
-Cell[744, 27, 2095, 54, 181, "Input",ExpressionUUID->"b22158f7-f4e8-4215-958c-5e7cfe5fcd71"],
+Cell[580, 22, 438, 10, 98, "Title",ExpressionUUID->"36189d5e-770b-4f72-bd09-fa26502bbd9c"],
+Cell[1021, 34, 2122, 55, 235, "Input",ExpressionUUID->"b22158f7-f4e8-4215-958c-5e7cfe5fcd71",
+ InitializationCell->True],
 Cell[CellGroupData[{
-Cell[2864, 85, 296, 5, 28, "Input",ExpressionUUID->"5164882e-22b9-45d6-b077-5f39d891f11c"],
-Cell[3163, 92, 191, 4, 47, "Output",ExpressionUUID->"7e8c8ee8-6297-4d3c-a1eb-65afaa2d7dd8"]
+Cell[3168, 93, 296, 5, 28, "Input",ExpressionUUID->"5164882e-22b9-45d6-b077-5f39d891f11c"],
+Cell[3467, 100, 191, 4, 47, "Output",ExpressionUUID->"7e8c8ee8-6297-4d3c-a1eb-65afaa2d7dd8"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3391, 101, 248, 4, 28, "Input",ExpressionUUID->"b618ed0c-0aa0-477e-8127-607c3f6db046"],
-Cell[3642, 107, 180, 2, 32, "Output",ExpressionUUID->"46212f2e-c42a-4a1c-9d35-e0fe5c6f31df"]
+Cell[3695, 109, 248, 4, 28, "Input",ExpressionUUID->"b618ed0c-0aa0-477e-8127-607c3f6db046"],
+Cell[3946, 115, 180, 2, 32, "Output",ExpressionUUID->"46212f2e-c42a-4a1c-9d35-e0fe5c6f31df"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3859, 114, 219, 3, 28, "Input",ExpressionUUID->"30b8f0b6-f096-4040-a013-16298bd042f8"],
-Cell[4081, 119, 162, 2, 32, "Output",ExpressionUUID->"12051ed9-c5e9-4c22-bd0e-6939ea225c59"]
-}, Open  ]]
+Cell[4163, 122, 219, 3, 28, "Input",ExpressionUUID->"30b8f0b6-f096-4040-a013-16298bd042f8"],
+Cell[4385, 127, 162, 2, 32, "Output",ExpressionUUID->"12051ed9-c5e9-4c22-bd0e-6939ea225c59"]
+}, Open  ]],
+Cell[4562, 132, 409, 10, 35, "Text",ExpressionUUID->"ddb00ad2-dfc7-4f25-9841-70582e9645d1"],
+Cell[4974, 144, 496, 14, 35, "Text",ExpressionUUID->"34aac2cf-0f57-4073-981e-a5cd4bfab830"]
 }, Open  ]]
 }
 ]
