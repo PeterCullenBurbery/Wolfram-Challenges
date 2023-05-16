@@ -10,17 +10,17 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[       829,         34]
+NotebookDataLength[       825,         34]
 NotebookOptionsPosition[       561,         21]
-NotebookOutlinePosition[       969,         37]
-CellTagsIndexPosition[       926,         34]
+NotebookOutlinePosition[       965,         37]
+CellTagsIndexPosition[       922,         34]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 },
 WindowSize->{569.25, 609.75},
-WindowMargins->{{Automatic, 45.75}, {-36, Automatic}},
+WindowMargins->{{Automatic, 48}, {39, Automatic}},
 FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"ad969922-4dfe-41fe-bc9c-d94457bbb674"
@@ -39,6 +39,4 @@ Notebook[{
 }
 ]
 *)
-
-(* End of internal cache information *)
 
