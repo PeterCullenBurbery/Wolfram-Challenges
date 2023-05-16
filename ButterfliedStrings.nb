@@ -1,1 +1,335 @@
-Notebook[{}]
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     14023,        325]
+NotebookOptionsPosition[     12952,        300]
+NotebookOutlinePosition[     13359,        316]
+CellTagsIndexPosition[     13316,        313]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[ButtonBox["Butterflied Strings",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://challenges.wolframcloud.com/challenge/butterflied-strings"], 
+   None},
+ ButtonNote->
+  "https://challenges.wolframcloud.com/challenge/butterflied-strings"]], \
+"Title",
+ CellChangeTimes->{{3.893239752845842*^9, 
+  3.893239758367502*^9}},ExpressionUUID->"dce7c5b0-d5ce-4d0c-a60c-\
+19d54d057aca"],
+
+Cell["This uses a small number of characters.", "Text",
+ CellChangeTimes->{{3.8932397915771666`*^9, 
+  3.8932398002969637`*^9}},ExpressionUUID->"cb952c75-abf2-4275-a16f-\
+881ebbbe03fc"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ButterflyString", "@", "s_String"}], ":=", 
+  RowBox[{"s", "<>", 
+   RowBox[{"StringReverse", "@", "s"}]}]}]], "Input",
+ CellChangeTimes->{{3.893239780817461*^9, 3.8932397818179584`*^9}},
+ CellLabel->"In[12]:=",ExpressionUUID->"8bbbfd00-514d-4d7c-aa23-5c014dd06205"],
+
+Cell["This uses more characters.", "Text",
+ CellChangeTimes->{{3.893239802601304*^9, 
+  3.8932398089684753`*^9}},ExpressionUUID->"22247a8e-1c3c-4cc3-9e07-\
+32a60538a071"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ButterflyString", "[", "str_String", "]"}], ":=", 
+  RowBox[{"StringJoin", "[", 
+   RowBox[{"str", ",", 
+    RowBox[{"StringReverse", "[", "str", "]"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.8932397751204915`*^9, 3.8932397784594703`*^9}},
+ CellLabel->"In[13]:=",ExpressionUUID->"aae3390f-3517-44f7-84b1-6248dcfdc6d9"],
+
+Cell[TextData[{
+ "My ",
+ ButtonBox["cloud notebook",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://www.wolframcloud.com/obj/burbery1/Published/\
+ButterfliedStrings(1).nb"], None},
+  ButtonNote->
+   "https://www.wolframcloud.com/obj/burbery1/Published/ButterfliedStrings(1).\
+nb"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.8932398202469816`*^9, 
+  3.8932398299530144`*^9}},ExpressionUUID->"56d6293b-a183-4a76-8faf-\
+448272173221"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"report", "=", 
+  RowBox[{"TestReport", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"VerificationTest", "[", 
+      RowBox[{
+       RowBox[{"ButterflyString", "[", "\"\<Wolfram\>\"", "]"}], ",", 
+       "\"\<WolframmarfloW\>\""}], "]"}], ",", 
+     RowBox[{"VerificationTest", "[", 
+      RowBox[{
+       RowBox[{"ButterflyString", "[", "\"\<butterfly\>\"", "]"}], ",", 
+       "\"\<butterflyylfrettub\>\""}], "]"}]}], "}"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.8932398368553605`*^9, 3.893239891033825*^9}},
+ CellLabel->"In[16]:=",ExpressionUUID->"5d72e0d7-78b0-457d-bc07-6ef6673fbe23"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["TestReportObject",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxOpener"]], 
+              ButtonFunction :> (Typeset`open$$ = True), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GraphicsBox[{
+              InsetBox[
+               BoxData[
+                FormBox[
+                 PaneBox[
+                  DynamicBox[
+                   FEPrivate`FrontEndResource[
+                   "MUnitExpressions", "SuccessIcon"]], Alignment -> Center, 
+                  ImageSize -> 
+                  Dynamic[{
+                    Automatic, 
+                    3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], TraditionalForm]]]}, 
+             PlotRange -> {{0, 1}, {0, 1}}, Background -> GrayLevel[0.93], 
+             Axes -> False, AspectRatio -> 1, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}], Frame -> True, FrameTicks -> None, 
+             FrameStyle -> Directive[
+               Thickness[Tiny], 
+               GrayLevel[0.55]]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Title: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["Automatic", "SummaryItem"]}], "\[SpanFromLeft]"}, {
+               RowBox[{
+                 TagBox["\"Success rate: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  TagBox[
+                   InterpretationBox[
+                    StyleBox["\"100%\"", ShowStringCharacters -> False], 1., 
+                    AutoDelete -> True], PercentForm], "SummaryItem"]}], 
+               RowBox[{
+                 TagBox["\"Tests run: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["2", "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxCloser"]], 
+              ButtonFunction :> (Typeset`open$$ = False), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GraphicsBox[{
+              InsetBox[
+               BoxData[
+                FormBox[
+                 PaneBox[
+                  DynamicBox[
+                   FEPrivate`FrontEndResource[
+                   "MUnitExpressions", "SuccessIcon"]], Alignment -> Center, 
+                  ImageSize -> 
+                  Dynamic[{
+                    Automatic, 
+                    3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], TraditionalForm]]]}, 
+             PlotRange -> {{0, 1}, {0, 1}}, Background -> GrayLevel[0.93], 
+             Axes -> False, AspectRatio -> 1, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}], Frame -> True, FrameTicks -> None, 
+             FrameStyle -> Directive[
+               Thickness[Tiny], 
+               GrayLevel[0.55]]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Title: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["Automatic", "SummaryItem"]}], "\[SpanFromLeft]"}, {
+               RowBox[{
+                 TagBox["\"Success rate: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  TagBox[
+                   InterpretationBox[
+                    StyleBox["\"100%\"", ShowStringCharacters -> False], 1., 
+                    AutoDelete -> True], PercentForm], "SummaryItem"]}], 
+               RowBox[{
+                 TagBox["\"Tests run: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["2", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Succeeded: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["2", "SummaryItem"]}], "\[SpanFromLeft]"}, {
+               RowBox[{
+                 TagBox["\"Failed: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["0", "SummaryItem"]}], "\[SpanFromLeft]"}, {
+               RowBox[{
+                 TagBox[
+                 "\"Failed with wrong results: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["0", "SummaryItem"]}], "\[SpanFromLeft]"}, {
+               RowBox[{
+                 TagBox[
+                 "\"Failed with messages: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["0", "SummaryItem"]}], "\[SpanFromLeft]"}, {
+               RowBox[{
+                 TagBox["\"Failed with errors: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["0", "SummaryItem"]}], "\[SpanFromLeft]"}, {
+               RowBox[{
+                 TagBox["\"Time elapsed: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  
+                  TemplateBox[{
+                   "0.0010381000000000001`", "\"s\"", "seconds", 
+                    "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
+                  "SummaryItem"]}], "\[SpanFromLeft]"}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  TestReportObject[<|
+   "Title" -> Automatic, "Aborted" -> False, 
+    "TestResults" -> <|
+     6580664074878862081 -> 
+      TestResultObject[<|
+        "TestKey" -> 6580664074878862081, "TestID" -> None, "TestFileName" -> 
+         "", "SameTest" -> SameQ, "SameMessages" -> Testing`MessageMatchQ, 
+         "MemoryConstraint" -> DirectedInfinity[1], "TimeConstraint" -> 
+         DirectedInfinity[1], "Outcome" -> "Success", "Input" -> HoldForm[
+           $CellContext`ButterflyString["Wolfram"]], "ExpectedOutput" -> 
+         HoldForm["WolframmarfloW"], "ActualOutput" -> 
+         HoldForm["WolframmarfloW"], "ExpectedMessages" -> HoldForm[{}], 
+         "ActualMessages" -> {}, "AbsoluteTime" -> 3.893239891358473*^9, 
+         "AbsoluteTimeUsed" -> 0.0010381`4.166754188874626, "CPUTimeUsed" -> 
+         0., "MemoryUsed" -> 2736|>], 7985034233497254212 -> 
+      TestResultObject[<|
+        "TestKey" -> 7985034233497254212, "TestID" -> None, "TestFileName" -> 
+         "", "SameTest" -> SameQ, "SameMessages" -> Testing`MessageMatchQ, 
+         "MemoryConstraint" -> DirectedInfinity[1], "TimeConstraint" -> 
+         DirectedInfinity[1], "Outcome" -> "Success", "Input" -> HoldForm[
+           $CellContext`ButterflyString["butterfly"]], "ExpectedOutput" -> 
+         HoldForm["butterflyylfrettub"], "ActualOutput" -> 
+         HoldForm["butterflyylfrettub"], "ExpectedMessages" -> HoldForm[{}], 
+         "ActualMessages" -> {}, "AbsoluteTime" -> 3.893239891359511*^9, 
+         "AbsoluteTimeUsed" -> 0``7.150514997831988, "CPUTimeUsed" -> 0., 
+         "MemoryUsed" -> 2736|>]|>, 
+    "TestsSucceededKeys" -> {6580664074878862081, 7985034233497254212}, 
+    "TestsFailedWrongResultsKeys" -> {}, "TestsFailedWithMessagesKeys" -> {}, 
+    "TestsFailedWithErrorsKeys" -> {}|>],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{{3.893239862055295*^9, 3.8932398914075017`*^9}},
+ CellLabel->"Out[16]=",ExpressionUUID->"bd3c53d8-af81-417c-946b-ce2eb2a1f548"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{569.25, 609.75},
+WindowMargins->{{Automatic, 54.75}, {39, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"51544d05-237c-44b0-bcc7-ecf810bb2815"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 398, 10, 98, "Title",ExpressionUUID->"dce7c5b0-d5ce-4d0c-a60c-19d54d057aca"],
+Cell[981, 34, 185, 3, 35, "Text",ExpressionUUID->"cb952c75-abf2-4275-a16f-881ebbbe03fc"],
+Cell[1169, 39, 301, 6, 28, "Input",ExpressionUUID->"8bbbfd00-514d-4d7c-aa23-5c014dd06205"],
+Cell[1473, 47, 170, 3, 35, "Text",ExpressionUUID->"22247a8e-1c3c-4cc3-9e07-32a60538a071"],
+Cell[1646, 52, 357, 7, 48, "Input",ExpressionUUID->"aae3390f-3517-44f7-84b1-6248dcfdc6d9"],
+Cell[2006, 61, 440, 14, 35, "Text",ExpressionUUID->"56d6293b-a183-4a76-8faf-448272173221"],
+Cell[CellGroupData[{
+Cell[2471, 79, 619, 14, 124, "Input",ExpressionUUID->"5d72e0d7-78b0-457d-bc07-6ef6673fbe23"],
+Cell[3093, 95, 9831, 201, 64, "Output",ExpressionUUID->"bd3c53d8-af81-417c-946b-ce2eb2a1f548"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
