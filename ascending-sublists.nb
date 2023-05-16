@@ -1,0 +1,179 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5957,        171]
+NotebookOptionsPosition[      4747,        144]
+NotebookOutlinePosition[      5152,        160]
+CellTagsIndexPosition[      5109,        157]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[ButtonBox["Ascending Sublists",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://challenges.wolframcloud.com/challenge/ascending-sublists"], 
+   None},
+ ButtonNote->
+  "https://challenges.wolframcloud.com/challenge/ascending-sublists"]], \
+"Title",
+ CellChangeTimes->{{3.893251942822567*^9, 
+  3.8932519497754807`*^9}},ExpressionUUID->"1b3cce55-04e2-4443-a0b5-\
+ad031ff0ffce"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"AscendingSublists", "[", 
+   RowBox[{"list", ":", 
+    RowBox[{"{", "___Integer", "}"}]}], "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", "temp", "}"}], ",", 
+    RowBox[{
+     RowBox[{"temp", "=", 
+      RowBox[{"Split", "[", 
+       RowBox[{"list", ",", "Less"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Select", "[", 
+      RowBox[{"temp", ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Length", "[", "#", "]"}], ">", "1"}], "&"}]}], "]"}]}]}], 
+   "]"}]}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.893251959150157*^9, 3.893251978710799*^9}},
+ CellLabel->"In[96]:=",ExpressionUUID->"194b65f8-aa59-4e93-ad2e-ae8d86579f8e"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"AscendingSublists", "[", 
+   RowBox[{"list", ":", 
+    RowBox[{"{", "___Integer", "}"}]}], "]"}], ":=", "\[IndentingNewLine]", 
+  RowBox[{"Select", "[", 
+   RowBox[{
+    RowBox[{"Split", "[", 
+     RowBox[{"list", ",", "Less"}], "]"}], ",", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Length", "[", "#", "]"}], ">", "1"}], "&"}]}], 
+   "]"}]}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.893251959150157*^9, 3.893251978710799*^9}, {
+  3.893252078740382*^9, 3.893252088234767*^9}},
+ CellLabel->"In[97]:=",ExpressionUUID->"f074a84e-68b8-4bf8-9084-bcc7c0d6e82a"],
+
+Cell[TextData[ButtonBox["Challenge notebook",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://www.wolframcloud.com/obj/burbery1/Published/AscendingSublists(\
+2).nb"], None},
+ ButtonNote->
+  "https://www.wolframcloud.com/obj/burbery1/Published/AscendingSublists(2).\
+nb"]], "Text",
+ CellChangeTimes->{{3.8932520461764207`*^9, 
+  3.8932520527388306`*^9}},ExpressionUUID->"f40f9143-51ee-4a08-ba8d-\
+05776a007f7a"],
+
+Cell[TextData[ButtonBox["Challenge statistics",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://www.wolframcloud.com/obj/80aa80ef-ae99-4001-adbe-\
+c83d9bb06ae0"], None},
+ ButtonNote->
+  "https://www.wolframcloud.com/obj/80aa80ef-ae99-4001-adbe-c83d9bb06ae0"]], \
+"Text",
+ CellChangeTimes->{{3.893252057387869*^9, 
+  3.893252062521008*^9}},ExpressionUUID->"7e5d1e63-5578-4d58-b14d-\
+9ea326393674"],
+
+Cell[TextData[ButtonBox["Second Challenge Statistics",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://www.wolframcloud.com/obj/0c918218-0116-4632-a7a0-\
+ff0890e41aa2"], None},
+ ButtonNote->
+  "https://www.wolframcloud.com/obj/0c918218-0116-4632-a7a0-ff0890e41aa2"]], \
+"Text",
+ CellChangeTimes->{{3.8932521273647957`*^9, 
+  3.8932521354239464`*^9}},ExpressionUUID->"86491dca-6fd2-4b84-9384-\
+510b54c80f6c"],
+
+Cell["Here I use Select\[CloseCurlyQuote]s operator form.", "Text",
+ CellChangeTimes->{{3.8932522166651416`*^9, 
+  3.893252221639338*^9}},ExpressionUUID->"5fd1151d-3e09-4e2f-a3a2-\
+6085faef53bd"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"AscendingSublists", "[", 
+   RowBox[{"list", ":", 
+    RowBox[{"{", "___Integer", "}"}]}], "]"}], ":=", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Select", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Length", "[", "#", "]"}], ">", "1"}], "&"}], "]"}], "[", 
+   RowBox[{"Split", "[", 
+    RowBox[{"list", ",", "Less"}], "]"}], "]"}]}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.893252158469084*^9, 3.893252163740109*^9}},
+ CellLabel->"In[98]:=",ExpressionUUID->"3610fbc5-a6eb-4a14-acc4-88ef66a18f0a"],
+
+Cell[TextData[ButtonBox["Third solution statistics",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://www.wolframcloud.com/obj/d72efe87-3cc6-4640-ae5c-\
+b146cfad92b6"], None},
+ ButtonNote->
+  "https://www.wolframcloud.com/obj/d72efe87-3cc6-4640-ae5c-b146cfad92b6"]], \
+"Text",
+ CellChangeTimes->{{3.893252211163004*^9, 
+  3.893252230223811*^9}},ExpressionUUID->"72f7d55b-fdd4-4abd-b27a-\
+08989f85c274"]
+}, Open  ]]
+},
+WindowSize->{569.25, 609.75},
+WindowMargins->{{Automatic, 102}, {Automatic, 57}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"43c225c8-2e75-4d61-9ca6-78f9e97b6bc7"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 397, 10, 98, "Title",ExpressionUUID->"1b3cce55-04e2-4443-a0b5-ad031ff0ffce"],
+Cell[980, 34, 721, 20, 83, "Input",ExpressionUUID->"194b65f8-aa59-4e93-ad2e-ae8d86579f8e",
+ InitializationCell->True],
+Cell[1704, 56, 609, 16, 64, "Input",ExpressionUUID->"f074a84e-68b8-4bf8-9084-bcc7c0d6e82a",
+ InitializationCell->True],
+Cell[2316, 74, 418, 10, 35, "Text",ExpressionUUID->"f40f9143-51ee-4a08-ba8d-05776a007f7a"],
+Cell[2737, 86, 404, 10, 35, "Text",ExpressionUUID->"7e5d1e63-5578-4d58-b14d-9ea326393674"],
+Cell[3144, 98, 415, 10, 35, "Text",ExpressionUUID->"86491dca-6fd2-4b84-9384-510b54c80f6c"],
+Cell[3562, 110, 195, 3, 35, "Text",ExpressionUUID->"5fd1151d-3e09-4e2f-a3a2-6085faef53bd"],
+Cell[3760, 115, 559, 14, 64, "Input",ExpressionUUID->"3610fbc5-a6eb-4a14-acc4-88ef66a18f0a",
+ InitializationCell->True],
+Cell[4322, 131, 409, 10, 35, "Text",ExpressionUUID->"72f7d55b-fdd4-4abd-b27a-08989f85c274"]
+}, Open  ]]
+}
+]
+*)
+
