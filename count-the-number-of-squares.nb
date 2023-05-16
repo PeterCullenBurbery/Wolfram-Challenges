@@ -1,0 +1,150 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5127,        142]
+NotebookOptionsPosition[      4606,        124]
+NotebookOutlinePosition[      5047,        141]
+CellTagsIndexPosition[      5004,        138]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[ButtonBox["Count the Number of Squares",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://challenges.wolframcloud.com/challenge/count-the-number-of-\
+squares"], None},
+ ButtonNote->
+  "https://challenges.wolframcloud.com/challenge/count-the-number-of-squares"]\
+], "Title",
+ CellChangeTimes->{{3.8932565377907276`*^9, 
+  3.8932565485737424`*^9}},ExpressionUUID->"5c38286c-2980-428a-bba0-\
+2feea10c36be"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"CountSquares", "[", 
+   RowBox[{"inputPoints_", "?", "ListQ"}], "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"count", "=", "0"}], ",", 
+      RowBox[{"n", "=", 
+       RowBox[{"Length", "[", "inputPoints", "]"}]}], ",", "pointA", ",", 
+      "pointB", ",", "pointC", ",", "pointD", ",", "sameDistancePoints"}], 
+     "}"}], ",", 
+    RowBox[{
+     RowBox[{"For", "[", 
+      RowBox[{
+       RowBox[{"i", "=", "1"}], ",", 
+       RowBox[{"i", "<=", "n"}], ",", 
+       RowBox[{"i", "++"}], ",", 
+       RowBox[{
+        RowBox[{"pointA", "=", 
+         RowBox[{"inputPoints", "[", 
+          RowBox[{"[", "i", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"For", "[", 
+         RowBox[{
+          RowBox[{"j", "=", "1"}], ",", 
+          RowBox[{"j", "<=", "n"}], ",", 
+          RowBox[{"j", "++"}], ",", 
+          RowBox[{
+           RowBox[{"pointB", "=", 
+            RowBox[{"inputPoints", "[", 
+             RowBox[{"[", "j", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{"i", "!=", "j"}], ",", 
+             RowBox[{
+              RowBox[{"sameDistancePoints", "=", 
+               RowBox[{"Select", "[", 
+                RowBox[{"inputPoints", ",", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"EuclideanDistance", "[", 
+                    RowBox[{"pointA", ",", "#"}], "]"}], "==", 
+                   RowBox[{"EuclideanDistance", "[", 
+                    RowBox[{"pointA", ",", "pointB"}], "]"}]}], "&"}]}], 
+                "]"}]}], ";", "\[IndentingNewLine]", 
+              RowBox[{"For", "[", 
+               RowBox[{
+                RowBox[{"k", "=", "1"}], ",", 
+                RowBox[{"k", "<=", 
+                 RowBox[{"Length", "[", "sameDistancePoints", "]"}]}], ",", 
+                RowBox[{"k", "++"}], ",", 
+                RowBox[{
+                 RowBox[{"pointC", "=", 
+                  RowBox[{"sameDistancePoints", "[", 
+                   RowBox[{"[", "k", "]"}], "]"}]}], ";", 
+                 "\[IndentingNewLine]", 
+                 RowBox[{"If", "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"VectorAngle", "[", 
+                    RowBox[{
+                    RowBox[{"pointB", "-", "pointA"}], ",", 
+                    RowBox[{"pointC", "-", "pointA"}]}], "]"}], "==", 
+                    RowBox[{"Pi", "/", "2"}]}], ",", 
+                   RowBox[{
+                    RowBox[{"pointD", "=", 
+                    RowBox[{"pointB", "+", "pointC", "-", "pointA"}]}], ";", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"MemberQ", "[", 
+                    RowBox[{"inputPoints", ",", "pointD"}], "]"}], ",", 
+                    RowBox[{"count", "++"}]}], "]"}]}]}], "]"}]}]}], 
+               "]"}]}]}], "]"}]}]}], "]"}]}]}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     FractionBox[
+      RowBox[{"count", "/", "2", " "}], "4"]}]}], 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{
+     "Since", " ", "we", " ", "count", " ", "each", " ", "square", " ", 
+      "twice"}], ",", 
+     RowBox[{
+     "we", " ", "need", " ", "to", " ", "divide", " ", "the", " ", "total", 
+      " ", "count", " ", "by", " ", "2"}]}], "*)"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.8932565523946896`*^9, 3.893256552396694*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"3657a8a0-c326-4bd1-908b-2966604d92f1"]
+}, Open  ]]
+},
+WindowSize->{571.8, 509.4},
+WindowMargins->{{Automatic, 0.6000000000001364}, {
+  27.600000000000023`, Automatic}},
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"f6e2216d-278d-4379-87e6-aac5c0230073"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 424, 10, 160, "Title",ExpressionUUID->"5c38286c-2980-428a-bba0-2feea10c36be"],
+Cell[1007, 34, 3583, 87, 380, "Input",ExpressionUUID->"3657a8a0-c326-4bd1-908b-2966604d92f1"]
+}, Open  ]]
+}
+]
+*)
+

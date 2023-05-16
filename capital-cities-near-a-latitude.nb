@@ -1,0 +1,125 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4012,        117]
+NotebookOptionsPosition[      3146,         93]
+NotebookOutlinePosition[      3597,        110]
+CellTagsIndexPosition[      3554,        107]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"NearestCapitalByLatitude", "[", "lat_", "]"}], "/;", 
+   RowBox[{
+    RowBox[{"-", "90"}], "<=", "lat", "<=", "90"}]}], ":=", "f"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.893254761740337*^9, 3.893254761740337*^9}, 
+   3.893254873110201*^9},
+ CellLabel->"In[10]:=",ExpressionUUID->"8e485629-790d-4863-b688-6991c4f32ea4"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"capitalcities", "=", 
+  RowBox[{"SortedEntityClass", "[", 
+   RowBox[{
+    RowBox[{"EntityClass", "[", 
+     RowBox[{"\"\<Country\>\"", ",", "All"}], "]"}], ",", 
+    RowBox[{
+     RowBox[{"EntityFunction", "[", 
+      RowBox[{"country", ",", 
+       RowBox[{"Latitude", "[", 
+        RowBox[{"country", "[", "\"\<Capital\>\"", "]"}], "]"}]}], "]"}], "-",
+      "38"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.893254777726003*^9, 3.893254868945429*^9}, {
+  3.893254907141465*^9, 3.8932549130393853`*^9}},
+ CellLabel->"In[12]:=",ExpressionUUID->"2383c98c-bf3c-4e72-b95f-5d7c8954fef0"],
+
+Cell[BoxData[
+ RowBox[{"SortedEntityClass", "[", 
+  RowBox[{
+   TemplateBox[{"\"countries\"", 
+     RowBox[{"EntityClass", "[", 
+       RowBox[{"\"Country\"", ",", "All"}], "]"}], 
+     "\"EntityClass[\\\"Country\\\", All]\"", "\"countries\""},
+    "EntityClass"], ",", 
+   RowBox[{
+    RowBox[{"-", "38"}], "+", 
+    RowBox[{"EntityFunction", "[", 
+     RowBox[{"country", ",", 
+      RowBox[{"Latitude", "[", 
+       RowBox[{"country", "[", "\<\"Capital\"\>", "]"}], "]"}]}], "]"}]}]}], 
+  "]"}]], "Output",
+ CellChangeTimes->{3.893254870873081*^9, 3.8932549213440256`*^9},
+ CellLabel->"Out[12]=",ExpressionUUID->"d90f3999-b929-42d2-9c8d-11c2a2a601a9"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"EntityValue", "[", 
+  RowBox[{"capitalcities", ",", "\"\<Entities\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.8932547675510464`*^9, 3.8932547919239335`*^9}, {
+  3.8932548770457306`*^9, 3.893254885126677*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"68a48aba-4a41-41aa-ae70-ddb6214016b7"],
+
+Cell[BoxData[
+ RowBox[{"EntityValue", "[", 
+  RowBox[{
+   RowBox[{"SortedEntityClass", "[", 
+    RowBox[{"\<\"Country\"\>", ",", 
+     RowBox[{
+      RowBox[{"-", "38"}], "+", 
+      RowBox[{"EntityFunction", "[", 
+       RowBox[{"country", ",", 
+        RowBox[{"Latitude", "[", 
+         RowBox[{"country", "[", "\<\"Capital\"\>", "]"}], "]"}]}], "]"}]}]}],
+     "]"}], ",", "\<\"Entities\"\>"}], "]"}]], "Output",
+ CellChangeTimes->{3.8932548854328237`*^9},
+ CellLabel->"Out[11]=",ExpressionUUID->"d077c9a3-1149-4266-b60f-323e78901b32"]
+}, Open  ]]
+},
+WindowSize->{581.25, 648.75},
+WindowMargins->{{Automatic, 94.5}, {Automatic, 29.25}},
+TaggingRules-><|"TryRealOnly" -> False|>,
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"3f36aa79-36da-484d-9121-f49f7ec08a22"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 387, 9, 44, "Input",ExpressionUUID->"8e485629-790d-4863-b688-6991c4f32ea4",
+ InitializationCell->True],
+Cell[CellGroupData[{
+Cell[970, 33, 610, 14, 48, "Input",ExpressionUUID->"2383c98c-bf3c-4e72-b95f-5d7c8954fef0"],
+Cell[1583, 49, 654, 16, 70, "Output",ExpressionUUID->"d90f3999-b929-42d2-9c8d-11c2a2a601a9"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2274, 70, 314, 5, 28, "Input",ExpressionUUID->"68a48aba-4a41-41aa-ae70-ddb6214016b7"],
+Cell[2591, 77, 539, 13, 71, "Output",ExpressionUUID->"d077c9a3-1149-4266-b60f-323e78901b32"]
+}, Open  ]]
+}
+]
+*)
+

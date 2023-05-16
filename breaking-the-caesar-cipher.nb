@@ -1,0 +1,112 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3461,        104]
+NotebookOptionsPosition[      2678,         83]
+NotebookOutlinePosition[      3081,         99]
+CellTagsIndexPosition[      3038,         96]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[ButtonBox["Breaking the Caesar Cipher",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://challenges.wolframcloud.com/challenge/breaking-the-caesar-\
+cipher"], None},
+ ButtonNote->
+  "https://challenges.wolframcloud.com/challenge/breaking-the-caesar-cipher"]]\
+, "Title",
+ CellChangeTimes->{{3.8932546708582587`*^9, 
+  3.8932546811646194`*^9}},ExpressionUUID->"37350548-eed6-4a6b-8a2e-\
+b90cf134c3d7"],
+
+Cell["I think ChatGPT wrote this.", "Text",
+ CellChangeTimes->{{3.8932546986599083`*^9, 
+  3.8932547030748296`*^9}},ExpressionUUID->"47611bf7-a544-4c54-9fc6-\
+60339c3261e4"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"CaesarDecrypt", "[", 
+    RowBox[{
+     RowBox[{"cipherText_String", "?", "LowerCaseQ"}], ",", "key_Integer"}], 
+    "]"}], "/;", 
+   RowBox[{"1", "<=", "key", "<=", "25"}]}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", "shiftMapping", "}"}], ",", 
+    RowBox[{
+     RowBox[{"shiftMapping", "=", 
+      RowBox[{"Thread", "[", 
+       RowBox[{
+        RowBox[{"RotateLeft", "[", 
+         RowBox[{
+          RowBox[{"Alphabet", "[", "]"}], ",", "key"}], "]"}], "->", 
+        RowBox[{"Alphabet", "[", "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"StringReplace", "[", 
+      RowBox[{"cipherText", ",", "shiftMapping"}], "]"}]}]}], 
+   "]"}]}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.893254692553053*^9, 3.8932546948317704`*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"15244678-ea02-40ea-9ddd-ce53174b884d"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.8932560621366153`*^9, 
+  3.8932560626212406`*^9}},ExpressionUUID->"3ccec262-d6bb-4d2d-a3f5-\
+f78b9446303a"],
+
+Cell[TextData[ButtonBox["Statistics for the solution",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://www.wolframcloud.com/obj/3b257f7f-b3d9-4c73-b0a6-\
+a642b525a5ba"], None},
+ ButtonNote->
+  "https://www.wolframcloud.com/obj/3b257f7f-b3d9-4c73-b0a6-a642b525a5ba"]], \
+"Text",
+ CellChangeTimes->{{3.8932561325140705`*^9, 
+  3.8932561385156507`*^9}},ExpressionUUID->"4e82ef0b-20d2-4fbb-91f2-\
+eb11427fd1c0"]
+}, Open  ]]
+},
+WindowSize->{718.8, 574.8},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"e5865d10-fd24-45b6-962b-f0e5be9ff617"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 421, 10, 98, "Title",ExpressionUUID->"37350548-eed6-4a6b-8a2e-b90cf134c3d7"],
+Cell[1004, 34, 173, 3, 35, "Text",ExpressionUUID->"47611bf7-a544-4c54-9fc6-60339c3261e4"],
+Cell[1180, 39, 905, 24, 102, "Input",ExpressionUUID->"15244678-ea02-40ea-9ddd-ce53174b884d",
+ InitializationCell->True],
+Cell[2088, 65, 156, 3, 28, "Input",ExpressionUUID->"3ccec262-d6bb-4d2d-a3f5-f78b9446303a"],
+Cell[2247, 70, 415, 10, 35, "Text",ExpressionUUID->"4e82ef0b-20d2-4fbb-91f2-eb11427fd1c0"]
+}, Open  ]]
+}
+]
+*)
+
