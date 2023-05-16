@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     14023,        325]
-NotebookOptionsPosition[     12952,        300]
-NotebookOutlinePosition[     13359,        316]
-CellTagsIndexPosition[     13316,        313]
+NotebookDataLength[     15913,        356]
+NotebookOptionsPosition[     14840,        331]
+NotebookOutlinePosition[     15247,        347]
+CellTagsIndexPosition[     15204,        344]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -89,9 +89,17 @@ Cell[BoxData[
      RowBox[{"VerificationTest", "[", 
       RowBox[{
        RowBox[{"ButterflyString", "[", "\"\<butterfly\>\"", "]"}], ",", 
-       "\"\<butterflyylfrettub\>\""}], "]"}]}], "}"}], "]"}]}]], "Input",
- CellChangeTimes->{{3.8932398368553605`*^9, 3.893239891033825*^9}},
- CellLabel->"In[16]:=",ExpressionUUID->"5d72e0d7-78b0-457d-bc07-6ef6673fbe23"],
+       "\"\<butterflyylfrettub\>\""}], "]"}], ",", 
+     RowBox[{"VerificationTest", "[", 
+      RowBox[{
+       RowBox[{"ButterflyString", "[", "\"\<race\>\"", "]"}], ",", 
+       "\"\<raceecar\>\""}], "]"}], ",", 
+     RowBox[{"VerificationTest", "[", 
+      RowBox[{
+       RowBox[{"ButterflyString", "[", "\"\<Hello world!\>\"", "]"}], ",", 
+       "\"\<Hello world!!dlrow olleH\>\""}], "]"}]}], "}"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.8932398368553605`*^9, 3.8932399496411543`*^9}},
+ CellLabel->"In[18]:=",ExpressionUUID->"5d72e0d7-78b0-457d-bc07-6ef6673fbe23"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -150,7 +158,7 @@ Cell[BoxData[
                RowBox[{
                  TagBox["\"Tests run: \"", "SummaryItemAnnotation"], 
                  "\[InvisibleSpace]", 
-                 TagBox["2", "SummaryItem"]}]}}, 
+                 TagBox["4", "SummaryItem"]}]}}, 
              GridBoxAlignment -> {
               "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
              False, GridBoxItemSize -> {
@@ -213,11 +221,11 @@ Cell[BoxData[
                RowBox[{
                  TagBox["\"Tests run: \"", "SummaryItemAnnotation"], 
                  "\[InvisibleSpace]", 
-                 TagBox["2", "SummaryItem"]}]}, {
+                 TagBox["4", "SummaryItem"]}]}, {
                RowBox[{
                  TagBox["\"Succeeded: \"", "SummaryItemAnnotation"], 
                  "\[InvisibleSpace]", 
-                 TagBox["2", "SummaryItem"]}], "\[SpanFromLeft]"}, {
+                 TagBox["4", "SummaryItem"]}], "\[SpanFromLeft]"}, {
                RowBox[{
                  TagBox["\"Failed: \"", "SummaryItemAnnotation"], 
                  "\[InvisibleSpace]", 
@@ -241,10 +249,9 @@ Cell[BoxData[
                  "\[InvisibleSpace]", 
                  TagBox[
                   
-                  TemplateBox[{
-                   "0.0010381000000000001`", "\"s\"", "seconds", 
-                    "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
-                  "SummaryItem"]}], "\[SpanFromLeft]"}}, 
+                  TemplateBox[{"0.`", "\"s\"", "seconds", "\"Seconds\""}, 
+                   "Quantity", SyntaxForm -> Mod], "SummaryItem"]}], 
+               "\[SpanFromLeft]"}}, 
              GridBoxAlignment -> {
               "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
              False, GridBoxItemSize -> {
@@ -264,37 +271,61 @@ Cell[BoxData[
   TestReportObject[<|
    "Title" -> Automatic, "Aborted" -> False, 
     "TestResults" -> <|
-     6580664074878862081 -> 
+     6428038510582286626 -> 
       TestResultObject[<|
-        "TestKey" -> 6580664074878862081, "TestID" -> None, "TestFileName" -> 
+        "TestKey" -> 6428038510582286626, "TestID" -> None, "TestFileName" -> 
          "", "SameTest" -> SameQ, "SameMessages" -> Testing`MessageMatchQ, 
          "MemoryConstraint" -> DirectedInfinity[1], "TimeConstraint" -> 
          DirectedInfinity[1], "Outcome" -> "Success", "Input" -> HoldForm[
            $CellContext`ButterflyString["Wolfram"]], "ExpectedOutput" -> 
          HoldForm["WolframmarfloW"], "ActualOutput" -> 
          HoldForm["WolframmarfloW"], "ExpectedMessages" -> HoldForm[{}], 
-         "ActualMessages" -> {}, "AbsoluteTime" -> 3.893239891358473*^9, 
-         "AbsoluteTimeUsed" -> 0.0010381`4.166754188874626, "CPUTimeUsed" -> 
-         0., "MemoryUsed" -> 2736|>], 7985034233497254212 -> 
+         "ActualMessages" -> {}, "AbsoluteTime" -> 3.893239950151817*^9, 
+         "AbsoluteTimeUsed" -> 0``7.150514997831988, "CPUTimeUsed" -> 0., 
+         "MemoryUsed" -> 2728|>], 4636176790956952921 -> 
       TestResultObject[<|
-        "TestKey" -> 7985034233497254212, "TestID" -> None, "TestFileName" -> 
+        "TestKey" -> 4636176790956952921, "TestID" -> None, "TestFileName" -> 
          "", "SameTest" -> SameQ, "SameMessages" -> Testing`MessageMatchQ, 
          "MemoryConstraint" -> DirectedInfinity[1], "TimeConstraint" -> 
          DirectedInfinity[1], "Outcome" -> "Success", "Input" -> HoldForm[
            $CellContext`ButterflyString["butterfly"]], "ExpectedOutput" -> 
          HoldForm["butterflyylfrettub"], "ActualOutput" -> 
          HoldForm["butterflyylfrettub"], "ExpectedMessages" -> HoldForm[{}], 
-         "ActualMessages" -> {}, "AbsoluteTime" -> 3.893239891359511*^9, 
+         "ActualMessages" -> {}, "AbsoluteTime" -> 3.893239950152815*^9, 
          "AbsoluteTimeUsed" -> 0``7.150514997831988, "CPUTimeUsed" -> 0., 
-         "MemoryUsed" -> 2736|>]|>, 
-    "TestsSucceededKeys" -> {6580664074878862081, 7985034233497254212}, 
+         "MemoryUsed" -> 2736|>], 3456039070075775927 -> 
+      TestResultObject[<|
+        "TestKey" -> 3456039070075775927, "TestID" -> None, "TestFileName" -> 
+         "", "SameTest" -> SameQ, "SameMessages" -> Testing`MessageMatchQ, 
+         "MemoryConstraint" -> DirectedInfinity[1], "TimeConstraint" -> 
+         DirectedInfinity[1], "Outcome" -> "Success", "Input" -> HoldForm[
+           $CellContext`ButterflyString["race"]], "ExpectedOutput" -> 
+         HoldForm["raceecar"], "ActualOutput" -> HoldForm["raceecar"], 
+         "ExpectedMessages" -> HoldForm[{}], "ActualMessages" -> {}, 
+         "AbsoluteTime" -> 3.893239950152815*^9, "AbsoluteTimeUsed" -> 
+         0``7.150514997831988, "CPUTimeUsed" -> 0., "MemoryUsed" -> 2728|>], 
+      1894424710313962916 -> 
+      TestResultObject[<|
+        "TestKey" -> 1894424710313962916, "TestID" -> None, "TestFileName" -> 
+         "", "SameTest" -> SameQ, "SameMessages" -> Testing`MessageMatchQ, 
+         "MemoryConstraint" -> DirectedInfinity[1], "TimeConstraint" -> 
+         DirectedInfinity[1], "Outcome" -> "Success", "Input" -> HoldForm[
+           $CellContext`ButterflyString["Hello world!"]], "ExpectedOutput" -> 
+         HoldForm["Hello world!!dlrow olleH"], "ActualOutput" -> 
+         HoldForm["Hello world!!dlrow olleH"], "ExpectedMessages" -> 
+         HoldForm[{}], "ActualMessages" -> {}, "AbsoluteTime" -> 
+         3.893239950152815*^9, "AbsoluteTimeUsed" -> 0``7.150514997831988, 
+         "CPUTimeUsed" -> 0., "MemoryUsed" -> 2744|>]|>, 
+    "TestsSucceededKeys" -> {6428038510582286626, 4636176790956952921, 
+     3456039070075775927, 1894424710313962916}, 
     "TestsFailedWrongResultsKeys" -> {}, "TestsFailedWithMessagesKeys" -> {}, 
     "TestsFailedWithErrorsKeys" -> {}|>],
   Editable->False,
   SelectWithContents->True,
   Selectable->False]], "Output",
- CellChangeTimes->{{3.893239862055295*^9, 3.8932398914075017`*^9}},
- CellLabel->"Out[16]=",ExpressionUUID->"bd3c53d8-af81-417c-946b-ce2eb2a1f548"]
+ CellChangeTimes->{{3.893239862055295*^9, 3.8932398914075017`*^9}, {
+  3.893239931516317*^9, 3.893239950200779*^9}},
+ CellLabel->"Out[18]=",ExpressionUUID->"f97cf3b2-34b4-4689-b83c-fa50cd8607d4"]
 }, Open  ]]
 }, Open  ]]
 },
@@ -323,13 +354,11 @@ Cell[1473, 47, 170, 3, 35, "Text",ExpressionUUID->"22247a8e-1c3c-4cc3-9e07-32a60
 Cell[1646, 52, 357, 7, 48, "Input",ExpressionUUID->"aae3390f-3517-44f7-84b1-6248dcfdc6d9"],
 Cell[2006, 61, 440, 14, 35, "Text",ExpressionUUID->"56d6293b-a183-4a76-8faf-448272173221"],
 Cell[CellGroupData[{
-Cell[2471, 79, 619, 14, 124, "Input",ExpressionUUID->"5d72e0d7-78b0-457d-bc07-6ef6673fbe23"],
-Cell[3093, 95, 9831, 201, 64, "Output",ExpressionUUID->"bd3c53d8-af81-417c-946b-ce2eb2a1f548"]
+Cell[2471, 79, 973, 22, 181, "Input",ExpressionUUID->"5d72e0d7-78b0-457d-bc07-6ef6673fbe23"],
+Cell[3447, 103, 11365, 224, 64, "Output",ExpressionUUID->"f97cf3b2-34b4-4689-b83c-fa50cd8607d4"]
 }, Open  ]]
 }, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
