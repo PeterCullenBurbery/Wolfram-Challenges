@@ -10,14 +10,102 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[       857,         35]
-NotebookOptionsPosition[       561,         21]
-NotebookOutlinePosition[       997,         38]
-CellTagsIndexPosition[       954,         35]
+NotebookDataLength[      3869,        125]
+NotebookOptionsPosition[      3453,        109]
+NotebookOutlinePosition[      3889,        126]
+CellTagsIndexPosition[      3846,        123]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"FivePointConic", "[", 
+    RowBox[{"pts_", ",", 
+     RowBox[{"{", 
+      RowBox[{"xx_", ",", "yy_"}], "}"}]}], "]"}], "/;", 
+   RowBox[{
+    RowBox[{"MatrixQ", "[", "pts", "]"}], "&&", 
+    RowBox[{
+     RowBox[{"Dimensions", "[", "pts", "]"}], "===", 
+     RowBox[{"{", 
+      RowBox[{"5", ",", "2"}], "}"}]}]}]}], ":=", 
+  RowBox[{"Times", "@@", 
+   RowBox[{"Power", "@@@", 
+    RowBox[{"DeleteCases", "[", 
+     RowBox[{
+      RowBox[{"FactorList", "[", 
+       RowBox[{"Det", "[", 
+        RowBox[{"PadLeft", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"x", ",", "y"}], "}"}], "|->", 
+             RowBox[{"{", 
+              RowBox[{"x", ",", "y", ",", 
+               SuperscriptBox["x", "2"], ",", 
+               RowBox[{"x", " ", "y"}], ",", 
+               SuperscriptBox["y", "2"]}], "}"}]}], ")"}], "@@@", 
+           RowBox[{"Append", "[", 
+            RowBox[{"pts", ",", 
+             RowBox[{"{", 
+              RowBox[{"xx", ",", "yy"}], "}"}]}], "]"}]}], ",", 
+          RowBox[{"{", 
+           RowBox[{"6", ",", "6"}], "}"}], ",", "1"}], "]"}], "]"}], "]"}], 
+      ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"_", "?", "NumericQ"}], ",", "_"}], "}"}]}], 
+     "]"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"FivePointConic", "[", "pts_", "]"}], ":=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Which", "[", 
+     RowBox[{
+      RowBox[{"Refine", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"First", "[", "#", "]"}], "<", "0"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"x", ">", "0"}], ",", 
+          RowBox[{"y", ">", "0"}]}], "}"}]}], "]"}], ",", 
+      RowBox[{"-", "#"}], ",", 
+      RowBox[{"Refine", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"First", "[", "#", "]"}], ">", "0"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"x", ">", "0"}], ",", 
+          RowBox[{"y", ">", "0"}]}], "}"}]}], "]"}], ",", "#"}], "]"}], "&"}],
+    "[", 
+   RowBox[{"FivePointConic", "[", 
+    RowBox[{"pts", ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "y"}], "}"}]}], "]"}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"FivePointConic", "[", 
+   RowBox[{"pts_", "/;", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"AllTrue", "[", 
+       RowBox[{
+        RowBox[{"!", 
+         RowBox[{"TrueQ", "[", 
+          RowBox[{"CollinearPoints", "[", "#", "]"}], "]"}]}], "&"}], "]"}], 
+      "[", 
+      RowBox[{"Subsets", "[", 
+       RowBox[{"pts", ",", 
+        RowBox[{"{", "3", "}"}]}], "]"}], "]"}], "===", "False"}]}], "]"}], 
+  ":=", "\"\<degenerate\>\""}]}], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.893256828954702*^9, 3.893256828956254*^9}},
+ CellLabel->"In[14]:=",ExpressionUUID->"d1d26511-b7be-48af-abf4-236543a081a6"]
 },
 WindowSize->{312, 495},
 WindowMargins->{{
@@ -37,9 +125,9 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
+Cell[558, 20, 2891, 87, 724, "Input",ExpressionUUID->"d1d26511-b7be-48af-abf4-236543a081a6",
+ InitializationCell->True]
 }
 ]
 *)
-
-(* End of internal cache information *)
 

@@ -1,0 +1,75 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2062,         67]
+NotebookOptionsPosition[      1539,         49]
+NotebookOutlinePosition[      1958,         65]
+CellTagsIndexPosition[      1915,         62]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[ButtonBox["List Prime Palindromes",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://challenges.wolframcloud.com/challenge/list-prime-palindromes"]\
+, None},
+ ButtonNote->
+  "https://challenges.wolframcloud.com/challenge/list-prime-palindromes"]], \
+"Title",
+ CellChangeTimes->{{3.89325699954645*^9, 3.8932570051524267`*^9}, {
+  3.8932572025186567`*^9, 
+  3.8932572105727124`*^9}},ExpressionUUID->"a8547eb0-a14e-43cc-baa6-\
+fa98d57d1620"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"PrimePalindromes", "[", "n_Integer", "]"}], ":=", 
+  RowBox[{
+   RowBox[{"Select", "[", "PalindromeQ", "]"}], "[", 
+   RowBox[{"Prime", "[", 
+    RowBox[{"Range", "[", 
+     RowBox[{"PrimePi", "[", "n", "]"}], "]"}], "]"}], "]"}]}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.8932570076509247`*^9, 3.8932570076535892`*^9}, 
+   3.8932571954282265`*^9},
+ CellLabel->"In[22]:=",ExpressionUUID->"0075bd65-31cc-499b-9bc3-1dd8d96efdfb"]
+}, Open  ]]
+},
+WindowSize->{568.8, 574.8},
+WindowMargins->{{Automatic, 26.40000000000009}, {Automatic, 0}},
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"0fc269cc-f593-4737-b19b-fbcf7e669ad1"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 459, 11, 98, "Title",ExpressionUUID->"a8547eb0-a14e-43cc-baa6-fa98d57d1620"],
+Cell[1042, 35, 481, 11, 64, "Input",ExpressionUUID->"0075bd65-31cc-499b-9bc3-1dd8d96efdfb",
+ InitializationCell->True]
+}, Open  ]]
+}
+]
+*)
+

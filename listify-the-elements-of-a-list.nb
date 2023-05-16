@@ -1,0 +1,75 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2050,         67]
+NotebookOptionsPosition[      1438,         47]
+NotebookOutlinePosition[      1974,         66]
+CellTagsIndexPosition[      1931,         63]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[ButtonBox["Listify the Elements of a List",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://challenges.wolframcloud.com/challenge/listify-the-elements-of-\
+a-list"], None},
+ ButtonNote->
+  "https://challenges.wolframcloud.com/challenge/listify-the-elements-of-a-\
+list"]], "Title",
+ CellChangeTimes->{{3.893257260907113*^9, 
+  3.893257265975891*^9}},ExpressionUUID->"df79c974-ed06-4d6e-ad7e-\
+cd6eb87c2511"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Listify", "[", 
+   RowBox[{"l_List", ",", 
+    RowBox[{"n_Integer", "?", "Positive"}]}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"ConstantArray", "[", 
+     RowBox[{"#", ",", "n"}], "]"}], "&"}], "/@", "l"}]}]], "Code",
+ CellChangeTimes->{{3.8932572511264105`*^9, 3.893257254053629*^9}},
+ CellLabel->"In[24]:=",ExpressionUUID->"bb8df442-7ba3-4f30-aea7-880d2ed383a3"]
+}, Open  ]]
+},
+WindowSize->{568.8, 574.8},
+WindowMargins->{{
+  Automatic, 8.400000000000091}, {-22.799999999999955`, Automatic}},
+SpellingDictionaries->{"CorrectWords"->{
+ "Astrocomputation", "astrocomputation", "Listify"}},
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"9f3656b2-e88b-4534-8f5c-1302a49b3ef1"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 429, 10, 98, "Title",ExpressionUUID->"df79c974-ed06-4d6e-ad7e-cd6eb87c2511"],
+Cell[1012, 34, 410, 10, 50, "Code",ExpressionUUID->"bb8df442-7ba3-4f30-aea7-880d2ed383a3"]
+}, Open  ]]
+}
+]
+*)
+
