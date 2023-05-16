@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      2826,         94]
-NotebookOptionsPosition[      2253,         76]
-NotebookOutlinePosition[      2659,         92]
-CellTagsIndexPosition[      2616,         89]
+NotebookDataLength[      3433,        110]
+NotebookOptionsPosition[      2768,         91]
+NotebookOutlinePosition[      3174,        107]
+CellTagsIndexPosition[      3131,        104]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -71,7 +71,22 @@ Cell[BoxData[
           RowBox[{"R", "-", "h"}], ")"}], "2"]}]]}]}], ")"}]}]}]], "Input",
  CellChangeTimes->{{3.893246367280984*^9, 3.893246418737506*^9}},
  CellLabel->
-  "In[123]:=",ExpressionUUID->"b086513f-8ede-447b-b7f1-a5feab7483a1"]
+  "In[123]:=",ExpressionUUID->"b086513f-8ede-447b-b7f1-a5feab7483a1"],
+
+Cell[TextData[{
+ "I used ",
+ ButtonBox["Wikipedia\[LongDash]Circular Segment Arc Length and area",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://en.wikipedia.org/wiki/Circular_segment#Arc_length_and_area"],
+     None},
+  ButtonNote->
+   "https://en.wikipedia.org/wiki/Circular_segment#Arc_length_and_area"]
+}], "Text",
+ CellChangeTimes->{{3.8932465111538296`*^9, 3.8932465150088515`*^9}, {
+  3.893246568336426*^9, 
+  3.8932465853323164`*^9}},ExpressionUUID->"39eb501c-ca15-490f-aaa3-\
+e439f0d502c7"]
 }, Open  ]]
 },
 WindowSize->{569.25, 609.75},
@@ -94,7 +109,8 @@ Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 390, 9, 98, "Title",ExpressionUUID->"a02be8dc-17cf-436e-b73e-e6b41c08490d"],
 Cell[973, 33, 396, 10, 35, "Text",ExpressionUUID->"8d35e448-1a40-449a-a32a-ae16ee5e8340"],
-Cell[1372, 45, 865, 28, 65, "Input",ExpressionUUID->"b086513f-8ede-447b-b7f1-a5feab7483a1"]
+Cell[1372, 45, 865, 28, 65, "Input",ExpressionUUID->"b086513f-8ede-447b-b7f1-a5feab7483a1"],
+Cell[2240, 75, 512, 13, 35, "Text",ExpressionUUID->"39eb501c-ca15-490f-aaa3-e439f0d502c7"]
 }, Open  ]]
 }
 ]
