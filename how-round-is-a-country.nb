@@ -10,14 +10,58 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[       831,         34]
-NotebookOptionsPosition[       561,         21]
-NotebookOutlinePosition[       971,         37]
-CellTagsIndexPosition[       928,         34]
+NotebookDataLength[      2518,         82]
+NotebookOptionsPosition[      2032,         65]
+NotebookOutlinePosition[      2442,         81]
+CellTagsIndexPosition[      2399,         78]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[ButtonBox["How Round Is a Country?",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://challenges.wolframcloud.com/challenge/how-round-is-a-country"]\
+, None},
+ ButtonNote->
+  "https://challenges.wolframcloud.com/challenge/how-round-is-a-country"]], \
+"Title",
+ CellChangeTimes->{{3.89324715420863*^9, 
+  3.89324717902636*^9}},ExpressionUUID->"7aa6c170-d328-4117-8daf-\
+0ac075b36e46"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"CountryRoundness", "[", 
+   RowBox[{"country", ":", 
+    RowBox[{"Entity", "[", 
+     RowBox[{"\"\<Country\>\"", ",", "_"}], "]"}]}], "]"}], ":=", 
+  RowBox[{"Block", "[", 
+   RowBox[{
+    RowBox[{"{", "polygon", "}"}], ",", 
+    RowBox[{
+     RowBox[{"polygon", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"country", "[", "\"\<Polygon\>\"", "]"}], "/.", 
+        RowBox[{"GeoPosition", "->", "Identity"}]}], "/.", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"x_Real", ",", "y_"}], "}"}], ":>", 
+        RowBox[{"{", 
+         RowBox[{"y", ",", "x"}], "}"}]}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Area", "[", "polygon", "]"}], "/", 
+      RowBox[{"Area", "[", 
+       RowBox[{"BoundingRegion", "[", 
+        RowBox[{"polygon", ",", "\"\<MinDisk\>\""}], "]"}], "]"}]}]}]}], 
+   "]"}]}]], "Code",
+ CellChangeTimes->{{3.8932471668648405`*^9, 3.8932471668648405`*^9}},
+ CellLabel->
+  "In[150]:=",ExpressionUUID->"27e2b5c1-c284-429d-a2b8-f377337af2ce"]
+}, Open  ]]
 },
 WindowSize->{569.25, 609.75},
 WindowMargins->{{Automatic, 64.5}, {-12.75, Automatic}},
@@ -36,9 +80,11 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 404, 10, 98, "Title",ExpressionUUID->"7aa6c170-d328-4117-8daf-0ac075b36e46"],
+Cell[987, 34, 1029, 28, 68, "Code",ExpressionUUID->"27e2b5c1-c284-429d-a2b8-f377337af2ce"]
+}, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
