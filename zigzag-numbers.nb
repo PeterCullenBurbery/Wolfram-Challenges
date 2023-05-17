@@ -10,14 +10,26 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       161,          7]
-NotebookDataLength[      1935,         66]
-NotebookOptionsPosition[      1565,         52]
-NotebookOutlinePosition[      1987,         68]
-CellTagsIndexPosition[      1944,         65]
+NotebookDataLength[      2745,         88]
+NotebookOptionsPosition[      2157,         70]
+NotebookOutlinePosition[      2579,         86]
+CellTagsIndexPosition[      2536,         83]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[ButtonBox["Zigzag Numbers",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://challenges.wolframcloud.com/challenge/zigzag-numbers"], None},
+ ButtonNote->
+  "https://challenges.wolframcloud.com/challenge/zigzag-numbers"]], "Title",
+ CellChangeTimes->{{3.8933404435087175`*^9, 
+  3.8933404474958158`*^9}},ExpressionUUID->"6a777279-ff3f-4b2d-98df-\
+8aa69a1dc9ad"],
+
 Cell[BoxData[
  RowBox[{
   RowBox[{"AlternatingPermutationQ", "[", 
@@ -48,7 +60,13 @@ Cell[BoxData[
    "]"}]}]], "Code",
  CellChangeTimes->{{3.89334043015687*^9, 
   3.8933404301578703`*^9}},ExpressionUUID->"a0089d34-b671-41c5-b64b-\
-0b927c5deaf0"]
+0b927c5deaf0"],
+
+Cell["Performance Statistics", "Section",
+ CellChangeTimes->{{3.8933404564149857`*^9, 
+  3.8933404597462115`*^9}},ExpressionUUID->"70c1b17d-96a1-45b2-a688-\
+dd9c93c15d27"]
+}, Open  ]]
 },
 WindowSize->{574.8, 579.6},
 WindowMargins->{{Automatic, -4.7999999999999545`}, {Automatic, 0}},
@@ -67,7 +85,11 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[561, 20, 1000, 30, 54, "Code",ExpressionUUID->"a0089d34-b671-41c5-b64b-0b927c5deaf0"]
+Cell[CellGroupData[{
+Cell[583, 22, 381, 8, 98, "Title",ExpressionUUID->"6a777279-ff3f-4b2d-98df-8aa69a1dc9ad"],
+Cell[967, 32, 1000, 30, 54, "Code",ExpressionUUID->"a0089d34-b671-41c5-b64b-0b927c5deaf0"],
+Cell[1970, 64, 171, 3, 67, "Section",ExpressionUUID->"70c1b17d-96a1-45b2-a688-dd9c93c15d27"]
+}, Open  ]]
 }
 ]
 *)
