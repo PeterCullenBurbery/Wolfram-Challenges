@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      4712,        140]
-NotebookOptionsPosition[      3513,        109]
-NotebookOutlinePosition[      3954,        126]
-CellTagsIndexPosition[      3911,        123]
+NotebookDataLength[      5242,        153]
+NotebookOptionsPosition[      3950,        121]
+NotebookOutlinePosition[      4391,        138]
+CellTagsIndexPosition[      4348,        135]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -104,7 +104,19 @@ Cell[BoxData[
      RowBox[{"0", ",", "10", ",", "1"}], "}"}]}], "]"}]}]], "Input",
  InitializationCell->True,
  CellChangeTimes->{{3.8932759047541513`*^9, 3.8932759095736966`*^9}},
- CellLabel->"In[10]:=",ExpressionUUID->"5477cf49-28d5-4d83-b766-78230b77c8e6"]
+ CellLabel->"In[10]:=",ExpressionUUID->"5477cf49-28d5-4d83-b766-78230b77c8e6"],
+
+Cell[TextData[ButtonBox["Solution for Digit Frequency for Pi Statistics",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://www.wolframcloud.com/obj/7e8e08b6-2822-44fb-a16b-\
+2f5b7f4c083e"], None},
+ ButtonNote->
+  "https://www.wolframcloud.com/obj/7e8e08b6-2822-44fb-a16b-2f5b7f4c083e"]], \
+"Text",
+ CellChangeTimes->{{3.8932759518945646`*^9, 
+  3.8932759620640354`*^9}},ExpressionUUID->"7d3c3db2-aaa5-4a77-8e94-\
+6350485a50db"]
 }, Open  ]]
 },
 WindowSize->{571.8, 509.4},
@@ -139,8 +151,9 @@ Cell[CellGroupData[{
 Cell[2232, 73, 404, 9, 28, "Input",ExpressionUUID->"e70d9208-eac5-4b82-855b-07c8b550c477"],
 Cell[2639, 84, 304, 6, 32, "Output",ExpressionUUID->"533c1076-0a1d-4182-9e38-33faef9e2556"]
 }, Open  ]],
-Cell[2958, 93, 539, 13, 94, "Input",ExpressionUUID->"5477cf49-28d5-4d83-b766-78230b77c8e6",
- InitializationCell->True]
+Cell[2958, 93, 539, 13, 64, "Input",ExpressionUUID->"5477cf49-28d5-4d83-b766-78230b77c8e6",
+ InitializationCell->True],
+Cell[3500, 108, 434, 10, 35, "Text",ExpressionUUID->"7d3c3db2-aaa5-4a77-8e94-6350485a50db"]
 }, Open  ]]
 }
 ]
