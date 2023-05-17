@@ -1,0 +1,851 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframDesktop 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       161,          7]
+NotebookDataLength[     36283,        843]
+NotebookOptionsPosition[     32794,        773]
+NotebookOutlinePosition[     33216,        789]
+CellTagsIndexPosition[     33173,        786]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[ButtonBox["Reverse Each Word",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://challenges.wolframcloud.com/challenge/reverse-each-word"], 
+   None},
+ ButtonNote->
+  "https://challenges.wolframcloud.com/challenge/reverse-each-word"]], "Title",
+ CellChangeTimes->{{3.8933363265327253`*^9, 
+  3.8933363312406664`*^9}},ExpressionUUID->"a2706eaf-de83-42a7-a906-\
+a1670fe8595f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"??", "StringReverse"}]], "Input",
+ CellChangeTimes->{{3.8933363516246195`*^9, 3.8933363584962406`*^9}},
+ CellLabel->
+  "In[460]:=",ExpressionUUID->"04a08292-a292-4108-bc8e-f3fddb07e94f"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   FrameBox[
+    DynamicModuleBox[{System`InformationDump`open$$ = True, 
+     System`InformationDump`mouseOver$$ = False}, 
+     PaneSelectorBox[{True->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False,
+             BaseStyle -> None],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox[
+           PaneBox[
+            TooltipBox[
+             ButtonBox[
+              PaneSelectorBox[{False->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIcon"],
+                ImageSizeCache->{13., {4., 9.}}], True->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIconHot"],
+                ImageSizeCache->{13., {4., 9.}}]}, Dynamic[
+                CurrentValue["MouseOver"]]],
+              Appearance->None,
+              BaseStyle->"Link",
+              ButtonData->"paclet:ref/StringReverse",
+              ButtonNote->"paclet:ref/StringReverse"],
+             "\"paclet:ref/StringReverse\""],
+            FrameMargins->{{0, 4}, {0, 2}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"\\!\\(\\*RowBox[{\\\"StringReverse\\\", \\\"[\\\", \
+StyleBox[\\\"\\\\\\\"\\\\!\\\\(\\\\*StyleBox[\\\\\\\"string\\\\\\\",\\\\\\\"\
+TI\\\\\\\"]\\\\)\\\\\\\"\\\", ShowStringCharacters->True], \\\"]\\\"}]\\) \
+reverses the order of the characters in \\\"\\!\\(\\*StyleBox[\\\"string\\\", \
+\\\"TI\\\"]\\)\\\".\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          PaneBox[GridBox[{
+             {
+              
+              DynamicModuleBox[{System`InformationDump`open$$ = {
+               False, False, False, False, False, False}}, 
+               StyleBox[GridBox[{
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Documentation\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"Documentation\"",
+                    TooltipStyle->"TextStyling"],
+                    Annotation[#, "Documentation", "Tooltip"]& ], 
+                   TemplateBox[{
+                    
+                    TemplateBox[{
+                    "\"Local \[RightGuillemet]\"", "paclet:ref/StringReverse",
+                     "paclet:ref/StringReverse", "Link", {
+                    RGBColor[0.9686274509803922, 0.4666666666666667, 0.]}, 
+                    BaseStyle -> {
+                    RGBColor[0.0784313725490196, 0.1568627450980392, 0.6]}}, 
+                    "HyperlinkTemplate"], "\"  \"", 
+                    StyleBox[
+                    "\"|\"", "InformationRowLabel", StripOnInput -> False], 
+                    "\"  \"", 
+                    TemplateBox[{"\"Web \[RightGuillemet]\"", {
+                    URL[
+                    "http://reference.wolfram.com/language/ref/StringReverse.\
+html"], None}, "http://reference.wolfram.com/language/ref/StringReverse.html",
+                     "Hyperlink", {
+                    RGBColor[0.9686274509803922, 0.4666666666666667, 0.]}, 
+                    BaseStyle -> {
+                    RGBColor[0.0784313725490196, 0.1568627450980392, 0.6]}}, 
+                    "HyperlinkTemplate"]},
+                    "RowDefault"]},
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Attributes\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"Attributes\"",
+                    TooltipStyle->"TextStyling"],
+                    Annotation[#, "Attributes", "Tooltip"]& ], 
+                   RowBox[{"{", 
+                    RowBox[{"Listable", ",", "Protected"}], "}"}]},
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"FullName\"",
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, "FullName", 
+                    "Tooltip"]& ], "\<\"System`StringReverse\"\>"}
+                 },
+                 AutoDelete->False,
+                 GridBoxAlignment->{"Columns" -> {Right, Left}},
+                 GridBoxDividers->None,
+                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+                 GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.8]}, 
+                    Offset[0.2]}}], "DialogStyle",
+                StripOnInput->False],
+               DynamicModuleValues:>{}]}
+            },
+            DefaultBaseStyle->"Column",
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.5599999999999999]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[3.6]}, 
+                Offset[0.2]}}],
+           FrameMargins->{{6, 6}, {6, 3}}], ""},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpener"],
+               ImageSizeCache->{10., {3., 7.}}], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpenerHot"],
+               ImageSizeCache->{10., {3., 7.}}]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, False],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"], False->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox[
+           PaneBox[
+            TooltipBox[
+             ButtonBox[
+              PaneSelectorBox[{False->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIcon"]], True->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIconHot"]]}, Dynamic[
+                CurrentValue["MouseOver"]]],
+              Appearance->None,
+              BaseStyle->"Link",
+              ButtonData->"paclet:ref/StringReverse",
+              ButtonNote->"paclet:ref/StringReverse"],
+             "\"paclet:ref/StringReverse\""],
+            FrameMargins->{{0, 4}, {0, 2}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"\\!\\(\\*RowBox[{\\\"StringReverse\\\", \\\"[\\\", \
+StyleBox[\\\"\\\\\\\"\\\\!\\\\(\\\\*StyleBox[\\\\\\\"string\\\\\\\",\\\\\\\"\
+TI\\\\\\\"]\\\\)\\\\\\\"\\\", ShowStringCharacters->True], \\\"]\\\"}]\\) \
+reverses the order of the characters in \\\"\\!\\(\\*StyleBox[\\\"string\\\", \
+\\\"TI\\\"]\\)\\\".\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"]], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpenerHot"]]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, True],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"]}, Dynamic[System`InformationDump`open$$],
+      BaselinePosition->Baseline,
+      FrameMargins->0,
+      ImageSize->Automatic],
+     DynamicModuleValues:>{}],
+    BaseStyle->"InformationGridFrame",
+    StripOnInput->False], "InformationGridPlain",
+   StripOnInput->False],
+  InformationData[<|
+   "ObjectType" -> "Symbol", "Usage" -> 
+    "\!\(\*RowBox[{\"StringReverse\", \"[\", \
+StyleBox[\"\\\"\\!\\(\\*StyleBox[\\\"string\\\",\\\"TI\\\"]\\)\\\"\", \
+ShowStringCharacters->True], \"]\"}]\) reverses the order of the characters \
+in \"\!\(\*StyleBox[\"string\", \"TI\"]\)\".", 
+    "Documentation" -> <|
+     "Local" -> "paclet:ref/StringReverse", "Web" -> 
+      "http://reference.wolfram.com/language/ref/StringReverse.html"|>, 
+    "OwnValues" -> None, "UpValues" -> None, "DownValues" -> None, 
+    "SubValues" -> None, "DefaultValues" -> None, "NValues" -> None, 
+    "FormatValues" -> None, "Options" -> None, 
+    "Attributes" -> {Listable, Protected}, "FullName" -> 
+    "System`StringReverse"|>, True]]], "Output",
+ CellChangeTimes->{3.893336358901889*^9},
+ CellLabel->
+  "Out[460]=",ExpressionUUID->"c5531bc5-a843-4c6a-ba67-3576904e64a5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TextWords", "[", "\"\<I went to the store to buy candy.\>\"", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.893336416990809*^9, 3.8933364250260167`*^9}},
+ CellLabel->
+  "In[461]:=",ExpressionUUID->"8a90fade-86fd-458f-b83f-941ba54a4869"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"I\"\>", ",", "\<\"went\"\>", ",", "\<\"to\"\>", 
+   ",", "\<\"the\"\>", ",", "\<\"store\"\>", ",", "\<\"to\"\>", 
+   ",", "\<\"buy\"\>", ",", "\<\"candy\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{3.893336425373063*^9},
+ CellLabel->
+  "Out[461]=",ExpressionUUID->"296215b7-fde5-46bf-a42d-e34bdd785b24"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"StringReverse", "[", 
+  RowBox[{
+  "TextWords", "[", "\"\<I went to the store to buy candy.\>\"", "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.893336426956789*^9, 3.893336429609741*^9}},
+ CellLabel->
+  "In[462]:=",ExpressionUUID->"13ea5b3a-2d6b-455c-83e1-be554752856e"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"I\"\>", ",", "\<\"tnew\"\>", ",", "\<\"ot\"\>", 
+   ",", "\<\"eht\"\>", ",", "\<\"erots\"\>", ",", "\<\"ot\"\>", 
+   ",", "\<\"yub\"\>", ",", "\<\"ydnac\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{3.893336429909786*^9},
+ CellLabel->
+  "Out[462]=",ExpressionUUID->"699e6b30-a2a0-42c9-9344-12b7e751d4a7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Thread", "[", 
+  RowBox[{
+   RowBox[{
+   "TextWords", "[", "\"\<I went to the store to buy candy.\>\"", "]"}], "->", 
+   RowBox[{"StringReverse", "[", 
+    RowBox[{
+    "TextWords", "[", "\"\<I went to the store to buy candy.\>\"", "]"}], 
+    "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8933364330990763`*^9, 3.8933364714135613`*^9}},
+ CellLabel->
+  "In[463]:=",ExpressionUUID->"962251af-b7ae-4c0b-81ee-7f61bbd95e8d"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"\<\"I\"\>", "\[Rule]", "\<\"I\"\>"}], ",", 
+   RowBox[{"\<\"went\"\>", "\[Rule]", "\<\"tnew\"\>"}], ",", 
+   RowBox[{"\<\"to\"\>", "\[Rule]", "\<\"ot\"\>"}], ",", 
+   RowBox[{"\<\"the\"\>", "\[Rule]", "\<\"eht\"\>"}], ",", 
+   RowBox[{"\<\"store\"\>", "\[Rule]", "\<\"erots\"\>"}], ",", 
+   RowBox[{"\<\"to\"\>", "\[Rule]", "\<\"ot\"\>"}], ",", 
+   RowBox[{"\<\"buy\"\>", "\[Rule]", "\<\"yub\"\>"}], ",", 
+   RowBox[{"\<\"candy\"\>", "\[Rule]", "\<\"ydnac\"\>"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.8933364720479*^9},
+ CellLabel->
+  "Out[463]=",ExpressionUUID->"3c88e1af-da0a-4a0a-9765-9df1b4b97cd7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"StringReplace", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\"\<I\>\"", "\[Rule]", "\"\<I\>\""}], ",", 
+     RowBox[{"\"\<went\>\"", "\[Rule]", "\"\<tnew\>\""}], ",", 
+     RowBox[{"\"\<to\>\"", "\[Rule]", "\"\<ot\>\""}], ",", 
+     RowBox[{"\"\<the\>\"", "\[Rule]", "\"\<eht\>\""}], ",", 
+     RowBox[{"\"\<store\>\"", "\[Rule]", "\"\<erots\>\""}], ",", 
+     RowBox[{"\"\<to\>\"", "\[Rule]", "\"\<ot\>\""}], ",", 
+     RowBox[{"\"\<buy\>\"", "\[Rule]", "\"\<yub\>\""}], ",", 
+     RowBox[{"\"\<candy\>\"", "\[Rule]", "\"\<ydnac\>\""}]}], "}"}], "]"}], 
+  "[", "\"\<I went to the store to buy candy.\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.8933364749011607`*^9, 3.8933364936168785`*^9}},
+ CellLabel->
+  "In[465]:=",ExpressionUUID->"d6d6c8f3-64a6-4c94-8623-da8cae48eabf"],
+
+Cell[BoxData["\<\"I tnew ot eht erots ot yub ydnac.\"\>"], "Output",
+ CellChangeTimes->{{3.8933364868026648`*^9, 3.8933364941238027`*^9}},
+ CellLabel->
+  "Out[465]=",ExpressionUUID->"6512982e-dbea-457a-aa63-9099737cfeaf"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"StringReplace", "[", 
+   RowBox[{"Thread", "[", 
+    RowBox[{
+     RowBox[{
+     "TextWords", "[", "\"\<I did this then that then this.\>\"", "]"}], "->", 
+     RowBox[{"StringReverse", "[", 
+      RowBox[{
+      "TextWords", "[", "\"\<I did this then that then this.\>\"", "]"}], 
+      "]"}]}], "]"}], "]"}], "[", "\"\<I did this then that then this.\>\"", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.8933364749011607`*^9, 3.8933365295027094`*^9}},
+ CellLabel->
+  "In[466]:=",ExpressionUUID->"ff267447-b789-4baa-9f4e-fbdafdcc1de6"],
+
+Cell[BoxData["\<\"I did siht neht taht neht siht.\"\>"], "Output",
+ CellChangeTimes->{3.8933365301722307`*^9},
+ CellLabel->
+  "Out[466]=",ExpressionUUID->"f4b427ca-bc4b-495f-82ce-0f0351953541"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ReverseWords", "[", "sentence_String", "]"}], ":=", 
+  RowBox[{
+   RowBox[{"StringReplace", "[", 
+    RowBox[{"Thread", "[", 
+     RowBox[{
+      RowBox[{"TextWords", "[", "sentence", "]"}], "->", 
+      RowBox[{"StringReverse", "[", 
+       RowBox[{"TextWords", "[", "sentence", "]"}], "]"}]}], "]"}], "]"}], 
+   "[", "sentence", "]"}]}]], "Input",
+ CellChangeTimes->{{3.893336346457548*^9, 3.8933363489283876`*^9}, {
+  3.8933365391090527`*^9, 3.893336553258751*^9}},
+ CellLabel->
+  "In[467]:=",ExpressionUUID->"fbd05203-beeb-4391-ba4e-de61347e3ec7"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ReverseWords", "[", "\"\<I went to the store to buy candy.\>\"", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.893336554192785*^9, 3.8933365628115215`*^9}},
+ CellLabel->
+  "In[468]:=",ExpressionUUID->"5e28ba76-4739-4741-a59a-30fb86279a3b"],
+
+Cell[BoxData["\<\"I tnew ot eht erots ot yub ydnac.\"\>"], "Output",
+ CellChangeTimes->{3.893336563101451*^9},
+ CellLabel->
+  "Out[468]=",ExpressionUUID->"839a59cf-8580-4ecb-9db4-4b40f547448b"]
+}, Open  ]],
+
+Cell[TextData[{
+ "I got a ",
+ ButtonBox["weird error.",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://www.wolframcloud.com/obj/f6fec5b1-8c86-41fb-986f-\
+39ddd295f91f"], None},
+  ButtonNote->
+   "https://www.wolframcloud.com/obj/f6fec5b1-8c86-41fb-986f-39ddd295f91f"]
+}], "Text",
+ CellChangeTimes->{{3.893336698112522*^9, 
+  3.8933367102519245`*^9}},ExpressionUUID->"fce2c856-46b6-4709-9cde-\
+58fec707f996"],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1:eJztm73OZutRRM1PQMgtcBekhKRGXIAtjEViJBsJcQPcNhyLkAne0a5vr/VV
+15J6dM4E3V3V9ew3mr/77b//+l//8le/+tWf/uaXP379m//8hz/+8Tf/9U9/
++8v//PMf/vRvv//D7/7lH//wH7/7/e/++Pe//atf/vK//+L/6q9/+e//GWOM
+McYYY4wxxhhjjDHGGGOMMcYYY4wxxhhjjDHGGGOMMcYYYww5f/6n0av/X5TP
+Lf0o7L7Y82zPAf1dsNZ87va5pR+F3Rd7nu05oL8L1prP3T639KOw+2LPsz0H
+9HfBWvO52+eWfhR2X+x5tueA/i5Yaz53+9zSj8Luiz3P9hzQ3wVrzedun1v6
+Udh9sefZngP6u2Ct+dztc0s/Crsv9jzbc0B/F6w1n7t9bulHYffFnmd7Dujv
+grXmc7fPLf0o7L7Y82zPAf1dsNZ87va5pR+F3Rd7nu05oL8L1qJ8bqFFL/U9
+aMlpi470XPt3reX9foo9Ly206KXeW0tOW3Sk51Jl94/CnpcWWvRS760lpy06
+0nOpsvtHYc9LCy16qffWktMWHem5VNn9o7DnpYUWvdR7a8lpi470XKrs/lHY
+89JCi17qvbXktEVHei5Vdv8o7HlpoUUv9d5actqiIz2XKrt/FPa8tNCil3pv
+LTlt0ZGeS5XdPwp7Xlpo0Uu9t5actuhIz6XK7h+FPS8ttOil3ltLTlt0pOdS
+ZfePwp6XdL+WXLXcjZrbkr+We9hpyQull5p7zeeWu1FzW/LXcg87LXmh9FJz
+r/nccjdqbkv+Wu5hpyUvlF5q7jWfW+5GzW3JX8s97LTkhdJLzb3mc8vdqLkt
++Wu5h52WvFB6qbnXfG65GzW3JX8t97DTkhdKLzX3ms8td6PmtuSv5R52WvJC
+6aXmXvO55W7U3Jb8tdzDTkteKL3U3Gs+t9yNmtuSv5Z72GnJC6WXmnvN55a7
+UXNb8tdyDzsteaH0UnOv+UzppfLS4gvlH63nin/2e1B6qbnXfKb0Unlp8YXy
+j9ZzxT/7PSi91NxrPlN6qby0+EL5R+u54p/9HpReau41nym9VF5afKH8o/Vc
+8c9+D0ovNfeaz5ReKi8tvlD+0Xqu+Ge/B6WXmnvNZ0ovlZcWXyj/aD1X/LPf
+g9JLzb3mM6WXykuLL5R/tJ4r/tnvQeml5l7zmdJL5aXFF8o/Ws8V/+z3oPRS
+c6/5TOml8tLiC+UfreeKf/Z7UHqpudd8pvRSeWnxhfKP1nPFP/s9KL3U3Gs+
+2/XafaGw343az56DFp8pvdTcaz7b9dp9obDfjdrPnoMWnym91NxrPtv12n2h
+sN+N2s+egxafKb3U3Gs+2/XafaGw343az56DFp8pvdTcaz7b9dp9obDfjdrP
+noMWnym91NxrPtv12n2hsN+N2s+egxafKb3U3Gs+2/XafaGw343az56DFp8p
+vdTcaz7b9dp9obDfjdrPnoMWnym91NxrPtv12n2hsN+N2s+egxafKb3U3Gs+
+2/XafaGw343az56DFp8pvfa5FMvV7kve1653c13M53ewfzeo/Vqw39eud3Nd
+zOd3sH83qP1asN/XrndzXcznd7B/N6j9WrDf1653c13M53ewfzeo/Vqw39eu
+d3NdzOd3sH83qP1asN/XrndzXcznd7B/N6j9WrDf1653c13M53ewfzeo/Vqw
+39eud3NdzOd3sH83qP1asN/XrndzXcznd7B/N6j9WrDf1653c13Yfb5W1N3W
+b/3W73m/a5WG1mOttH/rt37r916/a5WG1mOttH/rt37r916/a5WG1mOttH/r
+t37r916/a5WG1mOttH/rt37r916/a5WG1mOttH/rt37r916/a5WG1mOttH/r
+t37r916/a5WG1mOttH/rt37r916/a5WG1mOttH/rt37r916/a5WG1mOttH/r
+t37r916/azVcUPdtmUvlnn7H1nd+Te8YX0HL95maS303KB327+Q1vWN8BS3f
+Z2ou9d2gdNi/k9f0jvEVtHyfqbnUd4PSYf9OXtM7xlfQ8n2m5lLfDUqH/Tt5
+Te8YX0HL95maS303KB327+Q1vWN8BS3fZ2ou9d2gdNi/k9f0jvEVtHyfqbnU
+d4PSYf9OXtM7xlfQ8n2m5lLfDUqH/Tt5Te8YX0HL95maS303KB327+Q1vePH
+tHw37Dml9rPfN409Ly2+UHqp+9pzn2Z3e+du1H72+6ax56XFF0ovdV977tPs
+bu/cjdrPft809ry0+ELppe5rz32a3e2du1H72e+bxp6XFl8ovdR97blPs7u9
+czdqP/t909jz0uILpZe6rz33aXa3d+5G7We/bxp7Xlp8ofRS97XnPs3u9s7d
+qP3s901jz0uLL5Re6r723KfZ3d65G7Wf/b5p7Hlp8YXSS93Xnvs0u9s7d6P2
+s983jT0vLb5Qeqn72nOfZnd7527Ufvb7prHnpcUXSi91X3vuKa7p/RT7O7Lr
+aMnV/Otmvx8/pkVHmv0uPOvXkqv5181+F35Mi440+1141q8lV/Ovm/0u/JgW
+HWn2u/CsX0uu5l83+134MS060ux34Vm/llzNv272u/BjWnSk2e/Cs34tuZp/
+3ex34ce06Eiz34Vn/VpyNf+62e/Cj2nRkWa/C8/6teRq/nWz34Uf06IjzX4X
+nvVrydX862a/Cz+mRUea/S4869eSq/nXzbXfBUpHyzuy67Dn71MoHXb/7Lm3
+5/naXPt+LT7bdVC5SmN/HxT23NvzfG2ufb8Wn+06qFylsb8PCnvu7Xm+Nte+
+X4vPdh1UrtLY3weFPff2PF+ba9+vxWe7DipXaezvg8Kee3uer82179fis10H
+las09vdBYc+9Pc/X5tr3a/HZroPKVRr7+6Cw596e52tz7fu1+GzXQeUqjf19
+UNhzb8/ztbn2/Vp8tuugcpXG/j4o7Lm35/naXPt+LT7bdVC5SmN/HxT23Nvz
+fG1uer+Wfum5Lfe170f1S8+132N6n+nd3O/ZLz3XnvuW/ah+6bn2e0zvM72b
++z37pefac9+yH9UvPdd+j+l9pndzv2e/9Fx77lv2o/ql59rvMb3P9G7u9+yX
+nmvPfct+VL/0XPs9pveZ3s39nv3Sc+25b9mP6peea7/H9D7Tu7nfs196rj33
+LftR/dJz7feY3md6N/d79kvPtee+ZT+qX3qu/R7T+0zv5n7Pfum59ty37Ef1
+S8+132N6n+nd3O/ZLz3XnvuW/ah+6bn2e0zvM73X5trv9inUd6jFZ3tO7Sx/
+Lh27xzs67CwHz7Dn1M7y59Kxe7yjw85y8Ax7Tu0sfy4du8c7OuwsB8+w59TO
+8ufSsXu8o8POcvAMe07tLH8uHbvHOzrsLAfPsOfUzvLn0rF7vKPDznLwDHtO
+7Sx/Lh27xzs67CwHz7Dn1M7y59Kxe7yjw85y8Ax7Tu0sfy4du8c7OuwsB8+w
+59TO8ufSsXs800H1a9Fhzx+lg9Jr94XyOU3LPdJc28/+3bjWz66D0mv3hfI5
+Tcs90lzbz/7duNbProPSa/eF8jlNyz3SXNvP/t241s+ug9Jr94XyOU3LPdJc
+28/+3bjWz66D0mv3hfI5Tcs90lzbz/7duNbProPSa/eF8jlNyz3SXNvP/t24
+1s+ug9Jr94XyOU3LPdJc28/+3bjWz66D0mv3hfI5Tcs90lzbz/7duNbProPS
+a/eF8jlNyz3SXNvP/t241s+ug9Jr94XyOU3LPdLY90uz9+vql4a6r92XT7Hr
+oO/39juy58+el0+x3+NavzTUfe2+fIpdB32/t9+RPX/2vHyK/R7X+qWh7mv3
+5VPsOuj7vf2O7Pmz5+VT7Pe41i8NdV+7L59i10Hf7+13ZM+fPS+fYr/HtX5p
+qPvaffkUuw76fm+/I3v+7Hn5FPs9rvVLQ93X7sun2HXQ93v7HdnzZ8/Lp9jv
+ca1fGuq+dl8+xa6Dvt/b78ieP3tePsV+j2v90lD3tfvyKXYd9P3efkf2/Nnz
+8in2e1zrl4a6r92XT7HroO/39juy58+el0+x3+NavzTUfe2+fIpdB32/t9+R
+PX8teWnZz94vjf0dtex3DepuVA7Svtix67C/8xb/qPfWst81qLtROUj7Yseu
+w/7OW/yj3lvLfteg7kblIO2LHbsO+ztv8Y96by37XYO6G5WDtC927Drs77zF
+P+q9tex3DepuVA7Svtix67C/8xb/qPfWst81qLtROUj7Yseuw/7OW/yj3lvL
+fteg7kblIO2LHbsO+ztv8Y96by37XYO6G5WDtC927Drs77zFP+q9tex3Depu
+VA7Svtix67C/8xb/qPfWst81qLtROUj70gJ9P2sOWmi5R3quXYf9Hmm96+eC
+ymlL7u203KPl/bbcI613/VxQOW3JvZ2We7S835Z7pPWunwsqpy25t9Nyj5b3
+23KPtN71c0HltCX3dlru0fJ+W+6R1rt+LqictuTeTss9Wt5vyz3SetfPBZXT
+ltzbablHy/ttuUda7/q5oHLakns7Lfdoeb8t90jrXT8XVE5bcm+n5R4t77fl
+Hmm96+eCymlL7u203KPl/bbcI613/Z5B5aolf5Reqp/9vnaf7XMpWu52bb+W
+74bdl/R+LXrtvth12Gm527X9Wr4bdl/S+7Xotfti12Gn5W7X9mv5bth9Se/X
+otfui12HnZa7Xduv5bth9yW9X4teuy92HXZa7nZtv5bvht2X9H4teu2+2HXY
+abnbtf1avht2X9L7tei1+2LXYaflbtf2a/lu2H1J79ei1+6LXYedlrtd26/l
+u2H3Jb1fi167L3Yddlrudm2/lu+G3Zf0fi167b7YddhpuVvLfmnseq9919Jz
+7dXisx3qHva59txT2HXY72Gfa68Wn+1Q97DPteeewq7Dfg/7XHu1+GyHuod9
+rj33FHYd9nvY59qrxWc71D3sc+25p7DrsN/DPtdeLT7boe5hn2vPPYVdh/0e
+9rn2avHZDnUP+1x77insOuz3sM+1V4vPdqh72Ofac09h12G/h32uvVp8tkPd
+wz7XnnsKuw77Pexz7dXisx3qHva59txT2HXY72Gfa68Wn+1Q97DPtec+7Yvd
+Z8oXe57tvtj3s+eA8i/dz/4+7Hm2z215R3YdLb7Y97PngPIv3c/+Pux5ts9t
+eUd2HS2+2Pez54DyL93P/j7sebbPbXlHdh0tvtj3s+eA8i/dz/4+7Hm2z215
+R3YdLb7Y97PngPIv3c/+Pux5ts9teUd2HS2+2Pez54DyL93P/j7sebbPbXlH
+dh0tvtj3s+eA8i/dz/4+7Hm2z215R3YdLb7Y97PngPIv3c/+Pux5ts9teUd2
+HS2+2Pez54DyL93P/j7sebbPbXlHdh0tvtj3s+eA8i/dz/4+7HmmaPHF/n7t
+c+3V4jM1134P+1zqvhT2PKf7tehNz7VXi8/UXPs97HOp+1LY85zu16I3Pdde
+LT5Tc+33sM+l7kthz3O6X4ve9Fx7tfhMzbXfwz6Xui+FPc/pfi1603Pt1eIz
+Ndd+D/tc6r4U9jyn+7XoTc+1V4vP1Fz7PexzqftS2POc7teiNz3XXi0+U3Pt
+97DPpe5LYc9zul+L3vRce7X4TM2138M+l7ovhT3P6X4tetNz7dXiMzXXfg/7
+XOq+FPY8p/u16E3PtVeLz9Rc+z3sc6n7prHnlILKy7X8pWnxueW+dp/TOlpY
+7p/tZ69rtPjccl+7z2kdLSz3z/az1zVafG65r93ntI4Wlvtn+9nrGi0+t9zX
+7nNaRwvL/bP97HWNFp9b7mv3Oa2jheX+2X72ukaLzy33tfuc1tHCcv9sP3td
+o8XnlvvafU7raGG5f7afva7R4nPLfe0+p3W0sNw/289e12jxueW+dp/TOlpY
+7p/tZ69rtPjccl+7z2kd16C/b6l7UP3seu060nopWvZryUHLu6SgfKbuYffF
+vh+VZ2rutf1actDyLikon6l72H2x70flmZp7bb+WHLS8SwrKZ+oedl/s+1F5
+puZe268lBy3vkoLymbqH3Rf7flSeqbnX9mvJQcu7pKB8pu5h98W+H5Vnau61
+/Vpy0PIuKSifqXvYfbHvR+WZmnttv5YctLxLCspn6h52X+z7UXmm5l7bryUH
+Le+SgvKZuofdF/t+VJ6pudf2a8lBy7ukoHym7mH3xb4flWdq7rX9WnLQ8i7t
+/tnn2vez623Brte+36ek3xFVdv+oudT3b7649LZg12vf71PS74gqu3/UXOr7
+N19celuw67Xv9ynpd0SV3T9qLvX9my8uvS3Y9dr3+5T0O6LK7h81l/r+zReX
+3hbseu37fUr6HVFl94+aS33/5otLbwt2vfb9PiX9jqiy+0fNpb5/88WltwW7
+Xvt+n5J+R1TZ/aPmUt+/+eLS24Jdr32/T0m/I6rs/lFzqe/ffHHpbcGu177f
+p6TfEVV2/6i51Pdvvrj0tmDXa9/vU9LviCq7fy370Xd+W0ca+1z7fpRee053
+X1c/Oy05bcmBfa59P0qvPae7r6ufnZactuTAPte+H6XXntPd19XPTktOW3Jg
+n2vfj9Jrz+nu6+pnpyWnLTmwz7XvR+m153T3dfWz05LTlhzY59r3o/Tac7r7
+uvrZaclpSw7sc+37UXrtOd19Xf3stOS0JQf2ufb9KL32nO6+rn52WnLakgP7
+XPt+lF57TndfVz87LTltyYF9rn0/Sq89p7uvqx+F/b4t+9nfJb3nd39HaVp8
+tueZ0mvH7l/LfvZ3Tu/53d9Rmhaf7Xmm9Nqx+9eyn/2d03t+93eUpsVne54p
+vXbs/rXsZ3/n9J7f/R2lafHZnmdKrx27fy372d85ved3f0dpWny255nSa8fu
+X8t+9ndO7/nd31GaFp/teab02rH717Kf/Z3Te373d5SmxWd7nim9duz+texn
+f+f0nt/9HaVp8dmeZ0qvHbt/LfvZ3zm953d/R2lafLbnmdJrx+5fy372d07v
++d3fUZoWn+15pvTaablHy36fYv8etNDyfab0UnPn8zv7Uf3S2Pf7FHuuWtj3
+6h0d89mlg7ovhX2/T7HnqoV9r97RMZ9dOqj7Utj3+xR7rlrY9+odHfPZpYO6
+L4V9v0+x56qFfa/e0TGfXTqo+1LY9/sUe65a2PfqHR3z2aWDui+Ffb9Pseeq
+hX2v3tExn106qPtS2Pf7FHuuWtj36h0d89mlg7ovhX2/T7HnqoV9r97RMZ9d
+Oqj7Utj3+xR7rlrY9+odHfPZpWP+vTO3xeeWuWnsObX3s+fgmi8t97DfrcXn
+lrlp7Dm197Pn4JovLfew363F55a5aew5tfez5+CaLy33sN+txeeWuWnsObX3
+s+fgmi8t97DfrcXnlrlp7Dm197Pn4JovLfew363F55a5aew5tfez5+CaLy33
+sN+txeeWuWnsObX3s+fgmi8t97DfrcXnlrlp7Dm197Pn4JovLfew363F55a5
+aew5tfez5+CaLy33sN+txeeWuWnsObX3s+fgmi/2e3yK/V3afbbrsPuXJn2P
+1Tt5tu+X1mGnJQcUdh12/9JQ35fVs1zZ90vrsNOSAwq7Drt/aajvy+pZruz7
+pXXYackBhV2H3b801Pdl9SxX9v3SOuy05IDCrsPuXxrq+7J6liv7fmkddlpy
+QGHXYfcvDfV9WT3LlX2/tA47LTmgsOuw+5eG+r6snuXKvl9ah52WHFDYddj9
+S0N9X1bPcmXfL63DTksOKOw67P6lob4vq2e5su+X1mGnJQcUdh12/9JQ35fV
+s1zZ9xvvcC0HLe/Ifjd7Dj7FrmP3HV+B/ftC6U33aynKZwq7jt13fAX27wul
+N92vpSifKew6dt/xFdi/L5TedL+WonymsOvYfcdXYP++UHrT/VqK8pnCrmP3
+HV+B/ftC6U33aynKZwq7jt13fAX27wulN92vpSifKew6dt/xFdi/L5TedL+W
+onymsOvYfcdXYP++UHrT/VqK8pnCrmP3HV+B/ftC6U33aynKZwq7jt332X7X
+quUe6bmUDupuLfut3/r9DNT7tRcFpYPqZ79by37rt34/A/V+7UVB6aD62e/W
+st/6rd/PQL1fe1FQOqh+9ru17Ld+6/czUO/XXhSUDqqf/W4t+63f+v0M1Pu1
+FwWlg+pnv1vLfuu3fj8D9X7tRUHpoPrZ79ay3/qt389AvV97UVA6qH72u7Xs
+t37r9zNQ79deFJQOqp/9bi37rd/6/QzU+7UXBaWD6me/W8t+67d+PwM1l8J+
+t5Z+q2fVgl0vdTd7Xux3S0Pd91q/1bNqwa6Xups9L/a7paHue63f6lm1YNdL
+3c2eF/vd0lD3vdZv9axasOul7mbPi/1uaaj7Xuu3elYt2PVSd7PnxX63NNR9
+r/VbPasW7Hqpu9nzYr9bGuq+1/qtnlULdr3U3ex5sd8tDXXfa/1Wz6oFu17q
+bva82O+WhrrvtX6rZ9WCXS91N3te7HdLQ933Wr/Vs2rBrpe6mz0vdr3UflQ/
+uw77fe3+XevXUpQvFHZfqP2ofnYd9vva/bvWr6UoXyjsvlD7Uf3sOuz3tft3
+rV9LUb5Q2H2h9qP62XXY72v371q/lqJ8obD7Qu1H9bPrsN/X7t+1fi1F+UJh
+94Xaj+pn12G/r92/a/1aivKFwu4LtR/Vz67Dfl+7f9f6tRTlC4XdF2o/qp9d
+h/2+dv+u9WspyhcKuy/UflQ/uw77fe3+XevXUpQvFHZfqP2ofnYd9vva/bvW
+r6UoXyjsvlD7UXop7D636Gh5H/b9qH5prr2ja7m6lr9reU73s78P+35UvzTX
+3tG1XF3L37U8p/vZ34d9P6pfmmvv6FquruXvWp7T/ezvw74f1S/NtXd0LVfX
+8nctz+l+9vdh34/ql+baO7qWq2v5u5bndD/7+7DvR/VLc+0dXcvVtfxdy3O6
+n/192Pej+qW59o6u5epa/q7lOd3P/j7s+1H90lx7R9dydS1/1/Kc7md/H/b9
+qH5prr2ja7m6lr9reU73s78P+35UvzTX3tG1XF3T0VJp7Hez66XY3Vx6qf0o
+vS06WiqN/W52vRS7m0svtR+lt0VHS6Wx382ul2J3c+ml9qP0tuhoqTT2u9n1
+UuxuLr3UfpTeFh0tlcZ+N7teit3NpZfaj9LboqOl0tjvZtdLsbu59FL7UXpb
+dLRUGvvd7HopdjeXXmo/Sm+LjpZKY7+bXS/F7ubSS+1H6W3R0VJp7Hez66XY
+3Vx6qf0ovS06WiqN/W52vRS72/e826fM52fY80zpsFfaF6pfGnuer82lmM/P
+sL8jSoe90r5Q/dLY83xtLsV8fob9HVE67JX2heqXxp7na3Mp5vMz7O+I0mGv
+tC9UvzT2PF+bSzGfn2F/R5QOe6V9ofqlsef52lyK+fwM+zuidNgr7QvVL409
+z9fmUsznZ9jfEaXDXmlfqH5p7Hm+NpdiPj/D/o4oHfZK+0L1S2PP87W5FPP5
+GfZ3ROmwV9oXql8ae56vzaWYz8+wvyNKh73SvlD90tjzbJ97rex3S+9H+WIv
+6h4tPrf4l+7X4vO1SvtHYffFXtQ9Wnxu8S/dr8Xna5X2j8Lui72oe7T43OJf
+ul+Lz9cq7R+F3Rd7Ufdo8bnFv3S/Fp+vVdo/Crsv9qLu0eJzi3/pfi0+X6u0
+fxR2X+xF3aPF5xb/0v1afL5Waf8o7L7Yi7pHi88t/qX7tfh8rdL+Udh9sRd1
+jxafW/xL92vx+Vql/aOw+2Iv6h4tPrf4l+7X4vO1SvtHYffFXtQ9Wnxu8S/d
+z+7zGGOMMcYYY4wxxhhjjDHGGGOMMcYYY4wxxhhjjDHGGGOMMcYYY6T5Xy3M
+Pjo=
+    "], {{0, 234.02028175775231`}, {234.02028175775231`, 0}}, {0, 255},
+    ColorFunction->RGBColor,
+    ImageResolution->{119.98960000000002`, 119.98960000000002`},
+    SmoothingQuality->"High"],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  DefaultBaseStyle->"ImageGraphics",
+  ImageSize->Automatic,
+  ImageSizeRaw->{234.02028175775231`, 234.02028175775231`},
+  PlotRange->{{0, 234.02028175775231`}, {0, 234.02028175775231`}}]], "Input",E\
+xpressionUUID->"0b050b31-feee-4ea8-accc-a6093e363673"],
+
+Cell[CellGroupData[{
+
+Cell["Tests", "Section",
+ CellChangeTimes->{{3.8933367293141546`*^9, 
+  3.893336730078071*^9}},ExpressionUUID->"06d07d00-1aa5-496d-96a4-\
+0252859f3f98"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ReverseWords", "[", "\"\<Reversing words is fun!\>\"", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.893336726512233*^9, 3.89333673839844*^9}},
+ CellLabel->
+  "In[470]:=",ExpressionUUID->"a7a83753-2367-465d-8127-2dcbf83e22b2"],
+
+Cell[BoxData["\<\"gnisreveR sdrow si nuf!\"\>"], "Output",
+ CellChangeTimes->{{3.8933367315052233`*^9, 3.8933367390506306`*^9}},
+ CellLabel->
+  "Out[470]=",ExpressionUUID->"16eb6df1-c198-475f-bc48-1ba9535ffb93"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ReverseWords", "[", "\"\<I went to the store to buy candy.\>\"", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.8933367420254045`*^9, 3.893336742026405*^9}},
+ CellLabel->
+  "In[471]:=",ExpressionUUID->"6e453564-822d-41b2-9e40-3c97db1eac57"],
+
+Cell[BoxData["\<\"I tnew ot eht erots ot yub ydnac.\"\>"], "Output",
+ CellChangeTimes->{3.893336742610489*^9},
+ CellLabel->
+  "Out[471]=",ExpressionUUID->"3355b47d-4986-4aca-a77f-d5cf2c667b1b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ReverseWords", "[", "\"\<Caution: wet floor.\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.8933367455367384`*^9, 3.8933367455367384`*^9}},
+ CellLabel->
+  "In[472]:=",ExpressionUUID->"23f6d4a7-bec0-49f6-ab94-563bf9afb935"],
+
+Cell[BoxData["\<\"noituaC: tew roolf.\"\>"], "Output",
+ CellChangeTimes->{3.893336746124463*^9},
+ CellLabel->
+  "Out[472]=",ExpressionUUID->"8c12adf2-2436-41c6-8c9d-109f76ec4277"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ReverseWords", "[", 
+  "\"\<One space, three spaces,   six spaces,      end.\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.893336749176737*^9, 3.8933367491777363`*^9}},
+ CellLabel->
+  "In[473]:=",ExpressionUUID->"c070945a-68ae-4a91-9eb8-e7978e40b652"],
+
+Cell[BoxData["\<\"enO ecaps, eerht ecapss,   xis ecapss,      dne.\"\>"], \
+"Output",
+ CellChangeTimes->{3.893336749658901*^9},
+ CellLabel->
+  "Out[473]=",ExpressionUUID->"cc6f0548-2374-4ea4-a5d6-b0ac2408b0ce"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ReverseWords", "[", 
+  "\"\<My favorite kind of music? I'd have to say hip-hop.\>\"", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.893336753138731*^9, 3.8933367531397314`*^9}},
+ CellLabel->
+  "In[474]:=",ExpressionUUID->"12ec9965-c2f6-4024-8077-16c5bb79253e"],
+
+Cell[BoxData["\<\"yM etirovaf dnik fo cisum? d'I evah ot yas poh-pih.\"\>"], \
+"Output",
+ CellChangeTimes->{3.893336754099821*^9},
+ CellLabel->
+  "Out[474]=",ExpressionUUID->"e63c16ea-7264-40e9-b9c9-e0a0245a1f06"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{574.8, 579.6},
+WindowMargins->{{Automatic, -4.7999999999999545`}, {Automatic, 0}},
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 31, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"c3ca9104-71a2-4dff-904e-d4df2ad5dcb2"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[583, 22, 394, 9, 98, "Title",ExpressionUUID->"a2706eaf-de83-42a7-a906-a1670fe8595f"],
+Cell[CellGroupData[{
+Cell[1002, 35, 210, 4, 28, "Input",ExpressionUUID->"04a08292-a292-4108-bc8e-f3fddb07e94f"],
+Cell[1215, 41, 12499, 299, 159, "Output",ExpressionUUID->"c5531bc5-a843-4c6a-ba67-3576904e64a5"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13751, 345, 256, 5, 28, "Input",ExpressionUUID->"8a90fade-86fd-458f-b83f-941ba54a4869"],
+Cell[14010, 352, 347, 7, 32, "Output",ExpressionUUID->"296215b7-fde5-46bf-a42d-e34bdd785b24"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14394, 364, 297, 7, 28, "Input",ExpressionUUID->"13ea5b3a-2d6b-455c-83e1-be554752856e"],
+Cell[14694, 373, 347, 7, 32, "Output",ExpressionUUID->"699e6b30-a2a0-42c9-9344-12b7e751d4a7"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15078, 385, 446, 11, 67, "Input",ExpressionUUID->"962251af-b7ae-4c0b-81ee-7f61bbd95e8d"],
+Cell[15527, 398, 658, 13, 52, "Output",ExpressionUUID->"3c88e1af-da0a-4a0a-9765-9df1b4b97cd7"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16222, 416, 817, 16, 67, "Input",ExpressionUUID->"d6d6c8f3-64a6-4c94-8623-da8cae48eabf"],
+Cell[17042, 434, 221, 3, 32, "Output",ExpressionUUID->"6512982e-dbea-457a-aa63-9099737cfeaf"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17300, 442, 566, 14, 105, "Input",ExpressionUUID->"ff267447-b789-4baa-9f4e-fbdafdcc1de6"],
+Cell[17869, 458, 193, 3, 32, "Output",ExpressionUUID->"f4b427ca-bc4b-495f-82ce-0f0351953541"]
+}, Open  ]],
+Cell[18077, 464, 586, 14, 86, "Input",ExpressionUUID->"fbd05203-beeb-4391-ba4e-de61347e3ec7"],
+Cell[CellGroupData[{
+Cell[18688, 482, 259, 5, 28, "Input",ExpressionUUID->"5e28ba76-4739-4741-a59a-30fb86279a3b"],
+Cell[18950, 489, 193, 3, 32, "Output",ExpressionUUID->"839a59cf-8580-4ecb-9db4-4b40f547448b"]
+}, Open  ]],
+Cell[19158, 495, 419, 12, 35, "Text",ExpressionUUID->"fce2c856-46b6-4709-9cde-58fec707f996"],
+Cell[19580, 509, 10500, 176, 247, "Input",ExpressionUUID->"0b050b31-feee-4ea8-accc-a6093e363673"],
+Cell[CellGroupData[{
+Cell[30105, 689, 152, 3, 67, "Section",ExpressionUUID->"06d07d00-1aa5-496d-96a4-0252859f3f98"],
+Cell[CellGroupData[{
+Cell[30282, 696, 246, 5, 28, "Input",ExpressionUUID->"a7a83753-2367-465d-8127-2dcbf83e22b2"],
+Cell[30531, 703, 211, 3, 32, "Output",ExpressionUUID->"16eb6df1-c198-475f-bc48-1ba9535ffb93"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[30779, 711, 259, 5, 28, "Input",ExpressionUUID->"6e453564-822d-41b2-9e40-3c97db1eac57"],
+Cell[31041, 718, 193, 3, 32, "Output",ExpressionUUID->"3355b47d-4986-4aca-a77f-d5cf2c667b1b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31271, 726, 244, 4, 28, "Input",ExpressionUUID->"23f6d4a7-bec0-49f6-ab94-563bf9afb935"],
+Cell[31518, 732, 179, 3, 32, "Output",ExpressionUUID->"8c12adf2-2436-41c6-8c9d-109f76ec4277"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31734, 740, 274, 5, 48, "Input",ExpressionUUID->"c070945a-68ae-4a91-9eb8-e7978e40b652"],
+Cell[32011, 747, 210, 4, 32, "Output",ExpressionUUID->"cc6f0548-2374-4ea4-a5d6-b0ac2408b0ce"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[32258, 756, 280, 6, 48, "Input",ExpressionUUID->"12ec9965-c2f6-4024-8077-16c5bb79253e"],
+Cell[32541, 764, 213, 4, 32, "Output",ExpressionUUID->"e63c16ea-7264-40e9-b9c9-e0a0245a1f06"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
