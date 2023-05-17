@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      3081,         92]
-NotebookOptionsPosition[      2258,         69]
-NotebookOutlinePosition[      2697,         86]
-CellTagsIndexPosition[      2654,         83]
+NotebookDataLength[      3141,         95]
+NotebookOptionsPosition[      2289,         71]
+NotebookOutlinePosition[      2728,         88]
+CellTagsIndexPosition[      2685,         85]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -52,8 +52,10 @@ Cell[BoxData[
   RowBox[{"N", "[", 
    RowBox[{
     RowBox[{"HarmonicNumber", "[", "n", "]"}], "/", "2"}], "]"}]}]], "Input",
+ InitializationCell->True,
  CellChangeTimes->{{3.8932575302932215`*^9, 3.8932575366359415`*^9}},
- CellLabel->"In[29]:=",ExpressionUUID->"4eb65a1e-7efc-4fa9-b1f1-07043cf12c56"],
+ CellLabel->
+  "In[149]:=",ExpressionUUID->"4eb65a1e-7efc-4fa9-b1f1-07043cf12c56"],
 
 Cell[TextData[ButtonBox["Solution Statistics",
  BaseStyle->"Hyperlink",
@@ -67,10 +69,10 @@ Cell[TextData[ButtonBox["Solution Statistics",
   3.8932575830787*^9}},ExpressionUUID->"7671e71c-f0e6-4649-8f3e-b5e120767df7"]
 }, Open  ]]
 },
-WindowSize->{312, 495},
-WindowMargins->{{
-  Automatic, 122.40000000000009`}, {-23.399999999999977`, Automatic}},
-FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+WindowSize->{312., 466.2},
+WindowMargins->{{Automatic, 122.40000000000009`}, {
+  5.399999999999977, Automatic}},
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 31, 2023)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"a1d4f020-2a4e-4a96-8343-26056fd3013f"
 ]
@@ -91,8 +93,9 @@ Cell[CellGroupData[{
 Cell[992, 35, 267, 5, 28, "Input",ExpressionUUID->"a1d348c5-cb79-4071-808a-31454164168b"],
 Cell[1262, 42, 188, 2, 32, "Output",ExpressionUUID->"93470c67-3e07-421a-bd53-7d0db5817fc1"]
 }, Open  ]],
-Cell[1465, 47, 375, 8, 67, "Input",ExpressionUUID->"4eb65a1e-7efc-4fa9-b1f1-07043cf12c56"],
-Cell[1843, 57, 399, 9, 35, "Text",ExpressionUUID->"7671e71c-f0e6-4649-8f3e-b5e120767df7"]
+Cell[1465, 47, 406, 10, 113, "Input",ExpressionUUID->"4eb65a1e-7efc-4fa9-b1f1-07043cf12c56",
+ InitializationCell->True],
+Cell[1874, 59, 399, 9, 35, "Text",ExpressionUUID->"7671e71c-f0e6-4649-8f3e-b5e120767df7"]
 }, Open  ]]
 }
 ]

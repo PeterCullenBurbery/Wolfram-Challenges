@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      2518,         82]
-NotebookOptionsPosition[      2032,         65]
-NotebookOutlinePosition[      2442,         81]
-CellTagsIndexPosition[      2399,         78]
+NotebookDataLength[      3132,         95]
+NotebookOptionsPosition[      2452,         76]
+NotebookOutlinePosition[      2874,         92]
+CellTagsIndexPosition[      2831,         89]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -31,6 +31,13 @@ Cell[TextData[ButtonBox["How Round Is a Country?",
  CellChangeTimes->{{3.89324715420863*^9, 
   3.89324717902636*^9}},ExpressionUUID->"7aa6c170-d328-4117-8daf-\
 0ac075b36e46"],
+
+Cell["\<\
+The function that is the key to solving this problem is BoundingRegion.\
+\>", "Text",
+ CellChangeTimes->{{3.893319523897732*^9, 
+  3.8933195391879406`*^9}},ExpressionUUID->"335e1ce9-8450-4fca-b8c0-\
+a647bc1eb2ed"],
 
 Cell[BoxData[
  RowBox[{
@@ -59,13 +66,17 @@ Cell[BoxData[
         RowBox[{"polygon", ",", "\"\<MinDisk\>\""}], "]"}], "]"}]}]}]}], 
    "]"}]}]], "Code",
  CellChangeTimes->{{3.8932471668648405`*^9, 3.8932471668648405`*^9}},
- CellLabel->
-  "In[150]:=",ExpressionUUID->"27e2b5c1-c284-429d-a2b8-f377337af2ce"]
+ CellLabel->"In[95]:=",ExpressionUUID->"27e2b5c1-c284-429d-a2b8-f377337af2ce"],
+
+Cell["I think the server was down when I tried to submit.", "Text",
+ CellChangeTimes->{{3.8933195463721533`*^9, 
+  3.893319553437282*^9}},ExpressionUUID->"86bf02b3-42e1-46f8-b84a-\
+478f0290c294"]
 }, Open  ]]
 },
-WindowSize->{569.25, 609.75},
-WindowMargins->{{Automatic, 64.5}, {-12.75, Automatic}},
-FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+WindowSize->{574.8, 579.6},
+WindowMargins->{{Automatic, -4.7999999999999545`}, {Automatic, 0}},
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 31, 2023)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"b0c7121a-e018-48bb-8b10-ccbefdfbb18f"
 ]
@@ -82,7 +93,9 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 404, 10, 98, "Title",ExpressionUUID->"7aa6c170-d328-4117-8daf-0ac075b36e46"],
-Cell[987, 34, 1029, 28, 68, "Code",ExpressionUUID->"27e2b5c1-c284-429d-a2b8-f377337af2ce"]
+Cell[987, 34, 223, 5, 35, "Text",ExpressionUUID->"335e1ce9-8450-4fca-b8c0-a647bc1eb2ed"],
+Cell[1213, 41, 1025, 27, 68, "Code",ExpressionUUID->"27e2b5c1-c284-429d-a2b8-f377337af2ce"],
+Cell[2241, 70, 195, 3, 35, "Text",ExpressionUUID->"86bf02b3-42e1-46f8-b84a-478f0290c294"]
 }, Open  ]]
 }
 ]
