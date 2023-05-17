@@ -1,0 +1,56 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframDesktop 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       161,          7]
+NotebookDataLength[      1318,         46]
+NotebookOptionsPosition[       962,         32]
+NotebookOutlinePosition[      1370,         48]
+CellTagsIndexPosition[      1327,         45]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[ButtonBox["Grayscale Spectrum",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://challenges.wolframcloud.com/challenge/grayscale-spectrum"], 
+   None},
+ ButtonNote->
+  "https://challenges.wolframcloud.com/challenge/grayscale-spectrum"]], \
+"Title",
+ CellChangeTimes->{{3.893316129396655*^9, 
+  3.8933161342878275`*^9}},ExpressionUUID->"adacacef-9be2-4138-9362-\
+983e4a5c0308"]
+},
+WindowSize->{574.8, 579.6},
+WindowMargins->{{Automatic, -12}, {Automatic, 12.6}},
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 31, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"20ae1d98-7d6a-47c1-b215-7c11e5c714d4"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[561, 20, 397, 10, 98, "Title",ExpressionUUID->"adacacef-9be2-4138-9362-983e4a5c0308"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
