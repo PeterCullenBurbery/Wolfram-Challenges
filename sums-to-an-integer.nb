@@ -395,7 +395,7 @@ xpressionUUID->"118e8f00-13cb-4a63-bf06-0df12fba2212"]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{398.4, 604.8},
+WindowSize->{398.4, 574.8},
 WindowMargins->{{Automatic, 84}, {Automatic, 0}},
 FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 31, 2023)",
 StyleDefinitions->"Default.nb",
