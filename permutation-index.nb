@@ -1,0 +1,152 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframDesktop 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       161,          7]
+NotebookDataLength[      4683,        144]
+NotebookOptionsPosition[      4108,        124]
+NotebookOutlinePosition[      4581,        142]
+CellTagsIndexPosition[      4538,        139]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[ButtonBox["Permutation Index",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://challenges.wolframcloud.com/challenge/permutation-index"], 
+   None},
+ ButtonNote->
+  "https://challenges.wolframcloud.com/challenge/permutation-index"]], "Title",
+ CellChangeTimes->{{3.8933282892565584`*^9, 
+  3.893328297936509*^9}},ExpressionUUID->"31f0a855-5b12-48be-a933-\
+6406c297c233"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"PermutationFromIndex", "[", 
+    RowBox[{"index_Integer", ",", "length_Integer"}], "]"}], ":=", 
+   RowBox[{"PermutationFromLehmerCode", "[", 
+    RowBox[{"LehmerCodeFromIndex", "[", 
+     RowBox[{"index", ",", "length"}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"LehmerCodeFromIndex", "[", 
+    RowBox[{"index_Integer", ",", "length_Integer"}], "]"}], ":=", 
+   RowBox[{"Reverse", "[", 
+    RowBox[{"Last", "/@", 
+     RowBox[{"FoldList", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Floor", "[", 
+           RowBox[{
+            RowBox[{"#1", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "/", "#2"}], "]"}], ",", 
+          RowBox[{"Mod", "[", 
+           RowBox[{
+            RowBox[{"#1", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], ",", "#2"}], "]"}]}], "}"}], 
+        "&"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"index", "-", "1"}], ",", "0"}], "}"}], ",", 
+       RowBox[{"Range", "[", 
+        RowBox[{"2", ",", "length"}], "]"}]}], "]"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"PermutationFromLehmerCode", "[", "lehmercode_List", "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"vals", ",", "result"}], "}"}], ",", 
+     RowBox[{
+      RowBox[{"vals", "=", 
+       RowBox[{"Range", "[", 
+        RowBox[{"Length", "[", "lehmercode", "]"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"result", "=", 
+       RowBox[{"Table", "[", 
+        RowBox[{"0", ",", 
+         RowBox[{"{", 
+          RowBox[{"Length", "[", "lehmercode", "]"}], "}"}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Do", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"result", "[", 
+           RowBox[{"[", "n", "]"}], "]"}], "=", 
+          RowBox[{"vals", "[", 
+           RowBox[{"[", 
+            RowBox[{
+             RowBox[{"lehmercode", "[", 
+              RowBox[{"[", "n", "]"}], "]"}], "+", "1"}], "]"}], "]"}]}], ";",
+          "\[IndentingNewLine]", 
+         RowBox[{"vals", "=", 
+          RowBox[{"Drop", "[", 
+           RowBox[{"vals", ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"lehmercode", "[", 
+               RowBox[{"[", "n", "]"}], "]"}], "+", "1"}], "}"}]}], "]"}]}]}],
+         ",", 
+        RowBox[{"{", 
+         RowBox[{"n", ",", "1", ",", 
+          RowBox[{"Length", "[", "lehmercode", "]"}]}], "}"}]}], "]"}], ";", 
+      "\[IndentingNewLine]", "result"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"PermutationIndex", "[", 
+   RowBox[{
+    RowBox[{"order_Integer", "?", "Positive"}], ",", 
+    RowBox[{"index_Integer", "?", "Positive"}]}], "]"}], ":=", 
+  RowBox[{"PermutationFromIndex", "[", 
+   RowBox[{"index", ",", "order"}], "]"}]}]}], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.893328318140771*^9, 3.8933283181417756`*^9}},
+ CellLabel->
+  "In[370]:=",ExpressionUUID->"9d378e74-fd2b-419d-ac7d-a45a0eb30bd2"]
+}, Open  ]]
+},
+WindowSize->{571.8, 509.4},
+WindowMargins->{{
+  Automatic, 49.200000000000045`}, {-16.799999999999955`, Automatic}},
+Magnification:>1.2 Inherited,
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 31, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"0c77f7e3-24fb-42b3-8c61-9af9a00c2980"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[583, 22, 392, 9, 117, "Title",ExpressionUUID->"31f0a855-5b12-48be-a933-6406c297c233"],
+Cell[978, 33, 3114, 88, 563, "Input",ExpressionUUID->"9d378e74-fd2b-419d-ac7d-a45a0eb30bd2",
+ InitializationCell->True]
+}, Open  ]]
+}
+]
+*)
+
