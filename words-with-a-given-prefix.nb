@@ -1,0 +1,56 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframDesktop 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       161,          7]
+NotebookDataLength[      1353,         46]
+NotebookOptionsPosition[       983,         32]
+NotebookOutlinePosition[      1405,         48]
+CellTagsIndexPosition[      1362,         45]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[ButtonBox["Words with a Given Prefix",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://challenges.wolframcloud.com/challenge/words-with-a-given-\
+prefix"], None},
+ ButtonNote->
+  "https://challenges.wolframcloud.com/challenge/words-with-a-given-prefix"]],\
+ "Title",
+ CellChangeTimes->{{3.8933405200602646`*^9, 
+  3.8933405249966993`*^9}},ExpressionUUID->"a726e874-4edd-493a-98c1-\
+da5749b19edb"]
+},
+WindowSize->{574.8, 579.6},
+WindowMargins->{{Automatic, -4.7999999999999545`}, {Automatic, 0}},
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 31, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"6a5115b7-ad05-4e1f-ae92-5e0c659ae409"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[561, 20, 418, 10, 98, "Title",ExpressionUUID->"a726e874-4edd-493a-98c1-da5749b19edb"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
