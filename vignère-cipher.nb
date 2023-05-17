@@ -1,0 +1,3128 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframDesktop 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       161,          7]
+NotebookDataLength[    149261,       3120]
+NotebookOptionsPosition[    145913,       3052]
+NotebookOutlinePosition[    146334,       3068]
+CellTagsIndexPosition[    146291,       3065]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[ButtonBox["Vigen\[EGrave]re Cipher",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://challenges.wolframcloud.com/challenge/vigenere-cipher"], None},
+ ButtonNote->
+  "https://challenges.wolframcloud.com/challenge/vigenere-cipher"]], "Title",
+ CellChangeTimes->{{3.893342618667735*^9, 
+  3.8933426225113697`*^9}},ExpressionUUID->"3e9b98c9-c757-4c3c-b16a-\
+cdccb1e59968"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ResourceSearch", "[", "\"\<Cipher\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.8933426278062167`*^9, 3.893342639285987*^9}},
+ CellLabel->
+  "In[665]:=",ExpressionUUID->"e82488bb-4a74-46c6-b08c-507308a33ff4"],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[
+   DynamicModuleBox[{TypeSystem`NestedGrid`PackagePrivate`$state$$ = <|
+    "InitialData" -> {<|
+       "Name" -> "PigpenCipher", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "PigpenCipher", "ShortName" -> "PigpenCipher", "UUID" -> 
+           "97122ea7-0c11-4589-b016-07337fd561b8", "ResourceType" -> 
+           "Function", "Version" -> "1.0.0", "Description" -> 
+           "Encipher a string using the pigpen cipher", "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$daf0a6c18e284cf9b89eaecd8f766d90`\
+PigpenCipher"|>], "Description" -> 
+        "Encipher a string using the pigpen cipher", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+PigpenCipher"]|>, <|
+       "Name" -> "AffineCipher", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "AffineCipher", "ShortName" -> "AffineCipher", "UUID" -> 
+           "511fd286-bdd6-4784-8a09-62e5a9d7d399", "ResourceType" -> 
+           "Function", "Version" -> "1.0.0", "Description" -> 
+           "Encipher a string using the affine cipher", "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$7a1b86062b774e89ba921c6041e305d9`\
+AffineCipher"|>], "Description" -> 
+        "Encipher a string using the affine cipher", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+AffineCipher"]|>, <|
+       "Name" -> "AtbashCipher", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "AtbashCipher", "ShortName" -> "AtbashCipher", "UUID" -> 
+           "2850e584-8e2e-45d4-a36e-4fc4a3660245", "ResourceType" -> 
+           "Function", "Version" -> "2.0.0", "Description" -> 
+           "Encipher a string using the Atbash cipher", "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$0d08ca08c31f4f77b6672c51cdf52983`\
+AtbashCipher"|>], "Description" -> 
+        "Encipher a string using the Atbash cipher", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+AtbashCipher"]|>, <|
+       "Name" -> "CaesarCipher", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "CaesarCipher", "ShortName" -> "CaesarCipher", "UUID" -> 
+           "c44dfb33-da30-469e-896a-3a21ed452ffb", "ResourceType" -> 
+           "Function", "Version" -> "2.0.0", "Description" -> 
+           "Performs Caesar\[CloseCurlyQuote]s substitution cipher on a \
+string", "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$dda8d3361a4a47178d63b4ea6a51ad94`\
+CaesarCipher"|>], "Description" -> 
+        "Performs Caesar\[CloseCurlyQuote]s substitution cipher on a string", 
+        "Location" -> URL["https://resources.wolframcloud.com"], 
+        "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+CaesarCipher"]|>, <|
+       "Name" -> "VigenereCipher", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "VigenereCipher", "ShortName" -> "VigenereCipher", "UUID" -> 
+           "4d408757-e539-437b-b4cd-206b922003f1", "ResourceType" -> 
+           "Function", "Version" -> "1.0.0", "Description" -> 
+           "Perform Vigen\[EGrave]re's substitution cipher on a string", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$6be4bc34d393426a97c2b60a919a87cf`\
+VigenereCipher"|>], "Description" -> 
+        "Perform Vigen\[EGrave]re's substitution cipher on a string", 
+        "Location" -> URL["https://resources.wolframcloud.com"], 
+        "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+VigenereCipher"]|>, <|
+       "Name" -> "ChaoCipher", "ResourceType" -> "Function", "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "ChaoCipher", "ShortName" -> "ChaoCipher", "UUID" -> 
+           "d0262229-4150-4fb7-a9d7-3607da285337", "ResourceType" -> 
+           "Function", "Version" -> "1.0.0", "Description" -> 
+           "Encipher a string using the Chaocipher", "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$028c965cc339480f86ba08727b0720c9`ChaoCipher"|>\
+], "Description" -> "Encipher a string using the Chaocipher", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+ChaoCipher"]|>, <|
+       "Name" -> "TupperCipher", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "TupperCipher", "ShortName" -> "TupperCipher", "UUID" -> 
+           "a259dfa2-3f28-4158-ad70-4715d0a3ffe5", "ResourceType" -> 
+           "Function", "Version" -> "1.0.0", "Description" -> 
+           "Encrypt with Tupper\[CloseCurlyQuote]s self-referential formula", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$34e7a09ea50d4490a959e7192b238aa9`\
+TupperCipher"|>], "Description" -> 
+        "Encrypt with Tupper\[CloseCurlyQuote]s self-referential formula", 
+        "Location" -> URL["https://resources.wolframcloud.com"], 
+        "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+TupperCipher"]|>, <|
+       "Name" -> "MorseCipher", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "MorseCipher", "ShortName" -> "MorseCipher", "UUID" -> 
+           "f562538d-25d9-4529-a1d8-86456ddbb15d", "ResourceType" -> 
+           "Function", "Version" -> "1.0.0", "Description" -> 
+           "Encode a string with extended Morse code", "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$9a565000d4684ec7936aaead97cb37dd`MorseCipher"|>\
+], "Description" -> "Encode a string with extended Morse code", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+MorseCipher"]|>, <|
+       "Name" -> "RailFenceCipher", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "RailFenceCipher", "ShortName" -> "RailFenceCipher", 
+           "UUID" -> "f3ad617b-9afb-44c1-a80b-da0cc4712b8e", "ResourceType" -> 
+           "Function", "Version" -> "1.0.0", "Description" -> 
+           "Encipher a string using the rail fence cipher", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$7028e182ddfe445e800318602a401890`\
+RailFenceCipher"|>], "Description" -> 
+        "Encipher a string using the rail fence cipher", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+RailFenceCipher"]|>, <|
+       "Name" -> "HillCipherDecrypt", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "HillCipherDecrypt", "ShortName" -> "HillCipherDecrypt", 
+           "UUID" -> "f47ca74b-9446-4e29-9ec2-aa28477ca379", "ResourceType" -> 
+           "Function", "Version" -> "1.0.0", "Description" -> 
+           "Decrypt a string encrypted by a Hill cipher", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$29262998d9114cb0b6c174f6bbe064e7`\
+HillCipherDecrypt"|>], "Description" -> 
+        "Decrypt a string encrypted by a Hill cipher", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+HillCipherDecrypt"]|>, <|
+       "Name" -> "CrackCaesarCipher", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "CrackCaesarCipher", "ShortName" -> "CrackCaesarCipher", 
+           "UUID" -> "fb3c0cfe-3c74-4dc3-8cb1-88c121c4a444", "ResourceType" -> 
+           "Function", "Version" -> "1.0.0", "Description" -> 
+           "Attempt to crack a Caesar-enciphered message", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$0c18646be8f7412bbdaceb2ed713c7e6`\
+CrackCaesarCipher"|>], "Description" -> 
+        "Attempt to crack a Caesar-enciphered message", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+CrackCaesarCipher"]|>, <|
+       "Name" -> "AffineDecipher", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "AffineDecipher", "ShortName" -> "AffineDecipher", "UUID" -> 
+           "5b46ede4-a0ad-4f0a-a0dd-a176e1ffe034", "ResourceType" -> 
+           "Function", "Version" -> "1.0.0", "Description" -> 
+           "Decipher a string using the affine cipher", "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$025bc43e9d07491d9cfe15344e1facdf`\
+AffineDecipher"|>], "Description" -> 
+        "Decipher a string using the affine cipher", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+AffineDecipher"]|>, <|
+       "Name" -> "TupperDecipher", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "TupperDecipher", "ShortName" -> "TupperDecipher", "UUID" -> 
+           "6a04022b-5806-4964-b3bf-ca05a069555b", "ResourceType" -> 
+           "Function", "Version" -> "2.0.0", "Description" -> 
+           "Decrypt with Tupper\[CloseCurlyQuote]s self-referential formula", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$2f9a4d86bb454451b87fdf08a377531d`\
+TupperDecipher"|>], "Description" -> 
+        "Decrypt with Tupper\[CloseCurlyQuote]s self-referential formula", 
+        "Location" -> URL["https://resources.wolframcloud.com"], 
+        "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+TupperDecipher"]|>, <|
+       "Name" -> "RailFenceDecipher", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "RailFenceDecipher", "ShortName" -> "RailFenceDecipher", 
+           "UUID" -> "bb3a155d-e023-4762-a42a-f6e9a6dd95e2", "ResourceType" -> 
+           "Function", "Version" -> "1.0.0", "Description" -> 
+           "Decipher a string enciphered by the rail fence cipher", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$716c9754334c42f59907cf88a0495673`\
+RailFenceDecipher"|>], "Description" -> 
+        "Decipher a string enciphered by the rail fence cipher", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+RailFenceDecipher"]|>, <|
+       "Name" -> "VigenereDecipher", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "VigenereDecipher", "ShortName" -> "VigenereDecipher", 
+           "UUID" -> "9cb43d30-a211-4e06-a8ea-9b943b995d29", "ResourceType" -> 
+           "Function", "Version" -> "1.0.0", "Description" -> 
+           "Decipher a Vigen\[EGrave]re-enciphered string", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$946ddbfdccb24699978fb8ed8233c2c2`\
+VigenereDecipher"|>], "Description" -> 
+        "Decipher a Vigen\[EGrave]re-enciphered string", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+VigenereDecipher"]|>, <|
+       "Name" -> "ChaoDecipher", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "ChaoDecipher", "ShortName" -> "ChaoDecipher", "UUID" -> 
+           "b1f0e216-e805-40a1-bcb9-c5e16a20223a", "ResourceType" -> 
+           "Function", "Version" -> "1.0.0", "Description" -> 
+           "Decipher a Chaocipher-enciphered string", "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$c73eb53a2a764253860b1cccae86def0`\
+ChaoDecipher"|>], "Description" -> "Decipher a Chaocipher-enciphered string", 
+        "Location" -> URL["https://resources.wolframcloud.com"], 
+        "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+ChaoDecipher"]|>, <|
+       "Name" -> "CaesarDecipher", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "CaesarDecipher", "ShortName" -> "CaesarDecipher", "UUID" -> 
+           "52d7930e-792c-46cc-bbb5-35e39b217334", "ResourceType" -> 
+           "Function", "Version" -> "1.0.1", "Description" -> 
+           "Decipher a Caesar-enciphered string", "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$d7e0cef6e4a04354a318a07a37cd9394`\
+CaesarDecipher"|>], "Description" -> "Decipher a Caesar-enciphered string", 
+        "Location" -> URL["https://resources.wolframcloud.com"], 
+        "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+CaesarDecipher"]|>, <|
+       "Name" -> "CistercianNumberEncode", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "CistercianNumberEncode", "ShortName" -> 
+           "CistercianNumberEncode", "UUID" -> 
+           "0976d19a-33ec-4f89-9b0b-44c36bd3ca9f", "ResourceType" -> 
+           "Function", "Version" -> "1.0.0", "Description" -> 
+           "Encode a number according to the system devised by Cistercian \
+monks", "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$28c240a56969402cb48ad29ef8c4855a`\
+CistercianNumberEncode"|>], "Description" -> 
+        "Encode a number according to the system devised by Cistercian monks",
+         "Location" -> URL["https://resources.wolframcloud.com"], 
+        "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+CistercianNumberEncode"]|>, <|
+       "Name" -> "LetterFrequencyData", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "LetterFrequencyData", "ShortName" -> 
+           "LetterFrequencyData", "UUID" -> 
+           "10f91c2f-d6ff-4878-8375-a713bc03db75", "ResourceType" -> 
+           "Function", "Version" -> "1.0.0", "Description" -> 
+           "Get the frequency of letters appearing in texts", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$3c400aadd37e42ff93859e00ff47fc75`\
+LetterFrequencyData"|>], "Description" -> 
+        "Get the frequency of letters appearing in texts", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+LetterFrequencyData"]|>, <|
+       "Name" -> "FromAlBhedString", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "FromAlBhedString", "ShortName" -> "FromAlBhedString", 
+           "UUID" -> "312b0daf-60e8-45ad-a9a7-c8b2eea385a5", "ResourceType" -> 
+           "Function", "Version" -> "2.0.0", "Description" -> 
+           "Translate a string from Al Bhed, the cipher language from the \
+game Final Fantasy X,  to Latin or hiragana", "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$e09a412d323b45d79973042f9a04cec1`\
+FromAlBhedString"|>], "Description" -> 
+        "Translate a string from Al Bhed, the cipher language from the game \
+Final Fantasy X,  to Latin or hiragana", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+FromAlBhedString"]|>, <|
+       "Name" -> "ToAlBhedString", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "ToAlBhedString", "ShortName" -> "ToAlBhedString", "UUID" -> 
+           "9605ef56-94f4-427e-8225-b78154054758", "ResourceType" -> 
+           "Function", "Version" -> "2.0.0", "Description" -> 
+           
+           "Translate a string from Latin or Hiragana to Al Bhed, the cipher \
+language from the game \[OpenCurlyDoubleQuote]Final Fantasy X\
+\[CloseCurlyDoubleQuote]", "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$c18e3198f9fa4b299178248f6dbe3877`\
+ToAlBhedString"|>], "Description" -> 
+        "Translate a string from Latin or Hiragana to Al Bhed, the cipher \
+language from the game \[OpenCurlyDoubleQuote]Final Fantasy X\
+\[CloseCurlyDoubleQuote]", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+ToAlBhedString"]|>}, "AllowEmbedding" -> True, "InitialShape" -> 
+     TypeSystem`PackageScope`HeaderShape[<|{All, "Name"} -> 
+        1, {All, "ResourceType"} -> 1, {All, "ResourceObject"} -> 
+        1, {All, "Description"} -> 1, {All, "Location"} -> 
+        1, {All, "DocumentationLink"} -> 1|>, 
+       TypeSystem`PackageScope`Limited[
+        TypeSystem`PackageScope`ColumnShape[
+         TypeSystem`PackageScope`Limited[
+          
+          TypeSystem`PackageScope`RowShape[<|
+           "Name" -> TypeSystem`PackageScope`AtomShape[212.8], "ResourceType" -> 
+            TypeSystem`PackageScope`AtomShape[84.], "ResourceObject" -> 
+            TypeSystem`PackageScope`AtomShape[60], "Description" -> 
+            TypeSystem`PackageScope`AtomShape[560.], "Location" -> 
+            TypeSystem`PackageScope`AtomShape[60], "DocumentationLink" -> 
+            TypeSystem`PackageScope`AtomShape[60]|>], 
+          DirectedInfinity[1], 6, {All}]], 20, 
+        DirectedInfinity[1], {}]], "InitialType" -> TypeSystem`Vector[
+       TypeSystem`Struct[{
+        "Name", "ResourceType", "ResourceObject", "Description", "Location", 
+         "DocumentationLink"}, {
+         TypeSystem`Atom[String], 
+         TypeSystem`Atom[
+          TypeSystem`Enumeration["Function"]], 
+         TypeSystem`Atom[ResourceObject], 
+         TypeSystem`Atom[String], 
+         TypeSystem`Atom[URL], 
+         TypeSystem`Atom[URL]}], 21], "Meta" -> <||>, "RowTarget" -> 20, 
+     "ColumnTarget" -> 10, "Shape" -> 
+     TypeSystem`PackageScope`HeaderShape[<|{All, "Name"} -> 
+        1, {All, "ResourceType"} -> 1, {All, "ResourceObject"} -> 
+        1, {All, "Description"} -> 1, {All, "Location"} -> 
+        1, {All, "DocumentationLink"} -> 1|>, 
+       TypeSystem`PackageScope`Limited[
+        TypeSystem`PackageScope`ColumnShape[
+         TypeSystem`PackageScope`Limited[
+          
+          TypeSystem`PackageScope`RowShape[<|
+           "Name" -> TypeSystem`PackageScope`AtomShape[212.8], "ResourceType" -> 
+            TypeSystem`PackageScope`AtomShape[84.], "ResourceObject" -> 
+            TypeSystem`PackageScope`AtomShape[60], "Description" -> 
+            TypeSystem`PackageScope`AtomShape[560.], "Location" -> 
+            TypeSystem`PackageScope`AtomShape[60], "DocumentationLink" -> 
+            TypeSystem`PackageScope`AtomShape[60]|>], 
+          DirectedInfinity[1], 6, {All}]], 20, 
+        DirectedInfinity[1], {}]], "Type" -> TypeSystem`Vector[
+       TypeSystem`Struct[{
+        "Name", "ResourceType", "ResourceObject", "Description", "Location", 
+         "DocumentationLink"}, {
+         TypeSystem`Atom[String], 
+         TypeSystem`Atom[
+          TypeSystem`Enumeration["Function"]], 
+         TypeSystem`Atom[ResourceObject], 
+         TypeSystem`Atom[String], 
+         TypeSystem`Atom[URL], 
+         TypeSystem`Atom[URL]}], 21], "Path" -> {}, "DisplayedRowCount" -> 20,
+      "DisplayedColumnCount" -> 6, "DataRowCount" -> 21, "DataColumnCount" -> 
+     6, "SortPaths" -> {}, "SortDirections" -> {}, "HiddenItemsMap" -> Null, 
+     "UpdateType" -> 1|>, TypeSystem`NestedGrid`PackagePrivate`$outputID$$, 
+    TypeSystem`NestedGrid`PackagePrivate`$path$$ = {}, 
+    TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 2, 
+    TypeSystem`NestedGrid`PackagePrivate`$hPos$$ = 1, 
+    TypeSystem`NestedGrid`PackagePrivate`$grid$$ = 
+    DynamicModule[{TypeSystem`NestedGrid`PackagePrivate`renderedGrid = Deploy[
+        Style[
+         Grid[{{
+            Item[
+             Pane[
+              Annotation[
+               EventHandler[
+                MouseAppearance[
+                 Mouseover["Name", 
+                  Style[
+                  "Name", FontColor -> 
+                   RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                If[
+                  TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`localHold[
+                   "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"]][{All, "Name"}, 
+                   1]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{All, "Name"}, 
+                "ColumnHeader", True], "Mouse"], 
+              ImageSize -> {{1, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+             GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+            Item[
+             Pane[
+              Annotation[
+               EventHandler[
+                MouseAppearance[
+                 Mouseover["ResourceType", 
+                  Style[
+                  "ResourceType", FontColor -> 
+                   RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                If[
+                  TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`localHold[
+                   "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"]][{
+                   All, "ResourceType"}, 1]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{All, "ResourceType"}, 
+                "ColumnHeader", True], "Mouse"], 
+              ImageSize -> {{1, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+             GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+            Item[
+             Pane[
+              Annotation[
+               EventHandler[
+                MouseAppearance[
+                 Mouseover["ResourceObject", 
+                  Style[
+                  "ResourceObject", FontColor -> 
+                   RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                If[
+                  TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`localHold[
+                   "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"]][{
+                   All, "ResourceObject"}, 1]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{
+                All, "ResourceObject"}, "ColumnHeader", True], "Mouse"], 
+              ImageSize -> {{1, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+             GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+            Item[
+             Pane[
+              Annotation[
+               EventHandler[
+                MouseAppearance[
+                 Mouseover["Description", 
+                  Style[
+                  "Description", FontColor -> 
+                   RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                If[
+                  TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`localHold[
+                   "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"]][{
+                   All, "Description"}, 1]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{All, "Description"}, 
+                "ColumnHeader", True], "Mouse"], 
+              ImageSize -> {{1, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+             GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+            Item[
+             Pane[
+              Annotation[
+               EventHandler[
+                MouseAppearance[
+                 Mouseover["Location", 
+                  Style[
+                  "Location", FontColor -> 
+                   RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                If[
+                  TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`localHold[
+                   "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"]][{All, "Location"},
+                    1]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{All, "Location"}, 
+                "ColumnHeader", True], "Mouse"], 
+              ImageSize -> {{1, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+             GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+            Item[
+             Pane[
+              Annotation[
+               EventHandler[
+                MouseAppearance[
+                 Mouseover["DocumentationLink", 
+                  Style[
+                  "DocumentationLink", FontColor -> 
+                   RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                If[
+                  TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`localHold[
+                   "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"]][{
+                   All, "DocumentationLink"}, 1]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{
+                All, "DocumentationLink"}, "ColumnHeader", True], "Mouse"], 
+              ImageSize -> {{1, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+             GrayLevel[0.95], Alignment -> {Left, Baseline}]}, {
+            Item[
+             Pane[
+              Annotation["AffineCipher", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{2, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{2, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{84., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"AffineCipher\"", "\"\\\"\"", "\"]\""}, "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{2, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Encipher a string using the affine cipher", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{2, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{2, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://resources.wolframcloud.com/FunctionReposit...", 
+                URL[
+                "https://resources.wolframcloud.com/FunctionRepository/\
+resources/AffineCipher"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{2, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["AtbashCipher", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{3, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{3, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{84., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"AtbashCipher\"", "\"\\\"\"", "\"]\""}, "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{3, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Encipher a string using the Atbash cipher", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{3, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{3, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://resources.wolframcloud.com/FunctionReposit...", 
+                URL[
+                "https://resources.wolframcloud.com/FunctionRepository/\
+resources/AtbashCipher"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{3, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["CaesarCipher", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{4, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{4, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{84., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"CaesarCipher\"", "\"\\\"\"", "\"]\""}, "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{4, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+              "Performs Caesar\[CloseCurlyQuote]s substitution cipher on a \
+string", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{4, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{4, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://resources.wolframcloud.com/FunctionReposit...", 
+                URL[
+                "https://resources.wolframcloud.com/FunctionRepository/\
+resources/CaesarCipher"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{4, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["VigenereCipher", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{5, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{5, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{84., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"VigenereCipher\"", "\"\\\"\"", "\"]\""}, "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{5, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+              "Perform Vigen\[EGrave]re's substitution cipher on a string", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{5, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{5, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://resources.wolframcloud.com/FunctionReposit...", 
+                URL[
+                "https://resources.wolframcloud.com/FunctionRepository/\
+resources/VigenereCipher"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{5, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["ChaoCipher", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{6, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{6, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{84., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", "\"ChaoCipher\"", 
+                  "\"\\\"\"", "\"]\""}, "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{6, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Encipher a string using the Chaocipher", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{6, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{6, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://resources.wolframcloud.com/FunctionReposit...", 
+                URL[
+                "https://resources.wolframcloud.com/FunctionRepository/\
+resources/ChaoCipher"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{6, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["TupperCipher", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{7, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{7, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{84., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"TupperCipher\"", "\"\\\"\"", "\"]\""}, "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{7, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+              "Encrypt with Tupper\[CloseCurlyQuote]s self-referential \
+formula", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{7, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{7, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://resources.wolframcloud.com/FunctionReposit...", 
+                URL[
+                "https://resources.wolframcloud.com/FunctionRepository/\
+resources/TupperCipher"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{7, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["MorseCipher", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{8, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{8, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{84., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", "\"MorseCipher\"",
+                   "\"\\\"\"", "\"]\""}, "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{8, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Encode a string with extended Morse code", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{8, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{8, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://resources.wolframcloud.com/FunctionReposit...", 
+                URL[
+                "https://resources.wolframcloud.com/FunctionRepository/\
+resources/MorseCipher"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{8, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["RailFenceCipher", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{9, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{9, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{84., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"RailFenceCipher\"", "\"\\\"\"", "\"]\""}, "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{9, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Encipher a string using the rail fence cipher", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{9, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{9, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://resources.wolframcloud.com/FunctionReposit...", 
+                URL[
+                "https://resources.wolframcloud.com/FunctionRepository/\
+resources/RailFenceCipher"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{9, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["HillCipherDecrypt", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{10, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{10, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{84., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"HillCipherDecrypt\"", "\"\\\"\"", "\"]\""}, 
+                 "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{10, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Decrypt a string encrypted by a Hill cipher", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{10, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{10, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://resources.wolframcloud.com/FunctionReposit...", 
+                URL[
+                "https://resources.wolframcloud.com/FunctionRepository/\
+resources/HillCipherDecrypt"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{10, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["CrackCaesarCipher", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{11, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{11, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{84., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"CrackCaesarCipher\"", "\"\\\"\"", "\"]\""}, 
+                 "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{11, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Attempt to crack a Caesar-enciphered message", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{11, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{11, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://resources.wolframcloud.com/FunctionReposit...", 
+                URL[
+                "https://resources.wolframcloud.com/FunctionRepository/\
+resources/CrackCaesarCipher"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{11, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["AffineDecipher", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{12, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{12, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{84., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"AffineDecipher\"", "\"\\\"\"", "\"]\""}, "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{12, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Decipher a string using the affine cipher", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{12, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{12, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://resources.wolframcloud.com/FunctionReposit...", 
+                URL[
+                "https://resources.wolframcloud.com/FunctionRepository/\
+resources/AffineDecipher"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{12, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["TupperDecipher", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{13, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{13, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{84., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"TupperDecipher\"", "\"\\\"\"", "\"]\""}, "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{13, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+              "Decrypt with Tupper\[CloseCurlyQuote]s self-referential \
+formula", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{13, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{13, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://resources.wolframcloud.com/FunctionReposit...", 
+                URL[
+                "https://resources.wolframcloud.com/FunctionRepository/\
+resources/TupperDecipher"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{13, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["RailFenceDecipher", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{14, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{14, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{84., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"RailFenceDecipher\"", "\"\\\"\"", "\"]\""}, 
+                 "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{14, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+              "Decipher a string enciphered by the rail fence cipher", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{14, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{14, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://resources.wolframcloud.com/FunctionReposit...", 
+                URL[
+                "https://resources.wolframcloud.com/FunctionRepository/\
+resources/RailFenceDecipher"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{14, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["VigenereDecipher", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{15, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{15, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{84., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"VigenereDecipher\"", "\"\\\"\"", "\"]\""}, 
+                 "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{15, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Decipher a Vigen\[EGrave]re-enciphered string", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{15, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{15, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://resources.wolframcloud.com/FunctionReposit...", 
+                URL[
+                "https://resources.wolframcloud.com/FunctionRepository/\
+resources/VigenereDecipher"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{15, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["ChaoDecipher", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{16, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{16, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{84., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"ChaoDecipher\"", "\"\\\"\"", "\"]\""}, "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{16, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Decipher a Chaocipher-enciphered string", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{16, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{16, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://resources.wolframcloud.com/FunctionReposit...", 
+                URL[
+                "https://resources.wolframcloud.com/FunctionRepository/\
+resources/ChaoDecipher"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{16, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["CaesarDecipher", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{17, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{17, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{84., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"CaesarDecipher\"", "\"\\\"\"", "\"]\""}, "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{17, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Decipher a Caesar-enciphered string", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{17, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{17, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://resources.wolframcloud.com/FunctionReposit...", 
+                URL[
+                "https://resources.wolframcloud.com/FunctionRepository/\
+resources/CaesarDecipher"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{17, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["CistercianNumberEncode", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{18, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{18, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{84., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"CistercianNumberEncode\"", "\"\\\"\"", "\"]\""}, 
+                 "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{18, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+              "Encode a number according to the system devised by Cistercian \
+monks", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{18, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{18, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://resources.wolframcloud.com/FunctionReposit...", 
+                URL[
+                "https://resources.wolframcloud.com/FunctionRepository/\
+resources/CistercianNumberEncode"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{18, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["LetterFrequencyData", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{19, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{19, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{84., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"LetterFrequencyData\"", "\"\\\"\"", "\"]\""}, 
+                 "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{19, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Get the frequency of letters appearing in texts", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{19, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{19, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://resources.wolframcloud.com/FunctionReposit...", 
+                URL[
+                "https://resources.wolframcloud.com/FunctionRepository/\
+resources/LetterFrequencyData"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{19, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["FromAlBhedString", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{20, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{20, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{84., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"FromAlBhedString\"", "\"\\\"\"", "\"]\""}, 
+                 "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{20, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+              "Translate a string from Al Bhed, the cipher language from the \
+game Final Fantasy X,  to Latin or hiragana", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{20, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{20, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://resources.wolframcloud.com/FunctionReposit...", 
+                URL[
+                "https://resources.wolframcloud.com/FunctionRepository/\
+resources/FromAlBhedString"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{20, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["ToAlBhedString", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{21, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{21, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{84., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"ToAlBhedString\"", "\"\\\"\"", "\"]\""}, "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{21, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+              "Translate a string from Latin or Hiragana to Al Bhed, the \
+cipher language from the game \[OpenCurlyDoubleQuote]Final Fantasy X\
+\[CloseCurlyDoubleQuote]", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{21, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{21, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://resources.wolframcloud.com/FunctionReposit...", 
+                URL[
+                "https://resources.wolframcloud.com/FunctionRepository/\
+resources/ToAlBhedString"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][{21, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Deploy[
+              Pane[
+               Row[{
+                 Spacer[2], 
+                 Style[
+                  Row[{
+                    Button[
+                    MouseAppearance[
+                    Mouseover[
+                    Graphics[{{
+                    EdgeForm[None], 
+                    FaceForm[None], 
+                    Rectangle[{0, 0}, {18, 18}, RoundingRadius -> 2]}, 
+                    Rotate[
+                    Translate[{
+                    CapForm[Round], 
+                    Line[{{0, 0}, {4, 5}, {8, 0}}], 
+                    Line[{{0, 5}, {8, 5}}]}, {5, 6.5}], 0, {9, 9}]}, 
+                    ImageSize -> (1 -> 1), ImagePadding -> {{0, 1}, {1, 0}}, 
+                    BaselinePosition -> Scaled[0.35], BaseStyle -> 
+                    RGBColor[
+                    0.5372549019607843, 0.5372549019607843, 
+                    0.5372549019607843]], 
+                    Graphics[{{
+                    EdgeForm[
+                    RGBColor[
+                    0.27450980392156865`, 0.5411764705882353, 
+                    0.796078431372549]], 
+                    FaceForm[None], 
+                    Rectangle[{0, 0}, {18, 18}, RoundingRadius -> 2]}, 
+                    Rotate[
+                    Translate[{
+                    CapForm[Round], 
+                    RGBColor[
+                    0.27450980392156865`, 0.5411764705882353, 
+                    0.796078431372549], 
+                    Line[{{0, 0}, {4, 5}, {8, 0}}], 
+                    Line[{{0, 5}, {8, 5}}]}, {5, 6.5}], 0, {9, 9}]}, 
+                    ImageSize -> (1 -> 1), ImagePadding -> {{0, 1}, {1, 0}}, 
+                    BaselinePosition -> Scaled[0.35]]], "LinkHand"], 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 
+                    Clip[TypeSystem`NestedGrid`PackagePrivate`$vPos$$ + (-20) 
+                    If[True, 21, 1], {1, 21 - -20 + 1}]; 
+                    TypeSystem`NestedGrid`PackagePrivate`updateState[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"], True][
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$]], 
+                    Appearance -> None], 
+                    Button[
+                    MouseAppearance[
+                    Mouseover[
+                    Graphics[{{
+                    EdgeForm[None], 
+                    FaceForm[None], 
+                    Rectangle[{0, 0}, {18, 18}, RoundingRadius -> 2]}, 
+                    Rotate[
+                    Translate[{
+                    CapForm[Round], 
+                    Line[{{0, 0}, {4, 5}, {8, 0}}]}, {5, 6.5}], 0, {9, 9}]}, 
+                    ImageSize -> (1 -> 1), ImagePadding -> {{0, 1}, {1, 0}}, 
+                    BaselinePosition -> Scaled[0.35], BaseStyle -> 
+                    RGBColor[
+                    0.5372549019607843, 0.5372549019607843, 
+                    0.5372549019607843]], 
+                    Graphics[{{
+                    EdgeForm[
+                    RGBColor[
+                    0.27450980392156865`, 0.5411764705882353, 
+                    0.796078431372549]], 
+                    FaceForm[None], 
+                    Rectangle[{0, 0}, {18, 18}, RoundingRadius -> 2]}, 
+                    Rotate[
+                    Translate[{
+                    CapForm[Round], 
+                    RGBColor[
+                    0.27450980392156865`, 0.5411764705882353, 
+                    0.796078431372549], 
+                    Line[{{0, 0}, {4, 5}, {8, 0}}]}, {5, 6.5}], 0, {9, 9}]}, 
+                    ImageSize -> (1 -> 1), ImagePadding -> {{0, 1}, {1, 0}}, 
+                    BaselinePosition -> Scaled[0.35]]], "LinkHand"], 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 
+                    Clip[TypeSystem`NestedGrid`PackagePrivate`$vPos$$ + (-20) 
+                    If[False, 21, 1], {1, 21 - -20 + 1}]; 
+                    TypeSystem`NestedGrid`PackagePrivate`updateState[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"], True][
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$]], 
+                    Appearance -> None], " ", 
+                    Style[
+                    Mouseover[
+                    Style[
+                    Row[{"rows ", 2, "\[Dash]", 21, " of ", 
+                    Style[21, FontWeight -> Bold]}], FontSize -> 
+                    9.333333333333332, FontColor -> 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                    Style[
+                    Row[{"rows ", 2, "\[Dash]", 21, " of ", 
+                    Style[21, FontWeight -> Bold]}], FontSize -> 
+                    9.333333333333332, FontColor -> 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]], ContextMenu -> {
+                    MenuItem["Hide", 
+                    KernelExecute[
+                    
+                    TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"}, "Rows", 1, {}]], 
+                    MenuEvaluator -> Automatic], 
+                    MenuItem["Show up to 10 Rows", 
+                    KernelExecute[
+                    
+                    TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"}, "Rows", 10, {}]],
+                     MenuEvaluator -> Automatic], 
+                    MenuItem["Show up to 30 Rows", 
+                    KernelExecute[
+                    
+                    TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"}, "Rows", 30, {}]],
+                     MenuEvaluator -> Automatic], 
+                    MenuItem["Show up to 100 Rows", 
+                    KernelExecute[
+                    
+                    TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"}, "Rows", 
+                    100, {}]], MenuEvaluator -> Automatic], 
+                    MenuItem["Show All", 
+                    KernelExecute[
+                    
+                    TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"}, "Rows", 
+                    100000000, {}]], MenuEvaluator -> Automatic]}], " ", 
+                    Button[
+                    MouseAppearance[
+                    Mouseover[
+                    Graphics[{{
+                    EdgeForm[None], 
+                    FaceForm[None], 
+                    Rectangle[{0, 0}, {18, 18}, RoundingRadius -> 2]}, 
+                    Rotate[
+                    Translate[{
+                    CapForm[Round], 
+                    Line[{{0, 0}, {4, 5}, {8, 0}}]}, {5, 6.5}], 180 Degree, {
+                    9, 9}]}, ImageSize -> (1 -> 1), 
+                    ImagePadding -> {{0, 1}, {1, 0}}, BaselinePosition -> 
+                    Scaled[0.35], BaseStyle -> 
+                    RGBColor[
+                    0.5372549019607843, 0.5372549019607843, 
+                    0.5372549019607843]], 
+                    Graphics[{{
+                    EdgeForm[
+                    RGBColor[
+                    0.27450980392156865`, 0.5411764705882353, 
+                    0.796078431372549]], 
+                    FaceForm[None], 
+                    Rectangle[{0, 0}, {18, 18}, RoundingRadius -> 2]}, 
+                    Rotate[
+                    Translate[{
+                    CapForm[Round], 
+                    RGBColor[
+                    0.27450980392156865`, 0.5411764705882353, 
+                    0.796078431372549], 
+                    Line[{{0, 0}, {4, 5}, {8, 0}}]}, {5, 6.5}], 180 Degree, {
+                    9, 9}]}, ImageSize -> (1 -> 1), 
+                    ImagePadding -> {{0, 1}, {1, 0}}, BaselinePosition -> 
+                    Scaled[0.35]]], "LinkHand"], 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 
+                    Clip[TypeSystem`NestedGrid`PackagePrivate`$vPos$$ + 
+                    20 If[False, 21, 1], {1, 21 - 20 + 1}]; 
+                    TypeSystem`NestedGrid`PackagePrivate`updateState[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"], True][
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$]], 
+                    Appearance -> None], 
+                    Button[
+                    MouseAppearance[
+                    Mouseover[
+                    Graphics[{{
+                    EdgeForm[None], 
+                    FaceForm[None], 
+                    Rectangle[{0, 0}, {18, 18}, RoundingRadius -> 2]}, 
+                    Rotate[
+                    Translate[{
+                    CapForm[Round], 
+                    Line[{{0, 0}, {4, 5}, {8, 0}}], 
+                    Line[{{0, 5}, {8, 5}}]}, {5, 6.5}], 180 Degree, {9, 9}]}, 
+                    ImageSize -> (1 -> 1), ImagePadding -> {{0, 1}, {1, 0}}, 
+                    BaselinePosition -> Scaled[0.35], BaseStyle -> 
+                    RGBColor[
+                    0.5372549019607843, 0.5372549019607843, 
+                    0.5372549019607843]], 
+                    Graphics[{{
+                    EdgeForm[
+                    RGBColor[
+                    0.27450980392156865`, 0.5411764705882353, 
+                    0.796078431372549]], 
+                    FaceForm[None], 
+                    Rectangle[{0, 0}, {18, 18}, RoundingRadius -> 2]}, 
+                    Rotate[
+                    Translate[{
+                    CapForm[Round], 
+                    RGBColor[
+                    0.27450980392156865`, 0.5411764705882353, 
+                    0.796078431372549], 
+                    Line[{{0, 0}, {4, 5}, {8, 0}}], 
+                    Line[{{0, 5}, {8, 5}}]}, {5, 6.5}], 180 Degree, {9, 9}]}, 
+                    ImageSize -> (1 -> 1), ImagePadding -> {{0, 1}, {1, 0}}, 
+                    BaselinePosition -> Scaled[0.35]]], "LinkHand"], 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 
+                    Clip[TypeSystem`NestedGrid`PackagePrivate`$vPos$$ + 
+                    20 If[True, 21, 1], {1, 21 - 20 + 1}]; 
+                    TypeSystem`NestedGrid`PackagePrivate`updateState[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"], True][
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$]], 
+                    Appearance -> None]}], ContextMenu -> {}]}], 
+               ImageMargins -> {{0, -1}, {-1, 1}}]], Background -> 
+             RGBColor[
+              0.9764705882352941, 0.9764705882352941, 0.9764705882352941], 
+             Alignment -> {Left, Top}], SpanFromLeft, SpanFromLeft, 
+            SpanFromLeft, SpanFromLeft, SpanFromLeft}}, 
+          BaseStyle -> {
+           ContextMenu -> 
+            Dynamic[TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger; 
+              Which[TypeSystem`NestedGrid`PackagePrivate`$lastOutputID =!= 
+                "35cd1b92-3d10-4b17-87dd-fb2efcbc0405", {}, 
+                TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger === 
+                TypeSystem`NestedGrid`PackagePrivate`$lastContextMenuTrigger, 
+                TypeSystem`NestedGrid`PackagePrivate`$lastContextMenu, True, 
+                TypeSystem`NestedGrid`PackagePrivate`$lastContextMenuTrigger = 
+                 TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger; 
+                TypeSystem`NestedGrid`PackagePrivate`$lastContextMenu = 
+                 Block[{TypeSystem`NestedGrid`PackagePrivate`$globalScrollPos = \
+{TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$}}, 
+                   
+                   With[{TypeSystem`NestedGrid`PackagePrivate`lastPath$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPathType, 
+                    TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`$\
+lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
+                    MatchQ[TypeSystem`NestedGrid`PackagePrivate`$lastPathType, 
+                    Alternatives["RowHeader", "ColumnHeader"]], 
+                    TypeSystem`NestedGrid`PackagePrivate`headerHiddenQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$]], 
+                    TypeSystem`NestedGrid`PackagePrivate`allHidden$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`allHiddenQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`anyHidden$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`anyHiddenQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`columnSortDirection[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$[
+                    "SortPaths"], 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$[
+                    "SortDirections"]], 
+                    TypeSystem`NestedGrid`PackagePrivate`haveData$ = Not[
+                    FailureQ[
+                    TypeSystem`NestedGrid`PackagePrivate`datasetInitialData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$]]], 
+                    TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$ = Not[
+                    FreeQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, Keys]]}, 
+                    Join[{
+                    If[
+                    Or[
+                    Not[TypeSystem`NestedGrid`PackagePrivate`haveData$], 
+                    Not[TypeSystem`NestedGrid`PackagePrivate`anyHidden$], 
+                    TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$], 
+                    Nothing, 
+                    MenuItem[
+                    "Show " <> 
+                    Which[TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "Item", "", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "RowHeader", "Row", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "ColumnHeader", "Column", True, ""], 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateHiddenItems[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
+                    "remove"]], MenuEvaluator -> Automatic]], 
+                    If[
+                    Or[
+                    Not[TypeSystem`NestedGrid`PackagePrivate`haveData$], 
+                    TypeSystem`NestedGrid`PackagePrivate`pathEmptyQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$, 
+                    And[
+                    TypeSystem`NestedGrid`PackagePrivate`allHidden$, 
+                    TypeSystem`NestedGrid`PackagePrivate`headerHidden$]], 
+                    Nothing, 
+                    MenuItem[
+                    "Hide " <> 
+                    Which[TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "Item", "", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "RowHeader", "Row", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "ColumnHeader", "Column", True, ""], 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateHiddenItems[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, "add"]], 
+                    MenuEvaluator -> Automatic]], Delimiter}, 
+                    If[
+                    And[TypeSystem`NestedGrid`PackagePrivate`haveData$, 
+                    MatchQ[TypeSystem`NestedGrid`PackagePrivate`lastPathType$, 
+                    Alternatives["ColumnHeader", "KeyDummy"]], 
+                    TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$, 
+                    Not[TypeSystem`NestedGrid`PackagePrivate`allHidden$]], {
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ =!= 
+                    "Ascending", 
+                    MenuItem["Sort", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateSort[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
+                    "Ascending"]], MenuEvaluator -> Automatic], Nothing], 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ =!= 
+                    "Descending", 
+                    MenuItem["Reverse Sort", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateSort[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
+                    "Descending"]], MenuEvaluator -> Automatic], Nothing], 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ =!= 
+                    None, 
+                    MenuItem["Unsort", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateSort[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, None]], 
+                    MenuEvaluator -> Automatic], Nothing], Delimiter}, {}], {
+                    MenuItem["Copy Position to Clipboard", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentPosition[
+                    TypeSystem`NestedGrid`PackagePrivate`copyClip]], 
+                    MenuEvaluator -> Automatic], 
+                    If[TypeSystem`NestedGrid`PackagePrivate`haveData$, 
+                    MenuItem["Copy Data to Clipboard", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`copyClip]], 
+                    MenuEvaluator -> Automatic], Nothing], Delimiter, 
+                    MenuItem["Paste Position in New Cell", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentPosition[
+                    TypeSystem`NestedGrid`PackagePrivate`cellPaste]], 
+                    MenuEvaluator -> Automatic], 
+                    If[TypeSystem`NestedGrid`PackagePrivate`haveData$, 
+                    MenuItem["Paste Data in New Cell", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`cellPaste]], 
+                    MenuEvaluator -> Automatic], Nothing]}]]]]], FontFamily -> 
+            "Source Sans Pro", FontSize -> 14, FontWeight -> Plain}, Dividers -> 
+          All, FrameStyle -> GrayLevel[0.7490196078431373], 
+          Spacings -> {0, 0}, Alignment -> Left, 
+          BaseStyle -> {
+           FontFamily -> "Source Sans Pro", FontSize -> 14, FontWeight -> 
+            Plain}], LineBreakWithin -> False, ContextMenu -> {}, NumberMarks -> 
+         False, ShowAutoStyles -> False]], 
+      TypeSystem`NestedGrid`PackagePrivate`initialQ = True}, 
+     Dynamic[
+      TypeSystem`NestedGrid`PackagePrivate`setupViewPath[
+      TypeSystem`NestedGrid`PackagePrivate`$path$$, If[
+         Not[TypeSystem`NestedGrid`PackagePrivate`initialQ], 
+         Module[{
+          TypeSystem`NestedGrid`PackagePrivate`tmpGrid$ = $Failed, 
+           TypeSystem`NestedGrid`PackagePrivate`tmpData$ = 
+           TypeSystem`NestedGrid`PackagePrivate`datasetData[
+            TypeSystem`NestedGrid`PackagePrivate`$state$$]}, 
+          TypeSystem`NestedGrid`PackagePrivate`tmpGrid$ = If[
+             FailureQ[TypeSystem`NestedGrid`PackagePrivate`tmpData$], 
+             TypeSystem`NestedGrid`PackagePrivate`renderedGrid, 
+             TypeSystem`NestedGrid`PackagePrivate`renderGrid[
+             TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+              TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+              TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+              TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+              TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+              "35cd1b92-3d10-4b17-87dd-fb2efcbc0405"][
+             TypeSystem`NestedGrid`PackagePrivate`tmpData$]]; If[
+            Not[
+             FailureQ[TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]], 
+            TypeSystem`NestedGrid`PackagePrivate`renderedGrid = 
+            TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]; Null]]; 
+       TypeSystem`NestedGrid`PackagePrivate`initialQ = False; 
+       TypeSystem`NestedGrid`PackagePrivate`$vPos$$; 
+       TypeSystem`NestedGrid`PackagePrivate`$hPos$$; If[
+         FailureQ[TypeSystem`NestedGrid`PackagePrivate`renderedGrid], 
+         TypeSystem`SparseGrid[
+          TypeSystem`H["(data no longer present)"]], 
+         TypeSystem`NestedGrid`PackagePrivate`renderedGrid]], 
+      TrackedSymbols :> {
+       TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$hPos$$}], 
+     DynamicModuleValues :> {}], 
+    TypeSystem`NestedGrid`PackagePrivate`$topBar$$ = Dynamic[
+     TypeSystem`NestedGrid`PackagePrivate`makeFramedBar[
+      TypeSystem`PackageScope`SubViewPathbar[
+      TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+       TypeSystem`NestedGrid`PackagePrivate`updateState[
+       TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+        TypeSystem`NestedGrid`PackagePrivate`localHold[
+        TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]]], 
+     TrackedSymbols :> {TypeSystem`NestedGrid`PackagePrivate`$path$$}], 
+    TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$ = Style[
+     Framed[
+      Dynamic[
+       Replace[
+       TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$, {
+        TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+           TypeSystem`NestedGrid`PackagePrivate`localHold[
+           TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][Null, 
+           Blank[]] -> "", TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+           TypeSystem`NestedGrid`PackagePrivate`localHold[
+           TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+           Pattern[TypeSystem`NestedGrid`PackagePrivate`path$, 
+            Blank[]], 
+           Pattern[TypeSystem`NestedGrid`PackagePrivate`pathType$, 
+            Blank[]], 
+           Pattern[TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$, 
+            Blank[]]] :> (
+          Increment[TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger]; 
+          TypeSystem`NestedGrid`PackagePrivate`$lastPath = 
+           TypeSystem`NestedGrid`PackagePrivate`path$; 
+          TypeSystem`NestedGrid`PackagePrivate`$lastPathType = 
+           TypeSystem`NestedGrid`PackagePrivate`pathType$; 
+          TypeSystem`NestedGrid`PackagePrivate`$lastPathIsLeafHeader = 
+           TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$; 
+          TypeSystem`NestedGrid`PackagePrivate`$lastOutputID = 
+           TypeSystem`NestedGrid`PackagePrivate`localHold[
+            TypeSystem`NestedGrid`PackagePrivate`$outputID$$]; 
+          TypeSystem`NestedGrid`PackagePrivate`makePathTrail[
+           TypeSystem`NestedGrid`PackagePrivate`path$, 
+            TypeSystem`NestedGrid`PackagePrivate`makePathElements]), Null :> 
+         Spacer[10], Blank[] :> Spacer[10]}], 
+       TrackedSymbols :> {
+        TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$}], FrameStyle -> 
+      None, ImageMargins -> 0, FrameMargins -> 0, Alignment -> Top, 
+      ImageSize -> {Automatic, 15}], FontSize -> 1], 
+    TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$ = Null}, 
+    DynamicWrapperBox[
+     DynamicBox[ToBoxes[
+       Dataset`DatasetContent[
+       2, "Path" -> Hold[TypeSystem`NestedGrid`PackagePrivate`$path$$], 
+        "Grid" -> Hold[TypeSystem`NestedGrid`PackagePrivate`$grid$$], "State" -> 
+        Hold[TypeSystem`NestedGrid`PackagePrivate`$state$$], "VPos" -> 
+        Hold[TypeSystem`NestedGrid`PackagePrivate`$vPos$$], "HPos" -> 
+        Hold[TypeSystem`NestedGrid`PackagePrivate`$hPos$$], "TopBar" -> 
+        Hold[TypeSystem`NestedGrid`PackagePrivate`$topBar$$], "BottomBar" -> 
+        Hold[TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$], "OutputID" -> 
+        Hold[
+          TypeSystem`NestedGrid`PackagePrivate`localHold[
+          TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]], StandardForm],
+      ImageSizeCache->{1723., {299.6340332872234, 305.3659667127766}},
+      TrackedSymbols:>{
+       TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$grid$$}], 
+     TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$ = 
+     MouseAnnotation[],
+     ImageSizeCache->{1723., {299.6340332872234, 305.3659667127766}}],
+    BaseStyle->{LineBreakWithin -> False},
+    DynamicModuleValues:>{},
+    Initialization:>(TypeSystem`NestedGrid`PackagePrivate`$outputID$$ = 
+     CreateUUID[]),
+    UnsavedVariables:>{TypeSystem`NestedGrid`PackagePrivate`$outputID$$}],
+   Deploy,
+   DefaultBaseStyle->"Deploy"],
+  Dataset`InterpretDataset[1],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{{3.893342634423471*^9, 3.893342641495772*^9}},
+ CellLabel->
+  "Out[665]=",ExpressionUUID->"c9cc8b60-96df-4396-a0ad-20db3dd83ad9"]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{"ClearAll", "[", 
+  RowBox[{
+  "iValidVignereKeyQ", ",", "VigenereCipher", ",", "iVigenereCipher", ",", 
+   "iVigenereCipherChar"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"VigenereCipher", "::", "invalidkey"}], "=", 
+   "\"\<The key(s) `1` should be made up of characters a\[LongDash]z, A\
+\[LongDash]Z, and spaces, and have a minimum length of 1.\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"iValidVignereKeyQ", "[", "key_String", "]"}], ":=", 
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"StringLength", "[", "key", "]"}], ">", "0"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"AllTrue", "[", 
+       RowBox[{
+        RowBox[{"Characters", "[", "key", "]"}], ",", 
+        RowBox[{
+         RowBox[{"MemberQ", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"CharacterRange", "[", 
+             RowBox[{"\"\<a\>\"", ",", "\"\<z\>\""}], "]"}], "~", "Join", "~", 
+            RowBox[{"CharacterRange", "[", 
+             RowBox[{"\"\<A\>\"", ",", "\"\<Z\>\""}], "]"}], "~", "Join", "~", 
+            RowBox[{"{", "\"\< \>\"", "}"}]}], ",", "#"}], "]"}], "&"}]}], 
+       "]"}], ",", "\[IndentingNewLine]", "True", "\[IndentingNewLine]", ",", 
+      "\[IndentingNewLine]", "False"}], "\[IndentingNewLine]", "]"}], 
+    "\[IndentingNewLine]", ",", "\[IndentingNewLine]", "False"}], 
+   "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"VigenereCipher", "[", "key_", "]"}], "[", "str_", "]"}], ":=", 
+  RowBox[{"VigenereCipher", "[", 
+   RowBox[{"str", ",", "key"}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"VigenereCipher", "[", 
+   RowBox[{"str_List", ",", "key_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"VigenereCipher", "[", 
+     RowBox[{"#", ",", "key"}], "]"}], "&"}], "/@", 
+   "str"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"VigenereCipher", "[", 
+   RowBox[{"str_String", ",", "key_String"}], "]"}], ":=", 
+  RowBox[{"VigenereCipher", "[", 
+   RowBox[{"str", ",", 
+    RowBox[{"{", "key", "}"}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"VigenereCipher", "[", 
+   RowBox[{"str_String", ",", 
+    RowBox[{"keys", ":", 
+     RowBox[{"{", 
+      RowBox[{"_String", ".."}], "}"}]}]}], "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"lr", ",", "newkey", ",", "k"}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"k", "=", 
+      RowBox[{"ToLowerCase", "/@", "keys"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"AllTrue", "[", 
+        RowBox[{"k", ",", "iValidVignereKeyQ"}], "]"}], "\[IndentingNewLine]",
+        ",", "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Length", "[", "k", "]"}], ">", "1"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"lr", "=", 
+           RowBox[{"LCM", "@@", 
+            RowBox[{"(", 
+             RowBox[{"StringLength", "/@", "k"}], ")"}]}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{"lr", ">", 
+             RowBox[{"StringLength", "[", "str", "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"(*", " ", 
+             RowBox[{
+              RowBox[{"do", " ", "each", " ", "key", " ", "separately"}], ",",
+               " ", "iteratively"}], " ", "*)"}], "\[IndentingNewLine]", 
+            RowBox[{"Fold", "[", 
+             RowBox[{"iVigenereCipher", ",", "str", ",", "k"}], "]"}], 
+            "\[IndentingNewLine]", ",", "\[IndentingNewLine]", 
+            RowBox[{"(*", " ", 
+             RowBox[{
+             "make", " ", "1", " ", "key", " ", "that", " ", "does", " ", 
+              "it"}], " ", "*)"}], "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"newkey", "=", 
+              RowBox[{"StringJoin", "[", 
+               RowBox[{"ConstantArray", "[", 
+                RowBox[{
+                 RowBox[{"First", "[", "k", "]"}], ",", 
+                 RowBox[{"lr", "/", 
+                  RowBox[{"StringLength", "[", 
+                   RowBox[{"First", "[", "k", "]"}], "]"}]}]}], "]"}], 
+               "]"}]}], ";", "\[IndentingNewLine]", 
+             RowBox[{"newkey", "=", 
+              RowBox[{"Fold", "[", 
+               RowBox[{"iVigenereCipher", ",", "newkey", ",", 
+                RowBox[{"Rest", "[", "k", "]"}]}], "]"}]}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{"iVigenereCipher", "[", 
+              RowBox[{"str", ",", "newkey"}], "]"}]}]}], 
+           "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"iVigenereCipher", "[", 
+          RowBox[{"str", ",", 
+           RowBox[{"First", "[", "k", "]"}]}], "]"}]}], "\[IndentingNewLine]",
+         "]"}], "\[IndentingNewLine]", ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"Message", "[", 
+         RowBox[{
+          RowBox[{"VigenereCipher", "::", "invalidkey"}], ",", "keys"}], 
+         "]"}], ";", "\[IndentingNewLine]", 
+        RowBox[{"Return", "[", "$Failed", "]"}]}]}], "\[IndentingNewLine]", 
+      "]"}]}]}], "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"iVigenereCipherInitialize", "[", "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "a1", ",", "a2", ",", "a", ",", "t1", ",", "t2", ",", "cr1", ",", ",", 
+      "cr2"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"ClearAll", "[", "iVigenereCipherChar", "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"cr1", "=", 
+      RowBox[{"CharacterRange", "[", 
+       RowBox[{"\"\<A\>\"", ",", "\"\<Z\>\""}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"a1", "=", 
+      RowBox[{"MapIndexed", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"#1", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", 
+            RowBox[{"First", "[", "#2", "]"}]}], "}"}]}], "&"}], ",", "cr1"}],
+        "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"cr2", "=", 
+      RowBox[{"CharacterRange", "[", 
+       RowBox[{"\"\<a\>\"", ",", "\"\<z\>\""}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"a2", "=", 
+      RowBox[{"MapIndexed", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"#1", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"2", ",", 
+            RowBox[{"First", "[", "#2", "]"}]}], "}"}]}], "&"}], ",", "cr2"}],
+        "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"a", "=", 
+      RowBox[{"Association", "[", 
+       RowBox[{"Join", "[", 
+        RowBox[{"a1", ",", "a2"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"With", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"assoc", "=", "a"}], ",", 
+         RowBox[{"c1", "=", "cr1"}], ",", 
+         RowBox[{"c2", "=", "cr2"}]}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"iVigenereCipherChar", "[", 
+         RowBox[{"char_String", ",", "cshift_String"}], "]"}], ":=", 
+        RowBox[{"Module", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"pos", ",", "newpos", ",", "n"}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"n", "=", 
+            RowBox[{"assoc", "[", "cshift", "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"pos", "=", 
+            RowBox[{"assoc", "[", "char", "]"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"MissingQ", "[", "pos", "]"}], "\[Or]", 
+              RowBox[{"MissingQ", "[", "n", "]"}]}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"Return", "[", "char", "]"}], "\[IndentingNewLine]", ",",
+              "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"newpos", "=", 
+               RowBox[{"Mod", "[", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"pos", "[", 
+                   RowBox[{"[", "2", "]"}], "]"}], "+", 
+                  RowBox[{"n", "[", 
+                   RowBox[{"[", "2", "]"}], "]"}], "-", "1"}], ",", "26", ",",
+                  "1"}], "]"}]}], ";", "\[IndentingNewLine]", 
+              RowBox[{"If", "[", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"pos", "[", 
+                  RowBox[{"[", "1", "]"}], "]"}], "\[Equal]", "1"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"Return", "[", 
+                 RowBox[{"c1", "[", 
+                  RowBox[{"[", "newpos", "]"}], "]"}], "]"}], 
+                "\[IndentingNewLine]", ",", "\[IndentingNewLine]", 
+                RowBox[{"Return", "[", 
+                 RowBox[{"c2", "[", 
+                  RowBox[{"[", "newpos", "]"}], "]"}], "]"}]}], 
+               "\[IndentingNewLine]", "]"}]}]}], "\[IndentingNewLine]", 
+            "]"}]}]}], "\[IndentingNewLine]", "]"}]}]}], 
+      "\[IndentingNewLine]", "]"}]}]}], "\[IndentingNewLine]", 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"iVigenereCipherInitialize", "[", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"iVigenereCipher", "[", 
+   RowBox[{"str_String", ",", "key_String"}], "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"keychars", "=", 
+       RowBox[{"Characters", "[", "key", "]"}]}], ",", 
+      RowBox[{"keylen", "=", 
+       RowBox[{"StringLength", "[", "key", "]"}]}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"StringJoin", "[", 
+     RowBox[{"Table", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"iVigenereCipherChar", "[", 
+        RowBox[{
+         RowBox[{"StringTake", "[", 
+          RowBox[{"str", ",", 
+           RowBox[{"{", "i", "}"}]}], "]"}], ",", 
+         RowBox[{"keychars", "[", 
+          RowBox[{"[", 
+           RowBox[{"Mod", "[", 
+            RowBox[{"i", ",", "keylen", ",", "1"}], "]"}], "]"}], "]"}]}], 
+        "]"}], "\[IndentingNewLine]", ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "1", ",", 
+         RowBox[{"StringLength", "[", "str", "]"}]}], "}"}]}], 
+      "\[IndentingNewLine]", "]"}], "]"}]}], "\[IndentingNewLine]", 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Vigenere", "[", 
+    RowBox[{"plaintext_String", ",", "keyword_String"}], "]"}], "/;", 
+   RowBox[{"StringFreeQ", "[", 
+    RowBox[{
+     RowBox[{"ToUpperCase", "@", "keyword"}], ",", 
+     RowBox[{"Except", "[", 
+      RowBox[{"Alternatives", "@@", 
+       RowBox[{"ToUpperCase", "@", 
+        RowBox[{"Alphabet", "[", "]"}]}]}], "]"}]}], "]"}]}], ":=", 
+  RowBox[{"StringJoin", "@", 
+   RowBox[{"StringCases", "[", 
+    RowBox[{
+     RowBox[{"ToUpperCase", "[", 
+      RowBox[{"VigenereCipher", "[", 
+       RowBox[{
+        RowBox[{"StringDelete", "[", 
+         RowBox[{"plaintext", ",", "\"\< \>\""}], "]"}], ",", "keyword"}], 
+       "]"}], "]"}], ",", "LetterCharacter"}], "]"}]}]}]}], "Input",
+ CellChangeTimes->{{3.893342771174763*^9, 3.8933428076229124`*^9}, {
+   3.8933428858825536`*^9, 3.89334290674303*^9}, {3.8933432399733057`*^9, 
+   3.893343257891247*^9}, 3.893343518634159*^9, {3.8933436002870207`*^9, 
+   3.893343620120074*^9}},
+ CellLabel->
+  "In[773]:=",ExpressionUUID->"f7b4a271-1091-44ca-91a2-301ffae46c66"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Vigenere", "[", 
+  RowBox[{"\"\<Plaintext English!\>\"", ",", "\"\<key\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.8933432603987274`*^9, 3.8933432665635214`*^9}},
+ CellLabel->
+  "In[784]:=",ExpressionUUID->"72c1bd60-4d66-42cf-a239-0bacbb7fb90d"],
+
+Cell[BoxData["\<\"ZPYSRROBROREVMQR\"\>"], "Output",
+ CellChangeTimes->{3.89334326699543*^9, 3.893343626486595*^9},
+ CellLabel->
+  "Out[784]=",ExpressionUUID->"dec39135-dde3-4b8d-ba61-ea5453ef705d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"StringJoin", "@", 
+  RowBox[{"StringCases", "[", 
+   RowBox[{
+    RowBox[{"ToUpperCase", "[", 
+     RowBox[{"VigenereCipher", "[", 
+      RowBox[{
+       RowBox[{"StringDelete", "[", 
+        RowBox[{"\"\<Plaintext English!\>\"", ",", "\"\< \>\""}], "]"}], ",", 
+       "\"\<key\>\""}], "]"}], "]"}], ",", "LetterCharacter"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.8933430907300463`*^9, 3.8933430907310457`*^9}, {
+  3.893343124672529*^9, 3.8933431265695047`*^9}, {3.893343162638194*^9, 
+  3.893343171057974*^9}, {3.8933432116991796`*^9, 3.893343234948798*^9}},
+ CellLabel->
+  "In[716]:=",ExpressionUUID->"688ffbf6-bc30-4847-b6d9-a6db64fd4996"],
+
+Cell[BoxData["\<\"ZPYSRROBROREVMQR\"\>"], "Output",
+ CellChangeTimes->{
+  3.8933430914962463`*^9, 3.893343126924506*^9, 3.893343171372974*^9, {
+   3.893343215526775*^9, 3.8933432351177998`*^9}},
+ CellLabel->
+  "Out[716]=",ExpressionUUID->"24c20d12-7621-4518-9853-d97bcf9e0e27"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"VigenereDecipher", "[", 
+  RowBox[{"\"\<Plaintext English!\>\"", ",", "\"\<key\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.8933430907300463`*^9, 3.8933430907310457`*^9}, {
+  3.893343124672529*^9, 3.893343137665745*^9}},
+ CellLabel->
+  "In[712]:=",ExpressionUUID->"71cd7174-ff5f-4c9a-aff8-beaa880ee546"],
+
+Cell[BoxData["\<\"Fhcyjvutv Apwhkid!\"\>"], "Output",
+ CellChangeTimes->{3.893343138146448*^9},
+ CellLabel->
+  "Out[712]=",ExpressionUUID->"636726a3-8859-47d1-89ca-f533c6af0fd2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Vigenere", "@@", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{
+    "\"\<wd]aiHQvqAAMOVH@T`^zvQOX\[Continuation]FhBl\>\"", "\[Ellipsis]", 
+     "\"\<zTycl`ptInPdP?X>sFy]AujVWQWt\[Continuation]^\>\""}], ",", 
+    RowBox[{"\"\<\>\"", "\[Ellipsis]", "\"\<\>\""}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.893343338154293*^9, 3.8933433381562996`*^9}},
+ CellLabel->
+  "In[740]:=",ExpressionUUID->"a652dead-8a66-4add-9d62-f3078b09473d"],
+
+Cell[BoxData[
+ RowBox[{"Vigenere", "[", 
+  RowBox[{
+   RowBox[{"\<\"wd]aiHQvqAAMOVH@T`^zvQOX\[Continuation]FhBl\"\>", 
+    " ", "\<\"zTycl`ptInPdP?X>sFy]AujVWQWt\[Continuation]^\"\>", " ", 
+    "\[Ellipsis]"}], ",", 
+   RowBox[{
+    SuperscriptBox["\<\"\"\>", "2"], " ", "\[Ellipsis]"}]}], "]"}]], "Output",
+ CellChangeTimes->{3.893343339457852*^9},
+ CellLabel->
+  "Out[740]=",ExpressionUUID->"e8e56d57-7896-4ec6-ba4f-889784b8fed6"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"VigenereCipher", "@@", 
+  RowBox[{"{", 
+   RowBox[{
+   "\"\<wd]aiHQvqAAMOVH@T`^zvQOX\[Continuation]FhBl\>\"", ",", 
+    "\"\<key\>\""}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.893343338154293*^9, 3.8933433381562996`*^9}, {
+  3.89334337565567*^9, 3.8933434142100124`*^9}},
+ CellLabel->
+  "In[743]:=",ExpressionUUID->"83face8a-8ef2-4ba2-b047-ed9d422d22ab"],
+
+Cell[BoxData["\<\"gh]kmFAzoKEKYZF@X`^dtASV\[Continuation]JfLp\"\>"], "Output",
+ CellChangeTimes->{{3.8933433965118365`*^9, 3.89334341461728*^9}},
+ CellLabel->
+  "Out[743]=",ExpressionUUID->"b46a5c8f-2bec-4411-9c98-b64d698cb92a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"VigenereDecipher", "@@", 
+  RowBox[{"{", 
+   RowBox[{
+   "\"\<wd]aiHQvqAAMOVH@T`^zvQOX\[Continuation]FhBl\>\"", ",", 
+    "\"\<key\>\""}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.893343338154293*^9, 3.8933433381562996`*^9}, {
+  3.89334337565567*^9, 3.8933434204497643`*^9}},
+ CellLabel->
+  "In[744]:=",ExpressionUUID->"9f31453e-6e42-4cd7-bb55-5cd768e0758f"],
+
+Cell[BoxData["\<\"mz]qeJGrsQWOERJ@P`^vxGKZ\[Continuation]BjRh\"\>"], "Output",
+ CellChangeTimes->{3.8933434210232134`*^9},
+ CellLabel->
+  "Out[744]=",ExpressionUUID->"e7e63f4c-48ad-4b0c-abd6-e2ee128c9cba"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Vigenere", "@@", 
+  RowBox[{"{", 
+   RowBox[{
+   "\"\<wd]aiHQvqAAMOVH@T`^zvQOX\[Continuation]FhBl\>\"", ",", 
+    "\"\<key\>\""}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.893343338154293*^9, 3.8933433381562996`*^9}, {
+  3.89334337565567*^9, 3.8933434269211617`*^9}},
+ CellLabel->
+  "In[745]:=",ExpressionUUID->"f21e556b-e12a-4815-bf1f-57843c43f465"],
+
+Cell[BoxData["\<\"GHKMFAZOKEKYZFXDTASVJFLP\"\>"], "Output",
+ CellChangeTimes->{3.8933434272700844`*^9},
+ CellLabel->
+  "Out[745]=",ExpressionUUID->"9938550e-815d-447b-b349-d8f5877830f8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Tests", "Section",
+ CellChangeTimes->{{3.8933434591235905`*^9, 
+  3.8933434601275234`*^9}},ExpressionUUID->"7d6aa8ca-4c6e-4139-a683-\
+497d79d7f344"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Vigenere", "[", 
+  RowBox[{"\"\<Computation Meets Knowledge\>\"", ",", "\"\<wolfram\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.8933434606584454`*^9, 3.893343460659445*^9}},
+ CellLabel->
+  "In[746]:=",ExpressionUUID->"95f2f44f-ae39-4f52-a995-3269be4fe60c"],
+
+Cell[BoxData["\<\"YCXULTMPWZSDEQPGVSFWXARRJ\"\>"], "Output",
+ CellChangeTimes->{3.8933434616383104`*^9},
+ CellLabel->
+  "Out[746]=",ExpressionUUID->"b2680adf-1e42-4553-98c5-feaf96d7eb0d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Vigenere", "[", 
+  RowBox[{
+  "\"\<The quick brown fox jumped over the lazy dog.\>\"", ",", 
+   "\"\<leap\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.893343466808773*^9, 3.8933434668097754`*^9}},
+ CellLabel->
+  "In[747]:=",ExpressionUUID->"a10b6273-8d48-4a04-8842-371ff5b871ba"],
+
+Cell[BoxData["\<\"ELEFFMCZMVOLYJOMUYMEPHOKPVTWPPAOJHOV\"\>"], "Output",
+ CellChangeTimes->{3.8933434673181334`*^9},
+ CellLabel->
+  "Out[747]=",ExpressionUUID->"566bf603-4cfa-4372-bda6-e067d6864943"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Vigenere", "[", 
+  RowBox[{
+  "\"\<abcdefghijklmnopqrstuvwxyz\>\"", ",", 
+   "\"\<zyxwvutsrqponmlkjihgfedcba\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.8933434710367365`*^9, 3.893343471037737*^9}},
+ CellLabel->
+  "In[748]:=",ExpressionUUID->"cf946dd9-0666-4e75-a662-5b3f7143eb47"],
+
+Cell[BoxData["\<\"ZZZZZZZZZZZZZZZZZZZZZZZZZZ\"\>"], "Output",
+ CellChangeTimes->{3.893343471507834*^9},
+ CellLabel->
+  "Out[748]=",ExpressionUUID->"49a1ea1a-af04-4352-bd9a-09366d590303"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Vigenere", "[", 
+  RowBox[{"\"\<message\>\"", ",", "\"\<thekeycanbelonger\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.893343476888082*^9, 3.893343476889082*^9}},
+ CellLabel->
+  "In[749]:=",ExpressionUUID->"05a6a642-aa57-4b88-a66f-98fc1bf830e6"],
+
+Cell[BoxData["\<\"FLWCEEG\"\>"], "Output",
+ CellChangeTimes->{3.8933434778194327`*^9},
+ CellLabel->
+  "Out[749]=",ExpressionUUID->"bc393522-35df-47ab-b74e-4918d5b9047b"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{574.8, 571.8},
+WindowMargins->{{Automatic, 6.600000000000136}, {-15, Automatic}},
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 31, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"019e25ad-a52c-4cfc-8522-9ac1faf04a52"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[583, 22, 390, 8, 98, "Title",ExpressionUUID->"3e9b98c9-c757-4c3c-b16a-cdccb1e59968"],
+Cell[CellGroupData[{
+Cell[998, 34, 231, 4, 28, "Input",ExpressionUUID->"e82488bb-4a74-46c6-b08c-507308a33ff4"],
+Cell[1232, 40, 126090, 2506, 624, "Output",ExpressionUUID->"c9cc8b60-96df-4396-a0ad-20db3dd83ad9"]
+}, Open  ]],
+Cell[127337, 2549, 11451, 284, 1684, "Input",ExpressionUUID->"f7b4a271-1091-44ca-91a2-301ffae46c66"],
+Cell[CellGroupData[{
+Cell[138813, 2837, 272, 5, 28, "Input",ExpressionUUID->"72c1bd60-4d66-42cf-a239-0bacbb7fb90d"],
+Cell[139088, 2844, 197, 3, 32, "Output",ExpressionUUID->"dec39135-dde3-4b8d-ba61-ea5453ef705d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[139322, 2852, 674, 15, 105, "Input",ExpressionUUID->"688ffbf6-bc30-4847-b6d9-a6db64fd4996"],
+Cell[139999, 2869, 277, 5, 32, "Output",ExpressionUUID->"24c20d12-7621-4518-9853-d97bcf9e0e27"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[140313, 2879, 329, 6, 28, "Input",ExpressionUUID->"71cd7174-ff5f-4c9a-aff8-beaa880ee546"],
+Cell[140645, 2887, 178, 3, 32, "Output",ExpressionUUID->"636726a3-8859-47d1-89ca-f533c6af0fd2"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[140860, 2895, 451, 10, 67, "Input",ExpressionUUID->"a652dead-8a66-4add-9d62-f3078b09473d"],
+Cell[141314, 2907, 432, 10, 55, "Output",ExpressionUUID->"e8e56d57-7896-4ec6-ba4f-889784b8fed6"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[141783, 2922, 380, 9, 28, "Input",ExpressionUUID->"83face8a-8ef2-4ba2-b047-ed9d422d22ab"],
+Cell[142166, 2933, 228, 3, 32, "Output",ExpressionUUID->"b46a5c8f-2bec-4411-9c98-b64d698cb92a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[142431, 2941, 382, 9, 28, "Input",ExpressionUUID->"9f31453e-6e42-4cd7-bb55-5cd768e0758f"],
+Cell[142816, 2952, 205, 3, 32, "Output",ExpressionUUID->"e7e63f4c-48ad-4b0c-abd6-e2ee128c9cba"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[143058, 2960, 374, 9, 28, "Input",ExpressionUUID->"f21e556b-e12a-4815-bf1f-57843c43f465"],
+Cell[143435, 2971, 186, 3, 32, "Output",ExpressionUUID->"9938550e-815d-447b-b349-d8f5877830f8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[143658, 2979, 154, 3, 67, "Section",ExpressionUUID->"7d6aa8ca-4c6e-4139-a683-497d79d7f344"],
+Cell[CellGroupData[{
+Cell[143837, 2986, 286, 6, 28, "Input",ExpressionUUID->"95f2f44f-ae39-4f52-a995-3269be4fe60c"],
+Cell[144126, 2994, 187, 3, 32, "Output",ExpressionUUID->"b2680adf-1e42-4553-98c5-feaf96d7eb0d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[144350, 3002, 305, 7, 48, "Input",ExpressionUUID->"a10b6273-8d48-4a04-8842-371ff5b871ba"],
+Cell[144658, 3011, 198, 3, 55, "Output",ExpressionUUID->"566bf603-4cfa-4372-bda6-e067d6864943"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[144893, 3019, 308, 7, 48, "Input",ExpressionUUID->"cf946dd9-0666-4e75-a662-5b3f7143eb47"],
+Cell[145204, 3028, 186, 3, 32, "Output",ExpressionUUID->"49a1ea1a-af04-4352-bd9a-09366d590303"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[145427, 3036, 274, 6, 28, "Input",ExpressionUUID->"05a6a642-aa57-4b88-a66f-98fc1bf830e6"],
+Cell[145704, 3044, 169, 3, 32, "Output",ExpressionUUID->"bc393522-35df-47ab-b74e-4918d5b9047b"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
