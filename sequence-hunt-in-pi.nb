@@ -10,16 +10,72 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       161,          7]
-NotebookDataLength[       863,         35]
-NotebookOptionsPosition[       564,         21]
-NotebookOutlinePosition[      1006,         38]
-CellTagsIndexPosition[       963,         35]
+NotebookDataLength[      3262,         97]
+NotebookOptionsPosition[      2626,         77]
+NotebookOutlinePosition[      3068,         94]
+CellTagsIndexPosition[      3025,         91]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[ButtonBox["Sequence Hunt in Pi",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://challenges.wolframcloud.com/challenge/sequence-hunt-in-pi"], 
+   None},
+ ButtonNote->
+  "https://challenges.wolframcloud.com/challenge/sequence-hunt-in-pi"]], \
+"Title",
+ CellChangeTimes->{{3.8933370760716105`*^9, 
+  3.8933370801090918`*^9}},ExpressionUUID->"3155cbf0-f3af-4b64-b376-\
+d4bc20d2d6fe"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"FindInPi", "[", "s_String", "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"piDigits", ",", "seqLength", ",", "position", ",", "seq"}], 
+     "}"}], ",", 
+    RowBox[{
+     RowBox[{"seq", "=", 
+      RowBox[{"Characters", "[", "s", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"seqLength", "=", 
+      RowBox[{"Length", "[", "seq", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"position", "=", "0"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"While", "[", 
+      RowBox[{"True", ",", 
+       RowBox[{
+        RowBox[{"piDigits", "=", 
+         RowBox[{
+          RowBox[{"RealDigits", "[", 
+           RowBox[{"Pi", ",", "10", ",", 
+            RowBox[{"position", "+", "seqLength"}], ",", 
+            RowBox[{"-", "position"}]}], "]"}], "[", 
+          RowBox[{"[", "1", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Take", "[", 
+            RowBox[{"piDigits", ",", "seqLength"}], "]"}], "==", "seq"}], ",", 
+          RowBox[{"Break", "[", "]"}], ",", 
+          RowBox[{"position", "++"}]}], "]"}], ";"}]}], "]"}], ";", 
+     "\[IndentingNewLine]", "position"}]}], "]"}]}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.8933370655470147`*^9, 3.8933370655480127`*^9}},
+ CellLabel->
+  "In[481]:=",ExpressionUUID->"fdababee-f13d-404d-afb1-ad08e166b9e3"],
+
+Cell["This takes too long when I try to use it.", "Text",
+ CellChangeTimes->{{3.893337166803727*^9, 
+  3.893337175238708*^9}},ExpressionUUID->"337f8243-d22f-4067-8b5c-\
+bbbbf3357fdf"]
+}, Open  ]]
 },
-WindowSize->{571.8, 509.4},
+WindowSize->{382.8, 509.4},
 WindowMargins->{{Automatic, 107.40000000000009`}, {
   22.200000000000045`, Automatic}},
 FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 31, 2023)",
@@ -37,9 +93,13 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
+Cell[CellGroupData[{
+Cell[583, 22, 402, 10, 160, "Title",ExpressionUUID->"3155cbf0-f3af-4b64-b376-d4bc20d2d6fe"],
+Cell[988, 34, 1436, 35, 292, "Input",ExpressionUUID->"fdababee-f13d-404d-afb1-ad08e166b9e3",
+ InitializationCell->True],
+Cell[2427, 71, 183, 3, 35, "Text",ExpressionUUID->"337f8243-d22f-4067-8b5c-bbbbf3357fdf"]
+}, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
