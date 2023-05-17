@@ -10,25 +10,2093 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      1232,         44]
-NotebookOptionsPosition[       813,         28]
-NotebookOutlinePosition[      1255,         45]
-CellTagsIndexPosition[      1212,         42]
+NotebookDataLength[    109810,       2145]
+NotebookOptionsPosition[    107437,       2096]
+NotebookOutlinePosition[    107877,       2113]
+CellTagsIndexPosition[    107834,       2110]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 Cell[BoxData[
  RowBox[{
-  RowBox[{"FactorialZeros", "[", "n_Integer", "]"}], ":="}]], "Input",
+  RowBox[{"FactorialZeros", "[", "n_Integer", "]"}], ":=", 
+  RowBox[{"DigitCount", "[", 
+   RowBox[{
+    RowBox[{"n", "!"}], ",", "10", ",", "0"}], "]"}]}]], "Input",
  InitializationCell->True,
- CellChangeTimes->{{3.8932768830298405`*^9, 
-  3.8932768830298405`*^9}},ExpressionUUID->"d37bb6b9-2df6-4d84-9349-\
-961f7c932c1b"]
+ CellChangeTimes->{{3.8932768830298405`*^9, 3.8932768830298405`*^9}, 
+   3.8932769244133034`*^9, {3.8932769624331064`*^9, 3.893276964280929*^9}},
+ CellLabel->"In[10]:=",ExpressionUUID->"d37bb6b9-2df6-4d84-9349-961f7c932c1b"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"FactorialZeros", "[", "n_Integer", "]"}], ":=", 
+  RowBox[{"Sum", "[", 
+   RowBox[{
+    RowBox[{"Quotient", "[", 
+     RowBox[{"n", ",", 
+      SuperscriptBox["5", "i"]}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", 
+      RowBox[{"Floor", "[", 
+       RowBox[{"Log", "[", 
+        RowBox[{"5", ",", "n"}], "]"}], "]"}]}], "}"}]}], "]"}]}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.8932768830298405`*^9, 3.8932768830298405`*^9}, 
+   3.8932769244133034`*^9, {3.8932769624331064`*^9, 3.893276964280929*^9}, {
+   3.8932773046759205`*^9, 3.893277310794794*^9}},
+ CellLabel->"In[17]:=",ExpressionUUID->"a8713d2e-64f0-42e9-a235-4de821e674ff"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"IntegerDigits", "[", 
+  RowBox[{"100", "!"}], "]"}]], "Input",
+ CellChangeTimes->{{3.893276916478633*^9, 3.893276920235734*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"33333aeb-71b4-4ac7-9454-dc65b24d36c3"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "9", ",", "3", ",", "3", ",", "2", ",", "6", ",", "2", ",", "1", ",", "5", 
+   ",", "4", ",", "4", ",", "3", ",", "9", ",", "4", ",", "4", ",", "1", ",", 
+   "5", ",", "2", ",", "6", ",", "8", ",", "1", ",", "6", ",", "9", ",", "9", 
+   ",", "2", ",", "3", ",", "8", ",", "8", ",", "5", ",", "6", ",", "2", ",", 
+   "6", ",", "6", ",", "7", ",", "0", ",", "0", ",", "4", ",", "9", ",", "0", 
+   ",", "7", ",", "1", ",", "5", ",", "9", ",", "6", ",", "8", ",", "2", ",", 
+   "6", ",", "4", ",", "3", ",", "8", ",", "1", ",", "6", ",", "2", ",", "1", 
+   ",", "4", ",", "6", ",", "8", ",", "5", ",", "9", ",", "2", ",", "9", ",", 
+   "6", ",", "3", ",", "8", ",", "9", ",", "5", ",", "2", ",", "1", ",", "7", 
+   ",", "5", ",", "9", ",", "9", ",", "9", ",", "9", ",", "3", ",", "2", ",", 
+   "2", ",", "9", ",", "9", ",", "1", ",", "5", ",", "6", ",", "0", ",", "8", 
+   ",", "9", ",", "4", ",", "1", ",", "4", ",", "6", ",", "3", ",", "9", ",", 
+   "7", ",", "6", ",", "1", ",", "5", ",", "6", ",", "5", ",", "1", ",", "8", 
+   ",", "2", ",", "8", ",", "6", ",", "2", ",", "5", ",", "3", ",", "6", ",", 
+   "9", ",", "7", ",", "9", ",", "2", ",", "0", ",", "8", ",", "2", ",", "7", 
+   ",", "2", ",", "2", ",", "3", ",", "7", ",", "5", ",", "8", ",", "2", ",", 
+   "5", ",", "1", ",", "1", ",", "8", ",", "5", ",", "2", ",", "1", ",", "0", 
+   ",", "9", ",", "1", ",", "6", ",", "8", ",", "6", ",", "4", ",", "0", ",", 
+   "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+   ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+   "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+   "0"}], "}"}]], "Output",
+ CellChangeTimes->{3.8932769216028624`*^9},
+ CellLabel->"Out[6]=",ExpressionUUID->"e756e361-7c36-4215-8794-f00e0639fd29"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DigitCount", "[", 
+  RowBox[{
+   RowBox[{"100", "!"}], ",", "10", ",", "0"}], "]"}]], "Input",
+ CellChangeTimes->{{3.89327694106392*^9, 3.8932769561676846`*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"9c2ec98f-bf1c-466e-b74f-b953103e7285"],
+
+Cell[BoxData["30"], "Output",
+ CellChangeTimes->{{3.893276945740163*^9, 3.8932769567657347`*^9}},
+ CellLabel->"Out[9]=",ExpressionUUID->"4e06ca3d-5854-444d-b7ae-9a81b89b1253"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Floor", "[", 
+  RowBox[{"Log", "[", 
+   RowBox[{"5", ",", "1230000"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.893277159274448*^9, 3.893277164065219*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"dbd3c62b-4498-407d-8aa6-b1e7d4f829b2"],
+
+Cell[BoxData["8"], "Output",
+ CellChangeTimes->{3.8932771649362373`*^9},
+ CellLabel->"Out[11]=",ExpressionUUID->"72e43952-bddc-4c4e-9cea-b374a9a0e82f"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.8932772166081586`*^9, 
+  3.8932772174857655`*^9}},ExpressionUUID->"d57a23a6-d107-4fd7-8c3a-\
+5b93bf714fa9"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Sum", "[", 
+  RowBox[{
+   RowBox[{"Quotient", "[", 
+    RowBox[{"1230000", ",", 
+     SuperscriptBox["5", "i"]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", 
+     RowBox[{"Floor", "[", 
+      RowBox[{"Log", "[", 
+       RowBox[{"5", ",", "1230000"}], "]"}], "]"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8932771237297688`*^9, 3.893277135153781*^9}, {
+  3.893277232915173*^9, 3.893277243466522*^9}},
+ CellLabel->"In[14]:=",ExpressionUUID->"cf9c483d-10e4-463c-82e1-57814af54664"],
+
+Cell[BoxData["307497"], "Output",
+ CellChangeTimes->{{3.89327723532806*^9, 3.893277244376726*^9}},
+ CellLabel->"Out[14]=",ExpressionUUID->"de1e4f22-a900-455a-834e-201a09a75cf0"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Sum", "[", 
+  RowBox[{
+   RowBox[{"Quotient", "[", 
+    RowBox[{"777", ",", 
+     SuperscriptBox["5", "i"]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", 
+     RowBox[{"Floor", "[", 
+      RowBox[{"Log", "[", 
+       RowBox[{"5", ",", "777"}], "]"}], "]"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8932772577140903`*^9, 3.8932772595774384`*^9}},
+ CellLabel->"In[15]:=",ExpressionUUID->"03af8a18-31e2-4ea7-a3e5-88abaf8cffe0"],
+
+Cell[BoxData["193"], "Output",
+ CellChangeTimes->{3.893277260230313*^9},
+ CellLabel->"Out[15]=",ExpressionUUID->"4db4eab0-3103-49da-8e98-db213f4bf40c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Sum", "[", 
+  RowBox[{
+   RowBox[{"Quotient", "[", 
+    RowBox[{"10005", ",", 
+     SuperscriptBox["5", "i"]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", 
+     RowBox[{"Floor", "[", 
+      RowBox[{"Log", "[", 
+       RowBox[{"5", ",", "10005"}], "]"}], "]"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8932772791754627`*^9, 3.893277280193736*^9}},
+ CellLabel->"In[16]:=",ExpressionUUID->"b03665b9-b8e4-4036-85eb-a2b9cec12942"],
+
+Cell[BoxData["2500"], "Output",
+ CellChangeTimes->{3.893277281234954*^9},
+ CellLabel->"Out[16]=",ExpressionUUID->"876626a5-e444-49cc-82a0-6e780ce300f0"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ResourceSearch", "[", "\"\<Factorial\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.8932773338324842`*^9, 3.893277337583933*^9}},
+ CellLabel->"In[18]:=",ExpressionUUID->"354f4f59-8fd3-47b9-b762-c415c06a5410"],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[
+   DynamicModuleBox[{TypeSystem`NestedGrid`PackagePrivate`$state$$ = <|
+    "InitialData" -> {<|
+       "Name" -> "InverseFactorial", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "InverseFactorial", "ShortName" -> "InverseFactorial", 
+           "UUID" -> "1d1557b6-0623-41eb-9ea4-405d4ac6814e", "ResourceType" -> 
+           "Function", "Version" -> "1.0.0", "Description" -> 
+           "Compute the inverse factorial of a strictly positive integer by \
+solving the gamma function for a specific value", "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$f683174c95f045aeb56a0e7d44a0de29`\
+InverseFactorial"|>], "Description" -> 
+        "Compute the inverse factorial of a strictly positive integer by \
+solving the gamma function for a specific value", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+InverseFactorial"]|>, <|
+       "Name" -> "MultiFactorial", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "MultiFactorial", "ShortName" -> "MultiFactorial", "UUID" -> 
+           "ac91eaa4-574f-4f02-a825-238ff8ba6161", "ResourceType" -> 
+           "Function", "Version" -> "1.0.1", "Description" -> 
+           "Evaluate the multifactorial function", "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$899b372832a94c1993652361c81879ef`\
+MultiFactorial"|>], "Description" -> "Evaluate the multifactorial function", 
+        "Location" -> URL["https://resources.wolframcloud.com"], 
+        "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+MultiFactorial"]|>, <|
+       "Name" -> "FactorialMod", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "FactorialMod", "ShortName" -> "FactorialMod", "UUID" -> 
+           "0cef256e-0058-43a8-b987-4442f5c17deb", "ResourceType" -> 
+           "Function", "Version" -> "1.0.0", "Description" -> 
+           "Fast factorial modulo a given number", "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$4fa0e3c9338e4a75a6b05d1608c4fb7f`\
+FactorialMod"|>], "Description" -> "Fast factorial modulo a given number", 
+        "Location" -> URL["https://resources.wolframcloud.com"], 
+        "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+FactorialMod"]|>, <|
+       "Name" -> "FactorialSeriesExpansion", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "FactorialSeriesExpansion", "ShortName" -> 
+           "FactorialSeriesExpansion", "UUID" -> 
+           "a5b1516f-f71b-4627-ba5d-ede5aeab391a", "ResourceType" -> 
+           "Function", "Version" -> "1.0.0", "Description" -> 
+           "Expand a function into a factorial series", "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$5f2f82b3fd8a49a19a72194a1f6d5dc1`\
+FactorialSeriesExpansion"|>], "Description" -> 
+        "Expand a function into a factorial series", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+FactorialSeriesExpansion"]|>, <|
+       "Name" -> "StirlingsFormula", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "StirlingsFormula", "ShortName" -> "StirlingsFormula", 
+           "UUID" -> "618871d8-1353-41cd-8aaf-7fbf86fc7ee2", "ResourceType" -> 
+           "Function", "Version" -> "1.0.0", "Description" -> 
+           "Compute an approximation to a factorial with Stirling's formula", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$ce35454a25c84053a5c52364e045bf3f`\
+StirlingsFormula"|>], "Description" -> 
+        "Compute an approximation to a factorial with Stirling's formula", 
+        "Location" -> URL["https://resources.wolframcloud.com"], 
+        "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+StirlingsFormula"]|>, <|
+       "Name" -> "KurepaK", "ResourceType" -> "Function", "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "KurepaK", "ShortName" -> "KurepaK", "UUID" -> 
+           "1536b9f1-ba0f-4c30-9d70-d926301f94ac", "ResourceType" -> 
+           "Function", "Version" -> "1.0.0", "Description" -> 
+           "Evaluate the Kurepa function", "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$7c920a6505d14c2fb546221c643dda18`KurepaK"|>], 
+        "Description" -> "Evaluate the Kurepa function", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+KurepaK"]|>, <|
+       "Name" -> "Primorial", "ResourceType" -> "Function", "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "Primorial", "ShortName" -> "Primorial", "UUID" -> 
+           "1ba58f96-8745-419b-bb21-04c24efbf6e2", "ResourceType" -> 
+           "Function", "Version" -> "1.0.0", "Description" -> 
+           "Evaluate the primorial", "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$c0d9a6d236414e4c9aa9a71b2e4e5e69`Primorial"|>]\
+, "Description" -> "Evaluate the primorial", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+Primorial"]|>, <|
+       "Name" -> "LiouvilleNumber", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "LiouvilleNumber", "ShortName" -> "LiouvilleNumber", 
+           "UUID" -> "e4e789de-ce6e-4e8c-9073-136b4003684f", "ResourceType" -> 
+           "Function", "Version" -> "1.0.0", "Description" -> 
+           "Compute the Liouville number or its generalization", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$86f0ca737a5d4c17b7f0d8d8ab23a3f1`\
+LiouvilleNumber"|>], "Description" -> 
+        "Compute the Liouville number or its generalization", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+LiouvilleNumber"]|>, <|
+       "Name" -> "LehmerCodeFromPermutation", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "LehmerCodeFromPermutation", "ShortName" -> 
+           "LehmerCodeFromPermutation", "UUID" -> 
+           "81fef1d9-7c77-4ab8-9fbe-3b898f7092a7", "ResourceType" -> 
+           "Function", "Version" -> "2.0.0", "Description" -> 
+           "Create the Lehmer code corresponding to a given permutation", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$75d6275f016d4f1c9029b6e6412a531f`\
+LehmerCodeFromPermutation"|>], "Description" -> 
+        "Create the Lehmer code corresponding to a given permutation", 
+        "Location" -> URL["https://resources.wolframcloud.com"], 
+        "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+LehmerCodeFromPermutation"]|>, <|
+       "Name" -> "Derangements", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "Derangements", "ShortName" -> "Derangements", "UUID" -> 
+           "6b480978-af1a-4ce9-a21a-7e529bae0e53", "ResourceType" -> 
+           "Function", "Version" -> "1.0.0", "Description" -> 
+           "Give all the ways the numbers 1, 2, \[Ellipsis], n can be \
+scrambled completely", "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$b1bb8c817b3641cb981defaa1178093d`\
+Derangements"|>], "Description" -> 
+        "Give all the ways the numbers 1, 2, \[Ellipsis], n can be scrambled \
+completely", "Location" -> URL["https://resources.wolframcloud.com"], 
+        "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+Derangements"]|>, <|
+       "Name" -> "TripleGamma", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "TripleGamma", "ShortName" -> "TripleGamma", "UUID" -> 
+           "09a2fef8-356d-4c7a-8f71-3e8f104d22e3", "ResourceType" -> 
+           "Function", "Version" -> "1.0.0", "Description" -> 
+           "Evaluate the triple gamma function", "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$19b01bb4bf4e491dbc60bd7a4cc81181`TripleGamma"|>\
+], "Description" -> "Evaluate the triple gamma function", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+TripleGamma"]|>, <|
+       "Name" -> "DerangementQ", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "DerangementQ", "ShortName" -> "DerangementQ", "UUID" -> 
+           "14e7ef93-3330-474b-b7a5-fbab8c19d509", "ResourceType" -> 
+           "Function", "Version" -> "1.1.0", "Description" -> 
+           "Test whether a permutation is a derangement", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$1e63707048e7487987e823726a1c2045`\
+DerangementQ"|>], "Description" -> 
+        "Test whether a permutation is a derangement", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+DerangementQ"]|>, <|
+       "Name" -> "FubiniNumber", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "FubiniNumber", "ShortName" -> "FubiniNumber", "UUID" -> 
+           "6c6a2f1d-0121-411b-a7c6-75ea87678941", "ResourceType" -> 
+           "Function", "Version" -> "1.0.1", "Description" -> 
+           "Count the number of ways to partition a set where the order of \
+the subsets matters", "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$613ec6c3cb184aab9c10f8bedaa969c7`\
+FubiniNumber"|>], "Description" -> 
+        "Count the number of ways to partition a set where the order of the \
+subsets matters", "Location" -> URL["https://resources.wolframcloud.com"], 
+        "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+FubiniNumber"]|>}, "AllowEmbedding" -> True, "InitialShape" -> 
+     TypeSystem`PackageScope`HeaderShape[<|{All, "Name"} -> 
+        1, {All, "ResourceType"} -> 1, {All, "ResourceObject"} -> 
+        1, {All, "Description"} -> 1, {All, "Location"} -> 
+        1, {All, "DocumentationLink"} -> 1|>, 
+       TypeSystem`PackageScope`Limited[
+        TypeSystem`PackageScope`ColumnShape[
+         TypeSystem`PackageScope`Limited[
+          
+          TypeSystem`PackageScope`RowShape[<|
+           "Name" -> TypeSystem`PackageScope`AtomShape[280.], "ResourceType" -> 
+            TypeSystem`PackageScope`AtomShape[84.], "ResourceObject" -> 
+            TypeSystem`PackageScope`AtomShape[60], "Description" -> 
+            TypeSystem`PackageScope`AtomShape[560.], "Location" -> 
+            TypeSystem`PackageScope`AtomShape[60], "DocumentationLink" -> 
+            TypeSystem`PackageScope`AtomShape[60]|>], 
+          DirectedInfinity[1], 6, {All}]], 13, 
+        DirectedInfinity[1], {}]], "InitialType" -> TypeSystem`Vector[
+       TypeSystem`Struct[{
+        "Name", "ResourceType", "ResourceObject", "Description", "Location", 
+         "DocumentationLink"}, {
+         TypeSystem`Atom[String], 
+         TypeSystem`Atom[
+          TypeSystem`Enumeration["Function"]], 
+         TypeSystem`Atom[ResourceObject], 
+         TypeSystem`Atom[String], 
+         TypeSystem`Atom[URL], 
+         TypeSystem`Atom[URL]}], 13], "Meta" -> <||>, "RowTarget" -> 20, 
+     "ColumnTarget" -> 10, "Shape" -> 
+     TypeSystem`PackageScope`HeaderShape[<|{All, "Name"} -> 
+        1, {All, "ResourceType"} -> 1, {All, "ResourceObject"} -> 
+        1, {All, "Description"} -> 1, {All, "Location"} -> 
+        1, {All, "DocumentationLink"} -> 1|>, 
+       TypeSystem`PackageScope`Limited[
+        TypeSystem`PackageScope`ColumnShape[
+         TypeSystem`PackageScope`Limited[
+          TypeSystem`PackageScope`RowShape[<|
+           "Name" -> TypeSystem`PackageScope`AtomShape[280.], "ResourceType" -> 
+            TypeSystem`PackageScope`AtomShape[84.], "ResourceObject" -> 
+            TypeSystem`PackageScope`AtomShape[60], "Description" -> 
+            TypeSystem`PackageScope`AtomShape[560.], "Location" -> 
+            TypeSystem`PackageScope`AtomShape[60], "DocumentationLink" -> 
+            TypeSystem`PackageScope`AtomShape[60]|>], 
+          DirectedInfinity[1], 6, {All}]], 13, 
+        DirectedInfinity[1], {}]], "Type" -> TypeSystem`Vector[
+       TypeSystem`Struct[{
+        "Name", "ResourceType", "ResourceObject", "Description", "Location", 
+         "DocumentationLink"}, {
+         TypeSystem`Atom[String], 
+         TypeSystem`Atom[
+          TypeSystem`Enumeration["Function"]], 
+         TypeSystem`Atom[ResourceObject], 
+         TypeSystem`Atom[String], 
+         TypeSystem`Atom[URL], 
+         TypeSystem`Atom[URL]}], 13], "Path" -> {}, "DisplayedRowCount" -> 13,
+      "DisplayedColumnCount" -> 6, "DataRowCount" -> 13, "DataColumnCount" -> 
+     6, "SortPaths" -> {}, "SortDirections" -> {}, "HiddenItemsMap" -> Null, 
+     "UpdateType" -> 1|>, TypeSystem`NestedGrid`PackagePrivate`$outputID$$, 
+    TypeSystem`NestedGrid`PackagePrivate`$path$$ = {}, 
+    TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 1, 
+    TypeSystem`NestedGrid`PackagePrivate`$hPos$$ = 1, 
+    TypeSystem`NestedGrid`PackagePrivate`$grid$$ = 
+    DynamicModule[{TypeSystem`NestedGrid`PackagePrivate`renderedGrid = Deploy[
+        Style[
+         Grid[{{
+            Item[
+             Pane[
+              Annotation[
+               EventHandler[
+                MouseAppearance[
+                 Mouseover["Name", 
+                  Style[
+                  "Name", FontColor -> 
+                   RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                If[
+                  TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                   All, "Name"}, 1]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                All, "Name"}, "ColumnHeader", True], "Mouse"], 
+              ImageSize -> {{1, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+             GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+            Item[
+             Pane[
+              Annotation[
+               EventHandler[
+                MouseAppearance[
+                 Mouseover["ResourceType", 
+                  Style[
+                  "ResourceType", FontColor -> 
+                   RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                If[
+                  TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                   All, "ResourceType"}, 1]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                All, "ResourceType"}, "ColumnHeader", True], "Mouse"], 
+              ImageSize -> {{1, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+             GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+            Item[
+             Pane[
+              Annotation[
+               EventHandler[
+                MouseAppearance[
+                 Mouseover["ResourceObject", 
+                  Style[
+                  "ResourceObject", FontColor -> 
+                   RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                If[
+                  TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                   All, "ResourceObject"}, 1]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                All, "ResourceObject"}, "ColumnHeader", True], "Mouse"], 
+              ImageSize -> {{1, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+             GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+            Item[
+             Pane[
+              Annotation[
+               EventHandler[
+                MouseAppearance[
+                 Mouseover["Description", 
+                  Style[
+                  "Description", FontColor -> 
+                   RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                If[
+                  TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                   All, "Description"}, 1]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                All, "Description"}, "ColumnHeader", True], "Mouse"], 
+              ImageSize -> {{1, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+             GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+            Item[
+             Pane[
+              Annotation[
+               EventHandler[
+                MouseAppearance[
+                 Mouseover["Location", 
+                  Style[
+                  "Location", FontColor -> 
+                   RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                If[
+                  TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                   All, "Location"}, 1]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                All, "Location"}, "ColumnHeader", True], "Mouse"], 
+              ImageSize -> {{1, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+             GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+            Item[
+             Pane[
+              Annotation[
+               EventHandler[
+                MouseAppearance[
+                 Mouseover["DocumentationLink", 
+                  Style[
+                  "DocumentationLink", FontColor -> 
+                   RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                If[
+                  TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                   All, "DocumentationLink"}, 1]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                All, "DocumentationLink"}, "ColumnHeader", True], "Mouse"], 
+              ImageSize -> {{1, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+             GrayLevel[0.95], Alignment -> {Left, Baseline}]}, {
+            Item[
+             Pane[
+              Annotation["InverseFactorial", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{1, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{280., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{1, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{84., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"InverseFactorial\"", "\"\\\"\"", "\"]\""}, 
+                 "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{1, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+              "Compute the inverse factorial of a strictly positive integer \
+by solving the gamma function for a specific value", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{1, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{1, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://resources.wolframcloud.com/FunctionReposit...", 
+                URL[
+                "https://resources.wolframcloud.com/FunctionRepository/\
+resources/InverseFactorial"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{1, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["MultiFactorial", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{2, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{280., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{2, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{84., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"MultiFactorial\"", "\"\\\"\"", "\"]\""}, "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{2, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Evaluate the multifactorial function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{2, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{2, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://resources.wolframcloud.com/FunctionReposit...", 
+                URL[
+                "https://resources.wolframcloud.com/FunctionRepository/\
+resources/MultiFactorial"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{2, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["FactorialMod", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{3, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{280., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{3, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{84., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"FactorialMod\"", "\"\\\"\"", "\"]\""}, "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{3, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Fast factorial modulo a given number", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{3, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{3, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://resources.wolframcloud.com/FunctionReposit...", 
+                URL[
+                "https://resources.wolframcloud.com/FunctionRepository/\
+resources/FactorialMod"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{3, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["FactorialSeriesExpansion", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{4, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{280., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{4, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{84., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"FactorialSeriesExpansion\"", "\"\\\"\"", "\"]\""}, 
+                 "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{4, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Expand a function into a factorial series", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{4, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{4, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://resources.wolframcloud.com/FunctionReposit...", 
+                URL[
+                "https://resources.wolframcloud.com/FunctionRepository/\
+resources/FactorialSeriesExpansion"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{4, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["StirlingsFormula", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{5, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{280., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{5, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{84., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"StirlingsFormula\"", "\"\\\"\"", "\"]\""}, 
+                 "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{5, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+              "Compute an approximation to a factorial with Stirling's \
+formula", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{5, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{5, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://resources.wolframcloud.com/FunctionReposit...", 
+                URL[
+                "https://resources.wolframcloud.com/FunctionRepository/\
+resources/StirlingsFormula"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{5, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["KurepaK", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{6, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{280., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{6, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{84., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", "\"KurepaK\"", 
+                  "\"\\\"\"", "\"]\""}, "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{6, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Evaluate the Kurepa function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{6, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{6, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://resources.wolframcloud.com/FunctionReposit...", 
+                URL[
+                "https://resources.wolframcloud.com/FunctionRepository/\
+resources/KurepaK"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{6, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["Primorial", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{7, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{280., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{7, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{84., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", "\"Primorial\"", 
+                  "\"\\\"\"", "\"]\""}, "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{7, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Evaluate the primorial", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{7, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{7, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://resources.wolframcloud.com/FunctionReposit...", 
+                URL[
+                "https://resources.wolframcloud.com/FunctionRepository/\
+resources/Primorial"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{7, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["LiouvilleNumber", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{8, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{280., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{8, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{84., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"LiouvilleNumber\"", "\"\\\"\"", "\"]\""}, "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{8, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Compute the Liouville number or its generalization", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{8, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{8, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://resources.wolframcloud.com/FunctionReposit...", 
+                URL[
+                "https://resources.wolframcloud.com/FunctionRepository/\
+resources/LiouvilleNumber"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{8, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["LehmerCodeFromPermutation", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{9, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{280., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{9, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{84., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"LehmerCodeFromPermutation\"", "\"\\\"\"", "\"]\""}, 
+                 "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{9, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+              "Create the Lehmer code corresponding to a given permutation", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{9, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{9, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://resources.wolframcloud.com/FunctionReposit...", 
+                URL[
+                "https://resources.wolframcloud.com/FunctionRepository/\
+resources/LehmerCodeFromPermutation"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{9, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["Derangements", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{10, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{280., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{10, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{84., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"Derangements\"", "\"\\\"\"", "\"]\""}, "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{10, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+              "Give all the ways the numbers 1, 2, \[Ellipsis], n can be \
+scrambled completely", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{10, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{10, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://resources.wolframcloud.com/FunctionReposit...", 
+                URL[
+                "https://resources.wolframcloud.com/FunctionRepository/\
+resources/Derangements"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{10, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["TripleGamma", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{11, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{280., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{11, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{84., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", "\"TripleGamma\"",
+                   "\"\\\"\"", "\"]\""}, "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{11, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Evaluate the triple gamma function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{11, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{11, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://resources.wolframcloud.com/FunctionReposit...", 
+                URL[
+                "https://resources.wolframcloud.com/FunctionRepository/\
+resources/TripleGamma"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{11, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["DerangementQ", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{12, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{280., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{12, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{84., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"DerangementQ\"", "\"\\\"\"", "\"]\""}, "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{12, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Test whether a permutation is a derangement", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{12, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{12, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://resources.wolframcloud.com/FunctionReposit...", 
+                URL[
+                "https://resources.wolframcloud.com/FunctionRepository/\
+resources/DerangementQ"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{12, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["FubiniNumber", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{13, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{280., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{13, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{84., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"FubiniNumber\"", "\"\\\"\"", "\"]\""}, "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{13, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+              "Count the number of ways to partition a set where the order of \
+the subsets matters", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{13, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{13, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://resources.wolframcloud.com/FunctionReposit...", 
+                URL[
+                "https://resources.wolframcloud.com/FunctionRepository/\
+resources/FubiniNumber"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{13, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}}, 
+          BaseStyle -> {
+           ContextMenu -> 
+            Dynamic[TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger; 
+              Which[
+               TypeSystem`NestedGrid`PackagePrivate`$lastOutputID =!= 
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                 TypeSystem`NestedGrid`PackagePrivate`$outputID$$], {}, 
+                TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger === 
+                TypeSystem`NestedGrid`PackagePrivate`$lastContextMenuTrigger, 
+                TypeSystem`NestedGrid`PackagePrivate`$lastContextMenu, True, 
+                TypeSystem`NestedGrid`PackagePrivate`$lastContextMenuTrigger = 
+                 TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger; 
+                TypeSystem`NestedGrid`PackagePrivate`$lastContextMenu = 
+                 Block[{TypeSystem`NestedGrid`PackagePrivate`$globalScrollPos = \
+{TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$}}, 
+                   
+                   With[{TypeSystem`NestedGrid`PackagePrivate`lastPath$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPathType, 
+                    TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`$\
+lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
+                    MatchQ[TypeSystem`NestedGrid`PackagePrivate`$lastPathType, 
+                    Alternatives["RowHeader", "ColumnHeader"]], 
+                    TypeSystem`NestedGrid`PackagePrivate`headerHiddenQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$]], 
+                    TypeSystem`NestedGrid`PackagePrivate`allHidden$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`allHiddenQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`anyHidden$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`anyHiddenQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`columnSortDirection[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$[
+                    "SortPaths"], 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$[
+                    "SortDirections"]], 
+                    TypeSystem`NestedGrid`PackagePrivate`haveData$ = Not[
+                    FailureQ[
+                    TypeSystem`NestedGrid`PackagePrivate`datasetInitialData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$]]], 
+                    TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$ = Not[
+                    FreeQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, Keys]]}, 
+                    Join[{
+                    If[
+                    Or[
+                    Not[TypeSystem`NestedGrid`PackagePrivate`haveData$], 
+                    Not[TypeSystem`NestedGrid`PackagePrivate`anyHidden$], 
+                    TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$], 
+                    Nothing, 
+                    MenuItem[
+                    "Show " <> 
+                    Which[TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "Item", "", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "RowHeader", "Row", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "ColumnHeader", "Column", True, ""], 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateHiddenItems[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
+                    "remove"]], MenuEvaluator -> Automatic]], 
+                    If[
+                    Or[
+                    Not[TypeSystem`NestedGrid`PackagePrivate`haveData$], 
+                    TypeSystem`NestedGrid`PackagePrivate`pathEmptyQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$, 
+                    And[
+                    TypeSystem`NestedGrid`PackagePrivate`allHidden$, 
+                    TypeSystem`NestedGrid`PackagePrivate`headerHidden$]], 
+                    Nothing, 
+                    MenuItem[
+                    "Hide " <> 
+                    Which[TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "Item", "", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "RowHeader", "Row", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "ColumnHeader", "Column", True, ""], 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateHiddenItems[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, "add"]], 
+                    MenuEvaluator -> Automatic]], Delimiter}, 
+                    If[
+                    And[TypeSystem`NestedGrid`PackagePrivate`haveData$, 
+                    MatchQ[TypeSystem`NestedGrid`PackagePrivate`lastPathType$, 
+                    Alternatives["ColumnHeader", "KeyDummy"]], 
+                    TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$, 
+                    Not[TypeSystem`NestedGrid`PackagePrivate`allHidden$]], {
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ =!= 
+                    "Ascending", 
+                    MenuItem["Sort", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateSort[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
+                    "Ascending"]], MenuEvaluator -> Automatic], Nothing], 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ =!= 
+                    "Descending", 
+                    MenuItem["Reverse Sort", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateSort[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
+                    "Descending"]], MenuEvaluator -> Automatic], Nothing], 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ =!= 
+                    None, 
+                    MenuItem["Unsort", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateSort[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, None]], 
+                    MenuEvaluator -> Automatic], Nothing], Delimiter}, {}], {
+                    MenuItem["Copy Position to Clipboard", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentPosition[
+                    TypeSystem`NestedGrid`PackagePrivate`copyClip]], 
+                    MenuEvaluator -> Automatic], 
+                    If[TypeSystem`NestedGrid`PackagePrivate`haveData$, 
+                    MenuItem["Copy Data to Clipboard", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`copyClip]], 
+                    MenuEvaluator -> Automatic], Nothing], Delimiter, 
+                    MenuItem["Paste Position in New Cell", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentPosition[
+                    TypeSystem`NestedGrid`PackagePrivate`cellPaste]], 
+                    MenuEvaluator -> Automatic], 
+                    If[TypeSystem`NestedGrid`PackagePrivate`haveData$, 
+                    MenuItem["Paste Data in New Cell", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`cellPaste]], 
+                    MenuEvaluator -> Automatic], Nothing]}]]]]], FontFamily -> 
+            "Source Sans Pro", FontSize -> 14, FontWeight -> Plain}, Dividers -> 
+          All, FrameStyle -> GrayLevel[0.7490196078431373], 
+          Spacings -> {0, 0}, Alignment -> Left, 
+          BaseStyle -> {
+           FontFamily -> "Source Sans Pro", FontSize -> 14, FontWeight -> 
+            Plain}], LineBreakWithin -> False, ContextMenu -> {}, NumberMarks -> 
+         False, ShowAutoStyles -> False]], 
+      TypeSystem`NestedGrid`PackagePrivate`initialQ = True}, 
+     Dynamic[
+      TypeSystem`NestedGrid`PackagePrivate`setupViewPath[
+      TypeSystem`NestedGrid`PackagePrivate`$path$$, If[
+         Not[TypeSystem`NestedGrid`PackagePrivate`initialQ], 
+         Module[{
+          TypeSystem`NestedGrid`PackagePrivate`tmpGrid$ = $Failed, 
+           TypeSystem`NestedGrid`PackagePrivate`tmpData$ = 
+           TypeSystem`NestedGrid`PackagePrivate`datasetData[
+            TypeSystem`NestedGrid`PackagePrivate`$state$$]}, 
+          TypeSystem`NestedGrid`PackagePrivate`tmpGrid$ = If[
+             FailureQ[TypeSystem`NestedGrid`PackagePrivate`tmpData$], 
+             TypeSystem`NestedGrid`PackagePrivate`renderedGrid, 
+             TypeSystem`NestedGrid`PackagePrivate`renderGrid[
+             TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+              TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+              TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+              TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+              TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+              TypeSystem`NestedGrid`PackagePrivate`localHold[
+              TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+             TypeSystem`NestedGrid`PackagePrivate`tmpData$]]; If[
+            Not[
+             FailureQ[TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]], 
+            TypeSystem`NestedGrid`PackagePrivate`renderedGrid = 
+            TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]; Null]]; 
+       TypeSystem`NestedGrid`PackagePrivate`initialQ = False; 
+       TypeSystem`NestedGrid`PackagePrivate`$vPos$$; 
+       TypeSystem`NestedGrid`PackagePrivate`$hPos$$; If[
+         FailureQ[TypeSystem`NestedGrid`PackagePrivate`renderedGrid], 
+         TypeSystem`SparseGrid[
+          TypeSystem`H["(data no longer present)"]], 
+         TypeSystem`NestedGrid`PackagePrivate`renderedGrid]], 
+      TrackedSymbols :> {
+       TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$hPos$$}], 
+     DynamicModuleValues :> {}], 
+    TypeSystem`NestedGrid`PackagePrivate`$topBar$$ = Dynamic[
+     TypeSystem`NestedGrid`PackagePrivate`makeFramedBar[
+      TypeSystem`PackageScope`SubViewPathbar[
+      TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+       TypeSystem`NestedGrid`PackagePrivate`updateState[
+       TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+        TypeSystem`NestedGrid`PackagePrivate`localHold[
+        TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]]], 
+     TrackedSymbols :> {TypeSystem`NestedGrid`PackagePrivate`$path$$}], 
+    TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$ = Style[
+     Framed[
+      Dynamic[
+       Replace[
+       TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$, {
+        TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+           TypeSystem`NestedGrid`PackagePrivate`localHold[
+           TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][Null, 
+           Blank[]] -> "", TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+           TypeSystem`NestedGrid`PackagePrivate`localHold[
+           TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+           Pattern[TypeSystem`NestedGrid`PackagePrivate`path$, 
+            Blank[]], 
+           Pattern[TypeSystem`NestedGrid`PackagePrivate`pathType$, 
+            Blank[]], 
+           Pattern[TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$, 
+            Blank[]]] :> (
+          Increment[TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger]; 
+          TypeSystem`NestedGrid`PackagePrivate`$lastPath = 
+           TypeSystem`NestedGrid`PackagePrivate`path$; 
+          TypeSystem`NestedGrid`PackagePrivate`$lastPathType = 
+           TypeSystem`NestedGrid`PackagePrivate`pathType$; 
+          TypeSystem`NestedGrid`PackagePrivate`$lastPathIsLeafHeader = 
+           TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$; 
+          TypeSystem`NestedGrid`PackagePrivate`$lastOutputID = 
+           TypeSystem`NestedGrid`PackagePrivate`localHold[
+            TypeSystem`NestedGrid`PackagePrivate`$outputID$$]; 
+          TypeSystem`NestedGrid`PackagePrivate`makePathTrail[
+           TypeSystem`NestedGrid`PackagePrivate`path$, 
+            TypeSystem`NestedGrid`PackagePrivate`makePathElements]), Null :> 
+         Spacer[10], Blank[] :> Spacer[10]}], 
+       TrackedSymbols :> {
+        TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$}], FrameStyle -> 
+      None, ImageMargins -> 0, FrameMargins -> 0, Alignment -> Top, 
+      ImageSize -> {Automatic, 15}], FontSize -> 1], 
+    TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$ = Null}, 
+    DynamicWrapperBox[
+     DynamicBox[ToBoxes[
+       Dataset`DatasetContent[
+       2, "Path" -> Hold[TypeSystem`NestedGrid`PackagePrivate`$path$$], 
+        "Grid" -> Hold[TypeSystem`NestedGrid`PackagePrivate`$grid$$], "State" -> 
+        Hold[TypeSystem`NestedGrid`PackagePrivate`$state$$], "VPos" -> 
+        Hold[TypeSystem`NestedGrid`PackagePrivate`$vPos$$], "HPos" -> 
+        Hold[TypeSystem`NestedGrid`PackagePrivate`$hPos$$], "TopBar" -> 
+        Hold[TypeSystem`NestedGrid`PackagePrivate`$topBar$$], "BottomBar" -> 
+        Hold[TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$], "OutputID" -> 
+        Hold[
+          TypeSystem`NestedGrid`PackagePrivate`localHold[
+          TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]], StandardForm],
+      ImageSizeCache->{1871., {194.63403328722342`, 200.36596671277658`}},
+      TrackedSymbols:>{
+       TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$grid$$}], 
+     TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$ = 
+     MouseAnnotation[],
+     ImageSizeCache->{1871., {194.63403328722342`, 200.36596671277658`}}],
+    BaseStyle->{LineBreakWithin -> False},
+    DynamicModuleValues:>{},
+    Initialization:>(TypeSystem`NestedGrid`PackagePrivate`$outputID$$ = 
+     CreateUUID[]),
+    UnsavedVariables:>{TypeSystem`NestedGrid`PackagePrivate`$outputID$$}],
+   Deploy,
+   DefaultBaseStyle->"Deploy"],
+  Dataset`InterpretDataset[1],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{3.8932773423684864`*^9},
+ CellLabel->"Out[18]=",ExpressionUUID->"199ef11f-a767-4f31-b122-d2dbf77f32f7"]
+}, Open  ]],
+
+Cell[TextData[ButtonBox["Solution",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://www.wolframcloud.com/obj/52eb61c0-8202-4356-bbe9-\
+fef76a902543"], None},
+ ButtonNote->
+  "https://www.wolframcloud.com/obj/52eb61c0-8202-4356-bbe9-fef76a902543"]], \
+"Text",
+ CellChangeTimes->{{3.893277356097002*^9, 
+  3.8932773589838276`*^9}},ExpressionUUID->"cf710e5a-4d3b-4b4e-aded-\
+dbcc4c6d2570"],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1:eJztmz2ubWlSRJsfA5MpMAtcTNxGDKBbFC2cQqpGQkyAaUOVMLnGuTrx9lon
+MpaUT1XPyMyIyG8f6/3dH//99//6l7/73e/+/De//vH7P/znP/zyyx/+65/+
+9tf/+eef//xvf/r5p3/5x5//46c//fTL3//xr379y//+i/+rv/71v/9njDHG
+GGOMMcYYY4wxxhhjjDHGGGOMMcYYY4wxxhhjjDHGGGOMMeT89k+jV/+/KJ+p
+fmnm8zPY90tDfxesNZ+7fab6pZnPz2DfLw39XbDWfO72meqXZj4/g32/NPR3
+wVrzudtnql+a+fwM9v3S0N8Fa83nbp+pfmnm8zPY90tDfxesNZ+7fab6pZnP
+z2DfLw39XbDWfO72meqXZj4/g32/NPR3wVrzudtnql+a+fwM9v3S0N8Fa83n
+bp+pfmnm8zPY90tDfxesNZ+7fab6pZnPz2DfLw39XbAW5XMLdp+pe7HfaRr7
+HaT7teRr3y9Ny53asftMvd+W78ar2O8g3a8lX/t+aVru1I7dZ+r9tnw3XsV+
+B+l+Lfna90vTcqd27D5T77flu/Eq9jtI92vJ175fmpY7tWP3mXq/Ld+NV7Hf
+QbpfS772/dK03Kkdu8/U+235bryK/Q7S/Vryte+XpuVO7dh9pt5vy3fjVex3
+kO7Xkq99vzQtd2rH7jP1flu+G69iv4N0v5Z87fulablTO3afqffb8t14Ffsd
+pPu15GvfL03Lndqx+0y935bvxqvY7yDdryVf+35pdqeu75+9n70o/+w+Uzqo
+ufZ7sd+BPd90vxafW/xrycPuM6WDmmu/F/sd2PNN92vxucW/ljzsPlM6qLn2
+e7HfgT3fdL8Wn1v8a8nD7jOlg5prvxf7HdjzTfdr8bnFv5Y87D5TOqi59nux
+34E933S/Fp9b/GvJw+4zpYOaa78X+x3Y8033a/G5xb+WPOw+UzqoufZ7sd+B
+Pd90vxafW/xrycPuM6WDmmu/F/sd2PNN92vxucW/ljzsPlM6qLn2e7HfgT3f
+dL8Wn1v8a8nD7jOlg5prvxf7HdjzTfdr8Xm5rS76TNGSB6WXmnvN5+W2uugz
+RUselF5q7jWfl9vqos8ULXlQeqm513xebquLPlO05EHppeZe83m5rS76TNGS
+B6WXmnvN5+W2uugzRUselF5q7jWfl9vqos8ULXlQeqm513xebquLPlO05EHp
+peZe83m5rS76TNGSB6WXmnvN5+W2uugzRUselF5q7jWfKb0tOiha9rPn1tKv
+xT9q7jWfKb0tOiha9rPn1tKvxT9q7jWfKb0tOiha9rPn1tKvxT9q7jWfKb0t
+Oiha9rPn1tKvxT9q7jWfKb0tOiha9rPn1tKvxT9q7jWfKb0tOiha9rPn1tKv
+xT9q7jWfKb0tOiha9rPn1tKvxT9q7jWfKb0tOiha9rPn1tKvxT9q7jWfKb0t
+Oiha9rPn1tKvxT9q7jWfKb0tOiha9rPn1tKvxT/7XAr7Xdnnpvezz12/3RXJ
+fH6Glne09/vM3PXbXZHM52doeUd7v8/MXb/dFcl8foaWd7T3+8zc9dtdkczn
+Z2h5R3u/z8xdv90VyXx+hpZ3tPf7zNz1212RzOdnaHlHe7/PzF2/3RXJfH6G
+lne09/vM3PXbXZHM52doeUd7v8/MXb/dFcl8foaWd7T3+8zc9dtdkdh9vlZU
+buu3fuv3fr9rlYbWY620f+u3fuv3XL9rlYbWY620f+u3fuv3XL9rlYbWY620
+f+u3fuv3XL9rlYbWY620f+u3fuv3XL9rlYbWY620f+u3fuv3XL9rlYbWY620
+f+u3fuv3XL9rlYbWY620f+u3fuv3XL9rlYbWY620f+u3fuv3XL9rlYbWY620
+f+u3fuv3XL9rNVxQubXcn31uy7tM67jm3xjfoeW7ZtdBzW35ru13YYznaPmu
+2XVQc1u+a/tdGOM5Wr5rdh3U3Jbv2n4XxniOlu+aXQc1t+W7tt+FMZ6j5btm
+10HNbfmu7XdhjOdo+a7ZdVBzW75r+10Y4zlavmt2HdTclu/afhfGeI6W75pd
+BzW35bu234UxnqPlu2bXQc1t+a7td2F8B/u9XPv+2fezQ9+NNd+0f/b97GUn
+rYP225pby3526Lux5pv2z76fveykddB+W3Nr2c8OfTfWfNP+2fezl520Dtpv
+a24t+9mh78aab9o/+372spPWQfttza1lPzv03VjzTftn389edtI6aL+tubXs
+Z4e+G2u+af/s+9nLTloH7bc1t5b97NB3Y8037Z99P3vZSeug/bbm1rKfHfpu
+rPmm/bPvZy87aR2039bcWvazQ9+NNd+0f/b97GUnrYP225pby3526Lux5pv2
+z76fvVqYf+9B32HKZ/t+FJTPFPZ87XnY832VfQ/eg/KPuudrd3Dtu2HP156H
+Pd9X2ffgPSj/qHu+dgfXvhv2fO152PN9lX0P3oPyj7rna3dw7bthz9eehz3f
+V9n34D0o/6h7vnYH174b9nztedjzfZV9D96D8o+652t3cO27Yc/Xnoc931fZ
+9+A9KP+oe752B9e+G/Z87XnY832VfQ/eg/KPuudrd3Dtu2HP156HPd9X2ffg
+PSj/qHu+dgfXvhv2fO152PN9lX0P3oPyj7rna3dw7bthz9eeR0u+m/uZ2N+v
+XYf9TpfvZ96BPbfNdb2PNPb7s+uw3+ny/cw7sOe2ua73kcZ+f3Yd9jtdvp95
+B/bcNtf1PtLY78+uw36ny/cz78Ce2+a63kca+/3ZddjvdPl+5h3Yc9tc1/tI
+Y78/uw77nS7fz7wDe26b63ofaez3Z9dhv9Pl+5l3YM9tc13vI439/uw67He6
+fD/zDuy5ba7rfaSx359dh/1Ol+9n3oE9t811vY809vuz67Df6fL9zDtYbq48
+WmjxpeVerr2PtF77Pdt9prh293ZafGm5l2vvI63Xfs92nymu3b2dFl9a7uXa
++0jrtd+z3WeKa3dvp8WXlnu59j7Seu33bPeZ4trd22nxpeVerr2PtF77Pdt9
+prh293ZafGm5l2vvI63Xfs92nymu3b2dFl9a7uXa+0jrtd+z3WeKa3dvp8WX
+lnu59j7Seu33bPeZ4trd22nxpeVerr2PtF77Pdt9prh293ZafGm5l2vvI63X
+fs92n6m5LXfQ8n5bdNjnprHfgT1fe1F6r+Vh15uee02HfW4a+x3Y87UXpfda
+Hna96bnXdNjnprHfgT1fe1F6r+Vh15uee02HfW4a+x3Y87UXpfdaHna96bnX
+dNjnprHfgT1fe1F6r+Vh15uee02HfW4a+x3Y87UXpfdaHna96bnXdNjnprHf
+gT1fe1F6r+Vh15uee02HfW4a+x3Y87UXpfdaHna96bnXdNjnprHfgT1fe1F6
+r+Vh15uee02HfW4a+x3Y87UXpZfC7h+l1449D/odf7ovdlryoLDruJavPY9X
+seeRvquWO712f/Pva+w6ruVrz+NV7Hmk76rlTq/d3/z7GruOa/na83gVex7p
+u2q502v3N/++xq7jWr72PF7Fnkf6rlru9Nr9zb+vseu4lq89j1ex55G+q5Y7
+vXZ/8+9r7Dqu5WvP41XseaTvquVOr93f/Psau45r+drzeBV7Hum7arnTa/c3
+/77GruNavvY8XsWeR/quWu702v3Nv6+x67iWrz2PV7Hnkb6rlju9dn/z72um
+w9Xvmo4WvRQt+9nLrpfazw7lX7rfNR0teila9rOXXS+1nx3Kv3S/azpa9FK0
+7Gcvu15qPzuUf+l+13S06KVo2c9edr3UfnYo/9L9rulo0UvRsp+97Hqp/exQ
+/qX7XdPRopeiZT972fVS+9mh/Ev3u6ajRS9Fy372suul9rND+Zfud01Hi16K
+lv3sZddL7WeH8i/d75qOFr0ULfvZy66X2s8O5V+63zUdLXopWvazl10vtV8a
+Su90vAf9Pj/9Hdn3S9My134HlA5qP6rfNR3p/exl10vtl6Zlrv0OKB3UflS/
+azrS+9nLrpfaL03LXPsdUDqo/ah+13Sk97OXXS+1X5qWufY7oHRQ+1H9rulI
+72cvu15qvzQtc+13QOmg9qP6XdOR3s9edr3Ufmla5trvgNJB7Uf1u6YjvZ+9
+7Hqp/dK0zLXfAaWD2o/qd01Hej972fVS+6VpmWu/A0oHtR/V75qO9H72suul
+9kvTMtd+B5QOaj+q3zUd6f3sZddL7ZemZa79DigdFFQe1F1d69cyN70f1S9N
+Sx7z2UVaL+Xf+rl8pt6HPbc0LXnMZxdpvZR/6+fymXof9tzStOQxn12k9VL+
+rZ/LZ+p92HNL05LHfHaR1kv5t34un6n3Yc8tTUse89lFWi/l3/q5fKbehz23
+NC15zGcXab2Uf+vn8pl6H/bc0rTkMZ9dpPVS/q2fy2fqfdhzS9OSx3x2kdZL
++bd+Lp+p92HPLU1LHvPZRVov5d/6uXym3oc9tzQteczn8Rv2O033s9+LXQeV
+G9XvGvZ3aX8fLVz7vtjvxa6Dyo3qdw37u7S/jxaufV/s92LXQeVG9buG/V3a
+30cL174v9nux66Byo/pdw/4u7e+jhWvfF/u92HVQuVH9rmF/l/b30cK174v9
+Xuw6qNyoftewv0v7+2jh2vfFfi92HVRuVL9r2N+l/X20cO37Yr8Xuw4qN6rf
+Nezv0v4+Wrj2fbHfi10HlRvV7xr2d2l/Hy1c+77Y78Wug8qN6ncN+7u0vw+7
+L9PxjN50vxaf7XPt/rXobXlHaabDpSOtN92vxWf7XLt/LXpb3lGa6XDpSOtN
+92vx2T7X7l+L3pZ3lGY6XDrSetP9Wny2z7X716K35R2lmQ6XjrTedL8Wn+1z
+7f616G15R2mmw6UjrTfdr8Vn+1y7fy16W95Rmulw6UjrTfdr8dk+1+5fi96W
+d5RmOlw60nrT/Vp8ts+1+9eit+UdpZkOl4603nS/Fp/tc+3+tehteUdppsOl
+I6033a/FZ/tcu38telveEUXLO7Lvd+19UNC5WH2mdU/Hj803DbUflQe1X8v9
+tdzzcnPVdLzXLw21H5UHtV/L/bXc83Jz1XS81y8NtR+VB7Vfy/213PNyc9V0
+vNcvDbUflQe1X8v9tdzzcnPVdLzXLw21H5UHtV/L/bXc83Jz1XS81y8NtR+V
+B7Vfy/213PNyc9V0vNcvDbUflQe1X8v9tdzzcnPVdLzXLw21H5UHtV/L/bXc
+83Jz1XS81y8NtR+VB7Vfy/213PNyc9V0vNePgvKP2q9FB7VfS7+WudRd2eeO
+92j5Xl3TQe3X0q9lLnVX9rnjPVq+V9d0UPu19GuZS92Vfe54j5bv1TUd1H4t
+/VrmUndlnzveo+V7dU0HtV9Lv5a51F3Z5473aPleXdNB7dfSr2UudVf2ueM9
+Wr5X13RQ+7X0a5lL3ZV97niPlu/VNR3Ufi39WuZSd2WfO96j5Xt1TQe1X0u/
+lrnUXdnnjvdo+V5d00Ht19KvZS51V/a517Dn25LbdLj2s9+f3edXsfuc1tFC
+Wm/Lu0wzHa797Pdn9/lV7D6ndbSQ1tvyLtNMh2s/+/3ZfX4Vu89pHS2k9ba8
+yzTT4drPfn92n1/F7nNaRwtpvS3vMs10uPaz35/d51ex+5zW0UJab8u7TDMd
+rv3s92f3+VXsPqd1tJDW2/Iu00yHaz/7/dl9fhW7z2kdLaT1trzLNNPh2s9+
+f3afX8Xuc1pHC2m9Le8yzXS49rPfn93nV7H7nNbRQlpvy7tMMx2u/ez3Z/f5
+Vew+p3WMr6HuwD7XzvJ4Bmq/dB5U2fVSudlpuYP0XDvL4xns3xd72fVSudlp
+uYP0XDvL4xns3xd72fVSudlpuYP0XDvL4xns3xd72fVSudlpuYP0XDvL4xns
+3xd72fVSudlpuYP0XDvL4xns3xd72fVSudlpuYP0XDvL4xns3xd72fVSudlp
+uYP0XDvL4xns3xd72fVSudlpuYP0XDvL4xns3xd72fVSudlpuYP0XDvL4xns
+3xd72fVSudmx3wGFXa/dvzR2vS35Ujqo7xClww6l1+6fXa/dvzR2vS35Ujqo
+7xClww6l1+6fXa/dvzR2vS35Ujqo7xClww6l1+6fXa/dvzR2vS35Ujqo7xCl
+ww6l1+6fXa/dvzR2vS35Ujqo7xClww6l1+6fXa/dvzR2vS35Ujqo7xClww6l
+1+6fXa/dvzR2vS35Ujqo7xClww6l1+6fXa/dvzR2vS35Ujqo7xClww6l1+6f
+Xa/dvzR2vS35Ujqo7xClww6l1+6fXa/dvzR2vS35Ujqo7xClg9rPDuWzvV96
+7rV7pnyx+2f3OT2X6kdxTYf9Dlq+B3Yddl/s/tl9Ts+l+lFc02G/g5bvgV2H
+3Re7f3af03OpfhTXdNjvoOV7YNdh98Xun93n9FyqH8U1HfY7aPke2HXYfbH7
+Z/c5PZfqR3FNh/0OWr4Hdh12X+z+2X1Oz6X6UVzTYb+Dlu+BXYfdF7t/dp/T
+c6l+FNd02O+g5Xtg12H3xe6f3ef0XKofxTUd9jto+R7Yddh9sftn9zk9l+pH
+cU2H/Q5avgd2HXZf7P7ZfU7PpfpR2O+5xedXsX83rumg2Dv6Gvtdzef9LvwI
+7Hd/TQfF3tHX2O9qPu934Udgv/trOij2jr7Gflfzeb8LPwL73V/TQbF39DX2
+u5rP+134Edjv/poOir2jr7Hf1Xze78KPwH7313RQ7B19jf2u5vN+F34E9ru/
+poNi7+hr7Hc1n/e78COw3/01HRR7R19jv6v5vN+FH4H97q/poNg7+hr7Xc3n
+/S78COx3f00Hxd7R19jv6prPVL/03JaiaMmXmtuSr70ovfa56f2ofum5LUXR
+ki81tyVfe1F67XPT+1H90nNbiqIlX2puS772ovTa56b3o/ql57YURUu+1NyW
+fO1F6bXPTe9H9UvPbSmKlnypuS352ovSa5+b3o/ql57bUhQt+VJzW/K1F6XX
+Pje9H9UvPbelKFrypea25GsvSq99bno/ql96bktRtORLzW3J116UXvvc9H5U
+v/TclqJoyZea25KvvSi99rnp/ah+6bktRdGSLzW3JV97UXrtc9P72fXOP9dd
+pfVS/dJz7fna75miJQ9q7vxz+dfy3qh+6bn2fO33TNGSBzV3/rn8a3lvVL/0
+XHu+9numaMmDmjv/XP61vDeqX3quPV/7PVO05EHNnX8u/1reG9UvPdeer/2e
+KVryoObOP5d/Le+N6peea8/Xfs8ULXlQc+efy7+W90b1S8+152u/Z4qWPKi5
+88/lX8t7o/ql59rztd8zRUse1Nz55/Kv5b1R/dJz7fna75miJQ9q7vxz+dfy
+3qh+6bn2fO33TNGSR8vclqL8o/Kg9FL7UdB3vbp9V9TclqL8o/Kg9O79rshq
+gdJL5/fp95Ke26J373dFVguUXjq/T7+X9NwWvXu/K7JaoPTS+X36vaTntujd
++12R1QKll87v0+8lPbdF797viqwWKL10fp9+L+m5LXr3fldktUDppfP79HtJ
+z23Ru/e7IqsFSi+d36ffS3pui9693xVZLVB66fw+/V7Sc1v07v2uyBrjN9L3
+cu3+qHdp/27Y+9nnpvez6xguWt4vhf27a9+P6mefm97PrmO4aHm/FPbvrn0/
+qp99bno/u47houX9Uti/u/b9qH72uen97DqGi5b3S2H/7tr3o/rZ56b3s+sY
+LlreL4X9u2vfj+pnn5vez65juGh5vxT27659P6qffW56P7uO4aLl/VLYv7v2
+/ah+9rnp/ew6houW90th/+7a96P62eem97PrGC5a3i+F/btr34/qZ5+b3s+u
+Iw31PuxF+bzcPjM3+37rt37fgX7H1qJ8Xm6fmZt9v/Vbv+9Av2NrUT4vt8/M
+zb7f+q3fd6DfsbUon5fbZ+Zm32/91u870O/YWpTPy+0zc7Pvt37r9x3od2wt
+yufl9pm52fdbv/X7DvQ7thbl83L7zNzs+63f+n0H+h1bi/J5uX1mbvb91m/9
+vgP9jq1F+bzcPjM3+37rt37fgX7H1qJ8Xm6fmZt9v/Vbv+9AzaWgcrN/Xyi9
+1Fx7tWDXa8/t2lyKlu8VBaWD8vlavmnseu25XZtL0fK9oqB0UD5fyzeNXa89
+t2tzKVq+VxSUDsrna/mmseu153ZtLkXL94qC0kH5fC3fNHa99tyuzaVo+V5R
+UDoon6/lm8au157btbkULd8rCkoH5fO1fNPY9dpzuzaXouV7RUHpoHy+lm8a
+u157btfmUrR8rygoHZTP1/JNY9drz+3aXIqW7xUFpYPy+Vq+aex67bm1zLW/
+I7veNHaf7b7Y+7Xkay/7HaRpuZcWvWnsPtt9sfdrydde9jtI03IvLXrT2H22
++2Lv15Kvvex3kKblXlr0prH7bPfF3q8lX3vZ7yBNy7206E1j99nui71fS772
+st9BmpZ7adGbxu6z3Rd7v5Z87WW/gzQt99KiN43dZ7sv9n4t+drLfgdpWu6l
+RW8au892X+z9WvK1l/0O0rTcS4veNHaf7b7Y+7Xkay/7HaRpuZcWvWnsPtt9
+sfdrydde9jtI03Iv0/se13Ss33tQd0D1s999mms+X9M7HZ95L1S/9Fy73pa7
+T3PN52t6p+Mz74Xql55r19ty92mu+XxN73R85r1Q/dJz7Xpb7j7NNZ+v6Z2O
+z7wXql96rl1vy92nuebzNb3T8Zn3QvVLz7Xrbbn7NNd8vqZ3Oj7zXqh+6bl2
+vS13n+aaz9f0Tsdn3gvVLz3Xrrfl7tNc8/ma3un4zHuh+qXn2vW23H2aaz5f
+0zsdn3kvVL/0XLvelrtPc83nln4tPtv3S2P32a6X4pp/9ju1fw9a/GvRQeVG
+zaX8o/RSXPPPfqf270GLfy06qNyouZR/lF6Ka/7Z79T+PWjxr0UHlRs1l/KP
+0ktxzT/7ndq/By3+teigcqPmUv5Reimu+We/U/v3oMW/Fh1UbtRcyj9KL8U1
+/+x3av8etPjXooPKjZpL+Ufppbjmn/1O7d+DFv9adFC5UXMp/yi9FNf8s9+p
+/XvQ4l+LDio3ai7lH6WX4pp/9ju1fw9a/GvRQeVGzaX8o/RSXPOvJbdXsft8
+reazy2d6T+u9tPSzz6Ww+3yt5rPLZ3pP67209LPPpbD7fK3ms8tnek/rvbT0
+s8+lsPt8reazy2d6T+u9tPSzz6Ww+3yt5rPLZ3pP67209LPPpbD7fK3ms8tn
+ek/rvbT0s8+lsPt8reazy2d6T+u9tPSzz6Ww+3yt5rPLZ3pP67209LPPpbD7
+fK3ms8tnek/rvbT0s8+lsPt8reazy2d6T+u9tPRLz71W9tzS+62eyY26P3u1
++GefS+3XUmn/KGgfP72oPK7l2+KffS61X0ul/aOgffz0ovK4lm+Lf/a51H4t
+lfaPgvbx04vK41q+Lf7Z51L7tVTaPwrax08vKo9r+bb4Z59L7ddSaf8oaB8/
+vag8ruXb4p99LrVfS6X9o6B9/PSi8riWb4t/9rnUfi2V9o+C9vHTi8rjWr4t
+/tnnUvu1VNo/CtrHTy8qj2v5tvhnn0vt11Jp/yhoHz+9qDyu5dvin33uGGOM
+McYYY4wxxhhjjDHGGGOMMcYYY4wxxhhjjDHGGGOMMcYYY1D8Ly3x5wQ=
+    "], {{0, 234.02028175775231`}, {234.02028175775231`, 0}}, {0, 255},
+    ColorFunction->RGBColor,
+    ImageResolution->{119.98960000000002`, 119.98960000000002`},
+    SmoothingQuality->"High"],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  DefaultBaseStyle->"ImageGraphics",
+  ImageSize->Automatic,
+  ImageSizeRaw->{234.02028175775231`, 234.02028175775231`},
+  PlotRange->{{0, 234.02028175775231`}, {0, 234.02028175775231`}}]], "Input",E\
+xpressionUUID->"c223d691-7108-4e33-9a37-76ddea025c6b"]
 },
-WindowSize->{571.8, 509.4},
-WindowMargins->{{Automatic, 1.2000000000000455`}, {
-  16.200000000000045`, Automatic}},
+WindowSize->{1152., 585.6},
+WindowMargins->{{
+  Automatic, -5.399999999999864}, {-5.399999999999977, Automatic}},
 FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"ec1f1d80-d986-4f69-9eac-15310c4d12ff"
@@ -44,11 +2112,42 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 251, 6, 44, "Input",ExpressionUUID->"d37bb6b9-2df6-4d84-9349-961f7c932c1b",
- InitializationCell->True]
+Cell[558, 20, 443, 9, 64, "Input",ExpressionUUID->"d37bb6b9-2df6-4d84-9349-961f7c932c1b",
+ InitializationCell->True],
+Cell[1004, 31, 699, 17, 67, "Input",ExpressionUUID->"a8713d2e-64f0-42e9-a235-4de821e674ff",
+ InitializationCell->True],
+Cell[CellGroupData[{
+Cell[1728, 52, 230, 4, 28, "Input",ExpressionUUID->"33333aeb-71b4-4ac7-9454-dc65b24d36c3"],
+Cell[1961, 58, 1842, 26, 204, "Output",ExpressionUUID->"e756e361-7c36-4215-8794-f00e0639fd29"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3840, 89, 263, 5, 28, "Input",ExpressionUUID->"9c2ec98f-bf1c-466e-b74f-b953103e7285"],
+Cell[4106, 96, 175, 2, 32, "Output",ExpressionUUID->"4e06ca3d-5854-444d-b7ae-9a81b89b1253"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4318, 103, 263, 5, 28, "Input",ExpressionUUID->"dbd3c62b-4498-407d-8aa6-b1e7d4f829b2"],
+Cell[4584, 110, 151, 2, 32, "Output",ExpressionUUID->"72e43952-bddc-4c4e-9cea-b374a9a0e82f"]
+}, Open  ]],
+Cell[4750, 115, 156, 3, 28, "Input",ExpressionUUID->"d57a23a6-d107-4fd7-8c3a-5b93bf714fa9"],
+Cell[CellGroupData[{
+Cell[4931, 122, 521, 13, 55, "Input",ExpressionUUID->"cf9c483d-10e4-463c-82e1-57814af54664"],
+Cell[5455, 137, 177, 2, 32, "Output",ExpressionUUID->"de1e4f22-a900-455a-834e-201a09a75cf0"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5669, 144, 466, 12, 33, "Input",ExpressionUUID->"03af8a18-31e2-4ea7-a3e5-88abaf8cffe0"],
+Cell[6138, 158, 151, 2, 32, "Output",ExpressionUUID->"4db4eab0-3103-49da-8e98-db213f4bf40c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6326, 165, 468, 12, 33, "Input",ExpressionUUID->"b03665b9-b8e4-4036-85eb-a2b9cec12942"],
+Cell[6797, 179, 152, 2, 32, "Output",ExpressionUUID->"876626a5-e444-49cc-82a0-6e780ce300f0"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6986, 186, 230, 3, 28, "Input",ExpressionUUID->"354f4f59-8fd3-47b9-b762-c415c06a5410"],
+Cell[7219, 191, 89494, 1716, 414, "Output",ExpressionUUID->"199ef11f-a767-4f31-b122-d2dbf77f32f7"]
+}, Open  ]],
+Cell[96728, 1910, 394, 10, 35, "Text",ExpressionUUID->"cf710e5a-4d3b-4b4e-aded-dbcc4c6d2570"],
+Cell[97125, 1922, 10308, 172, 247, "Input",ExpressionUUID->"c223d691-7108-4e33-9a37-76ddea025c6b"]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
