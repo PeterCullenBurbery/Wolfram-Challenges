@@ -1,0 +1,138 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4258,        130]
+NotebookOptionsPosition[      3185,        102]
+NotebookOutlinePosition[      3628,        119]
+CellTagsIndexPosition[      3585,        116]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[ButtonBox["Deriffle a List",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://challenges.wolframcloud.com/challenge/deriffle-a-list"], None},
+ ButtonNote->
+  "https://challenges.wolframcloud.com/challenge/deriffle-a-list"]], "Title",
+ CellChangeTimes->{{3.8932756742386646`*^9, 
+  3.893275678669253*^9}},ExpressionUUID->"b9648764-6819-4641-bb53-\
+7e972ae818d3"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Deriffle", "[", "s_List", "]"}], ":=", 
+  RowBox[{"Extract", "[", 
+   RowBox[{"s", ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{";;", ";;", "2"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"2", ";;", ";;", "2"}], "}"}]}], "}"}]}], "]"}]}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.8932756911894383`*^9, 3.8932757374649734`*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"0054499a-6262-4deb-8fdb-b1446bb7e9fb"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Deriffle", "[", 
+  RowBox[{"{", 
+   RowBox[{"1", ",", "2", ",", "3", ",", "4", ",", "5"}], "}"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.8932757130268183`*^9, 3.8932757242168007`*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"a46848e8-c741-4806-80af-b027dd85dcdb"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", "3", ",", "5"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "4"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.8932757250197344`*^9, 3.89327573835594*^9}},
+ CellLabel->"Out[4]=",ExpressionUUID->"c359646d-a3f8-46af-9ddf-0eb17aaa5b99"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Deriffle", "[", 
+  RowBox[{"{", 
+   RowBox[{"a", ",", "1", ",", "b", ",", "2", ",", "c", ",", "3"}], "}"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.8932757415517287`*^9, 3.893275741552728*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"67876c09-d9ff-493f-b4d6-ba1b98e3d5b6"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"a", ",", "b", ",", "c"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "2", ",", "3"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.893275742110005*^9},
+ CellLabel->"Out[5]=",ExpressionUUID->"7758de1e-8e2a-4526-8be9-92667337743b"]
+}, Open  ]],
+
+Cell[TextData[ButtonBox["Solution Statistics",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://www.wolframcloud.com/obj/f280cb13-4a82-4135-9a59-\
+d1a352504cda"], None},
+ ButtonNote->
+  "https://www.wolframcloud.com/obj/f280cb13-4a82-4135-9a59-d1a352504cda"]], \
+"Text",
+ CellChangeTimes->{{3.893275783242872*^9, 
+  3.8932757878892293`*^9}},ExpressionUUID->"57d5080c-62b2-414a-adb5-\
+eb3cf58409ba"]
+}, Open  ]]
+},
+WindowSize->{571.8, 509.4},
+WindowMargins->{{Automatic, -10.799999999999955`}, {
+  19.800000000000068`, Automatic}},
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"e57de5b2-80a6-41f4-af70-03f0d28fca4a"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 382, 8, 98, "Title",ExpressionUUID->"b9648764-6819-4641-bb53-7e972ae818d3"],
+Cell[965, 32, 493, 13, 44, "Input",ExpressionUUID->"0054499a-6262-4deb-8fdb-b1446bb7e9fb",
+ InitializationCell->True],
+Cell[CellGroupData[{
+Cell[1483, 49, 289, 6, 28, "Input",ExpressionUUID->"a46848e8-c741-4806-80af-b027dd85dcdb"],
+Cell[1775, 57, 326, 8, 32, "Output",ExpressionUUID->"c359646d-a3f8-46af-9ddf-0eb17aaa5b99"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2138, 70, 297, 6, 28, "Input",ExpressionUUID->"67876c09-d9ff-493f-b4d6-ba1b98e3d5b6"],
+Cell[2438, 78, 311, 8, 32, "Output",ExpressionUUID->"7758de1e-8e2a-4526-8be9-92667337743b"]
+}, Open  ]],
+Cell[2764, 89, 405, 10, 35, "Text",ExpressionUUID->"57d5080c-62b2-414a-adb5-eb3cf58409ba"]
+}, Open  ]]
+}
+]
+*)
+

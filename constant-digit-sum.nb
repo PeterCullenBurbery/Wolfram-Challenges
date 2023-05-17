@@ -1,0 +1,111 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3363,        103]
+NotebookOptionsPosition[      2485,         80]
+NotebookOutlinePosition[      2888,         96]
+CellTagsIndexPosition[      2845,         93]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Constant Digit Sum", "Title",
+ CellChangeTimes->{
+  3.893262562209264*^9},ExpressionUUID->"063a34ea-0a70-4c03-913e-\
+2e113f24c27b"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ConstantDigitSum", "[", 
+   RowBox[{"m_Integer", ",", "n_Integer", ",", "s_Integer"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{"Select", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Total", "[", 
+       RowBox[{"IntegerDigits", "[", "#", "]"}], "]"}], "==", "s"}], "&"}], 
+    "]"}], "[", 
+   RowBox[{"Range", "[", 
+    RowBox[{"m", ",", "n"}], "]"}], "]"}]}]], "Code",
+ CellChangeTimes->{{3.893262375087475*^9, 3.893262424836272*^9}},
+ CellLabel->"In[49]:=",ExpressionUUID->"f5fade7c-862d-403e-a450-0798445b66ad"],
+
+Cell["\<\
+Using the test digits. also see \
+https://challenges.wolframcloud.com/challenge/constant-digit-sum\
+\>", "Text",
+ CellChangeTimes->{{3.8932626020702815`*^9, 
+  3.8932626240046153`*^9}},ExpressionUUID->"a52aed7a-f9dc-47b3-be55-\
+0b3ab2dcfab2"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ConstantDigitSum", "[", 
+  RowBox[{"1", ",", "20", ",", "2"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8932623976326256`*^9, 3.893262400181057*^9}, 
+   3.893262434321151*^9},
+ CellLabel->"In[51]:=",ExpressionUUID->"4ac619ab-1c9f-43c7-a443-3aa0abba1cff"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"2", ",", "11", ",", "20"}], "}"}]], "Output",
+ CellChangeTimes->{{3.8932624005429263`*^9, 3.893262435019598*^9}},
+ CellLabel->"Out[51]=",ExpressionUUID->"1ea7e424-bfd8-43b6-a7e6-5bcf5dd8f950"]
+}, Open  ]],
+
+Cell[TextData[ButtonBox["My solution",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://www.wolframcloud.com/obj/dcd6f609-410c-4e72-a418-\
+c7e9eb8ae327"], None},
+ ButtonNote->
+  "https://www.wolframcloud.com/obj/dcd6f609-410c-4e72-a418-c7e9eb8ae327"]], \
+"Text",
+ CellChangeTimes->{{3.893262547348284*^9, 
+  3.893262551213522*^9}},ExpressionUUID->"b253765f-9f54-40c0-81cb-\
+8d4942668fff"]
+}, Open  ]]
+},
+WindowSize->{574.8, 574.8},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"fcede6f1-f29a-4822-a787-a350d6c437ff"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 137, 3, 98, "Title",ExpressionUUID->"063a34ea-0a70-4c03-913e-2e113f24c27b"],
+Cell[720, 27, 548, 14, 50, "Code",ExpressionUUID->"f5fade7c-862d-403e-a450-0798445b66ad"],
+Cell[1271, 43, 252, 6, 58, "Text",ExpressionUUID->"a52aed7a-f9dc-47b3-be55-0b3ab2dcfab2"],
+Cell[CellGroupData[{
+Cell[1548, 53, 276, 5, 28, "Input",ExpressionUUID->"4ac619ab-1c9f-43c7-a443-3aa0abba1cff"],
+Cell[1827, 60, 232, 4, 32, "Output",ExpressionUUID->"1ea7e424-bfd8-43b6-a7e6-5bcf5dd8f950"]
+}, Open  ]],
+Cell[2074, 67, 395, 10, 35, "Text",ExpressionUUID->"b253765f-9f54-40c0-81cb-8d4942668fff"]
+}, Open  ]]
+}
+]
+*)
+

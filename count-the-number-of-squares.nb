@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      5127,        142]
-NotebookOptionsPosition[      4606,        124]
-NotebookOutlinePosition[      5047,        141]
-CellTagsIndexPosition[      5004,        138]
+NotebookDataLength[      5447,        150]
+NotebookOptionsPosition[      4808,        130]
+NotebookOutlinePosition[      5249,        147]
+CellTagsIndexPosition[      5206,        144]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -31,6 +31,11 @@ squares"], None},
  CellChangeTimes->{{3.8932565377907276`*^9, 
   3.8932565485737424`*^9}},ExpressionUUID->"5c38286c-2980-428a-bba0-\
 2feea10c36be"],
+
+Cell["ChatGPT helped me write this.", "Text",
+ CellChangeTimes->{{3.8932756079654036`*^9, 
+  3.89327561193141*^9}},ExpressionUUID->"e0d2eeb2-c618-4c51-832e-\
+be21c8676d14"],
 
 Cell[BoxData[
  RowBox[{
@@ -118,6 +123,7 @@ Cell[BoxData[
      RowBox[{
      "we", " ", "need", " ", "to", " ", "divide", " ", "the", " ", "total", 
       " ", "count", " ", "by", " ", "2"}]}], "*)"}], "]"}]}]], "Input",
+ InitializationCell->True,
  CellChangeTimes->{{3.8932565523946896`*^9, 3.893256552396694*^9}},
  CellLabel->"In[6]:=",ExpressionUUID->"3657a8a0-c326-4bd1-908b-2966604d92f1"]
 }, Open  ]]
@@ -142,7 +148,9 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 424, 10, 160, "Title",ExpressionUUID->"5c38286c-2980-428a-bba0-2feea10c36be"],
-Cell[1007, 34, 3583, 87, 380, "Input",ExpressionUUID->"3657a8a0-c326-4bd1-908b-2966604d92f1"]
+Cell[1007, 34, 172, 3, 35, "Text",ExpressionUUID->"e0d2eeb2-c618-4c51-832e-be21c8676d14"],
+Cell[1182, 39, 3610, 88, 366, "Input",ExpressionUUID->"3657a8a0-c326-4bd1-908b-2966604d92f1",
+ InitializationCell->True]
 }, Open  ]]
 }
 ]

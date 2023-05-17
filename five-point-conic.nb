@@ -10,14 +10,43 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      3869,        125]
-NotebookOptionsPosition[      3453,        109]
-NotebookOutlinePosition[      3889,        126]
-CellTagsIndexPosition[      3846,        123]
+NotebookDataLength[      5010,        159]
+NotebookOptionsPosition[      4360,        139]
+NotebookOutlinePosition[      4813,        156]
+CellTagsIndexPosition[      4770,        153]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[ButtonBox["Five-Point Conic",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://challenges.wolframcloud.com/challenge/five-point-conic"], 
+   None},
+ ButtonNote->
+  "https://challenges.wolframcloud.com/challenge/five-point-conic"]], "Title",
+ CellChangeTimes->{{3.893273381685361*^9, 
+  3.893273386557588*^9}},ExpressionUUID->"30adef2d-17d4-4e78-ac1a-\
+3d4d52ad7fd7"],
+
+Cell[TextData[{
+ "This code is from the ",
+ ButtonBox["Resource Function FivePointConic",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+FivePointConic/"], None},
+  ButtonNote->
+   "https://resources.wolframcloud.com/FunctionRepository/resources/\
+FivePointConic/"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.8932734075775023`*^9, 
+  3.89327342223071*^9}},ExpressionUUID->"8e80c9b1-a879-470b-8b03-\
+f176394a6031"],
+
 Cell[BoxData[{
  RowBox[{
   RowBox[{
@@ -106,10 +135,11 @@ Cell[BoxData[{
  InitializationCell->True,
  CellChangeTimes->{{3.893256828954702*^9, 3.893256828956254*^9}},
  CellLabel->"In[14]:=",ExpressionUUID->"d1d26511-b7be-48af-abf4-236543a081a6"]
+}, Open  ]]
 },
-WindowSize->{312, 495},
-WindowMargins->{{
-  Automatic, 140.4000000000001}, {-0.6000000000000227, Automatic}},
+WindowSize->{312., 480.59999999999997`},
+WindowMargins->{{Automatic, 140.4000000000001}, {
+  13.800000000000068`, Automatic}},
 FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"7c61a9f4-4dd4-4c8a-a134-ef9d55a75f7a"
@@ -125,8 +155,12 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 2891, 87, 724, "Input",ExpressionUUID->"d1d26511-b7be-48af-abf4-236543a081a6",
+Cell[CellGroupData[{
+Cell[580, 22, 387, 9, 160, "Title",ExpressionUUID->"30adef2d-17d4-4e78-ac1a-3d4d52ad7fd7"],
+Cell[970, 33, 480, 14, 58, "Text",ExpressionUUID->"8e80c9b1-a879-470b-8b03-f176394a6031"],
+Cell[1453, 49, 2891, 87, 694, "Input",ExpressionUUID->"d1d26511-b7be-48af-abf4-236543a081a6",
  InitializationCell->True]
+}, Open  ]]
 }
 ]
 *)
