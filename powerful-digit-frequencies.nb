@@ -1,0 +1,75 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframDesktop 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       161,          7]
+NotebookDataLength[      1977,         65]
+NotebookOptionsPosition[      1459,         47]
+NotebookOutlinePosition[      1878,         63]
+CellTagsIndexPosition[      1835,         60]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[ButtonBox["Powerful Digit Frequencies",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://Powerful Digit Frequencies"], None},
+ ButtonNote->"https://Powerful Digit Frequencies"]], "Title",
+ CellChangeTimes->{{3.8933292803111906`*^9, 
+  3.8933292870142107`*^9}},ExpressionUUID->"6b65b2a7-efdd-4c78-9d74-\
+165d0e0eea20"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DigitFrequenciesInThePowersOfTwo", "[", 
+   RowBox[{"n_Integer", "?", "Positive"}], "]"}], ":=", 
+  RowBox[{"BinCounts", "[", 
+   RowBox[{
+    RowBox[{"IntegerDigits", "[", 
+     SuperscriptBox["2", "n"], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0", ",", "10", ",", "1"}], "}"}]}], "]"}]}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.8933292617284446`*^9, 3.8933292617284446`*^9}},
+ CellLabel->
+  "In[403]:=",ExpressionUUID->"e7ce3f6f-2fcc-46c4-8306-c6cad6af0141"]
+}, Open  ]]
+},
+WindowSize->{574.8, 574.8},
+WindowMargins->{{Automatic, 41.40000000000009}, {Automatic, 0}},
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 31, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"095dc70a-6761-46dc-bde9-47ac0dd0a275"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[583, 22, 338, 7, 98, "Title",ExpressionUUID->"6b65b2a7-efdd-4c78-9d74-165d0e0eea20"],
+Cell[924, 31, 519, 13, 66, "Input",ExpressionUUID->"e7ce3f6f-2fcc-46c4-8306-c6cad6af0141",
+ InitializationCell->True]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
