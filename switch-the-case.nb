@@ -1,0 +1,3347 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframDesktop 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       161,          7]
+NotebookDataLength[    177835,       3339]
+NotebookOptionsPosition[    176986,       3315]
+NotebookOutlinePosition[    177408,       3331]
+CellTagsIndexPosition[    177365,       3328]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[ButtonBox["Switch the Case",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://challenges.wolframcloud.com/challenge/switch-the-case"], None},
+ ButtonNote->
+  "https://challenges.wolframcloud.com/challenge/switch-the-case"]], "Title",
+ CellChangeTimes->{{3.893338473066755*^9, 
+  3.893338478225012*^9}},ExpressionUUID->"3be52dab-50d6-4b64-850b-\
+0655f9c29f21"],
+
+Cell[CellGroupData[{
+
+Cell["Scratch Work", "Section",
+ CellChangeTimes->{{3.8933385033367805`*^9, 
+  3.8933385065231075`*^9}},ExpressionUUID->"7cd969bc-d2c1-460a-b24b-\
+196f91d61495"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ResourceSearch", "[", "\"\<Case\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.8933385263049474`*^9, 3.893338530825653*^9}},
+ CellLabel->
+  "In[511]:=",ExpressionUUID->"addde0ad-722a-4a0e-91d1-f0d1ddab4f1d"],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[
+   DynamicModuleBox[{TypeSystem`NestedGrid`PackagePrivate`$state$$ = <|
+    "InitialData" -> {<|
+       "Name" -> "SwapCase", "ResourceType" -> "Function", "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "SwapCase", "ShortName" -> "SwapCase", "UUID" -> 
+           "db770b13-cac4-474f-b743-cc959866ba90", "ResourceType" -> 
+           "Function", "Version" -> "1.0.0", "Description" -> 
+           "Convert uppercase letters to lowercase and vice versa", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$78cfcc4993be44589bfbe6dab94d2e30`SwapCase"|>],
+         "Description" -> 
+        "Convert uppercase letters to lowercase and vice versa", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+SwapCase"]|>, <|
+       "Name" -> "FromCamelCase", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "FromCamelCase", "ShortName" -> "FromCamelCase", "UUID" -> 
+           "723f5750-1117-47e4-a034-d6233eb71ca1", "ResourceType" -> 
+           "Function", "Version" -> "1.1.0", "Description" -> 
+           "Split camel case phrases into separate words", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$ef3bf128c7544296a2d9c00279062f21`\
+FromCamelCase"|>], "Description" -> 
+        "Split camel case phrases into separate words", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+FromCamelCase"]|>, <|
+       "Name" -> "Malaria Cases", "ResourceType" -> "DataResource", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "Malaria Cases", "UUID" -> 
+           "355a5ea9-df8a-41ce-9ef0-0166091d98e7", "ResourceType" -> 
+           "DataResource", "Version" -> "1.0.0", "Description" -> 
+           "WHO's estimated number of malaria cases by country in each year", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "ContentElements" -> {
+            "ByCountry", "ByYear", "Dataset", "TimeSeries"}|>], "Description" -> 
+        "WHO's estimated number of malaria cases by country in each year", 
+        "Location" -> URL["https://resources.wolframcloud.com"], 
+        "DocumentationLink" -> 
+        URL["https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/355a5ea9-df8a-41ce-9ef0-0166091d98e7"]|>, <|
+       "Name" -> "ToTitleCase", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "ToTitleCase", "ShortName" -> "ToTitleCase", "UUID" -> 
+           "9b6659e2-513a-4b1a-9ffb-5d105f0074ee", "ResourceType" -> 
+           "Function", "Version" -> "1.0.1", "Description" -> 
+           "Convert strings from sentence-style capitalization to title-style \
+capitalization", "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$c4416e767856488c8081fe3c85d595ac`ToTitleCase"|>\
+], "Description" -> 
+        "Convert strings from sentence-style capitalization to title-style \
+capitalization", "Location" -> URL["https://resources.wolframcloud.com"], 
+        "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+ToTitleCase"]|>, <|
+       "Name" -> "Sample Data: Liverpool Cancer", "ResourceType" -> 
+        "DataResource", "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "Sample Data: Liverpool Cancer", "UUID" -> 
+           "56d34791-da40-4128-bec0-6f8d6c221cfd", "ResourceType" -> 
+           "DataResource", "Version" -> "1.0.0", "Description" -> 
+           "Locations of cancer cases in North Liverpool, UK, annotated with \
+subject type (case or control) marks", "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "ContentElements" -> {
+            "Annotations", "AnnotationsKeys", "Data", "Description", 
+             "Dimension", "Locations", "LongDescription", "Name", 
+             "ObservationRegion", "PointCount", "RegionScale", "Source"}|>], 
+        "Description" -> 
+        "Locations of cancer cases in North Liverpool, UK, annotated with \
+subject type (case or control) marks", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/56d34791-da40-4128-bec0-6f8d6c221cfd"]|>, <|
+       "Name" -> "MapCases", "ResourceType" -> "Function", "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "MapCases", "ShortName" -> "MapCases", "UUID" -> 
+           "e8b1e491-7a9d-428d-aee1-7c7febbe3cdf", "ResourceType" -> 
+           "Function", "Version" -> "1.0.0", "Description" -> 
+           "Map a function at parts of an expression that match a given \
+pattern", "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$cd2d9b18493e421ca7b9b3227e27525f`MapCases"|>],
+         "Description" -> 
+        "Map a function at parts of an expression that match a given pattern",
+         "Location" -> URL["https://resources.wolframcloud.com"], 
+        "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+MapCases"]|>, <|
+       "Name" -> "Epidemic Data for SARS", "ResourceType" -> "DataResource", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "Epidemic Data for SARS", "UUID" -> 
+           "b8639fe1-f717-4e92-b6d1-d7d53cdd08e4", "ResourceType" -> 
+           "DataResource", "Version" -> "1.0.0", "Description" -> 
+           "Cumulative number of reported suspect and probable cases", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "WolframLanguageVersionRequired" -> "10.0", "ContentSize" -> 
+           Quantity[557.36, "Kilobytes"], "ContentElements" -> {"Dataset"}|>],
+         "Description" -> 
+        "Cumulative number of reported suspect and probable cases", 
+        "Location" -> URL["https://resources.wolframcloud.com"], 
+        "DocumentationLink" -> 
+        URL["https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/b8639fe1-f717-4e92-b6d1-d7d53cdd08e4"]|>, <|
+       "Name" -> "RandomPseudoSymbolName", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "RandomPseudoSymbolName", "ShortName" -> 
+           "RandomPseudoSymbolName", "UUID" -> 
+           "bee0550b-c27e-452d-b2ab-b71e11263ded", "ResourceType" -> 
+           "Function", "Version" -> "1.0.0", "Description" -> 
+           "Generate a new symbol name in the spirit of the Wolfram Language",
+            "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$7106b8277e9f41959e651623d8d63cae`\
+RandomPseudoSymbolName"|>], "Description" -> 
+        "Generate a new symbol name in the spirit of the Wolfram Language", 
+        "Location" -> URL["https://resources.wolframcloud.com"], 
+        "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+RandomPseudoSymbolName"]|>, <|
+       "Name" -> "CheckReturn", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "CheckReturn", "ShortName" -> "CheckReturn", "UUID" -> 
+           "7cc19950-a451-4fb7-a906-5ff883a8d4a7", "ResourceType" -> 
+           "Function", "Version" -> "1.0.0", "Description" -> 
+           "Evaluates an expression and returns the result unless messages \
+were generated, in which case it immediately returns a Failure expression", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$71ef304ddccf4fdfb8a9278bf8c93282`CheckReturn"|>\
+], "Description" -> 
+        "Evaluates an expression and returns the result unless messages were \
+generated, in which case it immediately returns a Failure expression", 
+        "Location" -> URL["https://resources.wolframcloud.com"], 
+        "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+CheckReturn"]|>, <|
+       "Name" -> "United States Supreme Court Decisions 1946-present", 
+        "ResourceType" -> "DataResource", "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "United States Supreme Court Decisions 1946-present", 
+           "UUID" -> "81366ea3-ef31-4c06-813c-182874d9d2e0", "ResourceType" -> 
+           "DataResource", "Version" -> "1.0.0", "Description" -> 
+           "Datasets relating to Supreme Court cases from 1946 to present", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "WolframLanguageVersionRequired" -> "10.0", "ContentSize" -> 
+           Quantity[338.86428, "Megabytes"], 
+           "ContentElements" -> {"Case", "Justice"}|>], "Description" -> 
+        "Datasets relating to Supreme Court cases from 1946 to present", 
+        "Location" -> URL["https://resources.wolframcloud.com"], 
+        "DocumentationLink" -> 
+        URL["https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/81366ea3-ef31-4c06-813c-182874d9d2e0"]|>, <|
+       "Name" -> "Infectious Diseases by Country 2009-2014", "ResourceType" -> 
+        "DataResource", "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "Infectious Diseases by Country 2009-2014", "UUID" -> 
+           "c4268190-9d42-40d5-907b-73132a76230c", "ResourceType" -> 
+           "DataResource", "Version" -> "1.0.0", "Description" -> 
+           "Number of reported, suspected and reported, and/or newly reported \
+cases to the World Health Organization of selected contagious or infectious \
+diseases like mumps and rubella by country from 2009 to 2014.", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "ContentSize" -> Quantity[10.592392, "Megabytes"], 
+           "ContentElements" -> {"Dataset", "RawData"}|>], "Description" -> 
+        "Number of reported, suspected and reported, and/or newly reported \
+cases to the World Health Organization of selected contagious or infectious \
+diseases like mumps and rubella by country from 2009 to 2014.", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/c4268190-9d42-40d5-907b-73132a76230c"]|>, <|
+       "Name" -> "Sample Data: Esophageal Cancer", "ResourceType" -> 
+        "DataResource", "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "Sample Data: Esophageal Cancer", "UUID" -> 
+           "a48c56fa-6fc8-4bd6-b12e-3b14ba91ba36", "ResourceType" -> 
+           "DataResource", "Version" -> "1.0.0", "Description" -> 
+           "Case\[Hyphen]control study of esophageal cancer in Ile\[Hyphen]et\
+\[Hyphen]Vilaine", "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "ContentSize" -> Quantity[77.904, "Kilobytes"], 
+           "ContentElements" -> {
+            "ColumnDescriptions", "ColumnTypes", "Content", "DataType", 
+             "Dimensions", "ObservationCount", "RawData", "Source"}|>], 
+        "Description" -> 
+        "Case\[Hyphen]control study of esophageal cancer in Ile\[Hyphen]et\
+\[Hyphen]Vilaine", "Location" -> URL["https://resources.wolframcloud.com"], 
+        "DocumentationLink" -> 
+        URL["https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/a48c56fa-6fc8-4bd6-b12e-3b14ba91ba36"]|>, <|
+       "Name" -> "Sample Data: Childhood Leukaemia Lymphoma", "ResourceType" -> 
+        "DataResource", "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "Sample Data: Childhood Leukaemia Lymphoma", "UUID" -> 
+           "046c7577-22c6-4e95-a03b-0355bb8652bc", "ResourceType" -> 
+           "DataResource", "Version" -> "1.0.0", "Description" -> 
+           "Locations of childhood leukaemia and lymphoma annotated with \
+case/control marks", "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "ContentElements" -> {
+            "Annotations", "AnnotationsKeys", "Data", "Description", 
+             "Dimension", "Locations", "LongDescription", "Name", 
+             "ObservationRegion", "PointCount", "RegionScale", "Source"}|>], 
+        "Description" -> 
+        "Locations of childhood leukaemia and lymphoma annotated with \
+case/control marks", "Location" -> URL["https://resources.wolframcloud.com"], 
+        "DocumentationLink" -> 
+        URL["https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/046c7577-22c6-4e95-a03b-0355bb8652bc"]|>, <|
+       "Name" -> "Sample Data: North Derbyshire Asthma", "ResourceType" -> 
+        "DataResource", "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "Sample Data: North Derbyshire Asthma", "UUID" -> 
+           "c3994c7d-dfc2-4f84-9f2d-f684fb91bbd1", "ResourceType" -> 
+           "DataResource", "Version" -> "1.0.0", "Description" -> 
+           "Locations of the residence of asthmatic (cases) and non-asthmatic \
+(controls) children, annotated with marks including number of household \
+smokers, subject type (case or control), hay fever occurrence, age, distance \
+to the nearest road, distance to pollution sources 1, 2, and 3", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "ContentElements" -> {
+            "Annotations", "AnnotationsKeys", "Data", "Description", 
+             "Dimension", "Locations", "LongDescription", "Name", 
+             "ObservationRegion", "PointCount", "RegionScale", "Source"}|>], 
+        "Description" -> 
+        "Locations of the residence of asthmatic (cases) and non-asthmatic \
+(controls) children, annotated with marks including number of household \
+smokers, subject type (case or control), hay fever occurrence, age, distance \
+to the nearest road, distance to pollution sources 1, 2, and 3", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/c3994c7d-dfc2-4f84-9f2d-f684fb91bbd1"]|>, <|
+       "Name" -> "Epidemic Data for Novel Coronavirus COVID-19", 
+        "ResourceType" -> "DataResource", "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "Epidemic Data for Novel Coronavirus COVID-19", "UUID" -> 
+           "dba89a96-2b3a-4254-8824-cb1f9e01a94b", "ResourceType" -> 
+           "DataResource", "Version" -> "495.0.0", "Description" -> 
+           "Estimated cases of novel coronavirus (COVID-19, formerly known as \
+2019-nCoV) infection by country or region \n(This data was imported and made \
+computable on January 31, 2022)", "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "WolframLanguageVersionRequired" -> "10.0", "ContentSize" -> 
+           Quantity[34.130128, "Megabytes"], 
+           "ContentElements" -> {
+            "AustraliaProvinces", "CanadaProvinces", "ChinaProvinces", 
+             "Dataset", "PuertoRicoProvinces", "RawData", "USCounties", 
+             "USStates", "WorldCountries"}|>], "Description" -> 
+        "Estimated cases of novel coronavirus (COVID-19, formerly known as \
+2019-nCoV) infection by country or region \n(This data was imported and made \
+computable on January 31, 2022)", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/dba89a96-2b3a-4254-8824-cb1f9e01a94b"]|>, <|
+       "Name" -> "Second DIMACS Sanchis Graph 10", "ResourceType" -> 
+        "DataResource", "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "Second DIMACS Sanchis Graph 10", "UUID" -> 
+           "200dec16-55d6-475f-bf62-037e10d6c9e6", "ResourceType" -> 
+           "DataResource", "Version" -> "1.0.0", "Description" -> 
+           "The Second DIMACS Implementation Challenge: 1992-1993", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "WolframLanguageVersionRequired" -> "10.0", "ContentSize" -> 
+           Quantity[6.330375999999999, "Megabytes"], 
+           "ContentElements" -> {
+            "ByteCount", "Description", "EdgeCount", "EdgeProperty", 
+             "FullGraph", "Graph", "LongDescription", "Name", "Source", 
+             "StandardName", "Summary", "VertexCount", "VertexProperty"}|>], 
+        "Description" -> 
+        "The Second DIMACS Implementation Challenge: 1992-1993", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/200dec16-55d6-475f-bf62-037e10d6c9e6"]|>, <|
+       "Name" -> "Second DIMACS Sanchis Graph 3", "ResourceType" -> 
+        "DataResource", "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "Second DIMACS Sanchis Graph 3", "UUID" -> 
+           "43a5eb66-2534-46b1-8ced-ea2341814c3f", "ResourceType" -> 
+           "DataResource", "Version" -> "1.0.0", "Description" -> 
+           "The Second DIMACS Implementation Challenge: 1992-1993", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "WolframLanguageVersionRequired" -> "10.0", "ContentSize" -> 
+           Quantity[1597.352, "Kilobytes"], 
+           "ContentElements" -> {
+            "ByteCount", "Description", "EdgeCount", "EdgeProperty", 
+             "FullGraph", "Graph", "LongDescription", "Name", "Source", 
+             "StandardName", "Summary", "VertexCount", "VertexProperty"}|>], 
+        "Description" -> 
+        "The Second DIMACS Implementation Challenge: 1992-1993", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/43a5eb66-2534-46b1-8ced-ea2341814c3f"]|>, <|
+       "Name" -> "Second DIMACS Sanchis Graph 4", "ResourceType" -> 
+        "DataResource", "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "Second DIMACS Sanchis Graph 4", "UUID" -> 
+           "35ad0a28-ecc3-4b32-a79e-7706d0014907", "ResourceType" -> 
+           "DataResource", "Version" -> "1.0.0", "Description" -> 
+           "The Second DIMACS Implementation Challenge: 1992-1993", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "WolframLanguageVersionRequired" -> "10.0", "ContentSize" -> 
+           Quantity[2.043112, "Megabytes"], 
+           "ContentElements" -> {
+            "ByteCount", "Description", "EdgeCount", "EdgeProperty", 
+             "FullGraph", "Graph", "LongDescription", "Name", "Source", 
+             "StandardName", "Summary", "VertexCount", "VertexProperty"}|>], 
+        "Description" -> 
+        "The Second DIMACS Implementation Challenge: 1992-1993", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/35ad0a28-ecc3-4b32-a79e-7706d0014907"]|>, <|
+       "Name" -> "Second DIMACS Sanchis Graph 6", "ResourceType" -> 
+        "DataResource", "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "Second DIMACS Sanchis Graph 6", "UUID" -> 
+           "0d4b0370-1d5d-4eb5-a725-d71b6bb7f776", "ResourceType" -> 
+           "DataResource", "Version" -> "1.0.0", "Description" -> 
+           "The Second DIMACS Implementation Challenge: 1992-1993", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "WolframLanguageVersionRequired" -> "10.0", "ContentSize" -> 
+           Quantity[2.043112, "Megabytes"], 
+           "ContentElements" -> {
+            "ByteCount", "Description", "EdgeCount", "EdgeProperty", 
+             "FullGraph", "Graph", "LongDescription", "Name", "Source", 
+             "StandardName", "Summary", "VertexCount", "VertexProperty"}|>], 
+        "Description" -> 
+        "The Second DIMACS Implementation Challenge: 1992-1993", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/0d4b0370-1d5d-4eb5-a725-d71b6bb7f776"]|>, <|
+       "Name" -> "Second DIMACS Sanchis Graph 2", "ResourceType" -> 
+        "DataResource", "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "Second DIMACS Sanchis Graph 2", "UUID" -> 
+           "cbc55d9e-bf83-49f4-85bf-e1fe98827855", "ResourceType" -> 
+           "DataResource", "Version" -> "1.0.0", "Description" -> 
+           "The Second DIMACS Implementation Challenge: 1992-1993", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "WolframLanguageVersionRequired" -> "10.0", "ContentSize" -> 
+           Quantity[1597.352, "Kilobytes"], 
+           "ContentElements" -> {
+            "ByteCount", "Description", "EdgeCount", "EdgeProperty", 
+             "FullGraph", "Graph", "LongDescription", "Name", "Source", 
+             "StandardName", "Summary", "VertexCount", "VertexProperty"}|>], 
+        "Description" -> 
+        "The Second DIMACS Implementation Challenge: 1992-1993", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/cbc55d9e-bf83-49f4-85bf-e1fe98827855"]|>, <|
+       "Name" -> "Second DIMACS Sanchis Graph 1", "ResourceType" -> 
+        "DataResource", "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "Second DIMACS Sanchis Graph 1", "UUID" -> 
+           "6a412b98-1ecc-4646-97c1-7c0eb14dbf30", "ResourceType" -> 
+           "DataResource", "Version" -> "1.0.0", "Description" -> 
+           "The Second DIMACS Implementation Challenge: 1992-1993", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "WolframLanguageVersionRequired" -> "10.0", "ContentSize" -> 
+           Quantity[28.24052, "Megabytes"], 
+           "ContentElements" -> {
+            "ByteCount", "Description", "EdgeCount", "EdgeProperty", 
+             "FullGraph", "Graph", "LongDescription", "Name", "Source", 
+             "StandardName", "Summary", "VertexCount", "VertexProperty"}|>], 
+        "Description" -> 
+        "The Second DIMACS Implementation Challenge: 1992-1993", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/6a412b98-1ecc-4646-97c1-7c0eb14dbf30"]|>, <|
+       "Name" -> "Second DIMACS Sanchis Graph 8", "ResourceType" -> 
+        "DataResource", "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "Second DIMACS Sanchis Graph 8", "UUID" -> 
+           "a8fa498a-04b6-4d51-aae9-38c03d15e1b1", "ResourceType" -> 
+           "DataResource", "Version" -> "1.0.0", "Description" -> 
+           "The Second DIMACS Implementation Challenge: 1992-1993", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "WolframLanguageVersionRequired" -> "10.0", "ContentSize" -> 
+           Quantity[6.330375999999999, "Megabytes"], 
+           "ContentElements" -> {
+            "ByteCount", "Description", "EdgeCount", "EdgeProperty", 
+             "FullGraph", "Graph", "LongDescription", "Name", "Source", 
+             "StandardName", "Summary", "VertexCount", "VertexProperty"}|>], 
+        "Description" -> 
+        "The Second DIMACS Implementation Challenge: 1992-1993", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/a8fa498a-04b6-4d51-aae9-38c03d15e1b1"]|>, <|
+       "Name" -> "Second DIMACS Sanchis Graph 9", "ResourceType" -> 
+        "DataResource", "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "Second DIMACS Sanchis Graph 9", "UUID" -> 
+           "82931c13-8c23-4d86-9743-f33e479f019b", "ResourceType" -> 
+           "DataResource", "Version" -> "1.0.0", "Description" -> 
+           "The Second DIMACS Implementation Challenge: 1992-1993", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "WolframLanguageVersionRequired" -> "10.0", "ContentSize" -> 
+           Quantity[6.330375999999999, "Megabytes"], 
+           "ContentElements" -> {
+            "ByteCount", "Description", "EdgeCount", "EdgeProperty", 
+             "FullGraph", "Graph", "LongDescription", "Name", "Source", 
+             "StandardName", "Summary", "VertexCount", "VertexProperty"}|>], 
+        "Description" -> 
+        "The Second DIMACS Implementation Challenge: 1992-1993", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/82931c13-8c23-4d86-9743-f33e479f019b"]|>, <|
+       "Name" -> "Second DIMACS Sanchis Graph 13", "ResourceType" -> 
+        "DataResource", "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "Second DIMACS Sanchis Graph 13", "UUID" -> 
+           "80bed448-b1d5-4c77-8243-a91030a9a382", "ResourceType" -> 
+           "DataResource", "Version" -> "1.0.0", "Description" -> 
+           "The Second DIMACS Implementation Challenge: 1992-1993", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "WolframLanguageVersionRequired" -> "10.0", "ContentSize" -> 
+           Quantity[2.037848, "Megabytes"], 
+           "ContentElements" -> {
+            "ByteCount", "Description", "EdgeCount", "EdgeProperty", 
+             "FullGraph", "Graph", "LongDescription", "Name", "Source", 
+             "StandardName", "Summary", "VertexCount", "VertexProperty"}|>], 
+        "Description" -> 
+        "The Second DIMACS Implementation Challenge: 1992-1993", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/80bed448-b1d5-4c77-8243-a91030a9a382"]|>, <|
+       "Name" -> "Second DIMACS Sanchis Graph 15", "ResourceType" -> 
+        "DataResource", "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "Second DIMACS Sanchis Graph 15", "UUID" -> 
+           "dade152f-68b9-467e-acc2-e7c77eb3abf4", "ResourceType" -> 
+           "DataResource", "Version" -> "1.0.0", "Description" -> 
+           "The Second DIMACS Implementation Challenge: 1992-1993", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "WolframLanguageVersionRequired" -> "10.0", "ContentSize" -> 
+           Quantity[6.331384, "Megabytes"], 
+           "ContentElements" -> {
+            "ByteCount", "Description", "EdgeCount", "EdgeProperty", 
+             "FullGraph", "Graph", "LongDescription", "Name", "Source", 
+             "StandardName", "Summary", "VertexCount", "VertexProperty"}|>], 
+        "Description" -> 
+        "The Second DIMACS Implementation Challenge: 1992-1993", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/dade152f-68b9-467e-acc2-e7c77eb3abf4"]|>, <|
+       "Name" -> "Second DIMACS Sanchis Graph 14", "ResourceType" -> 
+        "DataResource", "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "Second DIMACS Sanchis Graph 14", "UUID" -> 
+           "5c1eb96f-661b-41b8-aba8-3902bbe6cba1", "ResourceType" -> 
+           "DataResource", "Version" -> "1.0.0", "Description" -> 
+           "The Second DIMACS Implementation Challenge: 1992-1993", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "WolframLanguageVersionRequired" -> "10.0", "ContentSize" -> 
+           Quantity[4.552264, "Megabytes"], 
+           "ContentElements" -> {
+            "ByteCount", "Description", "EdgeCount", "EdgeProperty", 
+             "FullGraph", "Graph", "LongDescription", "Name", "Source", 
+             "StandardName", "Summary", "VertexCount", "VertexProperty"}|>], 
+        "Description" -> 
+        "The Second DIMACS Implementation Challenge: 1992-1993", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/5c1eb96f-661b-41b8-aba8-3902bbe6cba1"]|>, <|
+       "Name" -> "Second DIMACS Sanchis Graph 7", "ResourceType" -> 
+        "DataResource", "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "Second DIMACS Sanchis Graph 7", "UUID" -> 
+           "8ea79a63-f36e-4af1-944e-acf43b1b29d9", "ResourceType" -> 
+           "DataResource", "Version" -> "1.0.0", "Description" -> 
+           "The Second DIMACS Implementation Challenge: 1992-1993", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "WolframLanguageVersionRequired" -> "10.0", "ContentSize" -> 
+           Quantity[4.542856, "Megabytes"], 
+           "ContentElements" -> {
+            "ByteCount", "Description", "EdgeCount", "EdgeProperty", 
+             "FullGraph", "Graph", "LongDescription", "Name", "Source", 
+             "StandardName", "Summary", "VertexCount", "VertexProperty"}|>], 
+        "Description" -> 
+        "The Second DIMACS Implementation Challenge: 1992-1993", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/8ea79a63-f36e-4af1-944e-acf43b1b29d9"]|>, <|
+       "Name" -> "The Big Mac Index", "ResourceType" -> "DataResource", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "The Big Mac Index", "UUID" -> 
+           "fbca04ce-2507-4a43-b018-3a84f19916e8", "ResourceType" -> 
+           "DataResource", "Version" -> "1.0.0", "Description" -> 
+           "The Big Mac index, published by The Economist from 2000 to 2018.",
+            "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "WolframLanguageVersionRequired" -> "10.0", "ContentSize" -> 
+           Quantity[3.650368, "Megabytes"], 
+           "ContentElements" -> {"BigMacIndex"}|>], "Description" -> 
+        "The Big Mac index, published by The Economist from 2000 to 2018.", 
+        "Location" -> URL["https://resources.wolframcloud.com"], 
+        "DocumentationLink" -> 
+        URL["https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/fbca04ce-2507-4a43-b018-3a84f19916e8"]|>, <|
+       "Name" -> "September 11 Terrorists Network", "ResourceType" -> 
+        "DataResource", "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "September 11 Terrorists Network", "UUID" -> 
+           "dbc6da22-e5b0-4b03-9565-9200a86ba6b2", "ResourceType" -> 
+           "DataResource", "Version" -> "1.0.0", "Description" -> 
+           "Terrorist network linked to the tragic events of September 11, \
+2001", "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "WolframLanguageVersionRequired" -> "10.0", 
+           "ContentElements" -> {
+            "ByteCount", "Description", "EdgeCount", "EdgeProperty", 
+             "FullGraph", "Graph", "LongDescription", "Name", "Source", 
+             "StandardName", "Summary", "VertexCount", "VertexProperty"}|>], 
+        "Description" -> 
+        "Terrorist network linked to the tragic events of September 11, 2001",
+         "Location" -> URL["https://resources.wolframcloud.com"], 
+        "DocumentationLink" -> 
+        URL["https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/dbc6da22-e5b0-4b03-9565-9200a86ba6b2"]|>, <|
+       "Name" -> "US Health Data Breaches", "ResourceType" -> "DataResource", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "US Health Data Breaches", "UUID" -> 
+           "f5820347-b7e3-4f04-8b2b-f76be6d2dd74", "ResourceType" -> 
+           "DataResource", "Version" -> "1.0.0", "Description" -> 
+           "A list of breaches of unsecured protected health information \
+affecting 500 or more individuals", "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "ContentSize" -> Quantity[4.673344, "Megabytes"], 
+           "ContentElements" -> {
+            "ColumnDescriptions", "ColumnNames", "Dataset"}|>], "Description" -> 
+        "A list of breaches of unsecured protected health information \
+affecting 500 or more individuals", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/f5820347-b7e3-4f04-8b2b-f76be6d2dd74"]|>, <|
+       "Name" -> "SlugifyString", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "SlugifyString", "ShortName" -> "SlugifyString", "UUID" -> 
+           "b4c1cdc0-dfc2-4639-b422-cf1e9262f240", "ResourceType" -> 
+           "Function", "Version" -> "1.0.0", "Description" -> 
+           "Process strings to make them more URL friendly", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$9c41aae282104a57a9a3048633a7c9af`\
+SlugifyString"|>], "Description" -> 
+        "Process strings to make them more URL friendly", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+SlugifyString"]|>, <|
+       "Name" -> "Sample Data: Cancer Incidence", "ResourceType" -> 
+        "DataResource", "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "Sample Data: Cancer Incidence", "UUID" -> 
+           "4b158472-c85c-49fe-bc1a-a1a76a6fefb8", "ResourceType" -> 
+           "DataResource", "Version" -> "2.0.0", "Description" -> 
+           "Locations of cancer incidence annotated with larynx/lung marks", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "ContentElements" -> {
+            "Annotations", "AnnotationsKeys", "Data", "Description", 
+             "Dimension", "Locations", "LongDescription", "Name", 
+             "ObservationRegion", "PointCount", "RegionScale", "Source"}|>], 
+        "Description" -> 
+        "Locations of cancer incidence annotated with larynx/lung marks", 
+        "Location" -> URL["https://resources.wolframcloud.com"], 
+        "DocumentationLink" -> 
+        URL["https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/4b158472-c85c-49fe-bc1a-a1a76a6fefb8"]|>, <|
+       "Name" -> "KatakanaQ", "ResourceType" -> "Function", "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "KatakanaQ", "ShortName" -> "KatakanaQ", "UUID" -> 
+           "18ebff37-9327-452d-8022-e827a2d973a4", "ResourceType" -> 
+           "Function", "Version" -> "1.0.0", "Description" -> 
+           "Test if a string is composed of katakana characters", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$386b56952c5d42258b70309cdf699bc2`KatakanaQ"|>]\
+, "Description" -> "Test if a string is composed of katakana characters", 
+        "Location" -> URL["https://resources.wolframcloud.com"], 
+        "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+KatakanaQ"]|>, <|
+       "Name" -> "HiraganaQ", "ResourceType" -> "Function", "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "HiraganaQ", "ShortName" -> "HiraganaQ", "UUID" -> 
+           "5cc5f669-5812-4ba0-8e2c-e9bf9f8a84b4", "ResourceType" -> 
+           "Function", "Version" -> "1.0.0", "Description" -> 
+           "Test if a string is composed of hiragana characters", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$fe312e31c07d4555accee9cd577c1338`HiraganaQ"|>]\
+, "Description" -> "Test if a string is composed of hiragana characters", 
+        "Location" -> URL["https://resources.wolframcloud.com"], 
+        "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+HiraganaQ"]|>, <|
+       "Name" -> "KanjiQ", "ResourceType" -> "Function", "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "KanjiQ", "ShortName" -> "KanjiQ", "UUID" -> 
+           "86625643-c5ca-40bf-9ec1-92130f613b56", "ResourceType" -> 
+           "Function", "Version" -> "1.0.0", "Description" -> 
+           "Test if a string is composed of kanji characters", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$f62d96794e7e449f86241c3385844cd3`KanjiQ"|>], 
+        "Description" -> "Test if a string is composed of kanji characters", 
+        "Location" -> URL["https://resources.wolframcloud.com"], 
+        "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+KanjiQ"]|>, <|
+       "Name" -> "Project Tycho Level 1 Data", "ResourceType" -> 
+        "DataResource", "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "Project Tycho Level 1 Data", "UUID" -> 
+           "e55a3a76-4dfe-491b-96f0-12c0aa77f349", "ResourceType" -> 
+           "DataResource", "Version" -> "1.0.0", "Description" -> 
+           "Data from all weekly notifiable disease reports for the United \
+States dating back to 1888. Level 1 data have been custom tailored for \
+specific analyses.", "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "ContentSize" -> Quantity[1380.65032, "Megabytes"], 
+           "ContentElements" -> {"Dataset"}|>], "Description" -> 
+        "Data from all weekly notifiable disease reports for the United \
+States dating back to 1888. Level 1 data have been custom tailored for \
+specific analyses.", "Location" -> URL["https://resources.wolframcloud.com"], 
+        "DocumentationLink" -> 
+        URL["https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/e55a3a76-4dfe-491b-96f0-12c0aa77f349"]|>, <|
+       "Name" -> "LookupCases", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "LookupCases", "ShortName" -> "LookupCases", "UUID" -> 
+           "58388a58-28fa-4fda-881f-4eb4adf8f3b2", "ResourceType" -> 
+           "Function", "Version" -> "1.0.0", "Description" -> 
+           "Look up all values of a key in a nested association", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$19cdbbf3502641c797dcd26d6d28e7a0`LookupCases"|>\
+], "Description" -> "Look up all values of a key in a nested association", 
+        "Location" -> URL["https://resources.wolframcloud.com"], 
+        "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+LookupCases"]|>, <|
+       "Name" -> "GetLoremFlickrImage", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "GetLoremFlickrImage", "ShortName" -> 
+           "GetLoremFlickrImage", "UUID" -> 
+           "2bdc8ef2-07ef-43eb-814d-d9c4a43f2b45", "ResourceType" -> 
+           "Function", "Version" -> "1.0.0", "Description" -> 
+           "Get random LoremFlicker free Creative Commons (CC) images", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$52249425278d4b3aaa8c656c42724969`\
+GetLoremFlickrImage"|>], "Description" -> 
+        "Get random LoremFlicker free Creative Commons (CC) images", 
+        "Location" -> URL["https://resources.wolframcloud.com"], 
+        "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+GetLoremFlickrImage"]|>, <|
+       "Name" -> "Sample Data: Scallop Abundance", "ResourceType" -> 
+        "DataResource", "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "Sample Data: Scallop Abundance", "UUID" -> 
+           "44ae0373-b1b7-4ea4-915c-c7a480192026", "ResourceType" -> 
+           "DataResource", "Version" -> "1.1.0", "Description" -> 
+           "Locations of scallop samples in the Atlantic Ocean, annotated \
+with the numbers and types of scallops caught", "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "ContentElements" -> {
+            "Annotations", "AnnotationsKeys", "Data", "Description", 
+             "Dimension", "Locations", "LongDescription", "Name", 
+             "ObservationRegion", "PointCount", "RegionScale", "Source"}|>], 
+        "Description" -> 
+        "Locations of scallop samples in the Atlantic Ocean, annotated with \
+the numbers and types of scallops caught", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/44ae0373-b1b7-4ea4-915c-c7a480192026"]|>, <|
+       "Name" -> "PersianImmortals", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "PersianImmortals", "ShortName" -> "PersianImmortals", 
+           "UUID" -> "5a89b235-c996-4bc0-8ee7-55d9e5c75e4a", "ResourceType" -> 
+           "Function", "Version" -> "1.1.0", "Description" -> 
+           "Simulate the self-organizing system of the Persian Immortals as \
+described by Herodotus", "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$7bc610182ef34a77bfb222f104486a4e`\
+PersianImmortals"|>], "Description" -> 
+        "Simulate the self-organizing system of the Persian Immortals as \
+described by Herodotus", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+PersianImmortals"]|>, <|
+       "Name" -> "SpeedReader", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "SpeedReader", "ShortName" -> "SpeedReader", "UUID" -> 
+           "1f76e16d-8612-4df0-82ba-282373e0c15c", "ResourceType" -> 
+           "Function", "Version" -> "1.0.0", "Description" -> 
+           "Read text quickly by avoiding eye movement", "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$d0d4fb827e1140fd9281c847ab2c0fbf`SpeedReader"|>\
+], "Description" -> "Read text quickly by avoiding eye movement", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+SpeedReader"]|>, <|
+       "Name" -> "FirstMatchingValue", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "FirstMatchingValue", "ShortName" -> "FirstMatchingValue",
+            "UUID" -> "ee320613-fc2f-4be5-8414-b9105098f9bd", "ResourceType" -> 
+           "Function", "Version" -> "1.0.0", "Description" -> 
+           "Evaluate expressions in turn until a given form is returned", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$d88475d431b64dbeb9cbf975a407484e`\
+FirstMatchingValue"|>], "Description" -> 
+        "Evaluate expressions in turn until a given form is returned", 
+        "Location" -> URL["https://resources.wolframcloud.com"], 
+        "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+FirstMatchingValue"]|>, <|
+       "Name" -> "HUD Location Affordability Index", "ResourceType" -> 
+        "DataResource", "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "HUD Location Affordability Index", "UUID" -> 
+           "0e4fcfc5-0540-48c1-ad7e-08c5c8ce2fdd", "ResourceType" -> 
+           "DataResource", "Version" -> "1.0.0", "Description" -> 
+           "The Location Affordability Index gives estimates of the \
+percentage of a family's income dedicated to the combined cost of housing and \
+transportion in a given location.", "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "ContentSize" -> Quantity[1176.603856, "Megabytes"], 
+           "ContentElements" -> {
+            "ColumnDescriptions", "ColumnNames", "Dataset", "RawData"}|>], 
+        "Description" -> 
+        "The Location Affordability Index gives estimates of the percentage \
+of a family's income dedicated to the combined cost of housing and \
+transportion in a given location.", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/0e4fcfc5-0540-48c1-ad7e-08c5c8ce2fdd"]|>, <|
+       "Name" -> "Sample Data: Airplane Glass", "ResourceType" -> 
+        "DataResource", "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "Sample Data: Airplane Glass", "UUID" -> 
+           "f7260379-c960-4249-a2a0-91c50fa1d11c", "ResourceType" -> 
+           "DataResource", "Version" -> "1.0.0", "Description" -> 
+           "Time to failure for airplane glass", "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "ContentSize" -> Quantity[784, "Bytes"], 
+           "ContentElements" -> {
+            "ColumnDescriptions", "ColumnTypes", "Content", "DataType", 
+             "Dimensions", "EventData", "EventSeries", "ObservationCount", 
+             "Source"}|>], "Description" -> 
+        "Time to failure for airplane glass", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/f7260379-c960-4249-a2a0-91c50fa1d11c"]|>, <|
+       "Name" -> "DPSSWindow", "ResourceType" -> "Function", "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "DPSSWindow", "ShortName" -> "DPSSWindow", "UUID" -> 
+           "f3365e02-00ad-4fb1-8c25-1d61993b8eb4", "ResourceType" -> 
+           "Function", "Version" -> "1.0.0", "Description" -> 
+           "Generate the zero-order discrete prolate spheroidal sequence \
+window", "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$5e3d5267c17e4506a9cdb9cf0c9ebcae`DPSSWindow"|>\
+], "Description" -> 
+        "Generate the zero-order discrete prolate spheroidal sequence window",
+         "Location" -> URL["https://resources.wolframcloud.com"], 
+        "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+DPSSWindow"]|>, <|
+       "Name" -> "FindFirstNumberInstance", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "FindFirstNumberInstance", "ShortName" -> 
+           "FindFirstNumberInstance", "UUID" -> 
+           "c0eff4b2-1171-42fd-bd49-301ecf6bcf1f", "ResourceType" -> 
+           "Function", "Version" -> "1.0.1", "Description" -> 
+           "Find the first number that matches a certain requirement", 
+           "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$142ffb321a894181b76ab27b2c399af4`\
+FindFirstNumberInstance"|>], "Description" -> 
+        "Find the first number that matches a certain requirement", 
+        "Location" -> URL["https://resources.wolframcloud.com"], 
+        "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+FindFirstNumberInstance"]|>, <|
+       "Name" -> "KeywordsGraph", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "KeywordsGraph", "ShortName" -> "KeywordsGraph", "UUID" -> 
+           "40370771-2a44-46eb-a904-7832270f3519", "ResourceType" -> 
+           "Function", "Version" -> "2.0.0", "Description" -> 
+           "A weighted graph visualizing the flow and clustering of ideas in \
+the text", "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$791d8fbef6da4a57b825d4509db7bf66`\
+KeywordsGraph"|>], "Description" -> 
+        "A weighted graph visualizing the flow and clustering of ideas in the \
+text", "Location" -> URL["https://resources.wolframcloud.com"], 
+        "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+KeywordsGraph"]|>, <|
+       "Name" -> "Sample Data: Amacrine Cells", "ResourceType" -> 
+        "DataResource", "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "Sample Data: Amacrine Cells", "UUID" -> 
+           "4ad6e4ec-7d2c-4dab-a7b0-f0afe268b48b", "ResourceType" -> 
+           "DataResource", "Version" -> "1.1.0", "Description" -> 
+           "Locations of amacrine cells (inhibitory interneurons in the \
+retina) annotated with on/off marks", "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "ContentElements" -> {
+            "Annotations", "AnnotationsKeys", "Data", "Description", 
+             "Dimension", "Locations", "LongDescription", "Name", 
+             "ObservationRegion", "PointCount", "RegionScale", "Source"}|>], 
+        "Description" -> 
+        "Locations of amacrine cells (inhibitory interneurons in the retina) \
+annotated with on/off marks", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/4ad6e4ec-7d2c-4dab-a7b0-f0afe268b48b"]|>, <|
+       "Name" -> "SQuAD v1.1 Tokens Generated with WL", "ResourceType" -> 
+        "DataResource", "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "SQuAD v1.1 Tokens Generated with WL", "UUID" -> 
+           "fe056756-36f0-4fc1-bf56-459d0cc7957b", "ResourceType" -> 
+           "DataResource", "Version" -> "1.0.0", "Description" -> 
+           "A list of isolated words and symbols from the SQuAD dataset, \
+which consists of a set of Wikipedia articles labeled for question answering \
+and reading comprehension", "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "WolframLanguageVersionRequired" -> "10.0", "ContentSize" -> 
+           Quantity[450.85468799999995`, "Megabytes"], 
+           "ContentElements" -> {
+            "ColumnDescriptions", "ColumnNames", "Data", "Dataset", 
+             "TrainingData", "TrainingMetadata", "ValidationData", 
+             "ValidationMetadata"}|>], "Description" -> 
+        "A list of isolated words and symbols from the SQuAD dataset, which \
+consists of a set of Wikipedia articles labeled for question answering and \
+reading comprehension", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/fe056756-36f0-4fc1-bf56-459d0cc7957b"]|>, <|
+       "Name" -> "EpidemicModel", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "EpidemicModel", "ShortName" -> "EpidemicModel", "UUID" -> 
+           "6b24d4ac-5849-4773-932a-9b959dfe3362", "ResourceType" -> 
+           "Function", "Version" -> "2.0.0", "Description" -> 
+           "Generate an interactive tool for visualizing various compartment \
+based epidemiological models", "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$c86bd0bcd6ba4d478c5c570303f5c0b3`\
+EpidemicModel"|>], "Description" -> 
+        "Generate an interactive tool for visualizing various compartment \
+based epidemiological models", "Location" -> 
+        URL["https://resources.wolframcloud.com"], "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+EpidemicModel"]|>}, "AllowEmbedding" -> True, "InitialShape" -> 
+     TypeSystem`PackageScope`HeaderShape[<|{All, "Name"} -> 
+        1, {All, "ResourceType"} -> 1, {All, "ResourceObject"} -> 
+        1, {All, "Description"} -> 1, {All, "Location"} -> 
+        1, {All, "DocumentationLink"} -> 1|>, 
+       TypeSystem`PackageScope`Limited[
+        TypeSystem`PackageScope`ColumnShape[
+         TypeSystem`PackageScope`Limited[
+          
+          TypeSystem`PackageScope`RowShape[<|
+           "Name" -> TypeSystem`PackageScope`AtomShape[459.20000000000005`], 
+            "ResourceType" -> TypeSystem`PackageScope`AtomShape[126.], 
+            "ResourceObject" -> TypeSystem`PackageScope`AtomShape[60], 
+            "Description" -> TypeSystem`PackageScope`AtomShape[560.], 
+            "Location" -> TypeSystem`PackageScope`AtomShape[60], 
+            "DocumentationLink" -> TypeSystem`PackageScope`AtomShape[60]|>], 
+          DirectedInfinity[1], 6, {All}]], 20, 
+        DirectedInfinity[1], {}]], "InitialType" -> TypeSystem`Vector[
+       TypeSystem`Struct[{
+        "Name", "ResourceType", "ResourceObject", "Description", "Location", 
+         "DocumentationLink"}, {
+         TypeSystem`Atom[String], 
+         TypeSystem`Atom[
+          TypeSystem`Enumeration["DataResource", "Function"]], 
+         TypeSystem`Atom[ResourceObject], 
+         TypeSystem`Atom[String], 
+         TypeSystem`Atom[URL], 
+         TypeSystem`Atom[URL]}], 50], "Meta" -> <||>, "RowTarget" -> 20, 
+     "ColumnTarget" -> 10, "Shape" -> 
+     TypeSystem`PackageScope`HeaderShape[<|{All, "Name"} -> 
+        1, {All, "ResourceType"} -> 1, {All, "ResourceObject"} -> 
+        1, {All, "Description"} -> 1, {All, "Location"} -> 
+        1, {All, "DocumentationLink"} -> 1|>, 
+       TypeSystem`PackageScope`Limited[
+        TypeSystem`PackageScope`ColumnShape[
+         TypeSystem`PackageScope`Limited[
+          
+          TypeSystem`PackageScope`RowShape[<|
+           "Name" -> TypeSystem`PackageScope`AtomShape[459.20000000000005`], 
+            "ResourceType" -> TypeSystem`PackageScope`AtomShape[126.], 
+            "ResourceObject" -> TypeSystem`PackageScope`AtomShape[60], 
+            "Description" -> TypeSystem`PackageScope`AtomShape[560.], 
+            "Location" -> TypeSystem`PackageScope`AtomShape[60], 
+            "DocumentationLink" -> TypeSystem`PackageScope`AtomShape[60]|>], 
+          DirectedInfinity[1], 6, {All}]], 20, 
+        DirectedInfinity[1], {}]], "Type" -> TypeSystem`Vector[
+       TypeSystem`Struct[{
+        "Name", "ResourceType", "ResourceObject", "Description", "Location", 
+         "DocumentationLink"}, {
+         TypeSystem`Atom[String], 
+         TypeSystem`Atom[
+          TypeSystem`Enumeration["DataResource", "Function"]], 
+         TypeSystem`Atom[ResourceObject], 
+         TypeSystem`Atom[String], 
+         TypeSystem`Atom[URL], 
+         TypeSystem`Atom[URL]}], 50], "Path" -> {}, "DisplayedRowCount" -> 20,
+      "DisplayedColumnCount" -> 6, "DataRowCount" -> 50, "DataColumnCount" -> 
+     6, "SortPaths" -> {}, "SortDirections" -> {}, "HiddenItemsMap" -> Null, 
+     "UpdateType" -> 1|>, TypeSystem`NestedGrid`PackagePrivate`$outputID$$, 
+    TypeSystem`NestedGrid`PackagePrivate`$path$$ = {}, 
+    TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 1, 
+    TypeSystem`NestedGrid`PackagePrivate`$hPos$$ = 1, 
+    TypeSystem`NestedGrid`PackagePrivate`$grid$$ = 
+    DynamicModule[{TypeSystem`NestedGrid`PackagePrivate`renderedGrid = Deploy[
+        Style[
+         Grid[{{
+            Item[
+             Pane[
+              Annotation[
+               EventHandler[
+                MouseAppearance[
+                 Mouseover["Name", 
+                  Style[
+                  "Name", FontColor -> 
+                   RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                If[
+                  TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                   All, "Name"}, 1]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                All, "Name"}, "ColumnHeader", True], "Mouse"], 
+              ImageSize -> {{1, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+             GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+            Item[
+             Pane[
+              Annotation[
+               EventHandler[
+                MouseAppearance[
+                 Mouseover["ResourceType", 
+                  Style[
+                  "ResourceType", FontColor -> 
+                   RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                If[
+                  TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                   All, "ResourceType"}, 1]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                All, "ResourceType"}, "ColumnHeader", True], "Mouse"], 
+              ImageSize -> {{1, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+             GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+            Item[
+             Pane[
+              Annotation[
+               EventHandler[
+                MouseAppearance[
+                 Mouseover["ResourceObject", 
+                  Style[
+                  "ResourceObject", FontColor -> 
+                   RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                If[
+                  TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                   All, "ResourceObject"}, 1]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                All, "ResourceObject"}, "ColumnHeader", True], "Mouse"], 
+              ImageSize -> {{1, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+             GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+            Item[
+             Pane[
+              Annotation[
+               EventHandler[
+                MouseAppearance[
+                 Mouseover["Description", 
+                  Style[
+                  "Description", FontColor -> 
+                   RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                If[
+                  TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                   All, "Description"}, 1]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                All, "Description"}, "ColumnHeader", True], "Mouse"], 
+              ImageSize -> {{1, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+             GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+            Item[
+             Pane[
+              Annotation[
+               EventHandler[
+                MouseAppearance[
+                 Mouseover["Location", 
+                  Style[
+                  "Location", FontColor -> 
+                   RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                If[
+                  TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                   All, "Location"}, 1]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                All, "Location"}, "ColumnHeader", True], "Mouse"], 
+              ImageSize -> {{1, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+             GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+            Item[
+             Pane[
+              Annotation[
+               EventHandler[
+                MouseAppearance[
+                 Mouseover["DocumentationLink", 
+                  Style[
+                  "DocumentationLink", FontColor -> 
+                   RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                If[
+                  TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                   All, "DocumentationLink"}, 1]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                All, "DocumentationLink"}, "ColumnHeader", True], "Mouse"], 
+              ImageSize -> {{1, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+             GrayLevel[0.95], Alignment -> {Left, Baseline}]}, {
+            Item[
+             Pane[
+              Annotation["SwapCase", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{1, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{459.20000000000005`, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{1, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{126., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", "\"SwapCase\"", 
+                  "\"\\\"\"", "\"]\""}, "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{1, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+              "Convert uppercase letters to lowercase and vice versa", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{1, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{1, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://resources.wolframcloud.com/FunctionReposit...", 
+                URL[
+                "https://resources.wolframcloud.com/FunctionRepository/\
+resources/SwapCase"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{1, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["FromCamelCase", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{2, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{459.20000000000005`, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{2, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{126., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"FromCamelCase\"", "\"\\\"\"", "\"]\""}, "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{2, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Split camel case phrases into separate words", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{2, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{2, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://resources.wolframcloud.com/FunctionReposit...", 
+                URL[
+                "https://resources.wolframcloud.com/FunctionRepository/\
+resources/FromCamelCase"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{2, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["Malaria Cases", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{3, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{459.20000000000005`, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["DataResource", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{3, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{126., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"Malaria Cases\"", "\"\\\"\"", "\"]\""}, "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{3, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+              "WHO's estimated number of malaria cases by country in each \
+year", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{3, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{3, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://www.wolframcloud.com/obj/resourcesystem/pu...", 
+                URL[
+                "https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/355a5ea9-df8a-41ce-9ef0-0166091d98e7"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{3, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["ToTitleCase", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{4, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{459.20000000000005`, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{4, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{126., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", "\"ToTitleCase\"",
+                   "\"\\\"\"", "\"]\""}, "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{4, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+              "Convert strings from sentence-style capitalization to \
+title-style capitalization", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{4, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{4, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://resources.wolframcloud.com/FunctionReposit...", 
+                URL[
+                "https://resources.wolframcloud.com/FunctionRepository/\
+resources/ToTitleCase"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{4, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["Sample Data: Liverpool Cancer", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{5, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{459.20000000000005`, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["DataResource", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{5, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{126., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"Sample Data: Liverpool Cancer\"", "\"\\\"\"", "\"]\""}, 
+                 "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{5, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+              "Locations of cancer cases in North Liverpool, UK, annotated \
+with subject type (case or control) marks", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{5, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{5, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://www.wolframcloud.com/obj/resourcesystem/pu...", 
+                URL[
+                "https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/56d34791-da40-4128-bec0-6f8d6c221cfd"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{5, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["MapCases", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{6, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{459.20000000000005`, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{6, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{126., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", "\"MapCases\"", 
+                  "\"\\\"\"", "\"]\""}, "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{6, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+              "Map a function at parts of an expression that match a given \
+pattern", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{6, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{6, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://resources.wolframcloud.com/FunctionReposit...", 
+                URL[
+                "https://resources.wolframcloud.com/FunctionRepository/\
+resources/MapCases"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{6, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["Epidemic Data for SARS", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{7, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{459.20000000000005`, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["DataResource", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{7, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{126., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"Epidemic Data for SARS\"", "\"\\\"\"", "\"]\""}, 
+                 "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{7, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+              "Cumulative number of reported suspect and probable cases", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{7, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{7, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://www.wolframcloud.com/obj/resourcesystem/pu...", 
+                URL[
+                "https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/b8639fe1-f717-4e92-b6d1-d7d53cdd08e4"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{7, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["RandomPseudoSymbolName", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{8, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{459.20000000000005`, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{8, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{126., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"RandomPseudoSymbolName\"", "\"\\\"\"", "\"]\""}, 
+                 "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{8, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+              "Generate a new symbol name in the spirit of the Wolfram \
+Language", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{8, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{8, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://resources.wolframcloud.com/FunctionReposit...", 
+                URL[
+                "https://resources.wolframcloud.com/FunctionRepository/\
+resources/RandomPseudoSymbolName"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{8, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["CheckReturn", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{9, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{459.20000000000005`, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{9, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{126., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", "\"CheckReturn\"",
+                   "\"\\\"\"", "\"]\""}, "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{9, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+              "Evaluates an expression and returns the result unless messages \
+were generated, in which case it immediately returns a Failure expression", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{9, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{9, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://resources.wolframcloud.com/FunctionReposit...", 
+                URL[
+                "https://resources.wolframcloud.com/FunctionRepository/\
+resources/CheckReturn"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{9, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["United States Supreme Court Decisions 1946-present", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{10, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{459.20000000000005`, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["DataResource", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{10, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{126., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"United States Supreme Court Decisions 1946-present\"", 
+                  "\"\\\"\"", "\"]\""}, "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{10, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+              "Datasets relating to Supreme Court cases from 1946 to present", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{10, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{10, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://www.wolframcloud.com/obj/resourcesystem/pu...", 
+                URL[
+                "https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/81366ea3-ef31-4c06-813c-182874d9d2e0"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{10, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["Infectious Diseases by Country 2009-2014", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{11, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{459.20000000000005`, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["DataResource", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{11, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{126., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"Infectious Diseases by Country 2009-2014\"", "\"\\\"\"", 
+                  "\"]\""}, "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{11, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+              "Number of reported, suspected and reported, and/or newly \
+reported cases to the World Health Organization of selected contagious or \
+infectious diseases like mumps and rubella by country from 2009 to 2014.", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{11, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{11, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://www.wolframcloud.com/obj/resourcesystem/pu...", 
+                URL[
+                "https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/c4268190-9d42-40d5-907b-73132a76230c"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{11, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["Sample Data: Esophageal Cancer", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{12, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{459.20000000000005`, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["DataResource", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{12, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{126., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"Sample Data: Esophageal Cancer\"", "\"\\\"\"", "\"]\""}, 
+                 "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{12, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+              "Case\[Hyphen]control study of esophageal cancer in \
+Ile\[Hyphen]et\[Hyphen]Vilaine", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{12, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{12, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://www.wolframcloud.com/obj/resourcesystem/pu...", 
+                URL[
+                "https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/a48c56fa-6fc8-4bd6-b12e-3b14ba91ba36"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{12, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["Sample Data: Childhood Leukaemia Lymphoma", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{13, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{459.20000000000005`, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["DataResource", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{13, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{126., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"Sample Data: Childhood Leukaemia Lymphoma\"", "\"\\\"\"",
+                   "\"]\""}, "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{13, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+              "Locations of childhood leukaemia and lymphoma annotated with \
+case/control marks", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{13, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{13, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://www.wolframcloud.com/obj/resourcesystem/pu...", 
+                URL[
+                "https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/046c7577-22c6-4e95-a03b-0355bb8652bc"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{13, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["Sample Data: North Derbyshire Asthma", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{14, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{459.20000000000005`, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["DataResource", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{14, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{126., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"Sample Data: North Derbyshire Asthma\"", "\"\\\"\"", 
+                  "\"]\""}, "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{14, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+              "Locations of the residence of asthmatic (cases) and \
+non-asthmatic (controls) children, annotated with marks including number of \
+household smokers, subject type (case or control), hay fever occurrence, age, \
+distance to the nearest road, distance to pollution sources 1, 2, and 3", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{14, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{14, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://www.wolframcloud.com/obj/resourcesystem/pu...", 
+                URL[
+                "https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/c3994c7d-dfc2-4f84-9f2d-f684fb91bbd1"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{14, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["Epidemic Data for Novel Coronavirus COVID-19", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{15, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{459.20000000000005`, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["DataResource", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{15, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{126., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"Epidemic Data for Novel Coronavirus COVID-19\"", 
+                  "\"\\\"\"", "\"]\""}, "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{15, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+              "Estimated cases of novel coronavirus (COVID-19, formerly known \
+as 2019-nCoV) infection by country or region \n(This data was imported and \
+made computable on January 31, 2022)", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{15, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{15, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://www.wolframcloud.com/obj/resourcesystem/pu...", 
+                URL[
+                "https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/dba89a96-2b3a-4254-8824-cb1f9e01a94b"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{15, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["Second DIMACS Sanchis Graph 10", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{16, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{459.20000000000005`, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["DataResource", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{16, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{126., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"Second DIMACS Sanchis Graph 10\"", "\"\\\"\"", "\"]\""}, 
+                 "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{16, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+              "The Second DIMACS Implementation Challenge: 1992-1993", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{16, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{16, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://www.wolframcloud.com/obj/resourcesystem/pu...", 
+                URL[
+                "https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/200dec16-55d6-475f-bf62-037e10d6c9e6"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{16, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["Second DIMACS Sanchis Graph 3", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{17, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{459.20000000000005`, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["DataResource", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{17, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{126., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"Second DIMACS Sanchis Graph 3\"", "\"\\\"\"", "\"]\""}, 
+                 "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{17, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+              "The Second DIMACS Implementation Challenge: 1992-1993", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{17, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{17, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://www.wolframcloud.com/obj/resourcesystem/pu...", 
+                URL[
+                "https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/43a5eb66-2534-46b1-8ced-ea2341814c3f"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{17, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["Second DIMACS Sanchis Graph 4", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{18, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{459.20000000000005`, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["DataResource", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{18, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{126., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"Second DIMACS Sanchis Graph 4\"", "\"\\\"\"", "\"]\""}, 
+                 "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{18, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+              "The Second DIMACS Implementation Challenge: 1992-1993", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{18, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{18, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://www.wolframcloud.com/obj/resourcesystem/pu...", 
+                URL[
+                "https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/35ad0a28-ecc3-4b32-a79e-7706d0014907"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{18, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["Second DIMACS Sanchis Graph 6", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{19, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{459.20000000000005`, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["DataResource", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{19, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{126., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"Second DIMACS Sanchis Graph 6\"", "\"\\\"\"", "\"]\""}, 
+                 "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{19, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+              "The Second DIMACS Implementation Challenge: 1992-1993", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{19, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{19, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://www.wolframcloud.com/obj/resourcesystem/pu...", 
+                URL[
+                "https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/0d4b0370-1d5d-4eb5-a725-d71b6bb7f776"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{19, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation["Second DIMACS Sanchis Graph 2", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{20, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{459.20000000000005`, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["DataResource", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{20, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{126., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"Second DIMACS Sanchis Graph 2\"", "\"\\\"\"", "\"]\""}, 
+                 "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{20, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+              "The Second DIMACS Implementation Challenge: 1992-1993", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{20, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{560., Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{20, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://www.wolframcloud.com/obj/resourcesystem/pu...", 
+                URL[
+                "https://www.wolframcloud.com/obj/resourcesystem/published/\
+DataRepository/resources/cbc55d9e-bf83-49f4-85bf-e1fe98827855"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{20, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Deploy[
+              Pane[
+               Row[{
+                 Spacer[2], 
+                 Style[
+                  Row[{
+                    Button[
+                    MouseAppearance[
+                    Mouseover[
+                    Graphics[{{
+                    EdgeForm[None], 
+                    FaceForm[None], 
+                    Rectangle[{0, 0}, {18, 18}, RoundingRadius -> 2]}, 
+                    Rotate[
+                    Translate[{
+                    CapForm[Round], 
+                    Line[{{0, 0}, {4, 5}, {8, 0}}], 
+                    Line[{{0, 5}, {8, 5}}]}, {5, 6.5}], 0, {9, 9}]}, 
+                    ImageSize -> (1 -> 1), ImagePadding -> {{0, 1}, {1, 0}}, 
+                    BaselinePosition -> Scaled[0.35], BaseStyle -> 
+                    RGBColor[
+                    0.5372549019607843, 0.5372549019607843, 
+                    0.5372549019607843]], 
+                    Graphics[{{
+                    EdgeForm[
+                    RGBColor[
+                    0.27450980392156865`, 0.5411764705882353, 
+                    0.796078431372549]], 
+                    FaceForm[None], 
+                    Rectangle[{0, 0}, {18, 18}, RoundingRadius -> 2]}, 
+                    Rotate[
+                    Translate[{
+                    CapForm[Round], 
+                    RGBColor[
+                    0.27450980392156865`, 0.5411764705882353, 
+                    0.796078431372549], 
+                    Line[{{0, 0}, {4, 5}, {8, 0}}], 
+                    Line[{{0, 5}, {8, 5}}]}, {5, 6.5}], 0, {9, 9}]}, 
+                    ImageSize -> (1 -> 1), ImagePadding -> {{0, 1}, {1, 0}}, 
+                    BaselinePosition -> Scaled[0.35]]], "LinkHand"], 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 
+                    Clip[TypeSystem`NestedGrid`PackagePrivate`$vPos$$ + (-20) 
+                    If[True, 50, 1], {1, 50 - -20 + 1}]; 
+                    TypeSystem`NestedGrid`PackagePrivate`updateState[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]], True][
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$]], 
+                    Appearance -> None], 
+                    Button[
+                    MouseAppearance[
+                    Mouseover[
+                    Graphics[{{
+                    EdgeForm[None], 
+                    FaceForm[None], 
+                    Rectangle[{0, 0}, {18, 18}, RoundingRadius -> 2]}, 
+                    Rotate[
+                    Translate[{
+                    CapForm[Round], 
+                    Line[{{0, 0}, {4, 5}, {8, 0}}]}, {5, 6.5}], 0, {9, 9}]}, 
+                    ImageSize -> (1 -> 1), ImagePadding -> {{0, 1}, {1, 0}}, 
+                    BaselinePosition -> Scaled[0.35], BaseStyle -> 
+                    RGBColor[
+                    0.5372549019607843, 0.5372549019607843, 
+                    0.5372549019607843]], 
+                    Graphics[{{
+                    EdgeForm[
+                    RGBColor[
+                    0.27450980392156865`, 0.5411764705882353, 
+                    0.796078431372549]], 
+                    FaceForm[None], 
+                    Rectangle[{0, 0}, {18, 18}, RoundingRadius -> 2]}, 
+                    Rotate[
+                    Translate[{
+                    CapForm[Round], 
+                    RGBColor[
+                    0.27450980392156865`, 0.5411764705882353, 
+                    0.796078431372549], 
+                    Line[{{0, 0}, {4, 5}, {8, 0}}]}, {5, 6.5}], 0, {9, 9}]}, 
+                    ImageSize -> (1 -> 1), ImagePadding -> {{0, 1}, {1, 0}}, 
+                    BaselinePosition -> Scaled[0.35]]], "LinkHand"], 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 
+                    Clip[TypeSystem`NestedGrid`PackagePrivate`$vPos$$ + (-20) 
+                    If[False, 50, 1], {1, 50 - -20 + 1}]; 
+                    TypeSystem`NestedGrid`PackagePrivate`updateState[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]], True][
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$]], 
+                    Appearance -> None], " ", 
+                    Style[
+                    Mouseover[
+                    Style[
+                    Row[{"rows ", 1, "\[Dash]", 20, " of ", 
+                    Style[50, FontWeight -> Bold]}], FontSize -> 
+                    9.333333333333332, FontColor -> 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                    Style[
+                    Row[{"rows ", 1, "\[Dash]", 20, " of ", 
+                    Style[50, FontWeight -> Bold]}], FontSize -> 
+                    9.333333333333332, FontColor -> 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]], ContextMenu -> {
+                    MenuItem["Hide", 
+                    KernelExecute[
+                    
+                    TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 1, {}]], MenuEvaluator -> Automatic], 
+                    MenuItem["Show up to 10 Rows", 
+                    KernelExecute[
+                    
+                    TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 10, {}]], MenuEvaluator -> Automatic], 
+                    MenuItem["Show up to 30 Rows", 
+                    KernelExecute[
+                    
+                    TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 30, {}]], MenuEvaluator -> Automatic], 
+                    MenuItem["Show up to 100 Rows", 
+                    KernelExecute[
+                    
+                    TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 100, {}]], MenuEvaluator -> Automatic], 
+                    MenuItem["Show All", 
+                    KernelExecute[
+                    
+                    TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 100000000, {}]], MenuEvaluator -> Automatic]}], 
+                    " ", 
+                    Button[
+                    MouseAppearance[
+                    Mouseover[
+                    Graphics[{{
+                    EdgeForm[None], 
+                    FaceForm[None], 
+                    Rectangle[{0, 0}, {18, 18}, RoundingRadius -> 2]}, 
+                    Rotate[
+                    Translate[{
+                    CapForm[Round], 
+                    Line[{{0, 0}, {4, 5}, {8, 0}}]}, {5, 6.5}], 180 Degree, {
+                    9, 9}]}, ImageSize -> (1 -> 1), 
+                    ImagePadding -> {{0, 1}, {1, 0}}, BaselinePosition -> 
+                    Scaled[0.35], BaseStyle -> 
+                    RGBColor[
+                    0.5372549019607843, 0.5372549019607843, 
+                    0.5372549019607843]], 
+                    Graphics[{{
+                    EdgeForm[
+                    RGBColor[
+                    0.27450980392156865`, 0.5411764705882353, 
+                    0.796078431372549]], 
+                    FaceForm[None], 
+                    Rectangle[{0, 0}, {18, 18}, RoundingRadius -> 2]}, 
+                    Rotate[
+                    Translate[{
+                    CapForm[Round], 
+                    RGBColor[
+                    0.27450980392156865`, 0.5411764705882353, 
+                    0.796078431372549], 
+                    Line[{{0, 0}, {4, 5}, {8, 0}}]}, {5, 6.5}], 180 Degree, {
+                    9, 9}]}, ImageSize -> (1 -> 1), 
+                    ImagePadding -> {{0, 1}, {1, 0}}, BaselinePosition -> 
+                    Scaled[0.35]]], "LinkHand"], 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 
+                    Clip[TypeSystem`NestedGrid`PackagePrivate`$vPos$$ + 
+                    20 If[False, 50, 1], {1, 50 - 20 + 1}]; 
+                    TypeSystem`NestedGrid`PackagePrivate`updateState[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]], True][
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$]], 
+                    Appearance -> None], 
+                    Button[
+                    MouseAppearance[
+                    Mouseover[
+                    Graphics[{{
+                    EdgeForm[None], 
+                    FaceForm[None], 
+                    Rectangle[{0, 0}, {18, 18}, RoundingRadius -> 2]}, 
+                    Rotate[
+                    Translate[{
+                    CapForm[Round], 
+                    Line[{{0, 0}, {4, 5}, {8, 0}}], 
+                    Line[{{0, 5}, {8, 5}}]}, {5, 6.5}], 180 Degree, {9, 9}]}, 
+                    ImageSize -> (1 -> 1), ImagePadding -> {{0, 1}, {1, 0}}, 
+                    BaselinePosition -> Scaled[0.35], BaseStyle -> 
+                    RGBColor[
+                    0.5372549019607843, 0.5372549019607843, 
+                    0.5372549019607843]], 
+                    Graphics[{{
+                    EdgeForm[
+                    RGBColor[
+                    0.27450980392156865`, 0.5411764705882353, 
+                    0.796078431372549]], 
+                    FaceForm[None], 
+                    Rectangle[{0, 0}, {18, 18}, RoundingRadius -> 2]}, 
+                    Rotate[
+                    Translate[{
+                    CapForm[Round], 
+                    RGBColor[
+                    0.27450980392156865`, 0.5411764705882353, 
+                    0.796078431372549], 
+                    Line[{{0, 0}, {4, 5}, {8, 0}}], 
+                    Line[{{0, 5}, {8, 5}}]}, {5, 6.5}], 180 Degree, {9, 9}]}, 
+                    ImageSize -> (1 -> 1), ImagePadding -> {{0, 1}, {1, 0}}, 
+                    BaselinePosition -> Scaled[0.35]]], "LinkHand"], 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 
+                    Clip[TypeSystem`NestedGrid`PackagePrivate`$vPos$$ + 
+                    20 If[True, 50, 1], {1, 50 - 20 + 1}]; 
+                    TypeSystem`NestedGrid`PackagePrivate`updateState[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]], True][
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$]], 
+                    Appearance -> None]}], ContextMenu -> {}]}], 
+               ImageMargins -> {{0, -1}, {-1, 1}}]], Background -> 
+             RGBColor[
+              0.9764705882352941, 0.9764705882352941, 0.9764705882352941], 
+             Alignment -> {Left, Top}], SpanFromLeft, SpanFromLeft, 
+            SpanFromLeft, SpanFromLeft, SpanFromLeft}}, 
+          BaseStyle -> {
+           ContextMenu -> 
+            Dynamic[TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger; 
+              Which[TypeSystem`NestedGrid`PackagePrivate`$lastOutputID =!= 
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                 TypeSystem`NestedGrid`PackagePrivate`$outputID$$], {}, 
+                TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger === 
+                TypeSystem`NestedGrid`PackagePrivate`$lastContextMenuTrigger, 
+                TypeSystem`NestedGrid`PackagePrivate`$lastContextMenu, True, 
+                TypeSystem`NestedGrid`PackagePrivate`$lastContextMenuTrigger = 
+                 TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger; 
+                TypeSystem`NestedGrid`PackagePrivate`$lastContextMenu = 
+                 Block[{TypeSystem`NestedGrid`PackagePrivate`$globalScrollPos = \
+{TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$}}, 
+                   
+                   With[{TypeSystem`NestedGrid`PackagePrivate`lastPath$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPathType, 
+                    TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`$\
+lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
+                    MatchQ[TypeSystem`NestedGrid`PackagePrivate`$lastPathType, 
+                    Alternatives["RowHeader", "ColumnHeader"]], 
+                    TypeSystem`NestedGrid`PackagePrivate`headerHiddenQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$]], 
+                    TypeSystem`NestedGrid`PackagePrivate`allHidden$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`allHiddenQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`anyHidden$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`anyHiddenQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`columnSortDirection[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$[
+                    "SortPaths"], 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$[
+                    "SortDirections"]], 
+                    TypeSystem`NestedGrid`PackagePrivate`haveData$ = Not[
+                    FailureQ[
+                    TypeSystem`NestedGrid`PackagePrivate`datasetInitialData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$]]], 
+                    TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$ = Not[
+                    FreeQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, Keys]]}, 
+                    Join[{
+                    If[
+                    Or[
+                    Not[TypeSystem`NestedGrid`PackagePrivate`haveData$], 
+                    Not[TypeSystem`NestedGrid`PackagePrivate`anyHidden$], 
+                    TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$], 
+                    Nothing, 
+                    MenuItem[
+                    "Show " <> 
+                    Which[TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "Item", "", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "RowHeader", "Row", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "ColumnHeader", "Column", True, ""], 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateHiddenItems[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
+                    "remove"]], MenuEvaluator -> Automatic]], 
+                    If[
+                    Or[
+                    Not[TypeSystem`NestedGrid`PackagePrivate`haveData$], 
+                    TypeSystem`NestedGrid`PackagePrivate`pathEmptyQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$, 
+                    And[
+                    TypeSystem`NestedGrid`PackagePrivate`allHidden$, 
+                    TypeSystem`NestedGrid`PackagePrivate`headerHidden$]], 
+                    Nothing, 
+                    MenuItem[
+                    "Hide " <> 
+                    Which[TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "Item", "", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "RowHeader", "Row", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "ColumnHeader", "Column", True, ""], 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateHiddenItems[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, "add"]], 
+                    MenuEvaluator -> Automatic]], Delimiter}, 
+                    If[
+                    And[TypeSystem`NestedGrid`PackagePrivate`haveData$, 
+                    MatchQ[TypeSystem`NestedGrid`PackagePrivate`lastPathType$, 
+                    Alternatives["ColumnHeader", "KeyDummy"]], 
+                    TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$, 
+                    Not[TypeSystem`NestedGrid`PackagePrivate`allHidden$]], {
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ =!= 
+                    "Ascending", 
+                    MenuItem["Sort", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateSort[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
+                    "Ascending"]], MenuEvaluator -> Automatic], Nothing], 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ =!= 
+                    "Descending", 
+                    MenuItem["Reverse Sort", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateSort[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
+                    "Descending"]], MenuEvaluator -> Automatic], Nothing], 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ =!= 
+                    None, 
+                    MenuItem["Unsort", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateSort[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, None]], 
+                    MenuEvaluator -> Automatic], Nothing], Delimiter}, {}], {
+                    MenuItem["Copy Position to Clipboard", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentPosition[
+                    TypeSystem`NestedGrid`PackagePrivate`copyClip]], 
+                    MenuEvaluator -> Automatic], 
+                    If[TypeSystem`NestedGrid`PackagePrivate`haveData$, 
+                    MenuItem["Copy Data to Clipboard", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`copyClip]], 
+                    MenuEvaluator -> Automatic], Nothing], Delimiter, 
+                    MenuItem["Paste Position in New Cell", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentPosition[
+                    TypeSystem`NestedGrid`PackagePrivate`cellPaste]], 
+                    MenuEvaluator -> Automatic], 
+                    If[TypeSystem`NestedGrid`PackagePrivate`haveData$, 
+                    MenuItem["Paste Data in New Cell", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`cellPaste]], 
+                    MenuEvaluator -> Automatic], Nothing]}]]]]], FontFamily -> 
+            "Source Sans Pro", FontSize -> 14, FontWeight -> Plain}, Dividers -> 
+          All, FrameStyle -> GrayLevel[0.7490196078431373], 
+          Spacings -> {0, 0}, Alignment -> Left, 
+          BaseStyle -> {
+           FontFamily -> "Source Sans Pro", FontSize -> 14, FontWeight -> 
+            Plain}], LineBreakWithin -> False, ContextMenu -> {}, NumberMarks -> 
+         False, ShowAutoStyles -> False]], 
+      TypeSystem`NestedGrid`PackagePrivate`initialQ = True}, 
+     Dynamic[
+      TypeSystem`NestedGrid`PackagePrivate`setupViewPath[
+      TypeSystem`NestedGrid`PackagePrivate`$path$$, If[
+         Not[TypeSystem`NestedGrid`PackagePrivate`initialQ], 
+         Module[{
+          TypeSystem`NestedGrid`PackagePrivate`tmpGrid$ = $Failed, 
+           TypeSystem`NestedGrid`PackagePrivate`tmpData$ = 
+           TypeSystem`NestedGrid`PackagePrivate`datasetData[
+            TypeSystem`NestedGrid`PackagePrivate`$state$$]}, 
+          TypeSystem`NestedGrid`PackagePrivate`tmpGrid$ = If[
+             FailureQ[TypeSystem`NestedGrid`PackagePrivate`tmpData$], 
+             TypeSystem`NestedGrid`PackagePrivate`renderedGrid, 
+             TypeSystem`NestedGrid`PackagePrivate`renderGrid[
+             TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+              TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+              TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+              TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+              TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+              TypeSystem`NestedGrid`PackagePrivate`localHold[
+              TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+             TypeSystem`NestedGrid`PackagePrivate`tmpData$]]; If[
+            Not[
+             FailureQ[TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]], 
+            TypeSystem`NestedGrid`PackagePrivate`renderedGrid = 
+            TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]; Null]]; 
+       TypeSystem`NestedGrid`PackagePrivate`initialQ = False; 
+       TypeSystem`NestedGrid`PackagePrivate`$vPos$$; 
+       TypeSystem`NestedGrid`PackagePrivate`$hPos$$; If[
+         FailureQ[TypeSystem`NestedGrid`PackagePrivate`renderedGrid], 
+         TypeSystem`SparseGrid[
+          TypeSystem`H["(data no longer present)"]], 
+         TypeSystem`NestedGrid`PackagePrivate`renderedGrid]], 
+      TrackedSymbols :> {
+       TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$hPos$$}], 
+     DynamicModuleValues :> {}], 
+    TypeSystem`NestedGrid`PackagePrivate`$topBar$$ = Dynamic[
+     TypeSystem`NestedGrid`PackagePrivate`makeFramedBar[
+      TypeSystem`PackageScope`SubViewPathbar[
+      TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+       TypeSystem`NestedGrid`PackagePrivate`updateState[
+       TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+        TypeSystem`NestedGrid`PackagePrivate`localHold[
+        TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]]], 
+     TrackedSymbols :> {TypeSystem`NestedGrid`PackagePrivate`$path$$}], 
+    TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$ = Style[
+     Framed[
+      Dynamic[
+       Replace[
+       TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$, {
+        TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+           TypeSystem`NestedGrid`PackagePrivate`localHold[
+           TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][Null, 
+           Blank[]] -> "", TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+           TypeSystem`NestedGrid`PackagePrivate`localHold[
+           TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+           Pattern[TypeSystem`NestedGrid`PackagePrivate`path$, 
+            Blank[]], 
+           Pattern[TypeSystem`NestedGrid`PackagePrivate`pathType$, 
+            Blank[]], 
+           Pattern[TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$, 
+            Blank[]]] :> (
+          Increment[TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger]; 
+          TypeSystem`NestedGrid`PackagePrivate`$lastPath = 
+           TypeSystem`NestedGrid`PackagePrivate`path$; 
+          TypeSystem`NestedGrid`PackagePrivate`$lastPathType = 
+           TypeSystem`NestedGrid`PackagePrivate`pathType$; 
+          TypeSystem`NestedGrid`PackagePrivate`$lastPathIsLeafHeader = 
+           TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$; 
+          TypeSystem`NestedGrid`PackagePrivate`$lastOutputID = 
+           TypeSystem`NestedGrid`PackagePrivate`localHold[
+            TypeSystem`NestedGrid`PackagePrivate`$outputID$$]; 
+          TypeSystem`NestedGrid`PackagePrivate`makePathTrail[
+           TypeSystem`NestedGrid`PackagePrivate`path$, 
+            TypeSystem`NestedGrid`PackagePrivate`makePathElements]), Null :> 
+         Spacer[10], Blank[] :> Spacer[10]}], 
+       TrackedSymbols :> {
+        TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$}], FrameStyle -> 
+      None, ImageMargins -> 0, FrameMargins -> 0, Alignment -> Top, 
+      ImageSize -> {Automatic, 15}], FontSize -> 1], 
+    TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$ = Null}, 
+    DynamicWrapperBox[
+     DynamicBox[ToBoxes[
+       Dataset`DatasetContent[
+       2, "Path" -> Hold[TypeSystem`NestedGrid`PackagePrivate`$path$$], 
+        "Grid" -> Hold[TypeSystem`NestedGrid`PackagePrivate`$grid$$], "State" -> 
+        Hold[TypeSystem`NestedGrid`PackagePrivate`$state$$], "VPos" -> 
+        Hold[TypeSystem`NestedGrid`PackagePrivate`$vPos$$], "HPos" -> 
+        Hold[TypeSystem`NestedGrid`PackagePrivate`$hPos$$], "TopBar" -> 
+        Hold[TypeSystem`NestedGrid`PackagePrivate`$topBar$$], "BottomBar" -> 
+        Hold[TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$], "OutputID" -> 
+        Hold[
+          TypeSystem`NestedGrid`PackagePrivate`localHold[
+          TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]], StandardForm],
+      ImageSizeCache->{2185., {310.6340332872234, 316.3659667127766}},
+      TrackedSymbols:>{
+       TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$grid$$}], 
+     TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$ = 
+     MouseAnnotation[],
+     ImageSizeCache->{2185., {310.6340332872234, 316.3659667127766}}],
+    BaseStyle->{LineBreakWithin -> False},
+    DynamicModuleValues:>{},
+    Initialization:>(TypeSystem`NestedGrid`PackagePrivate`$outputID$$ = 
+     CreateUUID[]),
+    UnsavedVariables:>{TypeSystem`NestedGrid`PackagePrivate`$outputID$$}],
+   Deploy,
+   DefaultBaseStyle->"Deploy"],
+  Dataset`InterpretDataset[1],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{3.89333853515812*^9},
+ CellLabel->
+  "Out[511]=",ExpressionUUID->"1dd9521a-9e2b-42d2-aa16-275602a190d3"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"InvertString", "[", "s_String", "]"}], ":="}]], "Input",
+ CellChangeTimes->{{3.8933385072825685`*^9, 
+  3.89333850728357*^9}},ExpressionUUID->"b4c4555d-5529-400a-ae57-\
+da9d69b9e216"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{571.8, 509.4},
+WindowMargins->{{Automatic, -7.2000000000000455`}, {0, Automatic}},
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 31, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"46be8646-4029-4215-99dd-ad4e1934bf82"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[583, 22, 380, 8, 98, "Title",ExpressionUUID->"3be52dab-50d6-4b64-850b-0655f9c29f21"],
+Cell[CellGroupData[{
+Cell[988, 34, 161, 3, 67, "Section",ExpressionUUID->"7cd969bc-d2c1-460a-b24b-196f91d61495"],
+Cell[CellGroupData[{
+Cell[1174, 41, 229, 4, 28, "Input",ExpressionUUID->"addde0ad-722a-4a0e-91d1-f0d1ddab4f1d"],
+Cell[1406, 47, 175319, 3256, 646, "Output",ExpressionUUID->"1dd9521a-9e2b-42d2-aa16-275602a190d3"]
+}, Open  ]],
+Cell[176740, 3306, 218, 5, 28, "Input",ExpressionUUID->"b4c4555d-5529-400a-ae57-da9d69b9e216"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
