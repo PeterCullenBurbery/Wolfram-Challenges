@@ -1,0 +1,56 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframDesktop 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       161,          7]
+NotebookDataLength[      1327,         46]
+NotebookOptionsPosition[       960,         32]
+NotebookOutlinePosition[      1379,         48]
+CellTagsIndexPosition[      1336,         45]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[ButtonBox["Pythagorean Primes",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://challenges.wolframcloud.com/challenge/pythagorean-primes"], 
+   None},
+ ButtonNote->
+  "https://challenges.wolframcloud.com/challenge/pythagorean-primes"]], \
+"Title",
+ CellChangeTimes->{{3.893329473043668*^9, 
+  3.893329478737381*^9}},ExpressionUUID->"90417247-688d-4346-8c3c-\
+7ff8a808a251"]
+},
+WindowSize->{574.8, 574.8},
+WindowMargins->{{Automatic, 41.40000000000009}, {Automatic, 0}},
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 31, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"b2cf1322-a246-4559-a096-8522080134b9"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[561, 20, 395, 10, 98, "Title",ExpressionUUID->"90417247-688d-4346-8c3c-7ff8a808a251"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
