@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     26441,        638]
-NotebookOptionsPosition[     24747,        600]
-NotebookOutlinePosition[     25154,        616]
-CellTagsIndexPosition[     25111,        613]
+NotebookDataLength[     26503,        641]
+NotebookOptionsPosition[     24778,        602]
+NotebookOutlinePosition[     25188,        618]
+CellTagsIndexPosition[     25145,        615]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -38,8 +38,10 @@ Cell[BoxData[
   RowBox[{"Column", "@", 
    RowBox[{"Range", "@", 
     RowBox[{"Range", "@", "n"}]}]}]}]], "Input",
+ InitializationCell->True,
  CellChangeTimes->{{3.8932402453745494`*^9, 3.8932402453745494`*^9}},
- CellLabel->"In[23]:=",ExpressionUUID->"d0486129-184f-4fef-84eb-680e03147aad"],
+ CellLabel->
+  "In[201]:=",ExpressionUUID->"d0486129-184f-4fef-84eb-680e03147aad"],
 
 Cell[TextData[ButtonBox["My cloud notebook",
  BaseStyle->"Hyperlink",
@@ -600,7 +602,7 @@ Cell["Column[{{1}, {1, 2}, {1, 2, 3}}]", "Output",
 },
 WindowSize->{569.25, 609.75},
 WindowMargins->{{Automatic, 48}, {45.75, Automatic}},
-FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 31, 2023)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"d2fcd7fe-c21d-4a44-a4e8-884b163ab1cd"
 ]
@@ -617,32 +619,31 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 387, 9, 98, "Title",ExpressionUUID->"59d772b5-0091-4c1a-a9ea-77d83572dbfc"],
-Cell[970, 33, 364, 8, 28, "Input",ExpressionUUID->"d0486129-184f-4fef-84eb-680e03147aad"],
-Cell[1337, 43, 407, 10, 35, "Text",ExpressionUUID->"75ac44b3-787c-4d0a-9f50-9e16403c92d4"],
+Cell[970, 33, 395, 10, 44, "Input",ExpressionUUID->"d0486129-184f-4fef-84eb-680e03147aad",
+ InitializationCell->True],
+Cell[1368, 45, 407, 10, 35, "Text",ExpressionUUID->"75ac44b3-787c-4d0a-9f50-9e16403c92d4"],
 Cell[CellGroupData[{
-Cell[1769, 57, 1215, 36, 149, "Input",ExpressionUUID->"849b14d8-0334-48cb-a73d-b78e21e5492a"],
-Cell[2987, 95, 9272, 194, 164, "Output",ExpressionUUID->"a2d6051a-3c14-4eed-95ff-7bd9109c1ea1"]
+Cell[1800, 59, 1215, 36, 149, "Input",ExpressionUUID->"849b14d8-0334-48cb-a73d-b78e21e5492a"],
+Cell[3018, 97, 9272, 194, 161, "Output",ExpressionUUID->"a2d6051a-3c14-4eed-95ff-7bd9109c1ea1"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[12296, 294, 214, 3, 28, "Input",ExpressionUUID->"dff094f0-d2ed-4555-89c9-98b9361b68bf"],
-Cell[12513, 299, 687, 22, 99, "Output",ExpressionUUID->"3d156bf7-a400-4bbe-8907-c6f5bba6542a"]
+Cell[12327, 296, 214, 3, 28, "Input",ExpressionUUID->"dff094f0-d2ed-4555-89c9-98b9361b68bf"],
+Cell[12544, 301, 687, 22, 99, "Output",ExpressionUUID->"3d156bf7-a400-4bbe-8907-c6f5bba6542a"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[13237, 326, 214, 3, 28, "Input",ExpressionUUID->"d7db176e-89aa-445e-a2dd-e31d6f7ee9a1"],
-Cell[13454, 331, 1060, 35, 151, "Output",ExpressionUUID->"ac0574e1-fa06-4903-82fa-b7bec6a936de"]
+Cell[13268, 328, 214, 3, 28, "Input",ExpressionUUID->"d7db176e-89aa-445e-a2dd-e31d6f7ee9a1"],
+Cell[13485, 333, 1060, 35, 151, "Output",ExpressionUUID->"ac0574e1-fa06-4903-82fa-b7bec6a936de"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[14551, 371, 695, 18, 86, "Input",ExpressionUUID->"4b810447-4226-4485-b7c5-76882ba24276"],
-Cell[15249, 391, 9063, 191, 64, "Output",ExpressionUUID->"0a6369b7-79b6-4417-b714-a0bab4974e0f"]
+Cell[14582, 373, 695, 18, 86, "Input",ExpressionUUID->"4b810447-4226-4485-b7c5-76882ba24276"],
+Cell[15280, 393, 9063, 191, 64, "Output",ExpressionUUID->"0a6369b7-79b6-4417-b714-a0bab4974e0f"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[24349, 587, 178, 3, 28, "Input",ExpressionUUID->"5e1a32f8-90c6-472c-bdc2-b14ac3103e4e"],
-Cell[24530, 592, 189, 4, 47, "Output",ExpressionUUID->"29e88277-520a-4da3-b02c-231a935b4c35"]
+Cell[24380, 589, 178, 3, 28, "Input",ExpressionUUID->"5e1a32f8-90c6-472c-bdc2-b14ac3103e4e"],
+Cell[24561, 594, 189, 4, 47, "Output",ExpressionUUID->"29e88277-520a-4da3-b02c-231a935b4c35"]
 }, Open  ]]
 }, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
