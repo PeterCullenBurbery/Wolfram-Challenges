@@ -1,0 +1,176 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframDesktop 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       161,          7]
+NotebookDataLength[      5600,        168]
+NotebookOptionsPosition[      4130,        134]
+NotebookOutlinePosition[      4552,        150]
+CellTagsIndexPosition[      4509,        147]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[ButtonBox["Valid Integer Triangle",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://challenges.wolframcloud.com/challenge/valid-integer-triangle"]\
+, None},
+ ButtonNote->
+  "https://challenges.wolframcloud.com/challenge/valid-integer-triangle"]], \
+"Title",
+ CellChangeTimes->{{3.8933417606527433`*^9, 
+  3.893341767695394*^9}},ExpressionUUID->"a0affde0-5681-405c-af54-\
+3d48da4737f6"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SSSTriangle", "[", 
+  RowBox[{"3", ",", "4", ",", "5"}], "]"}]], "Input",
+ CellChangeTimes->{{3.89334178075704*^9, 3.893341807742837*^9}},
+ CellLabel->
+  "In[631]:=",ExpressionUUID->"2880c46b-ca10-430f-809b-f491b29fc1b1"],
+
+Cell[BoxData[
+ RowBox[{"Triangle", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"0", ",", "0"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"5", ",", "0"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      FractionBox["16", "5"], ",", 
+      FractionBox["12", "5"]}], "}"}]}], "}"}], "]"}]], "Output",
+ CellChangeTimes->{3.893341808641837*^9},
+ CellLabel->
+  "Out[631]=",ExpressionUUID->"12fbaf3f-b23e-4222-8d76-54ca1bb87a17"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RegionQ", "[", 
+  RowBox[{"SSSTriangle", "[", 
+   RowBox[{"3", ",", "4", ",", "5"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8933418210154037`*^9, 3.8933418224726152`*^9}},
+ CellLabel->
+  "In[633]:=",ExpressionUUID->"768656eb-049b-4623-98bc-6787c5c5152a"],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{3.893341822776061*^9},
+ CellLabel->
+  "Out[633]=",ExpressionUUID->"bcda13c1-a276-4701-b81a-af4d5c558a4e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SSSTriangle", "[", 
+  RowBox[{"8", ",", "5", ",", "14"}], "]"}]], "Input",
+ CellChangeTimes->{{3.89334181294693*^9, 3.893341813896017*^9}},
+ CellLabel->
+  "In[632]:=",ExpressionUUID->"9cd80cd5-c387-4133-9172-120483f9d88f"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "SSSTriangle", "tri", 
+   "\"The triangle side \\!\\(\\*RowBox[{\\\"14\\\"}]\\) should be less than \
+sum of sides \\!\\(\\*RowBox[{\\\"8\\\"}]\\) and \\!\\(\\*RowBox[{\\\"5\\\"}]\
+\\).\"", 2, 632, 119, 28307874266816217383, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.8933418143117266`*^9},
+ CellLabel->
+  "During evaluation of \
+In[632]:=",ExpressionUUID->"5ba78c1c-9af1-40ed-8d1d-02f64a5b9a62"],
+
+Cell[BoxData[
+ RowBox[{"SSSTriangle", "[", 
+  RowBox[{"8", ",", "5", ",", "14"}], "]"}]], "Output",
+ CellChangeTimes->{3.8933418143766937`*^9},
+ CellLabel->
+  "Out[632]=",ExpressionUUID->"10e9a22a-4405-4d8c-94c9-221b1d6dde36"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RegionQ", "[", 
+  RowBox[{"SSSTriangle", "[", 
+   RowBox[{"8", ",", "5", ",", "14"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.893341828205431*^9, 3.893341829421972*^9}},
+ CellLabel->
+  "In[634]:=",ExpressionUUID->"96e08687-6363-486d-aee3-2e8e4011b762"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "SSSTriangle", "tri", 
+   "\"The triangle side \\!\\(\\*RowBox[{\\\"14\\\"}]\\) should be less than \
+sum of sides \\!\\(\\*RowBox[{\\\"8\\\"}]\\) and \\!\\(\\*RowBox[{\\\"5\\\"}]\
+\\).\"", 2, 634, 120, 28307874266816217383, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.893341829690973*^9},
+ CellLabel->
+  "During evaluation of \
+In[634]:=",ExpressionUUID->"893f56a8-55d5-4742-a6e4-db020556501b"],
+
+Cell[BoxData["False"], "Output",
+ CellChangeTimes->{3.8933418297683787`*^9},
+ CellLabel->
+  "Out[634]=",ExpressionUUID->"e9b8a31d-443a-468b-9de1-3d052dbd1d0c"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{397.2, 579.6},
+WindowMargins->{{Automatic, -4.7999999999999545`}, {Automatic, 0}},
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 31, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"27acd174-32ea-4a82-89d4-79698ce33d3e"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[583, 22, 407, 10, 160, "Title",ExpressionUUID->"a0affde0-5681-405c-af54-3d48da4737f6"],
+Cell[CellGroupData[{
+Cell[1015, 36, 245, 5, 28, "Input",ExpressionUUID->"2880c46b-ca10-430f-809b-f491b29fc1b1"],
+Cell[1263, 43, 449, 14, 48, "Output",ExpressionUUID->"12fbaf3f-b23e-4222-8d76-54ca1bb87a17"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1749, 62, 285, 6, 28, "Input",ExpressionUUID->"768656eb-049b-4623-98bc-6787c5c5152a"],
+Cell[2037, 70, 156, 3, 32, "Output",ExpressionUUID->"bcda13c1-a276-4701-b81a-af4d5c558a4e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2230, 78, 246, 5, 28, "Input",ExpressionUUID->"9cd80cd5-c387-4133-9172-120483f9d88f"],
+Cell[2479, 85, 456, 10, 46, "Message",ExpressionUUID->"5ba78c1c-9af1-40ed-8d1d-02f64a5b9a62"],
+Cell[2938, 97, 226, 5, 32, "Output",ExpressionUUID->"10e9a22a-4405-4d8c-94c9-221b1d6dde36"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3201, 107, 282, 6, 28, "Input",ExpressionUUID->"96e08687-6363-486d-aee3-2e8e4011b762"],
+Cell[3486, 115, 454, 10, 46, "Message",ExpressionUUID->"893f56a8-55d5-4742-a6e4-db020556501b"],
+Cell[3943, 127, 159, 3, 32, "Output",ExpressionUUID->"e9b8a31d-443a-468b-9de1-3d052dbd1d0c"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
