@@ -1,0 +1,74 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframDesktop 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       161,          7]
+NotebookDataLength[      1935,         66]
+NotebookOptionsPosition[      1565,         52]
+NotebookOutlinePosition[      1987,         68]
+CellTagsIndexPosition[      1944,         65]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"AlternatingPermutationQ", "[", 
+   RowBox[{"p_", "?", "PermutationListQ"}], "]"}], ":=", 
+  RowBox[{"Block", "[", 
+   RowBox[{
+    RowBox[{"{", "function", "}"}], ",", 
+    RowBox[{
+     RowBox[{"function", "=", 
+      RowBox[{"Evaluate", "[", 
+       RowBox[{"FindSequenceFunction", "[", 
+        RowBox[{"Sign", "[", 
+         RowBox[{"Differences", "[", "p", "]"}], "]"}], "]"}], "]"}]}], ";", 
+     RowBox[{
+      RowBox[{"function", "===", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"-", "1"}], ")"}], "#1"]}], "&"}], ")"}]}], "||", 
+      RowBox[{"function", "===", 
+       RowBox[{"(", 
+        RowBox[{
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"-", "1"}], ")"}], "#1"], "&"}], ")"}]}]}]}]}], 
+   "]"}]}]], "Code",
+ CellChangeTimes->{{3.89334043015687*^9, 
+  3.8933404301578703`*^9}},ExpressionUUID->"a0089d34-b671-41c5-b64b-\
+0b927c5deaf0"]
+},
+WindowSize->{574.8, 579.6},
+WindowMargins->{{Automatic, -4.7999999999999545`}, {Automatic, 0}},
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 31, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"9557a1fb-dbb7-4dcf-95ba-ef5689b8c5da"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[561, 20, 1000, 30, 54, "Code",ExpressionUUID->"a0089d34-b671-41c5-b64b-0b927c5deaf0"]
+}
+]
+*)
+
