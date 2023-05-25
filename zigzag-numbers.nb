@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       161,          7]
-NotebookDataLength[      2745,         88]
-NotebookOptionsPosition[      2157,         70]
-NotebookOutlinePosition[      2579,         86]
-CellTagsIndexPosition[      2536,         83]
+NotebookDataLength[      4490,        135]
+NotebookOptionsPosition[      3785,        114]
+NotebookOutlinePosition[      4188,        130]
+CellTagsIndexPosition[      4145,        127]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -62,14 +62,58 @@ Cell[BoxData[
   3.8933404301578703`*^9}},ExpressionUUID->"a0089d34-b671-41c5-b64b-\
 0b927c5deaf0"],
 
+Cell[CellGroupData[{
+
 Cell["Performance Statistics", "Section",
  CellChangeTimes->{{3.8933404564149857`*^9, 
   3.8933404597462115`*^9}},ExpressionUUID->"70c1b17d-96a1-45b2-a688-\
-dd9c93c15d27"]
+dd9c93c15d27"],
+
+Cell[BoxData[
+ TemplateBox[{
+   RowBox[{
+     RowBox[{"AlternatingPermutationQ", "[", 
+       RowBox[{"p_", "?", "PermutationListQ"}], "]"}], ":=", 
+     RowBox[{"Block", "[", 
+       RowBox[{
+         RowBox[{"{", "function", "}"}], ",", 
+         RowBox[{
+           RowBox[{"function", "=", 
+             RowBox[{"Evaluate", "[", 
+               RowBox[{"FindSequenceFunction", "[", 
+                 RowBox[{"Sign", "[", 
+                   RowBox[{"Differences", "[", "p", "]"}], "]"}], "]"}], 
+               "]"}]}], ";", 
+           RowBox[{
+             RowBox[{"function", "===", 
+               RowBox[{"(", 
+                 RowBox[{
+                   RowBox[{"-", 
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"-", "1"}], ")"}], "#1"]}], "&"}], ")"}]}], "||", 
+             RowBox[{"function", "===", 
+               RowBox[{"(", 
+                 RowBox[{
+                   SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"-", "1"}], ")"}], "#1"], "&"}], ")"}]}]}]}]}], 
+       "]"}]}], {
+    URL["https://www.wolframcloud.com/obj/c5d1bf41-41b5-47b8-822b-\
+648feabf8312"], None}, 
+   "https://www.wolframcloud.com/obj/c5d1bf41-41b5-47b8-822b-648feabf8312", 
+   "HyperlinkActionRecycled", {"HyperlinkActive"}, BaseStyle -> {"Hyperlink"},
+    HyperlinkAction -> "Recycled"},
+  "HyperlinkTemplate"]], "Subsubsection",
+ CellChangeTimes->{{3.89334043015687*^9, 3.8933404301578703`*^9}, {
+  3.8940276596344995`*^9, 
+  3.894027673247322*^9}},ExpressionUUID->"f23af2f5-2378-4669-ae6e-\
+69279268be83"]
+}, Open  ]]
 }, Open  ]]
 },
-WindowSize->{574.8, 579.6},
-WindowMargins->{{Automatic, -4.7999999999999545`}, {Automatic, 0}},
+WindowSize->{574.8, 574.8},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
 FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 31, 2023)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"9557a1fb-dbb7-4dcf-95ba-ef5689b8c5da"
@@ -88,7 +132,10 @@ Notebook[{
 Cell[CellGroupData[{
 Cell[583, 22, 381, 8, 98, "Title",ExpressionUUID->"6a777279-ff3f-4b2d-98df-8aa69a1dc9ad"],
 Cell[967, 32, 1000, 30, 54, "Code",ExpressionUUID->"a0089d34-b671-41c5-b64b-0b927c5deaf0"],
-Cell[1970, 64, 171, 3, 67, "Section",ExpressionUUID->"70c1b17d-96a1-45b2-a688-dd9c93c15d27"]
+Cell[CellGroupData[{
+Cell[1992, 66, 171, 3, 67, "Section",ExpressionUUID->"70c1b17d-96a1-45b2-a688-dd9c93c15d27"],
+Cell[2166, 71, 1591, 39, 195, "Subsubsection",ExpressionUUID->"f23af2f5-2378-4669-ae6e-69279268be83"]
+}, Open  ]]
 }, Open  ]]
 }
 ]
