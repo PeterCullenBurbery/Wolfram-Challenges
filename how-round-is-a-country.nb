@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      3116,         95]
-NotebookOptionsPosition[      2452,         76]
-NotebookOutlinePosition[      2858,         92]
-CellTagsIndexPosition[      2815,         89]
+NotebookDataLength[      7435,        200]
+NotebookOptionsPosition[      5658,        161]
+NotebookOutlinePosition[      6080,        177]
+CellTagsIndexPosition[      6037,        174]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -66,16 +66,101 @@ Cell[BoxData[
         RowBox[{"polygon", ",", "\"\<MinDisk\>\""}], "]"}], "]"}]}]}]}], 
    "]"}]}]], "Code",
  CellChangeTimes->{{3.8932471668648405`*^9, 3.8932471668648405`*^9}},
- CellLabel->"In[95]:=",ExpressionUUID->"27e2b5c1-c284-429d-a2b8-f377337af2ce"],
+ CellLabel->"In[51]:=",ExpressionUUID->"27e2b5c1-c284-429d-a2b8-f377337af2ce"],
 
 Cell["I think the server was down when I tried to submit.", "Text",
  CellChangeTimes->{{3.8933195463721533`*^9, 
   3.893319553437282*^9}},ExpressionUUID->"86bf02b3-42e1-46f8-b84a-\
-478f0290c294"]
+478f0290c294"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CountryRoundness", "[", 
+  TemplateBox[{"\"Macedonia\"", 
+    RowBox[{"Entity", "[", 
+      RowBox[{"\"Country\"", ",", "\"Macedonia\""}], "]"}], 
+    "\"Entity[\\\"Country\\\", \\\"Macedonia\\\"]\"", "\"country\""},
+   "Entity"], "]"}]], "Input",
+ CellChangeTimes->{{3.894008562003117*^9, 3.8940085620041175`*^9}},
+ CellLabel->"In[52]:=",ExpressionUUID->"da1f1c9a-177b-4841-bac2-1808a4cf1b08"],
+
+Cell[BoxData["0.5229196408885195`"], "Output",
+ CellChangeTimes->{3.8940085628138*^9},
+ CellLabel->"Out[52]=",ExpressionUUID->"20fbdbc3-5dbe-4fd7-a6db-3a7776876eab"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CountryRoundness", "[", 
+  TemplateBox[{"\"United States\"", 
+    RowBox[{"Entity", "[", 
+      RowBox[{"\"Country\"", ",", "\"UnitedStates\""}], "]"}], 
+    "\"Entity[\\\"Country\\\", \\\"UnitedStates\\\"]\"", "\"country\""},
+   "Entity"], "]"}]], "Input",
+ CellChangeTimes->{{3.894008581128564*^9, 3.894008581130563*^9}},
+ CellLabel->"In[57]:=",ExpressionUUID->"fa83d906-f713-4483-a1e8-d722b0f3e144"],
+
+Cell[BoxData["0.31685262787848856`"], "Output",
+ CellChangeTimes->{3.8940085829762917`*^9, 3.8940086354264097`*^9},
+ CellLabel->"Out[57]=",ExpressionUUID->"0a7a76a1-3bf1-4642-beda-d26a45735ba7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CountryRoundness", "[", 
+  TemplateBox[{"\"Uruguay\"", 
+    RowBox[{"Entity", "[", 
+      RowBox[{"\"Country\"", ",", "\"Uruguay\""}], "]"}], 
+    "\"Entity[\\\"Country\\\", \\\"Uruguay\\\"]\"", "\"country\""},
+   "Entity"], "]"}]], "Input",
+ CellChangeTimes->{{3.894008591055979*^9, 3.894008591056979*^9}},
+ CellLabel->"In[58]:=",ExpressionUUID->"75cc2728-6c97-4f12-8a2c-4f91979edbd1"],
+
+Cell[BoxData["0.6602587155350963`"], "Output",
+ CellChangeTimes->{3.8940085919568243`*^9, 3.894008635538946*^9},
+ CellLabel->"Out[58]=",ExpressionUUID->"d4305254-d277-4a05-a6e7-d0d8d642393f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CountryRoundness", "[", 
+  TemplateBox[{"\"Nauru\"", 
+    RowBox[{"Entity", "[", 
+      RowBox[{"\"Country\"", ",", "\"Nauru\""}], "]"}], 
+    "\"Entity[\\\"Country\\\", \\\"Nauru\\\"]\"", "\"country\""},
+   "Entity"], "]"}]], "Input",
+ CellChangeTimes->{{3.8940085991753407`*^9, 3.894008599177307*^9}},
+ CellLabel->"In[59]:=",ExpressionUUID->"ebf52eb0-aa83-4afe-bb6a-0870cc8d1a8b"],
+
+Cell[BoxData["0.7389927200727948`"], "Output",
+ CellChangeTimes->{3.8940086000125685`*^9, 3.8940086356659484`*^9},
+ CellLabel->"Out[59]=",ExpressionUUID->"67a07fb8-1ecb-493d-b8db-f8f4a6fb8a34"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CountryRoundness", "[", 
+  TemplateBox[{"\"Bahamas\"", 
+    RowBox[{"Entity", "[", 
+      RowBox[{"\"Country\"", ",", "\"Bahamas\""}], "]"}], 
+    "\"Entity[\\\"Country\\\", \\\"Bahamas\\\"]\"", "\"country\""},
+   "Entity"], "]"}]], "Input",
+ CellChangeTimes->{{3.89400860864223*^9, 3.894008608643228*^9}},
+ CellLabel->"In[60]:=",ExpressionUUID->"0284688b-ab83-4e98-b37f-effcfb43a267"],
+
+Cell[BoxData["0.01837127321265978`"], "Output",
+ CellChangeTimes->{{3.894008609497717*^9, 3.8940086358125057`*^9}},
+ CellLabel->"Out[60]=",ExpressionUUID->"25bc80bc-58e5-474c-b548-6fd3ac2a1f42"]
+}, Open  ]]
 }, Open  ]]
 },
-WindowSize->{574.8, 574.8},
-WindowMargins->{{-4.8, Automatic}, {Automatic, 0}},
+WindowSize->{574.8, 511.2},
+WindowMargins->{{Automatic, -4.7999999999999545`}, {Automatic, 0}},
 FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 31, 2023)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"b0c7121a-e018-48bb-8b10-ccbefdfbb18f"
@@ -95,7 +180,27 @@ Cell[CellGroupData[{
 Cell[580, 22, 404, 10, 98, "Title",ExpressionUUID->"7aa6c170-d328-4117-8daf-0ac075b36e46"],
 Cell[987, 34, 223, 5, 35, "Text",ExpressionUUID->"335e1ce9-8450-4fca-b8c0-a647bc1eb2ed"],
 Cell[1213, 41, 1025, 27, 68, "Code",ExpressionUUID->"27e2b5c1-c284-429d-a2b8-f377337af2ce"],
-Cell[2241, 70, 195, 3, 35, "Text",ExpressionUUID->"86bf02b3-42e1-46f8-b84a-478f0290c294"]
+Cell[2241, 70, 195, 3, 35, "Text",ExpressionUUID->"86bf02b3-42e1-46f8-b84a-478f0290c294"],
+Cell[CellGroupData[{
+Cell[2461, 77, 418, 8, 39, "Input",ExpressionUUID->"da1f1c9a-177b-4841-bac2-1808a4cf1b08"],
+Cell[2882, 87, 165, 2, 32, "Output",ExpressionUUID->"20fbdbc3-5dbe-4fd7-a6db-3a7776876eab"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3084, 94, 426, 8, 39, "Input",ExpressionUUID->"fa83d906-f713-4483-a1e8-d722b0f3e144"],
+Cell[3513, 104, 194, 2, 32, "Output",ExpressionUUID->"0a7a76a1-3bf1-4642-beda-d26a45735ba7"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3744, 111, 410, 8, 39, "Input",ExpressionUUID->"75cc2728-6c97-4f12-8a2c-4f91979edbd1"],
+Cell[4157, 121, 191, 2, 32, "Output",ExpressionUUID->"d4305254-d277-4a05-a6e7-d0d8d642393f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4385, 128, 406, 8, 39, "Input",ExpressionUUID->"ebf52eb0-aa83-4afe-bb6a-0870cc8d1a8b"],
+Cell[4794, 138, 193, 2, 32, "Output",ExpressionUUID->"67a07fb8-1ecb-493d-b8db-f8f4a6fb8a34"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5024, 145, 409, 8, 39, "Input",ExpressionUUID->"0284688b-ab83-4e98-b37f-effcfb43a267"],
+Cell[5436, 155, 194, 2, 32, "Output",ExpressionUUID->"25bc80bc-58e5-474c-b548-6fd3ac2a1f42"]
+}, Open  ]]
 }, Open  ]]
 }
 ]
