@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      4012,        117]
-NotebookOptionsPosition[      3146,         93]
-NotebookOutlinePosition[      3597,        110]
-CellTagsIndexPosition[      3554,        107]
+NotebookDataLength[      4230,        122]
+NotebookOptionsPosition[      3364,         98]
+NotebookOutlinePosition[      3815,        115]
+CellTagsIndexPosition[      3772,        112]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -73,13 +73,18 @@ Cell[BoxData[
   RowBox[{"capitalcities", ",", "\"\<Entities\>\""}], "]"}]], "Input",
  CellChangeTimes->{{3.8932547675510464`*^9, 3.8932547919239335`*^9}, {
   3.8932548770457306`*^9, 3.893254885126677*^9}},
- CellLabel->"In[11]:=",ExpressionUUID->"68a48aba-4a41-41aa-ae70-ddb6214016b7"],
+ CellLabel->"In[13]:=",ExpressionUUID->"68a48aba-4a41-41aa-ae70-ddb6214016b7"],
 
 Cell[BoxData[
  RowBox[{"EntityValue", "[", 
   RowBox[{
    RowBox[{"SortedEntityClass", "[", 
-    RowBox[{"\<\"Country\"\>", ",", 
+    RowBox[{
+     TemplateBox[{"\"countries\"", 
+       RowBox[{"EntityClass", "[", 
+         RowBox[{"\"Country\"", ",", "All"}], "]"}], 
+       "\"EntityClass[\\\"Country\\\", All]\"", "\"countries\""},
+      "EntityClass"], ",", 
      RowBox[{
       RowBox[{"-", "38"}], "+", 
       RowBox[{"EntityFunction", "[", 
@@ -87,8 +92,8 @@ Cell[BoxData[
         RowBox[{"Latitude", "[", 
          RowBox[{"country", "[", "\<\"Capital\"\>", "]"}], "]"}]}], "]"}]}]}],
      "]"}], ",", "\<\"Entities\"\>"}], "]"}]], "Output",
- CellChangeTimes->{3.8932548854328237`*^9},
- CellLabel->"Out[11]=",ExpressionUUID->"d077c9a3-1149-4266-b60f-323e78901b32"]
+ CellChangeTimes->{3.8932548854328237`*^9, 3.893254922967909*^9},
+ CellLabel->"Out[13]=",ExpressionUUID->"6681421c-e546-4d1c-965d-33df11ade94e"]
 }, Open  ]]
 },
 WindowSize->{581.25, 648.75},
@@ -117,7 +122,7 @@ Cell[1583, 49, 654, 16, 70, "Output",ExpressionUUID->"d90f3999-b929-42d2-9c8d-11
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[2274, 70, 314, 5, 28, "Input",ExpressionUUID->"68a48aba-4a41-41aa-ae70-ddb6214016b7"],
-Cell[2591, 77, 539, 13, 71, "Output",ExpressionUUID->"d077c9a3-1149-4266-b60f-323e78901b32"]
+Cell[2591, 77, 757, 18, 98, "Output",ExpressionUUID->"6681421c-e546-4d1c-965d-33df11ade94e"]
 }, Open  ]]
 }
 ]

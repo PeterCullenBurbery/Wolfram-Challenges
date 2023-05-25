@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      3132,         95]
+NotebookDataLength[      3116,         95]
 NotebookOptionsPosition[      2452,         76]
-NotebookOutlinePosition[      2874,         92]
-CellTagsIndexPosition[      2831,         89]
+NotebookOutlinePosition[      2858,         92]
+CellTagsIndexPosition[      2815,         89]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -74,8 +74,8 @@ Cell["I think the server was down when I tried to submit.", "Text",
 478f0290c294"]
 }, Open  ]]
 },
-WindowSize->{574.8, 579.6},
-WindowMargins->{{Automatic, -4.7999999999999545`}, {Automatic, 0}},
+WindowSize->{574.8, 574.8},
+WindowMargins->{{-4.8, Automatic}, {Automatic, 0}},
 FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 31, 2023)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"b0c7121a-e018-48bb-8b10-ccbefdfbb18f"
