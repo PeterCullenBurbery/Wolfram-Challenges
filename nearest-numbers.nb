@@ -1,0 +1,94 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframDesktop 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       161,          7]
+NotebookDataLength[      2724,         86]
+NotebookOptionsPosition[      2156,         68]
+NotebookOutlinePosition[      2559,         84]
+CellTagsIndexPosition[      2516,         81]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[ButtonBox["Nearest Numbers",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://challenges.wolframcloud.com/challenge/nearest-numbers"], None},
+ ButtonNote->
+  "https://challenges.wolframcloud.com/challenge/nearest-numbers"]], "Title",
+ CellChangeTimes->{{3.894487053198985*^9, 
+  3.8944870773452015`*^9}},ExpressionUUID->"beeabe7d-99d5-40d2-a534-\
+87592c745399"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"NearestNumbers", "[", 
+   RowBox[{"numbers", ":", 
+    RowBox[{"{", "__Integer", "}"}]}], "]"}], " ", ":=", " ", 
+  RowBox[{"Sort", "/@", 
+   RowBox[{"Union", "[", 
+    RowBox[{
+     RowBox[{"KeySort", "[", 
+      RowBox[{
+       RowBox[{"GroupBy", "[", 
+        RowBox[{
+         RowBox[{"EuclideanDistance", "@@", "#"}], "&"}], "]"}], "[", 
+       RowBox[{
+        RowBox[{"DeleteCases", "[", 
+         RowBox[{"{", 
+          RowBox[{"x_", ",", "x_"}], "}"}], "]"}], "[", 
+        RowBox[{"Subsets", "[", 
+         RowBox[{"numbers", ",", 
+          RowBox[{"{", "2", "}"}]}], "]"}], "]"}], "]"}], "]"}], "[", 
+     RowBox[{"[", "1", "]"}], "]"}], "]"}]}]}]], "Input",ExpressionUUID->\
+"01a39f43-2cca-46ac-9f7c-00b0bf1a2a13"],
+
+Cell[TextData[ButtonBox["Performance Statistics",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://www.wolframcloud.com/obj/1e392de2-046a-4786-93be-\
+7fb1315923e3"], None},
+ ButtonNote->
+  "https://www.wolframcloud.com/obj/1e392de2-046a-4786-93be-7fb1315923e3"]], \
+"Text",
+ CellChangeTimes->{{3.894487164233165*^9, 
+  3.894487170224491*^9}},ExpressionUUID->"6abbbfb6-0664-475b-af2a-\
+810cba4eb191"]
+}, Open  ]]
+},
+WindowSize->{574.8, 579.6},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 31, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"cac835ca-71bb-4f83-9385-f777f3bb6d61"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[583, 22, 382, 8, 98, "Title",ExpressionUUID->"beeabe7d-99d5-40d2-a534-87592c745399"],
+Cell[968, 32, 763, 21, 105, "Input",ExpressionUUID->"01a39f43-2cca-46ac-9f7c-00b0bf1a2a13"],
+Cell[1734, 55, 406, 10, 35, "Text",ExpressionUUID->"6abbbfb6-0664-475b-af2a-810cba4eb191"]
+}, Open  ]]
+}
+]
+*)
+
